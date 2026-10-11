@@ -1,0 +1,10 @@
+# OS / OneDrive junk
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*
+*.tmp
+
+# Slicer output
+*.gcode
+*.bgcode

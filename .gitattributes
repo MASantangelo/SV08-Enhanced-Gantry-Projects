@@ -1,0 +1,8 @@
+# CAD / model files: store as-is, no line-ending conversion or text diffs
+*.step binary
+*.stp binary
+*.stl binary
+*.3mf binary
+*.f3d binary
+*.f3z binary
+*.xlsx binary
