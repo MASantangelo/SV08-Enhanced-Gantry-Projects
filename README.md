@@ -22,6 +22,7 @@ The design comes in three gantry variants:
 - `Base Assemblies/`: each corner motor assembly and XY joint as its own STEP file
   - `For Viewing/`: STL copies for previewing on GitHub
 - `Base Components/Print Ready/`: parts already oriented for printing. Quantities are in the file names (for example `4x Z Carriage Spacer`).
+  - `Printed Parts All.3mf`: every print-ready part laid out on one plate, ready to open in your slicer (made in Creality Print)
   - `For Viewing/`: STL copies of the print-ready STEP files, so you can preview them in 3D right on GitHub. The STEP files are the source of truth.
 - `Base Components/For Mockups Only/`: plates in their assembled orientation, for reference and mockups. **Do not print these.**
   - `For Viewing/`: STL copies of the mockup STEP files, so you can preview them in 3D right on GitHub.
