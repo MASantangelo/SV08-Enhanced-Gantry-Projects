@@ -15,6 +15,7 @@ The design comes in three gantry variants:
 - `SV08-P6 Dual Shear Live Idlers Front Tensioners.step`: the full assembly
 - `SV08_P6_Printed_BOM_from_STEP.xlsx`: bill of materials
 - `Base Components/Print Ready/`: parts already oriented for printing. Quantities are in the file names (for example `4x Z Carriage Spacer`).
+  - `For Viewing/`: STL copies of the print-ready STEP files, so you can preview them in 3D right on GitHub. The STEP files are the source of truth.
 - `Base Components/For Mockups Only/`: plates in their assembled orientation, for reference and mockups. **Do not print these.**
 
 ## License
