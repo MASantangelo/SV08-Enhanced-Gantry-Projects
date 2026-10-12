@@ -11,7 +11,7 @@ Printed Version/
 ├── BOM.md                                   Bill of materials with purchase links
 ├── SV08_P6_Printed_BOM_from_STEP.xlsx       BOM spreadsheet (source for BOM.md)
 ├── SV08-P6 Dual Shear Live Idlers Front Tensioners.step   Full assembly
-├── SV08-CF6_..._FusionBOMExport.csv         Raw Fusion BOM export (from the CF6 design)
+├── SV08-P6_..._FusionBOMExport.csv          Raw Fusion BOM export
 ├── For Viewing/                             STL preview of the full assembly (~38 MB)
 │
 ├── Base Assemblies/                         Each corner and joint as its own assembly
