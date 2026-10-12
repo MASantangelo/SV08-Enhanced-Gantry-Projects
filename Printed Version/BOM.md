@@ -143,7 +143,7 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 
 | Qty | Part | Buy | Notes |
 |---:|---|---|---|
-| 2 | MG9H Linear Rail Slide |  | Re-usable from Stock |
+| 2 | MGN9H Linear Rail Slide |  | Re-usable from Stock |
 | 2 | Y MGN9H Rail 402mm |  | Re-usable from Stock |
 | 1 | MGN12H Linear Rail Slide |  | Re-usable from Stock |
 | 1 | X MGN12H Rail 406mm |  | Re-usable from Stock |
@@ -159,7 +159,7 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 | Qty | Part | Buy | Notes |
 |---:|---|---|---|
 | 2 | Gantry Y-Axis 2020 Extrusion 469mm |  |  |
-| 1 | Gantry X-Axis 2020 Extrusion 357mm |  | Shortened from 345mm: all tensioning now happens at the front motor mounts. |
+| 1 | Gantry X-Axis 2020 Extrusion 342mm |  | Shortened from 345mm: all tensioning now happens at the front motor mounts. |
 | 1 | Toolhead X-Axis 2020 Extrusion 426mm |  |  |
 
 ## Printed Parts
@@ -179,8 +179,8 @@ Print files are in [`Base Components/Print Ready`](Base%20Components/Print%20Rea
 | 1 | [Back Left Top Plate Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/Back%20Left%20Top%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
 | 1 | [Back Right Bottom Plate Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/Back%20Right%20Bottom%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
 | 1 | [Back Right Top Plate Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/Back%20Right%20Top%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
-| 1 | [Front Left Bottom Dual Shear Live Idler Tensioner Dual Lever](Base%20Components/Print%20Ready/For%20Viewing/Front%20Left%20Bottom%20Printed6mm%20-%20For%20Printing.stl) |  |  |
-| 1 | [Front Left Top Dual Shear Live Idler Tensioner Dual Lever](Base%20Components/Print%20Ready/For%20Viewing/Front%20Left%20Top%20Printed6mm%20-%20For%20Printing.stl) |  |  |
+| 1 | [Front Left Bottom Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/Front%20Left%20Bottom%20Printed6mm%20-%20For%20Printing.stl) |  |  |
+| 1 | [Front Left Top Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/Front%20Left%20Top%20Printed6mm%20-%20For%20Printing.stl) |  |  |
 | 1 | [Front Right Bottom Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/Front%20Right%20Bottom%20Printed6mm%20-%20For%20Printing.stl) |  |  |
 | 1 | [Front Right Top Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/Front%20Right%20Top%20Printed6mm%20-%20For%20Printing.stl) |  |  |
 | 1 | [XY Live Idler Left Bottom Plate Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/XY%20Live%20Idler%20Left%20Bottom%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
