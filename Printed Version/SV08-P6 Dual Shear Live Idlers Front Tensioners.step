@@ -10,7 +10,7 @@ FILE_DESCRIPTION(
 
 FILE_NAME(
 /* name */ 'SV08-P6 Dual Shear Live Idlers Front Tensioners.step',
-/* time_stamp */ '2026-10-11T19:27:59-04:00',
+/* time_stamp */ '2026-10-11T20:16:43-04:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v20.2',
@@ -6600,10 +6600,10 @@ ider (1):1','MGN9HZ1C \X\BB\X\AC\X\BF\X\E9 slider (1):1',
 'Toolhead X-Axis 2020 Extrusion 426mm x1.f3d :1',#256074,#256075,
 'Toolhead X-Axis 2020 Extrusion 426mm x1.f3d :1');
 #2378=NEXT_ASSEMBLY_USAGE_OCCURRENCE(
-'Gantry X-Axis 2020 Extrusion 357mm x1:1',
-'Gantry X-Axis 2020 Extrusion 357mm x1:1',
-'Gantry X-Axis 2020 Extrusion 357mm x1:1',#256074,#256076,
-'Gantry X-Axis 2020 Extrusion 357mm x1:1');
+'Gantry X-Axis 2020 Extrusion 342mm x1:1',
+'Gantry X-Axis 2020 Extrusion 342mm x1:1',
+'Gantry X-Axis 2020 Extrusion 342mm x1:1',#256074,#256076,
+'Gantry X-Axis 2020 Extrusion 342mm x1:1');
 #2379=NEXT_ASSEMBLY_USAGE_OCCURRENCE(
 'Gantry Y-Axis 2020 Extrusion 469mm x2.f3d :1',
 'Gantry Y-Axis 2020 Extrusion 469mm x2.f3d :1',
@@ -291303,7 +291303,7 @@ ounting plate1_2','AB-axis mounting plate1',#256198,#255918);
 #256075=PRODUCT_DEFINITION('2020-2 profile_Standard',
 'Toolhead X-Axis 2020 Extrusion 426mm x1.f3d ',#256256,#255918);
 #256076=PRODUCT_DEFINITION('2020-2 profile_Standard_1',
-'Gantry X-Axis 2020 Extrusion 357mm x1',#256257,#255918);
+'Gantry X-Axis 2020 Extrusion 342mm x1',#256257,#255918);
 #256077=PRODUCT_DEFINITION('2020-2 profile_Standard_2',
 'Gantry Y-Axis 2020 Extrusion 469mm x2.f3d ',#256258,#255918);
 #256078=PRODUCT_DEFINITION('2026-10-08-14-45-27-475','Xol Hardware',#256259,
@@ -291876,8 +291876,8 @@ r rail (2)(Mirror)',(#256511));
 'Toolhead X-Axis 2020 Extrusion 426mm x1.f3d ',
 'Toolhead X-Axis 2020 Extrusion 426mm x1.f3d ',(#256621));
 #256438=PRODUCT_RELATED_PRODUCT_CATEGORY(
-'Gantry X-Axis 2020 Extrusion 357mm x1',
-'Gantry X-Axis 2020 Extrusion 357mm x1',(#256622));
+'Gantry X-Axis 2020 Extrusion 342mm x1',
+'Gantry X-Axis 2020 Extrusion 342mm x1',(#256622));
 #256439=PRODUCT_RELATED_PRODUCT_CATEGORY(
 'Gantry Y-Axis 2020 Extrusion 469mm x2.f3d ',
 'Gantry Y-Axis 2020 Extrusion 469mm x2.f3d ',(#256623));
@@ -292243,7 +292243,7 @@ $,(#256464));
 #256621=PRODUCT('2020-2 profile_Standard',
 'Toolhead X-Axis 2020 Extrusion 426mm x1.f3d ',$,(#256464));
 #256622=PRODUCT('2020-2 profile_Standard_1',
-'Gantry X-Axis 2020 Extrusion 357mm x1',$,(#256464));
+'Gantry X-Axis 2020 Extrusion 342mm x1',$,(#256464));
 #256623=PRODUCT('2020-2 profile_Standard_2',
 'Gantry Y-Axis 2020 Extrusion 469mm x2.f3d ',$,(#256464));
 #256624=PRODUCT('2026-10-08-14-45-27-475','Xol Hardware',$,(#256464));
