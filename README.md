@@ -18,7 +18,7 @@ The design comes in three gantry variants:
 
 - `SV08-P6 Dual Shear Live Idlers Front Tensioners.step`: the full assembly
   - `For Viewing/`: STL copy of the full assembly for previewing on GitHub. It's about 38 MB, so give it a few seconds to load. Small hardware is meshed coarser to keep the size down.
-- `SV08_P6_Printed_BOM_from_STEP.xlsx`: bill of materials
+- **[Bill of Materials](Printed%20Version/BOM.md)**: every part with quantities, purchase links and notes. It's generated from `SV08_P6_Printed_BOM_from_STEP.xlsx`, which you can also download.
 - `Base Assemblies/`: each corner motor assembly and XY joint as its own STEP file
   - `For Viewing/`: STL copies for previewing on GitHub
 - `Base Components/Print Ready/`: parts already oriented for printing. Quantities are in the file names (for example `4x Z Carriage Spacer`).
