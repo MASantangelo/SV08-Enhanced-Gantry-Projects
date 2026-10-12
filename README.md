@@ -9,8 +9,8 @@ The design comes in three gantry variants:
 | Variant | Plate material | Plate thickness | Folder | Status |
 |---|---|---|---|---|
 | Printed gantry | 3D printed | 6 mm | [`Printed Version`](Printed%20Version) | Available |
-| CF gantry | Carbon fiber (CFRP) | 6 mm | *coming soon* | In progress |
-| Metal gantry | Metal | 5 mm | *coming soon* | In progress |
+| CF gantry | Carbon fiber (CFRP) | 6 mm | [`CF Version`](CF%20Version) | Work in progress |
+| Metal gantry | Metal | 5 mm | [`Metal Version`](Metal%20Version) | Work in progress |
 
 ## Printed Version (6 mm)
 
