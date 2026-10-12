@@ -37,7 +37,7 @@ Compared with [Stanciu-Andrei's Sovol SV08 AWD Mod](https://github.com/Stanciu-A
 | | Original | This project |
 |---|---|---|
 | **Belt tensioning** | At the rear, with dedicated rear tensioner parts | At the front motor mounts, with lever arms. Rear tensioners removed, and the gantry X extrusion shortened to 342 mm. |
-| **XY joints** | 8.5 mm toothed idlers on M5 dowel pins | Dual-shear live idlers: GT2 20-tooth pulleys on bearing stacks, supported top and bottom. An M3 internally threaded standoff replaces the M5×40 dowel. |
+| **XY joints** | Standard (non-live) idlers: the pulleys spin freely on fixed shafts | **Live idlers**, in dual shear: GT2 20-tooth pulleys fixed to a shaft that turns on bearing stacks, supported top and bottom. An M3 internally threaded standoff replaces the M5×40 dowel. |
 | **Shear support** | Double shear optional, at the rear motors only | Dual shear at every corner and both XY joints. Motors need a 37 mm shaft. |
 | **Construction** | Chunky printed corner housings | Flat top and bottom plates held apart by standoffs. One plate design produces the printed (6 mm), carbon fiber (6 mm) and metal (5 mm) versions. |
 | **Hardware** | Mostly printed structure | Moving toward a mostly metal design: aluminium standoffs, threaded spacers, shoulder bolts in three lengths, 48 flanged 695-2RS bearings, T-nut mounting, Voron-spec heat-set inserts and D2F-L endstops. Printed alternatives remain for the standoffs. |
