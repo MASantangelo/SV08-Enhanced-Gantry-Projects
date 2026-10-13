@@ -1,0 +1,45 @@
+{
+  "_help": "Rules that turn CAD names from the STEP file into BOM lines. Names are matched after Fusion copy/mirror suffixes like ' (2)(Mirror)', '_1', '.f3d' and ' x2' are stripped. Patterns are Python regular expressions. 'common' applies to every variant; 'variants' adds to it per variant folder. See tools/README.md.",
+
+  "common": {
+    "exclude_assemblies": [
+      "^SV08 .* Z Carriage$"
+    ],
+
+    "unit_assemblies": {
+      "^D2F-L_Straight$": { "as": "D2F-L Micro Switch (Endstop)" },
+      "^GT2 20 Tooth Live Idler Pulley$": { "as": "GT2 20-Tooth Pulley - Live Idler Version", "descend": true }
+    },
+
+    "category_by_assembly": {
+      "^Xol Hardware$": "Xol Toolhead Hardware"
+    },
+
+    "rename": {
+      "T-Nut M4": "M4 T-Nut",
+      "T-Nut - M3": "M3 T-Nut",
+      "F695-2RS Bearing Single": "695-2RS Flanged Bearing",
+      "M3 Shim 5mm OD .2mm Tall": "M3 Shim (3mm ID | 5mm OD | .2mm Tall)",
+      "M3x20mmx8mm Spacer": "M3 Spacer 8mm OD 20mm Tall",
+      "MG9H Linear Rail Slide": "MGN9H Linear Rail Slide",
+      "Y Axis Linear Rail": "Y MGN9H Rail 402mm"
+    },
+
+    "rename_patterns": [
+      ["^(D5 M\\d)x(\\d+)mm ", "\\1 x \\2mm "],
+      ["^(M\\d)x(\\d+)mm ", "\\1 x \\2mm "]
+    ],
+
+    "ignore_parts": [],
+
+    "bom_only": []
+  },
+
+  "variants": {
+    "Printed Version": {
+      "unit_assemblies": {
+        "^Front Left (Top|Bottom) Printed6mm$": {}
+      }
+    }
+  }
+}
