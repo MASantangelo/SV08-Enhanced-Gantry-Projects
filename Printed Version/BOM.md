@@ -9,7 +9,6 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 - [Fasteners - Screws](#fasteners---screws)
 - [Fasteners - Shoulder Bolts](#fasteners---shoulder-bolts)
 - [Fasteners - T-Nuts](#fasteners---t-nuts)
-- [Fasteners - Dowel Pins](#fasteners---dowel-pins)
 - [Fasteners - Threaded Rods](#fasteners---threaded-rods)
 - [Fasteners - Nuts](#fasteners---nuts)
 - [Inserts - Heat-Set](#inserts---heat-set)
@@ -32,9 +31,10 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 | 28 | M3 x 8mm SHCS | [Amazon](https://amazon.com/dp/B0F5Q6YYWM) | Count matches the 28 M3 T-Nuts 1:1. |
 | 28 | M4 x 10mm BHCS | [Amazon](https://amazon.com/dp/B0CTH3Z2F5) |  |
 | 24 | M3 x 6mm FHCS | [Amazon](https://amazon.com/dp/B01E5EOIWW) |  |
-| 16 | M3 x 10mm BHCS | [Amazon](https://amazon.com/dp/B0GJK7Z9DH) |  |
+| 12 | M3 x 10mm BHCS | [Amazon](https://amazon.com/dp/B0GJK7Z9DH) |  |
 | 8 | M3 x 35mm SHCS | [Amazon](https://amazon.com/dp/B0GHY9ZCLC) |  |
 | 8 | M4 x 45mm BHCS | [Amazon](https://amazon.com/dp/B0GH6G1R1G) |  |
+| 8 | M3 x 10mm Ultra Thin Flat Head (.8-1mm) | [Amazon](https://amazon.com/dp/B0H61WCTBX) | Ultra-thin head (.8-1mm). 2 per front motor assembly and 2 per XY joint. |
 | 4 | M2 x 2mm Set Screw | [Amazon](https://amazon.com/dp/B0DDJBSF6B) | Should come with the GT2 20-Tooth Pulley - Live Idler Version (2 per pulley, 4 total). |
 | 4 | M2 x 8mm SHCS | [Amazon](https://amazon.com/dp/B0D4JMPT86) |  |
 | 4 | M4 x 20mm BHCS | [Amazon](https://amazon.com/dp/B0DYSQZHC9) |  |
@@ -55,17 +55,12 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 | 32 | M4 T-Nut | [Amazon](https://amazon.com/dp/B0C9DJBG1H) |  |
 | 28 | M3 T-Nut | [Amazon](https://amazon.com/dp/B0G2M7W3PL) |  |
 
-## Fasteners - Dowel Pins
-
-| Qty | Part | Buy | Notes |
-|---:|---|---|---|
-| 2 | M5 x 30mm Dowel | [Amazon](https://amazon.com/dp/B0DKBMBQ9K) | Used by the Live Idler assembly in the Front Motor Towers. Renamed from "Dowel Pin" to "Dowel" in CAD. |
-
 ## Fasteners - Threaded Rods
 
 | Qty | Part | Buy | Notes |
 |---:|---|---|---|
-| 2 | M3 Internally Threaded Spacer (5mm OD \| 35mm Tall) | [Amazon](https://amazon.com/dp/B0D3HWQ2GF) | Replaces the M5 x 40mm dowel in the XY Joints (1 per joint). Clamped between the plates by 2x M3 x 10mm BHCS and 2x M3 washers per joint. |
+| 2 | M3 Internally Threaded Spacer (5mm OD \| 35mm Tall) | [Amazon](https://amazon.com/dp/B0D3HWQ2GF) | Replaces the M5 x 40mm dowel in the XY Joints (1 per joint). Clamped between the plates by 2x M3 x 10mm Ultra Thin Flat Head per joint. |
+| 2 | M3 Internally Threaded Spacer (5mm OD \| 25mm Tall) | [Amazon](https://amazon.com/dp/B0D3HVVJPN) | Replaces the M5 x 30mm dowel in the front motor assemblies (1 per side). Held by 2x M3 x 10mm Ultra Thin Flat Head. |
 
 ## Fasteners - Nuts
 
@@ -86,7 +81,7 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 |---:|---|---|---|
 | 44 | M5 Washer (5mm ID \| 10mm OD \| 1mm Tall) | [Amazon](https://amazon.com/dp/B07WZ5WQCG) | Includes the 36 bearing-stack shims, now named M5 Washer. |
 | 38 | M4 Washer (4mm ID \| 9mm OD \| 1mm Tall) | [Amazon](https://amazon.com/dp/B0DK6KXB6W) | .8mm more common and acceptable swap, OD matters |
-| 12 | M3 Washer (3mm ID \| 7mm OD \| .5mm Tall) | [Amazon](https://amazon.com/dp/B0C3TJ7PWT) |  |
+| 8 | M3 Washer (3mm ID \| 7mm OD \| .5mm Tall) | [Amazon](https://amazon.com/dp/B0C3TJ7PWT) |  |
 | 8 | M3 Shim (3mm ID \| 5mm OD \| .2mm Tall) | [Amazon](https://amazon.com/dp/B08ZYP1TK4) |  |
 
 ## Bearings
