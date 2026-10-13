@@ -26,12 +26,9 @@ $freecadcmd = Join-Path $FreeCADBin "freecadcmd.exe"
 $python = Join-Path $FreeCADBin "python.exe"
 
 if (-not $SkipStl) {
-    $folders = @(
-        $variantDir,
-        (Join-Path $variantDir "Base Assemblies"),
-        (Join-Path $variantDir "Base Components\Print Ready"),
-        (Join-Path $variantDir "Base Components\For Mockups Only")
-    ) | Where-Object { (Test-Path $_) -and (Get-ChildItem $_ -File -Include *.step, *.stp -Name -Path "$_\*") }
+    # Every folder (the variant itself and any subfolder) that holds STEP files, except our own outputs
+    $folders = @($variantDir) + @(Get-ChildItem $variantDir -Directory -Recurse | Where-Object { $_.Name -notin @("For Viewing", "Renders") } | ForEach-Object { $_.FullName })
+    $folders = $folders | Where-Object { Get-ChildItem $_ -File | Where-Object { $_.Extension -in ".step", ".stp" } }
 
     Remove-Item Env:STEP2STL_ONLY -ErrorAction SilentlyContinue
     foreach ($f in $folders) {

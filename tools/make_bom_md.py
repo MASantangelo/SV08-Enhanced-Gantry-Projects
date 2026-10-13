@@ -2,8 +2,8 @@
 
 Usage: python make_bom_md.py <variant folder> <xlsx name> <title>
 Section rows = only column A filled. Data rows = Category, Qty, Description, Link, Notes.
-Printed parts link to their STL preview in Base Components/Print Ready/For Viewing when the
-name matches; otherwise to the Print Ready folder.
+Made parts (printed parts, plates) link to their STL preview when one with a matching name
+exists in the variant's Base Components (Print Ready or flat) or in Shared Components.
 """
 import json
 import os
@@ -17,18 +17,25 @@ here = os.path.dirname(os.path.abspath(__file__))
 rows = json.loads(subprocess.check_output(
     [sys.executable, "-I", os.path.join(here, "read_xlsx.py"), os.path.join(variant, xlsx_name), "--json"]))
 
-print_ready = os.path.join(variant, "Base Components", "Print Ready")
-stl_dir = os.path.join(print_ready, "For Viewing")
-
-
 def norm(s):
     s = re.sub(r"^\d+x\s+", "", s)
     s = re.sub(r"\s*-\s*For Printing$", "", s)
     return s.strip().lower()
 
 
-stl_files = os.listdir(stl_dir) if os.path.isdir(stl_dir) else []
-stl_by_name = {norm(os.path.splitext(f)[0]): f for f in stl_files if f.lower().endswith(".stl")}
+# STL preview folders, as path parts relative to the variant folder; earlier entries win.
+STL_DIRS = [
+    ("Base Components", "Print Ready", "For Viewing"),
+    ("Base Components", "For Viewing"),
+    ("..", "Shared Components", "Print Ready", "For Viewing"),
+]
+stl_by_name = {}
+for parts in STL_DIRS:
+    d = os.path.join(variant, *parts)
+    for f in sorted(os.listdir(d)) if os.path.isdir(d) else []:
+        if f.lower().endswith(".stl"):
+            stl_by_name.setdefault(norm(os.path.splitext(f)[0]), parts + (f,))
+has_shared = os.path.isdir(os.path.join(variant, "..", "Shared Components"))
 
 
 def rel(*parts):
@@ -44,7 +51,8 @@ def buy(url):
     if not url.startswith("http"):
         return ""
     host = urlparse(url).netloc.lower()
-    label = "Amazon" if "amazon." in host else "AliExpress" if "aliexpress." in host else host.removeprefix("www.")
+    stores = {"amazon.": "Amazon", "aliexpress.": "AliExpress", "mouser.": "Mouser", "mcmaster.": "McMaster-Carr"}
+    label = next((v for k, v in stores.items() if k in host), host.removeprefix("www."))
     return f"[{label}]({url})"
 
 
@@ -73,23 +81,31 @@ for r in rows:
         if section.startswith("Xol"):
             body += ["*Optional: only needed if you're building the Xol carriage.*", ""]
         if section == "Printed Parts":
-            body += [f"Print files are in [`Base Components/Print Ready`]({rel('Base Components', 'Print Ready')}). "
+            where = []
+            if os.path.isdir(os.path.join(variant, "Base Components", "Print Ready")):
+                where.append(f"[`Base Components/Print Ready`]({rel('Base Components', 'Print Ready')})")
+            if has_shared:
+                where.append(f"[`Shared Components/Print Ready`]({rel('..', 'Shared Components', 'Print Ready')}) "
+                             f"(parts common to every version)")
+            body += [f"Print files are in {' and '.join(where)}. Click a part name to preview it in 3D.", ""]
+        elif section.endswith("Plates"):
+            body += [f"Cutting files are in [`Base Components`]({rel('Base Components')}). "
                      f"Click a part name to preview it in 3D.", ""]
         body += ["| Qty | Part | Buy | Notes |", "|---:|---|---|---|"]
         continue
     if not r[2]:
         continue
     part = cell(r[2])
-    if section == "Printed Parts":
+    if section == "Printed Parts" or section.endswith("Plates"):
         stl = stl_by_name.get(norm(r[2]))
         if not stl:  # BOM and file names can differ; fall back to a unique leading-words match
             lead = " ".join(norm(r[2]).split()[:3])
             hits = [v for k, v in stl_by_name.items() if k.startswith(lead + " ")]
             stl = hits[0] if len(hits) == 1 else None
             if stl:
-                print(f"fuzzy: {r[2]!r} -> {stl!r}")
+                print(f"fuzzy: {r[2]!r} -> {stl[-1]!r}")
         if stl:
-            part = f"[{part}]({rel('Base Components', 'Print Ready', 'For Viewing', stl)})"
+            part = f"[{part}]({rel(*stl)})"
     notes = cell(r[4])
     if notes == "Check Repo":
         notes = ""

@@ -14,6 +14,8 @@ The design comes in three gantry variants:
 | CF gantry | Carbon fiber (CFRP) | 6 mm | [`CF Version`](CF%20Version) | Work in progress |
 | Metal gantry | Metal | 5 mm | [`Metal Version`](Metal%20Version) | Work in progress |
 
+Parts that are the same in every version (the spacers and the tensioner lever arm) live in [`Shared Components`](Shared%20Components), and each version's BOM links there for them.
+
 ## Printed Version (6 mm)
 
 ![Front left tensioner motion](Printed%20Version/Screenshots/Front%20Left%20Tensioner%20Motion.gif)
@@ -23,8 +25,8 @@ The design comes in three gantry variants:
 - **[Bill of Materials](Printed%20Version/BOM.md)**: every part with quantities, purchase links and notes. It's generated from `SV08_P6_Printed_BOM_from_STEP.xlsx`, which you can also download.
 - `Base Assemblies/`: each corner motor assembly and XY joint as its own STEP file
   - `For Viewing/`: STL copies for previewing on GitHub
-- `Base Components/Print Ready/`: parts already oriented for printing, with holes enlarged by about 0.3 mm for printing tolerance. Quantities are in the file names (for example `4x Z Carriage Spacer`).
-  - `Printed Parts All.3mf`: every print-ready part laid out on one plate, ready to open in your slicer (made in Creality Print)
+- `Base Components/Print Ready/`: the printed plates, oriented for printing, with holes enlarged by about 0.3 mm for printing tolerance. The spacers and lever arms are in [`Shared Components/Print Ready`](Shared%20Components/Print%20Ready), with quantities in their file names (for example `4x Z Carriage Spacer`).
+  - `Printed Parts All.3mf`: every printed part (plates and shared parts) laid out on one plate, ready to open in your slicer (made in Creality Print)
   - `For Viewing/`: STL copies of the print-ready STEP files, so you can preview them in 3D right on GitHub. The STEP files are the source of truth.
 - `Base Components/For Mockups Only/`: plates in their assembled orientation, for reference and mockups. **Do not print these.**
   - `For Viewing/`: STL copies of the mockup STEP files, so you can preview them in 3D right on GitHub.

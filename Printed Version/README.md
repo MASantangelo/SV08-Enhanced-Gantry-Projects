@@ -20,9 +20,9 @@ Printed Version/
 │   └── For Viewing/                         STL previews
 │
 ├── Base Components/
-│   ├── Print Ready/                         ← Print these
-│   │   ├── *.step                           Oriented for printing, holes enlarged ~0.3 mm; quantity in the name (4x, 2x)
-│   │   ├── Printed Parts All.3mf            Every part on one plate (Creality Print)
+│   ├── Print Ready/                         ← Print these (plus ../Shared Components/Print Ready)
+│   │   ├── *.step                           Printed plates, holes enlarged ~0.3 mm for printing
+│   │   ├── Printed Parts All.3mf            Every printed part, shared ones included, on one plate (Creality Print)
 │   │   └── For Viewing/                     STL previews
 │   └── For Mockups Only/                    Plates in assembled orientation. Do not print.
 │       └── For Viewing/                     STL previews
@@ -36,7 +36,7 @@ Printed Version/
 | I want to... | Go to |
 |---|---|
 | Buy the hardware | [BOM.md](BOM.md) |
-| Print the parts | [Base Components/Print Ready](Base%20Components/Print%20Ready), or the all-in-one [3MF plate](Base%20Components/Print%20Ready/Printed%20Parts%20All.3mf) |
+| Print the parts | The plates in [Base Components/Print Ready](Base%20Components/Print%20Ready) and the spacers and levers in [Shared Components/Print Ready](../Shared%20Components/Print%20Ready). Or print everything from the all-in-one [3MF plate](Base%20Components/Print%20Ready/Printed%20Parts%20All.3mf). |
 | Look at the assembly in 3D | [Full assembly STL](For%20Viewing/SV08-P6%20Dual%20Shear%20Live%20Idlers%20Front%20Tensioners.stl) · [Sub-assemblies](Base%20Assemblies/For%20Viewing) |
 | See the tensioner move | [Front Left Tensioner Motion.gif](Screenshots/Front%20Left%20Tensioner%20Motion.gif) |
 | Browse all screenshots | [Screenshots](Screenshots) |

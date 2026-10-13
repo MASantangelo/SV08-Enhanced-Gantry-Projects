@@ -159,17 +159,17 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 
 ## Printed Parts
 
-Print files are in [`Base Components/Print Ready`](Base%20Components/Print%20Ready). Click a part name to preview it in 3D.
+Print files are in [`Base Components/Print Ready`](Base%20Components/Print%20Ready) and [`Shared Components/Print Ready`](../Shared%20Components/Print%20Ready) (parts common to every version). Click a part name to preview it in 3D.
 
 | Qty | Part | Buy | Notes |
 |---:|---|---|---|
-| 4 | [Tensioner Lever Arm Revised](Base%20Components/Print%20Ready/For%20Viewing/4x%20Tensioner%20Lever%20Arm%20Revised%20-%20For%20Printing.stl) |  |  |
+| 4 | [Tensioner Lever Arm Revised](../Shared%20Components/Print%20Ready/For%20Viewing/4x%20Tensioner%20Lever%20Arm%20Revised%20-%20For%20Printing.stl) |  |  |
 | 4 | [XY Live Idler Spacer 5mm Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/XY%20Live%20Idler%20Spacer%205mm%20Printed6mm%20-%20For%20Printing.stl) |  |  |
-| 4 | [Z Carriage Spacer](Base%20Components/Print%20Ready/For%20Viewing/4x%20Z%20Carriage%20Spacer%20-%20For%20Printing.stl) |  |  |
-| 2 | [Back Spacer Plate 20mm](Base%20Components/Print%20Ready/For%20Viewing/2x%20Back%20Spacer%20Plate%2020mm%20-%20For%20Printing.stl) |  |  |
-| 2 | [Front Spacer Plate 20mm](Base%20Components/Print%20Ready/For%20Viewing/2x%20Front%20Spacer%20Plate%2020mm%20-%20For%20Printing.stl) |  |  |
-| 2 | [Printed Back Motor Spacer](Base%20Components/Print%20Ready/For%20Viewing/2x%20Printed%20Back%20Motor%20Spacer%20-For%20Printing.stl) |  |  |
-| 2 | [XY Live Idler Spacer](Base%20Components/Print%20Ready/For%20Viewing/2x%20XY%20Live%20Idler%20Spacer%20-%20For%20Printing.stl) |  |  |
+| 4 | [Z Carriage Spacer](../Shared%20Components/Print%20Ready/For%20Viewing/4x%20Z%20Carriage%20Spacer%20-%20For%20Printing.stl) |  |  |
+| 2 | [Back Spacer Plate 20mm](../Shared%20Components/Print%20Ready/For%20Viewing/2x%20Back%20Spacer%20Plate%2020mm%20-%20For%20Printing.stl) |  |  |
+| 2 | [Front Spacer Plate 20mm](../Shared%20Components/Print%20Ready/For%20Viewing/2x%20Front%20Spacer%20Plate%2020mm%20-%20For%20Printing.stl) |  |  |
+| 2 | [Printed Back Motor Spacer](../Shared%20Components/Print%20Ready/For%20Viewing/2x%20Printed%20Back%20Motor%20Spacer%20-For%20Printing.stl) |  |  |
+| 2 | [XY Live Idler Spacer](../Shared%20Components/Print%20Ready/For%20Viewing/2x%20XY%20Live%20Idler%20Spacer%20-%20For%20Printing.stl) |  |  |
 | 1 | [Back Left Bottom Plate Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/Back%20Left%20Bottom%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
 | 1 | [Back Left Top Plate Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/Back%20Left%20Top%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
 | 1 | [Back Right Bottom Plate Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/Back%20Right%20Bottom%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
