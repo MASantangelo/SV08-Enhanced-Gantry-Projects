@@ -2,7 +2,7 @@
 
 The printed-plate variant: every gantry plate is 3D printed at 6 mm.
 
-![Full assembled gantry overview](Screenshots/Full%20Assembled%20Gantry%20Overview.png)
+![Full gantry overview, rendered from the current STEP file](Renders/Full%20Gantry%20-%20Overview.png)
 
 ## Folder structure
 
