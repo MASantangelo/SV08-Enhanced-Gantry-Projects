@@ -23,12 +23,13 @@ The design comes in three gantry variants:
 - **[Bill of Materials](Printed%20Version/BOM.md)**: every part with quantities, purchase links and notes. It's generated from `SV08_P6_Printed_BOM_from_STEP.xlsx`, which you can also download.
 - `Base Assemblies/`: each corner motor assembly and XY joint as its own STEP file
   - `For Viewing/`: STL copies for previewing on GitHub
-- `Base Components/Print Ready/`: parts already oriented for printing. Quantities are in the file names (for example `4x Z Carriage Spacer`).
+- `Base Components/Print Ready/`: parts already oriented for printing, with holes enlarged by about 0.3 mm for printing tolerance. Quantities are in the file names (for example `4x Z Carriage Spacer`).
   - `Printed Parts All.3mf`: every print-ready part laid out on one plate, ready to open in your slicer (made in Creality Print)
   - `For Viewing/`: STL copies of the print-ready STEP files, so you can preview them in 3D right on GitHub. The STEP files are the source of truth.
 - `Base Components/For Mockups Only/`: plates in their assembled orientation, for reference and mockups. **Do not print these.**
   - `For Viewing/`: STL copies of the mockup STEP files, so you can preview them in 3D right on GitHub.
-- [`Screenshots/`](Printed%20Version/Screenshots): renders of the assemblies and belt paths, plus an [MP4 of the tensioner motion](Printed%20Version/Screenshots/Front%20Left%20Tensioner%20Motion.mp4)
+- [`Renders/`](Printed%20Version/Renders): images of the full gantry and each sub-assembly, generated automatically from the STEP files so they always match the current design
+- [`Screenshots/`](Printed%20Version/Screenshots): Fusion screenshots of the assemblies and belt paths, plus an [MP4 of the tensioner motion](Printed%20Version/Screenshots/Front%20Left%20Tensioner%20Motion.mp4)
 
 ## Changes from the original
 

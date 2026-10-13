@@ -21,13 +21,14 @@ Printed Version/
 │
 ├── Base Components/
 │   ├── Print Ready/                         ← Print these
-│   │   ├── *.step                           Oriented for printing; quantity in the name (4x, 2x)
+│   │   ├── *.step                           Oriented for printing, holes enlarged ~0.3 mm; quantity in the name (4x, 2x)
 │   │   ├── Printed Parts All.3mf            Every part on one plate (Creality Print)
 │   │   └── For Viewing/                     STL previews
 │   └── For Mockups Only/                    Plates in assembled orientation. Do not print.
 │       └── For Viewing/                     STL previews
 │
-└── Screenshots/                             Renders, belt paths, tensioner motion (GIF + MP4)
+├── Renders/                                 Auto-generated from the STEP files (always current)
+└── Screenshots/                             Fusion screenshots, belt paths, tensioner motion (GIF + MP4)
 ```
 
 ## Quick links
@@ -39,3 +40,25 @@ Printed Version/
 | Look at the assembly in 3D | [Full assembly STL](For%20Viewing/SV08-P6%20Dual%20Shear%20Live%20Idlers%20Front%20Tensioners.stl) · [Sub-assemblies](Base%20Assemblies/For%20Viewing) |
 | See the tensioner move | [Front Left Tensioner Motion.gif](Screenshots/Front%20Left%20Tensioner%20Motion.gif) |
 | Browse all screenshots | [Screenshots](Screenshots) |
+
+The print-ready plates have their holes enlarged by about 0.3 mm to allow for printing tolerances. That's why they're slightly lighter than the mockup copies, which are dimensioned to nominal size.
+
+## Renders
+
+Generated automatically from the current STEP files whenever the repo is refreshed (see [tools](../tools)), so they always show the latest design.
+
+| | |
+|---|---|
+| ![Full gantry, front left](Renders/Full%20Gantry%20-%20Front%20Left.png) | ![Full gantry, front right](Renders/Full%20Gantry%20-%20Front%20Right.png) |
+| Front left | Front right |
+| ![Full gantry, rear left](Renders/Full%20Gantry%20-%20Rear%20Left.png) | ![Full gantry, overview](Renders/Full%20Gantry%20-%20Overview.png) |
+| Rear left | Overview |
+
+### Sub-assemblies
+
+| | | |
+|---|---|---|
+| ![Front left motor assembly](Renders/Front%20Left%20Motor%20Assembly%20Printed%206mm%20-%20Iso.png) | ![Front right motor assembly](Renders/Front%20Right%20Motor%20Assembly%20Printed%206mm%20-%20Iso.png) | ![XY joint left](Renders/XY%20Joint%20Left%20Printed%206mm%20-%20Iso.png) |
+| Front left motor | Front right motor | XY joint left |
+| ![Back left motor assembly](Renders/Back%20Left%20Motor%20Assembly%20Printed%206mm%20-%20Iso.png) | ![Back right motor assembly](Renders/Back%20Right%20Motor%20Assembly%20Printed%206mm%20-%20Iso.png) | ![XY joint right](Renders/XY%20Joint%20Right%20Printed%206mm%20-%20Iso.png) |
+| Back left motor | Back right motor | XY joint right |

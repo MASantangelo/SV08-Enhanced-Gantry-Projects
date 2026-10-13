@@ -21,6 +21,20 @@ Add `-SkipStl` or `-SkipBom` to run only one of the two steps. Close the spreads
 
 The output is deterministic: if a STEP file hasn't changed, its STL comes out byte-for-byte identical, so git only shows files that actually changed.
 
+## Renders
+
+`update-previews.ps1` also renders PNGs into `<variant>\Renders\`. You can run that step on its own:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools\render.ps1 -Variant "Printed Version"
+```
+
+- **What it renders:** the main assembly from 4 angles (front left, front right, rear left, overview), plus each `Base Assemblies` STEP from its outside corner. The CAD colours are kept, shaded without edge lines.
+- **How:** it uses FreeCAD's full interface, so a FreeCAD window opens for about a minute and then closes itself. Images are rendered at 2× size, cropped to the parts and scaled down.
+- **Changing angles:** edit `$MainViews` and `$AssemblyViews` in `render.ps1`. An angle is an azimuth (0 = front, 45 = front right, 315 = front left) and an elevation in degrees above the horizon. Avoid 90 (straight down), because the light washes out faces seen head-on.
+- **No noise in git:** a render is only rewritten when its pixels change, so an unchanged model leaves the files byte-identical. FreeCAD's embedded metadata, which includes a timestamp and the local file path, is stripped out.
+- **Not covered:** motion. Animations like the tensioner GIF still come from Fusion.
+
 ## Check the BOM against the STEP file
 
 Run this before committing a new assembly STEP. It reads every part and how many times it's used from the STEP file, then compares those counts with the spreadsheet.
@@ -58,6 +72,7 @@ CAD names don't always match BOM names, so `bom_rules.json` translates them. Fus
 | `update-previews.ps1` | Runs both steps for one variant |
 | `step2stl.py` | STEP to STL using size-based meshing: small hardware coarse, plates and large parts fine. This keeps full assemblies small enough for GitHub's viewer. |
 | `make_bom_md.py` | Spreadsheet to `BOM.md`: sectioned tables, Amazon/AliExpress buy links, and printed parts linked to their STL previews |
+| `render.ps1` / `render.py` | Renders PNGs of the assemblies using FreeCAD's full interface |
 | `step_bom.py` | Checks or updates the BOM spreadsheet against the assembly STEP |
 | `bom_rules.json` | Rules that translate CAD names into BOM lines |
 | `read_xlsx.py` | Minimal `.xlsx` reader using only the Python standard library, used by `make_bom_md.py` |
