@@ -40,7 +40,7 @@ The spacers and tensioner lever arms are the same in every version, so they live
 ## What's different from the printed version
 
 - **Plates:** cut from 6 mm carbon fiber instead of printed. They are the same shapes as the printed plates, dimensioned to nominal size.
-- **Threaded mounting points:** PEM self-clinching standoffs (SO-M3-3ZI and SO-M3-6ZI), pressed into the plates, replace the M3 heat-set inserts.
+- **Threaded mounting points:** PEM self-clinching standoffs (SO-M3-3ZI and SO-M3-6ZI), pressed into the plates, replace the M3 heat-set inserts. We recommend locking each standoff in place with epoxy so it can't fall out during assembly or disassembly. We've used [this epoxy](https://amazon.com/dp/B0CTB8GHYP).
 - **Everything else is the same:** hardware, bearings, pulleys, belts, extrusions and the shared printed parts.
 
 ## Renders

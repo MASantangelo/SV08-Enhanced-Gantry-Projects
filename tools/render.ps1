@@ -47,3 +47,6 @@ $p = Start-Process (Join-Path $FreeCADBin "FreeCAD.exe") -ArgumentList "`"$(Join
 if (-not $p.WaitForExit(900000)) { $p.Kill(); throw "FreeCAD did not finish within 15 minutes" }
 Get-Content $log | Where-Object { $_ }
 if (Select-String -Path $log -Pattern '^ERROR' -Quiet) { throw "Rendering failed; see the log above" }
+
+# Landing-page image: every variant's Front Right render, split on the diagonal
+& (Join-Path $FreeCADBin "python.exe") (Join-Path $PSScriptRoot "landing_composite.py")

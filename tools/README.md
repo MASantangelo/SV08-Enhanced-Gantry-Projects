@@ -34,6 +34,7 @@ powershell -ExecutionPolicy Bypass -File tools\render.ps1 -Variant "Printed Vers
 - **Changing angles:** edit `$MainViews` and `$AssemblyViews` in `render.ps1`. An angle is an azimuth (0 = front, 45 = front right, 315 = front left) and an elevation in degrees above the horizon. Avoid 90 (straight down), because the light washes out faces seen head-on.
 - **No noise in git:** a render is only rewritten when its pixels change, so an unchanged model leaves the files byte-identical. FreeCAD's embedded metadata, which includes a timestamp and the local file path, is stripped out.
 - **Not covered:** motion. Animations like the tensioner GIF still come from Fusion.
+- **Landing image:** after rendering, `landing_composite.py` combines each version's `Full Gantry - Front Right` render into `Renders/Landing - Front Right.png`, split on the diagonal from top right to bottom left. It uses two bands for two versions, and three once the metal version has renders.
 
 ## Check the BOM against the STEP file
 
@@ -73,6 +74,7 @@ CAD names don't always match BOM names, so `bom_rules.json` translates them. Fus
 | `step2stl.py` | STEP to STL using size-based meshing: small hardware coarse, plates and large parts fine. This keeps full assemblies small enough for GitHub's viewer. |
 | `make_bom_md.py` | Spreadsheet to `BOM.md`: sectioned tables, Amazon/AliExpress buy links, and printed parts linked to their STL previews |
 | `render.ps1` / `render.py` | Renders PNGs of the assemblies using FreeCAD's full interface |
+| `landing_composite.py` | Builds the split landing-page image from each version's render |
 | `step_bom.py` | Checks or updates the BOM spreadsheet against the assembly STEP |
 | `bom_rules.json` | Rules that translate CAD names into BOM lines |
 | `read_xlsx.py` | Minimal `.xlsx` reader using only the Python standard library, used by `make_bom_md.py` |
