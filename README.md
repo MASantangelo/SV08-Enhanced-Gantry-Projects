@@ -1,6 +1,8 @@
 # SV08 Enhanced Gantry Projects
 
-AWD conversion for the Sovol SV08 with dual-shear live XY idlers and front belt tensioners.
+**Three styles of parts, one unified system.**
+
+AWD conversion for the Sovol SV08 with dual-shear live XY idlers and front belt tensioners. Build the gantry plates printed, in carbon fiber or in aluminium: every version shares the same layout, hardware, bearings, belts and printed parts, so you can pick the material that suits your tools and budget, or upgrade later without starting over.
 
 > **Built on the work of [Stanciu-Andrei](https://github.com/Stanciu-Andrei).** This project started from the original [Sovol SV08 AWD Mod](https://github.com/Stanciu-Andrei/SovolSV08_AWD_Mod). The working parts here began as those designs before being reworked into the variants below. If you find this useful, go star the original repo and consider [supporting Stanciu on Ko-fi](https://ko-fi.com/C0C510OWNY).
 
