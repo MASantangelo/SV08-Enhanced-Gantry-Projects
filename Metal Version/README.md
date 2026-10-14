@@ -1,8 +1,8 @@
 # SV08 Metal Gantry (5 mm)
 
-**Work in progress.** The plates, every sub-assembly and the full gantry assembly are designed and checked. The bill of materials is still to come.
-
 The metal variant: every gantry plate is machined from 5 mm 6061 aluminium, with tapped M3 holes in place of the heat-set inserts (printed) and PEM standoffs (CF).
+
+- **[Bill of Materials](BOM.md)**: every part with quantities, purchase links and notes. It's generated from `SV08_M5_BOM_from_STEP.xlsx`, which you can also download.
 
 ![The metal gantry, seen from the front right](Renders/Full%20Gantry%20-%20Front%20Right.png)
 
@@ -12,7 +12,7 @@ The metal variant: every gantry plate is machined from 5 mm 6061 aluminium, with
   - [`For Viewing/`](For%20Viewing): STL copy for previewing on GitHub. It's about 32 MB, so give it a few seconds to load.
 - [`Renders/`](Renders): the full gantry from four angles and each sub-assembly, generated from the STEP files
 
-## Plates (available now)
+## Plates
 
 [`Base Components`](Base%20Components) has all 14 parts as STEP files, with 3D previews in [`Base Components/For Viewing`](Base%20Components/For%20Viewing):
 

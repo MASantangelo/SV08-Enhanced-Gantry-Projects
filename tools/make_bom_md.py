@@ -89,7 +89,8 @@ for r in rows:
                              f"(parts common to every version)")
             body += [f"Print files are in {' and '.join(where)}. Click a part name to preview it in 3D.", ""]
         elif section.endswith("Plates"):
-            body += [f"Cutting files are in [`Base Components`]({rel('Base Components')}). "
+            verb = "Machining" if section.startswith("Metal") else "Cutting"
+            body += [f"{verb} files are in [`Base Components`]({rel('Base Components')}). "
                      f"Click a part name to preview it in 3D.", ""]
         body += ["| Qty | Part | Buy | Notes |", "|---:|---|---|---|"]
         continue
