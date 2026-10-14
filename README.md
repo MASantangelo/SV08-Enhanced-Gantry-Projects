@@ -38,6 +38,7 @@ Parts that are the same in every version (the spacers and the tensioner lever ar
 ## Build notes
 
 - **Threadlock the ultra-thin flat heads.** The M3 × 10 ultra-thin flat-head screws thread into the ends of the M3 internally threaded spacers that act as the live idler shafts (2 per front motor assembly, 2 per XY joint). Those shafts spin with the pulleys, so add threadlocker. **Blue (medium strength)** is recommended because you can still remove it with hand tools. Use **red (high strength)** only for a permanent build: removing it takes heat, which can damage the bearings and printed parts nearby.
+- **Leave a gap between each pulley and its bearing.** The GT2 pulleys are held by set screws, so you set their height by hand. Leave about 0.5 mm between the pulley face and the nearest bearing; a feeler gauge or a folded piece of paper makes a good shim while you tighten the set screws. The pulley turns with the shaft but the bearing's outer ring doesn't, so a pulley pushed against the bearing will rub. The toothed part of the pulley is 7 mm wide for a 6 mm belt, so this small offset doesn't affect belt tracking.
 
 ## Changes from the original
 
