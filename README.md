@@ -12,7 +12,7 @@ The design comes in three gantry variants:
 |---|---|---|---|---|---|
 | Printed gantry | 3D printed | 6 mm | [`Printed Version`](Printed%20Version) | Available | [BOM](Printed%20Version/BOM.md) · [XLSX](Printed%20Version/SV08_P6_Printed_BOM_from_STEP.xlsx) |
 | CF gantry | Carbon fiber (CFRP) | 6 mm | [`CF Version`](CF%20Version) | Available | [BOM](CF%20Version/BOM.md) · [XLSX](CF%20Version/SV08_CF6_BOM_from_STEP.xlsx) |
-| Metal gantry | Metal | 5 mm | [`Metal Version`](Metal%20Version) | Work in progress | — |
+| Metal gantry | 6061 aluminium | 5 mm | [`Metal Version`](Metal%20Version) | Work in progress (plates available) | — |
 
 Parts that are the same in every version (the spacers and the tensioner lever arm) live in [`Shared Components`](Shared%20Components), and each version's BOM links there for them.
 

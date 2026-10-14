@@ -1,0 +1,21 @@
+{
+  "_help": "Plate-check findings accepted on purpose. An entry matches the same plate and kind ('wall', 'near-miss' or 'fit') within 1 mm of x/y and 0.05 mm of value (the wall thickness or hole diameter). If the geometry changes, the finding is reported again.",
+  "accepted": [
+    {
+      "plate": "Front Left Top Metal5mm",
+      "kind": "wall",
+      "x": 30.3,
+      "y": -1.9,
+      "value": 1.08,
+      "note": "rim between the countersunk-screw seat and the shoulder-bolt hole; fixed by bearing/shoulder positions, removing it looks worse (accepted 2026-10-13)"
+    },
+    {
+      "plate": "Front Right Top Metal5mm",
+      "kind": "wall",
+      "x": -30.3,
+      "y": -1.9,
+      "value": 1.08,
+      "note": "mirror of the accepted Front Left Top rim (countersunk-screw seat to shoulder-bolt hole) (accepted 2026-10-13)"
+    }
+  ]
+}

@@ -36,6 +36,25 @@ powershell -ExecutionPolicy Bypass -File tools\render.ps1 -Variant "Printed Vers
 - **Not covered:** motion. Animations like the tensioner GIF still come from Fusion.
 - **Landing image:** after rendering, `landing_composite.py` combines each version's `Full Gantry - Front Right` render into `Renders/Landing - Front Right.png`, split on the diagonal from top right to bottom left. It uses two bands for two versions, and three once the metal version has renders.
 
+## Check flat plates (CF, metal)
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools\plate-check.ps1 -Variant "Metal Version" -Reference "CF Version"
+```
+
+For each plate in `<variant>\Base Components`, it checks:
+
+- **Thickness:** must match the number in the file name (`Metal5mm` → 5.00 mm).
+- **Position:** the plate must sit on 0,0,0.
+- **Holes by role:** M2 and M3 tap drills (1.6 and 2.5), close-fit clearance holes (3.2, 4.3, 5.3) and Ø5.00 locating fits. A hole that's close to one of these sizes but not on it is flagged as a near-miss. Inside corner radii of the outline aren't counted as holes.
+- **Metal only:** every plate except spacers needs at least one tapped hole.
+- **Minimum wall:** the thinnest strip of material between two features, or between a feature and the edge, at every depth. Anything under 1.5 mm is flagged (change it with `-MinWall`). Each one is labelled as a through-wall (full plate depth) or a lip (a rim around a pocket).
+- **With `-Reference`:** each hole is matched by position to the same plate in the reference version. It flags precision fits that changed (Ø5.00 shoulder holes, Ø13.00 bearing bores, Ø22.00 motor boss) and holes that exist on only one of the two plates. Intentional changes like PEM → tap are only counted. Add `-ListAllChanges` to list them.
+
+Use `-Only "Front Left Top"` to check a single plate. Plates with findings get a marked-up drawing in `%TEMP%\sv08-plate-check`.
+
+**Accepting a finding on purpose:** add an entry to `plate_accepted.json`, giving the plate, the kind (`wall`, `near-miss` or `fit`), x/y and the measured value, plus a note. A matching finding then prints as `~ accepted` and doesn't count against the plate. If the geometry changes, it's reported as a normal finding again: that means a move of more than 1 mm, or a value change of more than 0.05 mm.
+
 ## Check the BOM against the STEP file
 
 Run this before committing a new assembly STEP. It reads every part and how many times it's used from the STEP file, then compares those counts with the spreadsheet.
@@ -75,6 +94,7 @@ CAD names don't always match BOM names, so `bom_rules.json` translates them. Fus
 | `make_bom_md.py` | Spreadsheet to `BOM.md`: sectioned tables, Amazon/AliExpress buy links, and printed parts linked to their STL previews |
 | `render.ps1` / `render.py` | Renders PNGs of the assemblies using FreeCAD's full interface |
 | `landing_composite.py` | Builds the split landing-page image from each version's render |
+| `plate-check.ps1` / `plate_check.py` | Sanity-checks flat plates: thickness, holes, thin walls, changes from a reference version |
 | `step_bom.py` | Checks or updates the BOM spreadsheet against the assembly STEP |
 | `bom_rules.json` | Rules that translate CAD names into BOM lines |
 | `read_xlsx.py` | Minimal `.xlsx` reader using only the Python standard library, used by `make_bom_md.py` |
