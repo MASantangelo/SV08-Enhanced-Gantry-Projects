@@ -24,6 +24,9 @@ $MainViews = @(
     @{ name = "Overview";    azimuth = 0;   elevation = 60 }
 )
 $AssemblyViews = @( @{ name = "Iso"; azimuth = "outside"; elevation = 30 } )
+# Fixed angles for sub-assemblies whose file position doesn't give a consistent "outside" view.
+# Mirror pairs get mirror views (45 = front right, 315 = front left). Matched on file-name substring.
+$AzimuthOverrides = [ordered]@{ "XY Joint Left" = 315; "XY Joint Right" = 45 }
 
 $jobs = @()
 $main = @(Get-ChildItem $variantDir -File -Filter *.step)
@@ -34,7 +37,15 @@ if ($main.Count -eq 1) {
     Write-Host "No main assembly STEP in $Variant yet; rendering sub-assemblies only."
 }
 Get-ChildItem (Join-Path $variantDir "Base Assemblies") -File -Filter *.step -ErrorAction SilentlyContinue | ForEach-Object {
-    $jobs += @{ name = $_.BaseName; step = $_.FullName; out_dir = $outDir; views = $AssemblyViews }
+    $file = $_
+    $views = $AssemblyViews
+    foreach ($key in $AzimuthOverrides.Keys) {
+        if ($file.BaseName -like "*$key*") {
+            $views = @( @{ name = "Iso"; azimuth = $AzimuthOverrides[$key]; elevation = 30 } )
+            break
+        }
+    }
+    $jobs += @{ name = $file.BaseName; step = $file.FullName; out_dir = $outDir; views = $views }
 }
 
 if ($jobs.Count -eq 0) { Write-Host "Nothing to render in $Variant."; return }

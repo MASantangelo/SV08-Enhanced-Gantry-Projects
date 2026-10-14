@@ -17,9 +17,11 @@ The spacers and tensioner lever arms that every version shares are in [`Shared C
 
 [`Base Assemblies`](Base%20Assemblies) has each finished sub-assembly as STEP, with a 3D preview in [`Base Assemblies/For Viewing`](Base%20Assemblies/For%20Viewing).
 
-| | |
+| XY Joint Left | XY Joint Right |
 |---|---|
-| ![XY joint right, metal](Renders/XY%20Joint%20Right%20Metal5mm%20-%20Iso.png) | **XY Joint Right**: live idler in dual shear on 5 mm metal plates. The bearing retainers are M3 × 5 flat heads that end flush with the plate faces. |
+| ![XY joint left, metal](Renders/XY%20Joint%20Left%20Metal5mm%20-%20Iso.png) | ![XY joint right, metal](Renders/XY%20Joint%20Right%20Metal5mm%20-%20Iso.png) |
+
+Each XY joint is a live idler in dual shear on 5 mm metal plates. The bearing retainers are M3 × 5 flat heads that end flush with the plate faces.
 
 ### Hole guide for machining
 

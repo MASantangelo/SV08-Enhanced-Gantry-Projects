@@ -10,7 +10,7 @@ FILE_DESCRIPTION(
 
 FILE_NAME(
 /* name */ 'XY Joint Right Metal5mm.step',
-/* time_stamp */ '2026-10-13T21:14:00-04:00',
+/* time_stamp */ '2026-10-13T21:37:50-04:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v20.2',
@@ -1004,30 +1004,14 @@ SHAPE_REPRESENTATION_RELATIONSHIP()
 'M3 x 10mm Ultra Thin Flat Head (.8-1mm):2',
 'M3 x 10mm Ultra Thin Flat Head (.8-1mm):2',#23860,#23881,
 'M3 x 10mm Ultra Thin Flat Head (.8-1mm):2');
-#291=NEXT_ASSEMBLY_USAGE_OCCURRENCE(
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw:1',
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw:1',
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw:1',
-#23860,#23882,
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw:1');
-#292=NEXT_ASSEMBLY_USAGE_OCCURRENCE(
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw:2',
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw:2',
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw:2',
-#23860,#23882,
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw:2');
-#293=NEXT_ASSEMBLY_USAGE_OCCURRENCE(
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw:3',
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw:3',
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw:3',
-#23860,#23882,
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw:3');
-#294=NEXT_ASSEMBLY_USAGE_OCCURRENCE(
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw:4',
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw:4',
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw:4',
-#23860,#23882,
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw:4');
+#291=NEXT_ASSEMBLY_USAGE_OCCURRENCE('M3x5mm FHCS:1','M3x5mm FHCS:1',
+'M3x5mm FHCS:1',#23860,#23882,'M3x5mm FHCS:1');
+#292=NEXT_ASSEMBLY_USAGE_OCCURRENCE('M3x5mm FHCS:2','M3x5mm FHCS:2',
+'M3x5mm FHCS:2',#23860,#23882,'M3x5mm FHCS:2');
+#293=NEXT_ASSEMBLY_USAGE_OCCURRENCE('M3x5mm FHCS:3','M3x5mm FHCS:3',
+'M3x5mm FHCS:3',#23860,#23882,'M3x5mm FHCS:3');
+#294=NEXT_ASSEMBLY_USAGE_OCCURRENCE('M3x5mm FHCS:4','M3x5mm FHCS:4',
+'M3x5mm FHCS:4',#23860,#23882,'M3x5mm FHCS:4');
 #295=CONICAL_SURFACE('',#14000,7.5,0.785398163397451);
 #296=CONICAL_SURFACE('',#14003,7.35,0.785398163397445);
 #297=CONICAL_SURFACE('',#14029,6.8,0.785398163397454);
@@ -25682,8 +25666,7 @@ SOLID_ANGLE_UNIT()
 'M3 x 10mm Ultra Thin Flat Head (.8-1mm)',#23904,#23859);
 #23882=PRODUCT_DEFINITION(
 '92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw',
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw',#23905,
-#23859);
+'M3x5mm FHCS',#23905,#23859);
 #23883=PRODUCT_DEFINITION_FORMATION('',$,#23932);
 #23884=PRODUCT_DEFINITION_FORMATION('',$,#23933);
 #23885=PRODUCT_DEFINITION_FORMATION('',$,#23934);
@@ -25756,9 +25739,7 @@ SOLID_ANGLE_UNIT()
 #23927=PRODUCT_RELATED_PRODUCT_CATEGORY(
 'M3 x 10mm Ultra Thin Flat Head (.8-1mm)',
 'M3 x 10mm Ultra Thin Flat Head (.8-1mm)',(#23953));
-#23928=PRODUCT_RELATED_PRODUCT_CATEGORY(
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw',
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw',(#23954));
+#23928=PRODUCT_RELATED_PRODUCT_CATEGORY('M3x5mm FHCS','M3x5mm FHCS',(#23954));
 #23929=APPLICATION_PROTOCOL_DEFINITION('international standard',
 'automotive_design',2009,#23930);
 #23930=APPLICATION_CONTEXT(
@@ -25806,8 +25787,7 @@ $,(#23931));
 'M3 x 10mm Ultra Thin Flat Head (.8-1mm)',$,(#23931));
 #23954=PRODUCT(
 '92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw',
-'92125A125_NO THREADS_18-8 Stainless Steel Hex-Drive Flat Head Screw',$,
-(#23931));
+'M3x5mm FHCS',$,(#23931));
 #23955=PRESENTATION_STYLE_ASSIGNMENT((#23966));
 #23956=PRESENTATION_STYLE_ASSIGNMENT((#23967));
 #23957=PRESENTATION_STYLE_ASSIGNMENT((#23968));
