@@ -16,6 +16,14 @@
       "y": -1.9,
       "value": 1.08,
       "note": "mirror of the accepted Front Left Top rim (countersunk-screw seat to shoulder-bolt hole) (accepted 2026-10-13)"
+    },
+    {
+      "plate": "Tensioner Lever Arm Revised - 5mm Metal Only",
+      "kind": "near-miss",
+      "x": -33.83,
+      "y": 8.04,
+      "value": 5.75,
+      "note": "intentional oversized arc of the adjustment slot, same as the shared lever (accepted 2026-10-13)"
     }
   ]
 }

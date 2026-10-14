@@ -44,7 +44,7 @@ VERBOSE = bool(os.environ.get("PLATE_VERBOSE"))
 # Reference sizes that are precision fits and must survive into the checked variant:
 # 5.00 D5 shoulder-bolt shoulders, 13.00 F695 bearing bores, 22.00 NEMA 17 boss.
 PRESERVE = (5.0, 13.0, 22.0)
-NO_TAP_NEEDED = ("Spacer",)
+NO_TAP_NEEDED = ("Spacer", "Lever")
 
 
 def role(d):

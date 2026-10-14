@@ -19,10 +19,10 @@ Part names link to 3D previews. The STEP files sit next to them in [`Print Ready
 
 ## For Cutting
 
-Nominal size, for parts that can also be cut from carbon fiber or metal instead of printed.
+Nominal size, for parts that can also be cut from carbon fiber instead of printed.
 
 | Qty | Part |
 |---:|---|
 | 4 | [Tensioner Lever Arm Revised](For%20Cutting/For%20Viewing/Tensioner%20Lever%20Arm%20Revised.stl) |
 
-The tensioner lever arm works either way: print it from `Print Ready`, or cut it from CF or metal using this file.
+The tensioner lever arm works either way: print it from `Print Ready`, or cut it from carbon fiber using this file. **Metal builds use their own flat 5 mm lever arm** from [`Metal Version/Base Components`](../Metal%20Version/Base%20Components).
