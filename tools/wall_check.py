@@ -76,7 +76,9 @@ def orient(shape):
     n = max(planes, key=lambda f: f.Area).normalAt(0, 0)
     rot = FreeCAD.Rotation(n, V(0, 0, 1))
     m = FreeCAD.Placement(V(), rot).toMatrix()
-    s = shape.transformGeometry(m) if abs(rot.Angle) > 1e-9 else shape.copy()
+    s = shape.copy()
+    if abs(rot.Angle) > 1e-9:
+        s.transformShape(m)  # rigid move; keeps planes as planes (transformGeometry can turn them into B-splines)
     return s, m.inverse()
 
 
@@ -177,6 +179,10 @@ def walls(s, inv):
 
 
 def floors(s, inv):
+    """Material thickness along Z under every upward-facing flat face (and so over every
+    downward-facing one): sample points on the face and find the nearest downward-facing flat
+    face directly below each. Sampling avoids booleans between faces, which fail silently on
+    some merged pocket floors."""
     up, down = [], []
     for f in s.Faces:
         if isinstance(f.Surface, Part.Plane) and f.BoundBox.ZLength < 1e-6:
@@ -184,25 +190,26 @@ def floors(s, inv):
     out = []
     for fu in up:
         zu = fu.BoundBox.ZMin
-        best = None
-        for fd in down:
-            zd = fd.BoundBox.ZMin
-            if zd >= zu - 1e-6 or (best and zu - zd >= best[0]):
-                continue
-            a = fu.copy()
-            a.translate(V(0, 0, -zu))
-            c = fd.copy()
-            c.translate(V(0, 0, -zd))
-            try:
-                com = a.common(c)
-            except Exception:
-                continue
-            if com.Area > 0.01:
-                best = (zu - zd, com)
-        if best and best[0] < MIN - 1e-3:
-            c = best[1].CenterOfMass
-            p = inv.multVec(V(c.x, c.y, zu))
-            out.append({"d": best[0], "x": p.x, "y": p.y, "area": best[1].Area})
+        below = [fd for fd in down if fd.BoundBox.ZMin < zu - 1e-6]
+        pts, tris = fu.tessellate(0.2)
+        samples = [(pts[a] + pts[b] + pts[c]) * (1 / 3) for a, b, c in tris] + list(pts)
+        thin = []
+        for p in samples:
+            depth = None
+            for fd in below:
+                zd = fd.BoundBox.ZMin
+                if depth is not None and zu - zd >= depth:
+                    continue
+                if fd.isInside(V(p.x, p.y, zd), 1e-4, True):
+                    depth = zu - zd
+            if depth is not None and depth < MIN - 1e-3:
+                thin.append((depth, p))
+        if thin:
+            d = min(t for t, _ in thin)
+            cx = sum(p.x for _, p in thin) / len(thin)
+            cy = sum(p.y for _, p in thin) / len(thin)
+            q = inv.multVec(V(cx, cy, zu))
+            out.append({"d": d, "x": q.x, "y": q.y, "area": fu.Area})
     return out
 
 
@@ -228,7 +235,7 @@ def check(path):
             report("grid", w["x"], w["y"], w["d"],
                    f"OFF-GRID WALL {w['d']:.2f} mm {where} (multiples of {GRID:g}: {lo:.2f} / {hi:.2f})")
     for w in floors(s, inv):
-        report("floor", w["x"], w["y"], w["d"], f"THIN FLOOR {w['d']:.2f} mm near ({w['x']:.2f}, {w['y']:.2f}), over {w['area']:.1f} mm2")
+        report("floor", w["x"], w["y"], w["d"], f"THIN FLOOR {w['d']:.2f} mm near ({w['x']:.2f}, {w['y']:.2f}) (on a {w['area']:.1f} mm2 face)")
     if LAYER:
         for h, c in sorted(flat_levels(s).items()):
             if off_grid(h, LAYER) > TOL:

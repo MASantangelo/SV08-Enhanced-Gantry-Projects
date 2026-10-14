@@ -165,7 +165,7 @@ Cutting files are in [`Base Components`](Base%20Components). Click a part name t
 
 | Qty | Part | Buy | Notes |
 |---:|---|---|---|
-| 4 | [XY Live Idler Spacer 5mm CF6mm](Base%20Components/For%20Viewing/XY%20Live%20Idler%20Spacer%205mm%20CF6mm.stl) |  | Cut from 6mm carbon fiber |
+| 4 | [XY Live Idler Spacer 5mm CF6mm](Base%20Components/For%20Viewing/XY%20Live%20Idler%20Spacer%205mm%20CF6mm.stl) |  | Cut from the same 6mm carbon fiber plate and machined down to 5mm (no separate 5mm sheet needed). |
 | 1 | [Back Left Bottom Plate CF6mm](Base%20Components/For%20Viewing/Back%20Left%20Bottom%20Plate%20CF6mm.stl) |  | Cut from 6mm carbon fiber |
 | 1 | [Back Left Top Plate CF6mm](Base%20Components/For%20Viewing/Back%20Left%20Top%20Plate%20CF6mm.stl) |  | Cut from 6mm carbon fiber |
 | 1 | [Back Right Bottom Plate CF6mm](Base%20Components/For%20Viewing/Back%20Right%20Bottom%20Plate%20CF6mm.stl) |  | Cut from 6mm carbon fiber |

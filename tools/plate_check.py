@@ -250,10 +250,15 @@ def draw(plate, marks, dst):
 
 def check(path):
     plate = Plate(path)
-    findings, marks = [], []
+    findings, marks, print_notes = [], [], []
     exp = expected_thickness(plate.name)
+    sizes = [float(m) for m in re.findall(r"(\d+(?:\.\d+)?)\s*mm", plate.name)[:-1]]
     if exp is not None and abs(plate.thickness - exp) > 0.01:
-        findings.append(f"thickness {plate.thickness:.2f} mm, name says {exp:g}")
+        if any(abs(plate.thickness - s) <= 0.01 for s in sizes):
+            # e.g. "XY Live Idler Spacer 5mm CF6mm": machined to 5 mm from 6 mm stock
+            print_notes.append(f"machined to {plate.thickness:g} mm from {exp:g} mm stock (per the name)")
+        else:
+            findings.append(f"thickness {plate.thickness:.2f} mm, name says {exp:g}")
     bb = plate.shape.BoundBox
     if not all(lo - 1 <= 0 <= hi + 1 for lo, hi in ((bb.XMin, bb.XMax), (bb.YMin, bb.YMax), (bb.ZMin, bb.ZMax))):
         findings.append(f"not at 0,0,0 (X {bb.XMin:.1f}..{bb.XMax:.1f} Y {bb.YMin:.1f}..{bb.YMax:.1f} Z {bb.ZMin:.1f}..{bb.ZMax:.1f})")
@@ -287,7 +292,7 @@ def check(path):
         flag("wall", mid.x, mid.y, gap, f"THIN WALL {gap:.2f} mm ({kind}) near ({mid.x:.2f}, {mid.y:.2f})",
              f"{gap:.2f} {'thru' if kind == 'through' else 'lip'}")
 
-    changes, other_changes, print_notes = [], 0, []
+    changes, other_changes = [], 0
     rp = ref_path_for(plate.name)
     if REF and not rp:
         findings.append(f"no matching plate in {REF}")
