@@ -1,25 +1,33 @@
-"""Build the landing-page image: the same render of each variant, split on diagonals.
+"""Build the landing-page image: the same render of each variant, split into labelled regions.
 
 Usage (FreeCAD's python.exe):  python tools/landing_composite.py
 Writes Renders/Landing - Front Right.png at the repo root.
 
-Uses <variant>/Renders/Full Gantry - Front Right.png for each variant that has one, in the
-order Printed, CF, Metal. With two variants the image is split on the diagonal from top right
-to bottom left (first variant upper left, second lower right). With three, two parallel
-diagonals give three bands. Renders are aligned on the top-left of their content, since each
-was auto-cropped separately. Like render.py, it writes pixels only and skips unchanged output.
+Uses <variant>/Renders/Full Gantry - Front Right.png for each variant in REGIONS that has one.
+With three variants the image is split in a "Y" from its centre: seams run to the top-left
+corner, the top-right corner and the bottom middle, giving a left, a top and a right region.
+With two, a single vertical seam splits it down the middle. Each region gets its variant's label.
+Renders are aligned on the top-left of their content, since each was auto-cropped separately.
+Like render.py, it writes pixels only and skips unchanged output.
 """
-import math
 import os
 import sys
 
 from PySide2 import QtCore, QtGui
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VARIANTS = ["Printed Version", "CF Version", "Metal Version"]
+# (variant folder, label, region, label centre as fractions of the image)
+REGIONS = [
+    ("Printed Version", "Printed 6mm", "left", (0.13, 0.92)),
+    ("Metal Version", "Aluminum 5mm", "top", (0.50, 0.06)),
+    ("CF Version", "Carbon Fiber 6mm", "right", (0.85, 0.92)),
+]
 VIEW = "Full Gantry - Front Right.png"
 OUT = os.path.join(ROOT, "Renders", "Landing - Front Right.png")
 SEAM = QtGui.QColor(200, 200, 200)
+TEXT = QtGui.QColor(40, 40, 40)
+LABEL_BG = QtGui.QColor(255, 255, 255, 225)
+LABEL_EDGE = QtGui.QColor(190, 190, 190)
 
 
 def content_origin(img, step=2, threshold=248):
@@ -32,52 +40,74 @@ def content_origin(img, step=2, threshold=248):
     return QtCore.QPoint(min(xs), min(ys))
 
 
+def region_polygons(w, h, names):
+    """Polygons (lists of points) for each region name, plus the seam segments."""
+    c = (w / 2, h / 2)
+    if len(names) == 3:
+        polys = {
+            "left": [c, (0, 0), (0, h), (w / 2, h)],
+            "top": [c, (0, 0), (w, 0)],
+            "right": [c, (w, 0), (w, h), (w / 2, h)],
+        }
+        seams = [(c, (0, 0)), (c, (w, 0)), (c, (w / 2, h))]
+    else:
+        polys = {"left": [(0, 0), (w / 2, 0), (w / 2, h), (0, h)], "right": [(w / 2, 0), (w, 0), (w, h), (w / 2, h)]}
+        polys["top"] = polys["right"]
+        seams = [((w / 2, 0), (w / 2, h))]
+    return polys, seams
+
+
 def main():
     app = QtGui.QGuiApplication(sys.argv[:1])  # noqa: F841 (needed for QPainter)
-    srcs = [(v, os.path.join(ROOT, v, "Renders", VIEW)) for v in VARIANTS]
-    imgs = [(v, QtGui.QImage(p).convertToFormat(QtGui.QImage.Format_RGB32)) for v, p in srcs if os.path.exists(p)]
-    if len(imgs) < 2:
-        print(f"Only {len(imgs)} variant render(s) found; nothing to composite.")
+    regions = []
+    for folder, label, where, centre in REGIONS:
+        path = os.path.join(ROOT, folder, "Renders", VIEW)
+        if os.path.exists(path):
+            regions.append((folder, label, where, centre, QtGui.QImage(path).convertToFormat(QtGui.QImage.Format_RGB32)))
+    if len(regions) < 2:
+        print(f"Only {len(regions)} variant render(s) found; nothing to composite.")
         return
-    origins = [content_origin(img) for _, img in imgs]
+    origins = [content_origin(r[4]) for r in regions]
     # Shift every image so its content's top-left lands where the first image's does.
     shifts = [origins[0] - o for o in origins]
-    w = max(img.width() + s.x() for (_, img), s in zip(imgs, shifts))
-    h = max(img.height() + s.y() for (_, img), s in zip(imgs, shifts))
+    w = max(r[4].width() + s.x() for r, s in zip(regions, shifts))
+    h = max(r[4].height() + s.y() for r, s in zip(regions, shifts))
 
     out = QtGui.QImage(w, h, QtGui.QImage.Format_RGB32)
     out.fill(QtCore.Qt.white)
     p = QtGui.QPainter(out)
     p.setRenderHint(QtGui.QPainter.Antialiasing)
-    n = len(imgs)
-    # Diagonal bands parallel to the top-right -> bottom-left diagonal. Band boundary k is the
-    # line x/w + y/h = 2k/n, so with two variants the single seam runs corner to corner.
-    def seam_ends(t):
-        """Where the line x/w + y/h = t meets the image edges."""
-        if t <= 1:
-            return (w * t, 0.0), (0.0, h * t)
-        return (float(w), h * (t - 1)), (w * (t - 1), float(h))
+    p.setRenderHint(QtGui.QPainter.TextAntialiasing)
+    polys, seams = region_polygons(w, h, [r[2] for r in regions])
+    if len(regions) == 2:  # two variants: first on the left, second on the right
+        regions = [regions[0][:2] + ("left",) + regions[0][3:], regions[1][:2] + ("right",) + regions[1][3:]]
 
-    def band(k):
-        a, b = 2.0 * k / n, 2.0 * (k + 1) / n  # region between x/w + y/h = a and = b
-        pts = list(seam_ends(a)) + list(seam_ends(b))
-        pts += [(x, y) for x, y in ((0, 0), (w, 0), (w, h), (0, h)) if a <= x / w + y / h <= b]
-        cx = sum(x for x, _ in pts) / len(pts)
-        cy = sum(y for _, y in pts) / len(pts)
-        pts.sort(key=lambda q: math.atan2(q[1] - cy, q[0] - cx))  # convex region: sort around its centre
+    for r, s in zip(regions, shifts):
         path = QtGui.QPainterPath()
-        path.addPolygon(QtGui.QPolygonF([QtCore.QPointF(x, y) for x, y in pts]))
-        return path
-
-    for k, ((_, img), s) in enumerate(zip(imgs, shifts)):
+        path.addPolygon(QtGui.QPolygonF([QtCore.QPointF(x, y) for x, y in polys[r[2]]]))
+        path.closeSubpath()
         p.save()
-        p.setClipPath(band(k))
-        p.drawImage(s, img)
+        p.setClipPath(path)
+        p.drawImage(s, r[4])
         p.restore()
     p.setPen(QtGui.QPen(SEAM, 3))
-    for k in range(1, n):
-        (x1, y1), (x2, y2) = seam_ends(2.0 * k / n)
+    for (x1, y1), (x2, y2) in seams:
         p.drawLine(QtCore.QPointF(x1, y1), QtCore.QPointF(x2, y2))
+
+    font = QtGui.QFont("Segoe UI")
+    font.setPixelSize(max(18, int(h * 0.038)))
+    font.setBold(True)
+    p.setFont(font)
+    fm = QtGui.QFontMetrics(font)
+    pad_x, pad_y = int(font.pixelSize() * 0.55), int(font.pixelSize() * 0.3)
+    for folder, label, where, (fx, fy), _ in regions:
+        tw, th = fm.horizontalAdvance(label) + 2 * pad_x, fm.height() + 2 * pad_y
+        box = QtCore.QRectF(fx * w - tw / 2, fy * h - th / 2, tw, th)
+        p.setPen(QtGui.QPen(LABEL_EDGE, 2))
+        p.setBrush(LABEL_BG)
+        p.drawRoundedRect(box, th * 0.25, th * 0.25)
+        p.setPen(TEXT)
+        p.drawText(box, QtCore.Qt.AlignCenter, label)
     p.end()
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
@@ -85,7 +115,7 @@ def main():
         print(f"SAME {os.path.relpath(OUT, ROOT)}")
         return
     out.save(OUT)
-    print(f"OK   {os.path.relpath(OUT, ROOT)}  {w}x{h}  ({', '.join(v for v, _ in imgs)})")
+    print(f"OK   {os.path.relpath(OUT, ROOT)}  {w}x{h}  ({', '.join(r[0] for r in regions)})")
 
 
 if __name__ == "__main__":

@@ -6,7 +6,7 @@ AWD conversion for the Sovol SV08 with dual-shear live XY idlers and front belt 
 
 > **Built on the work of [Stanciu-Andrei](https://github.com/Stanciu-Andrei).** This project started from the original [Sovol SV08 AWD Mod](https://github.com/Stanciu-Andrei/SovolSV08_AWD_Mod). The working parts here began as those designs before being reworked into the variants below. If you find this useful, go star the original repo and consider [supporting Stanciu on Ko-fi](https://ko-fi.com/C0C510OWNY).
 
-![The gantry split on the diagonal: printed 6 mm plates (upper left) and carbon fiber 6 mm plates (lower right)](Renders/Landing%20-%20Front%20Right.png)
+![The gantry split three ways from the centre: printed 6 mm on the left, aluminium 5 mm at the top and carbon fiber 6 mm on the right](Renders/Landing%20-%20Front%20Right.png)
 
 The design comes in three gantry variants:
 
@@ -14,7 +14,7 @@ The design comes in three gantry variants:
 |---|---|---|---|---|---|
 | Printed gantry | 3D printed | 6 mm | [`Printed Version`](Printed%20Version) | Available | [BOM](Printed%20Version/BOM.md) · [XLSX](Printed%20Version/SV08_P6_Printed_BOM_from_STEP.xlsx) |
 | CF gantry | Carbon fiber (CFRP) | 6 mm | [`CF Version`](CF%20Version) | Available | [BOM](CF%20Version/BOM.md) · [XLSX](CF%20Version/SV08_CF6_BOM_from_STEP.xlsx) |
-| Metal gantry | 6061 aluminium | 5 mm | [`Metal Version`](Metal%20Version) | Work in progress (plates available) | — |
+| Metal gantry | 6061 aluminium | 5 mm | [`Metal Version`](Metal%20Version) | Work in progress (plates and assemblies available, BOM to come) | — |
 
 Parts that are the same in every version (the spacers and the tensioner lever arm) live in [`Shared Components`](Shared%20Components), and each version's BOM links there for them.
 

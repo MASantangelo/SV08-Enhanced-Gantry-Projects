@@ -1,8 +1,16 @@
 # SV08 Metal Gantry (5 mm)
 
-**Work in progress.** The plates are designed and checked. Sub-assemblies are being added one at a time; the full assembly, bill of materials and remaining renders are still to come.
+**Work in progress.** The plates, every sub-assembly and the full gantry assembly are designed and checked. The bill of materials is still to come.
 
 The metal variant: every gantry plate is machined from 5 mm 6061 aluminium, with tapped M3 holes in place of the heat-set inserts (printed) and PEM standoffs (CF).
+
+![The metal gantry, seen from the front right](Renders/Full%20Gantry%20-%20Front%20Right.png)
+
+## Full assembly
+
+- `SV08-M5 Dual Shear Live Idlers Front Tensioners.step`: the full gantry assembly
+  - [`For Viewing/`](For%20Viewing): STL copy for previewing on GitHub. It's about 32 MB, so give it a few seconds to load.
+- [`Renders/`](Renders): the full gantry from four angles and each sub-assembly, generated from the STEP files
 
 ## Plates (available now)
 
@@ -14,7 +22,7 @@ The metal variant: every gantry plate is machined from 5 mm 6061 aluminium, with
 
 The spacers that every version shares are in [`Shared Components`](../Shared%20Components). Metal builds use the metal lever arm above instead of the shared one.
 
-## Sub-assemblies (in progress)
+## Sub-assemblies
 
 [`Base Assemblies`](Base%20Assemblies) has each finished sub-assembly as STEP, with a 3D preview in [`Base Assemblies/For Viewing`](Base%20Assemblies/For%20Viewing).
 

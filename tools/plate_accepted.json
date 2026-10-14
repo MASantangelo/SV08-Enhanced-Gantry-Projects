@@ -18,6 +18,22 @@
       "note": "mirror of the accepted Front Left Top rim (countersunk-screw seat to shoulder-bolt hole) (accepted 2026-10-13)"
     },
     {
+      "plate": "Front Left Top Metal5mm",
+      "kind": "wall",
+      "x": 35.49,
+      "y": 3.21,
+      "value": 1.08,
+      "note": "tongue between the retainer counterbore and the motor-boss recess (motor-side 2.2 mm layer), tip filleted; kept for looks, revisit if it machines badly (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Top Metal5mm",
+      "kind": "wall",
+      "x": -35.49,
+      "y": 3.21,
+      "value": 1.08,
+      "note": "mirror of the accepted Front Left Top tongue (accepted 2026-10-14)"
+    },
+    {
       "plate": "Tensioner Lever Arm Revised - 5mm Metal Only",
       "kind": "near-miss",
       "x": -33.83,
