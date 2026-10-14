@@ -10,7 +10,8 @@ Edit $MainViews / $AssemblyViews below to change camera angles (see tools\render
 param(
     [Parameter(Mandatory)][string]$Variant,
     [string]$FreeCADBin = "C:\Program Files\FreeCAD 1.0\bin",
-    [int]$Width = 1600
+    [int]$Width = 1600,
+    [string]$Only = ""   # render only STEP files whose name contains this text
 )
 $ErrorActionPreference = "Stop"
 $root = Split-Path $PSScriptRoot -Parent
@@ -48,6 +49,7 @@ Get-ChildItem (Join-Path $variantDir "Base Assemblies") -File -Filter *.step -Er
     $jobs += @{ name = $file.BaseName; step = $file.FullName; out_dir = $outDir; views = $views }
 }
 
+if ($Only) { $jobs = @($jobs | Where-Object { $_.name -like "*$Only*" }) }
 if ($jobs.Count -eq 0) { Write-Host "Nothing to render in $Variant."; return }
 
 $tmp = Join-Path ([IO.Path]::GetTempPath()) "sv08-render"
