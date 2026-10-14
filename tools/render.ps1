@@ -26,12 +26,18 @@ $MainViews = @(
 $AssemblyViews = @( @{ name = "Iso"; azimuth = "outside"; elevation = 30 } )
 
 $jobs = @()
-$main = Get-ChildItem $variantDir -File -Filter *.step
-if ($main.Count -ne 1) { throw "Expected one main .step in $Variant, found $($main.Count)" }
-$jobs += @{ name = "Full Gantry"; step = $main[0].FullName; out_dir = $outDir; views = $MainViews }
+$main = @(Get-ChildItem $variantDir -File -Filter *.step)
+if ($main.Count -gt 1) { throw "Expected at most one main .step in $Variant, found $($main.Count)" }
+if ($main.Count -eq 1) {
+    $jobs += @{ name = "Full Gantry"; step = $main[0].FullName; out_dir = $outDir; views = $MainViews }
+} else {
+    Write-Host "No main assembly STEP in $Variant yet; rendering sub-assemblies only."
+}
 Get-ChildItem (Join-Path $variantDir "Base Assemblies") -File -Filter *.step -ErrorAction SilentlyContinue | ForEach-Object {
     $jobs += @{ name = $_.BaseName; step = $_.FullName; out_dir = $outDir; views = $AssemblyViews }
 }
+
+if ($jobs.Count -eq 0) { Write-Host "Nothing to render in $Variant."; return }
 
 $tmp = Join-Path ([IO.Path]::GetTempPath()) "sv08-render"
 New-Item -ItemType Directory -Force $tmp | Out-Null

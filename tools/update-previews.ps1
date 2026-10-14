@@ -52,10 +52,12 @@ if (-not $SkipBom) {
 }
 
 if (-not $SkipRenders) {
-    if (Get-ChildItem $variantDir -File -Filter *.step) {
+    $hasMain = Get-ChildItem $variantDir -File -Filter *.step
+    $hasSubs = Get-ChildItem (Join-Path $variantDir "Base Assemblies") -File -Filter *.step -ErrorAction SilentlyContinue
+    if ($hasMain -or $hasSubs) {
         Write-Host "== Renders" -ForegroundColor Cyan
         & (Join-Path $PSScriptRoot "render.ps1") -Variant $Variant -FreeCADBin $FreeCADBin
     } else {
-        Write-Host "No main assembly STEP in $Variant; skipping renders"
+        Write-Host "No assembly STEPs in $Variant; skipping renders"
     }
 }

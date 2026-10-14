@@ -1,6 +1,6 @@
 # SV08 Metal Gantry (5 mm)
 
-**Work in progress.** The plates are designed and checked; the assemblies, bill of materials and renders are still to come.
+**Work in progress.** The plates are designed and checked. Sub-assemblies are being added one at a time; the full assembly, bill of materials and remaining renders are still to come.
 
 The metal variant: every gantry plate is machined from 5 mm 6061 aluminium, with tapped M3 holes in place of the heat-set inserts (printed) and PEM standoffs (CF).
 
@@ -12,6 +12,14 @@ The metal variant: every gantry plate is machined from 5 mm 6061 aluminium, with
 - the 5 mm XY live idler spacer
 
 The spacers and tensioner lever arms that every version shares are in [`Shared Components`](../Shared%20Components).
+
+## Sub-assemblies (in progress)
+
+[`Base Assemblies`](Base%20Assemblies) has each finished sub-assembly as STEP, with a 3D preview in [`Base Assemblies/For Viewing`](Base%20Assemblies/For%20Viewing).
+
+| | |
+|---|---|
+| ![XY joint right, metal](Renders/XY%20Joint%20Right%20Metal5mm%20-%20Iso.png) | **XY Joint Right**: live idler in dual shear on 5 mm metal plates. The bearing retainers are M3 × 5 flat heads that end flush with the plate faces. |
 
 ### Hole guide for machining
 
@@ -26,5 +34,11 @@ The spacers and tensioner lever arms that every version shares are in [`Shared C
 | **Tensioner slot** | 5.3 mm wide | Clearance, so the tensioner shaft can slide |
 
 The pockets and steps (bearing seats, countersunk screw seats, the pulley-clearance relief on the back top plates) need a mill; a waterjet or laser can't cut partial-depth features.
+
+### Build note: shoulder-bolt tips stick out 1 mm
+
+The D5 M3 shoulder bolts are the same ones the CF and printed versions use. Their M3 thread is 6 mm long, but the metal bottom plates are 5 mm thick, so about **1 mm of thread sticks out** under each bottom plate when the shoulder is seated. This is expected and doesn't affect function.
+
+If it bothers you, trim the extra millimetre off the thread end: cut it, then run an M3 nut off over the cut to clean up the thread. **Don't put a washer under the bolt head to hide the tip.** That lifts the shoulder off the bottom plate, and the shoulder seating on that plate is what holds the bearing axle rigidly.
 
 Every plate passes [`tools/plate-check.ps1`](../tools), which checks thickness, hole sizes, minimum wall thickness (1.5 mm) and left/right mirror symmetry.
