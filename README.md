@@ -35,6 +35,10 @@ Parts that are the same in every version (the spacers and the tensioner lever ar
 - [`Renders/`](Printed%20Version/Renders): images of the full gantry and each sub-assembly, generated automatically from the STEP files so they always match the current design
 - [`Screenshots/`](Printed%20Version/Screenshots): Fusion screenshots of the assemblies and belt paths, plus an [MP4 of the tensioner motion](Printed%20Version/Screenshots/Front%20Left%20Tensioner%20Motion.mp4)
 
+## Build notes
+
+- **Threadlock the ultra-thin flat heads.** The M3 × 10 ultra-thin flat-head screws thread into the ends of the M3 internally threaded spacers that act as the live idler shafts (2 per front motor assembly, 2 per XY joint). Those shafts spin with the pulleys, so add threadlocker. **Blue (medium strength)** is recommended because you can still remove it with hand tools. Use **red (high strength)** only for a permanent build: removing it takes heat, which can damage the bearings and printed parts nearby.
+
 ## Changes from the original
 
 Compared with [Stanciu-Andrei's Sovol SV08 AWD Mod](https://github.com/Stanciu-Andrei/SovolSV08_AWD_Mod):

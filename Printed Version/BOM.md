@@ -34,7 +34,7 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 | 12 | M3 x 10mm BHCS | [Amazon](https://amazon.com/dp/B0GJK7Z9DH) |  |
 | 8 | M3 x 35mm SHCS | [Amazon](https://amazon.com/dp/B0GHY9ZCLC) |  |
 | 8 | M4 x 45mm BHCS | [Amazon](https://amazon.com/dp/B0GH6G1R1G) |  |
-| 8 | M3 x 10mm Ultra Thin Flat Head (.8-1mm) | [Amazon](https://amazon.com/dp/B0H61WCTBX) | Ultra-thin head (.8-1mm). 2 per front motor assembly and 2 per XY joint. |
+| 8 | M3 x 10mm Ultra Thin Flat Head (.8-1mm) | [Amazon](https://amazon.com/dp/B0H61WCTBX) | Ultra-thin head (.8-1mm). 2 per front motor assembly and 2 per XY joint. Use threadlocker: blue (medium, removable) recommended; red (high strength) only for a permanent build, since removing it takes heat that can damage bearings and printed parts. |
 | 4 | M2 x 2mm Set Screw | [Amazon](https://amazon.com/dp/B0DDJBSF6B) | Should come with the GT2 20-Tooth Pulley - Live Idler Version (2 per pulley, 4 total). |
 | 4 | M2 x 8mm SHCS | [Amazon](https://amazon.com/dp/B0D4JMPT86) |  |
 | 4 | M4 x 20mm BHCS | [Amazon](https://amazon.com/dp/B0DYSQZHC9) |  |
