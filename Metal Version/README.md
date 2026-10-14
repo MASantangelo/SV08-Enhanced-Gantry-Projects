@@ -23,9 +23,12 @@ The spacers that every version shares are in [`Shared Components`](../Shared%20C
 | ![XY joint left, metal](Renders/XY%20Joint%20Left%20Metal5mm%20-%20Iso.png) | ![XY joint right, metal](Renders/XY%20Joint%20Right%20Metal5mm%20-%20Iso.png) |
 | **Back Left Motor** | **Back Right Motor** |
 | ![Back left motor assembly, metal](Renders/Back%20Left%20Motor%20Assembly%20Metal5mm%20-%20Iso.png) | ![Back right motor assembly, metal](Renders/Back%20Right%20Motor%20Assembly%20Metal5mm%20-%20Iso.png) |
+| **Front Left Motor** | |
+| ![Front left motor assembly, metal](Renders/Front%20Left%20Motor%20Assembly%20Metal5mm%20-%20Iso.png) | |
 
 - **XY joints:** live idler in dual shear. The bearing retainers are M3 × 5 flat heads that end flush with the plate faces.
 - **Back motor corners:** the bearing retainers are M3 × 4 flat heads, which end on the floor of the pulley-clearance relief. The D2F endstop screws straight into tapped M2 holes, so no nuts are needed. Its M2 × 8 screws stick out about 0.2 mm under the top plate; a 0.2 mm shim from the tensioner hardware covers that if you want it flush.
+- **Front motor corners:** the bearing pocket on the front **top** plates is flipped so its flange ledge is on the motor side. The bearing sits 1.2 mm below the motor face, the ultra-thin flat head on it clears the motor by 0.2 mm, and the clamp load goes into the plate instead of the retainer screws. Retainers are M3 × 4 on the top plate and M3 × 5 on the bottom. The tensioner uses the 5 mm metal lever arms. See the build note below about the shoulder bolts and the motor.
 
 ### Hole guide for machining
 
@@ -47,5 +50,12 @@ The pockets and steps (bearing seats, countersunk screw seats, the pulley-cleara
 The D5 M3 shoulder bolts are the same ones the CF and printed versions use. Their M3 thread is 6 mm long, but the metal bottom plates are 5 mm thick, so about **1 mm of thread sticks out** under each bottom plate when the shoulder is seated. This is expected and doesn't affect function.
 
 If it bothers you, trim the extra millimetre off the thread end: cut it, then run an M3 nut off over the cut to clean up the thread. **Don't put a washer under the bolt head to hide the tip.** That lifts the shoulder off the bottom plate, and the shoulder seating on that plate is what holds the bearing axle rigidly.
+
+### Build note: front corner shoulder bolts thread into the motor
+
+On the **front** motor corners, the four D5 M3 × 30 shoulder bolts are also the motor mounting screws: they pass up through both plates and thread into the motor. With the 5 mm plates, all 6 mm of thread would go into the motor, but NEMA 17 mounting holes are often only about 4.5 mm deep, so the bolts could bottom out before the motor is clamped. Use one of these:
+
+- **2 mm of washers under each shoulder-bolt head** (two 1 mm M5-size washers, which clear the Ø5 shoulder). This leaves about 4 mm of thread in the motor. Unlike on the XY joints and back corners, a washer is fine here: the shoulder still locates in both plates, and the bolt clamps the motor onto the stack.
+- **Or trim the M3 thread to 4 mm** (cut 2 mm off, then run an M3 nut off over the cut to clean up the thread), with no washers.
 
 Every plate passes [`tools/plate-check.ps1`](../tools), which checks thickness, hole sizes, minimum wall thickness (1.5 mm) and left/right mirror symmetry.
