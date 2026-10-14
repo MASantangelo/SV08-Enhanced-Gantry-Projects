@@ -20,8 +20,8 @@ The spacers and tensioner lever arms that every version shares are in [`Shared C
 | XY Joint Left | XY Joint Right |
 |---|---|
 | ![XY joint left, metal](Renders/XY%20Joint%20Left%20Metal5mm%20-%20Iso.png) | ![XY joint right, metal](Renders/XY%20Joint%20Right%20Metal5mm%20-%20Iso.png) |
-| **Back Right Motor** | |
-| ![Back right motor assembly, metal](Renders/Back%20Right%20Motor%20Assembly%20Metal5mm%20-%20Iso.png) | |
+| **Back Left Motor** | **Back Right Motor** |
+| ![Back left motor assembly, metal](Renders/Back%20Left%20Motor%20Assembly%20Metal5mm%20-%20Iso.png) | ![Back right motor assembly, metal](Renders/Back%20Right%20Motor%20Assembly%20Metal5mm%20-%20Iso.png) |
 
 - **XY joints:** live idler in dual shear. The bearing retainers are M3 × 5 flat heads that end flush with the plate faces.
 - **Back motor corners:** the bearing retainers are M3 × 4 flat heads, which end on the floor of the pulley-clearance relief. The D2F endstop screws straight into tapped M2 holes, so no nuts are needed. Its M2 × 8 screws stick out about 0.2 mm under the top plate; a 0.2 mm shim from the tensioner hardware covers that if you want it flush.
