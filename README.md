@@ -2,43 +2,76 @@
 
 **Three styles of parts, one unified system.**
 
-AWD conversion for the Sovol SV08 with dual-shear live XY idlers and front belt tensioners. Build the gantry plates printed, in carbon fiber or in aluminium: every version shares the same layout, hardware, bearings, belts and printed parts, so you can pick the material that suits your tools and budget, or upgrade later without starting over.
+AWD conversion for the Sovol SV08 with dual-shear live XY idlers and front belt tensioners. Build the gantry plates in carbon fiber, in aluminium or printed: every version shares the same layout, hardware, bearings, belts and printed parts, so you can pick the material that suits your tools and budget, or upgrade later without starting over.
 
 > **Built on the work of [Stanciu-Andrei](https://github.com/Stanciu-Andrei).** This project started from the original [Sovol SV08 AWD Mod](https://github.com/Stanciu-Andrei/SovolSV08_AWD_Mod). The working parts here began as those designs before being reworked into the variants below. If you find this useful, go star the original repo and consider [supporting Stanciu on Ko-fi](https://ko-fi.com/C0C510OWNY).
 
 ![The gantry split three ways from the centre: printed 6 mm on the left, aluminium 5 mm at the top and carbon fiber 6 mm on the right](Renders/Landing%20-%20Front%20Right.png)
 
-The design comes in three gantry variants:
+## Pick your version
 
-| Variant | Plate material | Plate thickness | Folder | Status | Bill of materials |
+| Version | Plate material | Plate thickness | Threaded mounting points | Folder | Bill of materials |
 |---|---|---|---|---|---|
-| Printed gantry | 3D printed | 6 mm | [`Printed Version`](Printed%20Version) | Available | [BOM](Printed%20Version/BOM.md) · [XLSX](Printed%20Version/SV08_P6_Printed_BOM_from_STEP.xlsx) |
-| CF gantry | Carbon fiber (CFRP) | 6 mm | [`CF Version`](CF%20Version) | Available | [BOM](CF%20Version/BOM.md) · [XLSX](CF%20Version/SV08_CF6_BOM_from_STEP.xlsx) |
-| Metal gantry | 6061 aluminium | 5 mm | [`Metal Version`](Metal%20Version) | Available | [BOM](Metal%20Version/BOM.md) · [XLSX](Metal%20Version/SV08_M5_BOM_from_STEP.xlsx) |
+| **[Carbon fiber](#carbon-fiber-version-6-mm)** | Carbon fiber (CFRP) | 6 mm | PEM self-clinching standoffs | [`CF Version`](CF%20Version) | [BOM](CF%20Version/BOM.md) · [XLSX](CF%20Version/SV08_CF6_BOM_from_STEP.xlsx) |
+| **[Metal](#metal-version-5-mm)** | 6061 aluminium | 5 mm | Tapped M3 / M2 holes | [`Metal Version`](Metal%20Version) | [BOM](Metal%20Version/BOM.md) · [XLSX](Metal%20Version/SV08_M5_BOM_from_STEP.xlsx) |
+| **[Printed](#printed-version-6-mm)** | 3D printed | 6 mm | Heat-set inserts | [`Printed Version`](Printed%20Version) | [BOM](Printed%20Version/BOM.md) · [XLSX](Printed%20Version/SV08_P6_Printed_BOM_from_STEP.xlsx) |
 
-Parts that are the same in every version (the spacers and the tensioner lever arm) live in [`Shared Components`](Shared%20Components), and each version's BOM links there for them.
+The project was designed around the 6 mm carbon fiber plates; the metal and printed versions use the same layout. Parts that are the same in every version (the spacers and the shared tensioner lever arm) live in [`Shared Components`](Shared%20Components), and each version's BOM links there for them.
 
-## Printed Version (6 mm)
+Every version folder has the same layout:
+
+- the **full assembly** as a STEP file, with an STL preview in `For Viewing/`
+- **`BOM.md`** and the spreadsheet it's generated from
+- **`Base Assemblies/`**: each corner motor assembly and XY joint as its own STEP file, with STL previews
+- **`Base Components/`**: the plates, with STL previews
+- **`Renders/`**: images of the full gantry and each sub-assembly, generated from the STEP files so they always match the current design
+
+## Carbon fiber version (6 mm)
+
+![Carbon fiber front right motor assembly](CF%20Version/Renders/Front%20Right%20Motor%20Assembly%20CF6mm%20-%20Iso.png)
+
+The 12 gantry plates are cut from 6 mm carbon fiber, with PEM self-clinching standoffs (SO-M3-3ZI and SO-M3-6ZI) in place of heat-set inserts. Full details are in the [CF README](CF%20Version/README.md).
+
+**CF build notes**
+
+- **Cut the plates with a mill.** The bearing steps, counterbores and hex PEM pockets are partial-depth features, so a waterjet or laser alone can't make them. Hole sizes and tolerances are in the CF README's [hole guide](CF%20Version/README.md#cutting-the-plates).
+- **Epoxy the PEM standoffs.** Carbon fiber doesn't flow around a self-clinching standoff the way sheet metal does, so lock each one in its hex pocket with epoxy. We've used [this epoxy](https://amazon.com/dp/B0CTB8GHYP).
+- **Left plates are flipped copies of the right ones**, so their pockets are on the opposite face of the file. Machine each plate pocket-side up as it's drawn.
+- **XY live idler spacers** are cut from the same 6 mm sheet and machined down to 5 mm.
+
+## Metal version (5 mm)
+
+![Metal front right motor assembly](Metal%20Version/Renders/Front%20Right%20Motor%20Assembly%20Metal5mm%20-%20Iso.png)
+
+The 12 gantry plates, the XY spacers and the 4 tensioner lever arms are machined from 5 mm 6061 aluminium. The M3 and M2 holes are tapped, so there are no inserts, standoffs or M2 nuts. Full details are in the [Metal README](Metal%20Version/README.md).
+
+**Metal build notes**
+
+- **Machine and tap the plates.** The pockets need a mill; the tap drills, close-fit clearances and locating fits are in the Metal README's [hole guide](Metal%20Version/README.md#hole-guide-for-machining).
+- **Front corners: shim or trim the shoulder bolts.** The D5 M3 × 30 shoulder bolts are also the motor screws. With the 5 mm plates, put two 1 mm M5 washers under each head, or trim the thread to 4 mm, so they don't bottom out in the motor ([details](Metal%20Version/README.md#build-note-front-corner-shoulder-bolts-thread-into-the-motor)).
+- **XY joints and back corners: about 1 mm of shoulder-bolt thread sticks out** under the bottom plates. That's expected. Trim it if you like, but don't add a washer under the head ([details](Metal%20Version/README.md#build-note-shoulder-bolt-tips-stick-out-1-mm)).
+- **Use the metal tensioner lever arm** (`Tensioner Lever Arm Revised - 5mm Metal Only`), not the shared one.
+
+## Printed version (6 mm)
 
 ![Front left tensioner motion](Printed%20Version/Screenshots/Front%20Left%20Tensioner%20Motion.gif)
 
-- `SV08-P6 Dual Shear Live Idlers Front Tensioners.step`: the full assembly
-  - `For Viewing/`: STL copy of the full assembly for previewing on GitHub. It's about 38 MB, so give it a few seconds to load. Small hardware is meshed coarser to keep the size down.
-- **[Bill of Materials](Printed%20Version/BOM.md)**: every part with quantities, purchase links and notes. It's generated from `SV08_P6_Printed_BOM_from_STEP.xlsx`, which you can also download.
-- `Base Assemblies/`: each corner motor assembly and XY joint as its own STEP file
-  - `For Viewing/`: STL copies for previewing on GitHub
-- `Base Components/Print Ready/`: the printed plates, oriented for printing, with holes enlarged by about 0.3 mm for printing tolerance. The spacers and lever arms are in [`Shared Components/Print Ready`](Shared%20Components/Print%20Ready), with quantities in their file names (for example `4x Z Carriage Spacer`).
-  - `Printed Parts All.3mf`: every printed part (plates and shared parts) laid out on one plate, ready to open in your slicer (made in Creality Print)
-  - `For Viewing/`: STL copies of the print-ready STEP files, so you can preview them in 3D right on GitHub. The STEP files are the source of truth.
-- `Base Components/For Mockups Only/`: plates in their assembled orientation, for reference and mockups. **Do not print these.**
-  - `For Viewing/`: STL copies of the mockup STEP files, so you can preview them in 3D right on GitHub.
-- [`Renders/`](Printed%20Version/Renders): images of the full gantry and each sub-assembly, generated automatically from the STEP files so they always match the current design
-- [`Screenshots/`](Printed%20Version/Screenshots): Fusion screenshots of the assemblies and belt paths, plus an [MP4 of the tensioner motion](Printed%20Version/Screenshots/Front%20Left%20Tensioner%20Motion.mp4)
+The plates are 3D printed at 6 mm with M3 heat-set inserts. This is the easiest version to build if you have a printer and no access to a mill.
 
-## Build notes
+> [!NOTE]
+> **The print files are under final review.** The printed plates are getting the same checks the carbon fiber and metal plates just went through, plus some print-specific tweaks. Expect updates to the files in `Print Ready` soon.
+
+**Printed build notes**
+
+- **Print the parts from `Base Components/Print Ready/`.** They're oriented for printing, with holes enlarged by about 0.3 mm for printing tolerance. The spacers and lever arms are in [`Shared Components/Print Ready`](Shared%20Components/Print%20Ready), with quantities in their file names (for example `4x Z Carriage Spacer`).
+- **`Printed Parts All.3mf`** has every printed part (plates and shared parts) laid out on one plate, ready to open in your slicer (made in Creality Print).
+- **Don't print `Base Components/For Mockups Only/`.** Those are the plates in their assembled orientation, for reference.
+- [`Screenshots/`](Printed%20Version/Screenshots) has Fusion screenshots of the assemblies and belt paths, plus an [MP4 of the tensioner motion](Printed%20Version/Screenshots/Front%20Left%20Tensioner%20Motion.mp4).
+
+## Build notes for every version
 
 - **Threadlock the ultra-thin flat heads.** The M3 × 10 ultra-thin flat-head screws thread into the ends of the M3 internally threaded spacers that act as the live idler shafts (2 per front motor assembly, 2 per XY joint). Those shafts spin with the pulleys, so add threadlocker. **Blue (medium strength)** is recommended because you can still remove it with hand tools. Use **red (high strength)** only for a permanent build: removing it takes heat, which can damage the bearings and printed parts nearby.
-- **Check your motors' screw-hole depth (front corners).** On each front motor corner, the four D5 M3 × 30 shoulder bolts are also the motor screws: they pass up through both plates and thread into the motor. On the printed and carbon fiber versions, about 4.5 mm of thread goes into the motor, which suits the usual 4.5 mm-deep NEMA 17 holes. Some motors only have 4 mm-deep holes; on those, the bolts can bottom out before the motor is clamped. If yours are 4 mm, trim 0.5 mm off the end of each bolt's thread, then run an M3 nut off over the cut to clean up the thread. The metal version has its own note in the [Metal README](Metal%20Version/README.md).
+- **Check your motors' screw-hole depth (front corners, CF and printed).** On each front motor corner, the four D5 M3 × 30 shoulder bolts are also the motor screws: they pass up through both plates and thread into the motor. On the carbon fiber and printed versions, about 4.5 mm of thread goes into the motor, which suits the usual 4.5 mm-deep NEMA 17 holes. Some motors only have 4 mm-deep holes; on those, the bolts can bottom out before the motor is clamped. If yours are 4 mm, trim 0.5 mm off the end of each bolt's thread, then run an M3 nut off over the cut to clean up the thread. The metal version has its own note above.
 - **Leave a gap between each pulley and its bearing.** The GT2 pulleys are held by set screws, so you set their height by hand. Leave about 0.5 mm between the pulley face and the nearest bearing; a feeler gauge or a folded piece of paper makes a good shim while you tighten the set screws. The pulley turns with the shaft but the bearing's outer ring doesn't, so a pulley pushed against the bearing will rub. The toothed part of the pulley is 7 mm wide for a 6 mm belt, so this small offset doesn't affect belt tracking.
 
 ## Changes from the original
@@ -50,13 +83,13 @@ Compared with [Stanciu-Andrei's Sovol SV08 AWD Mod](https://github.com/Stanciu-A
 | **Belt tensioning** | At the rear, with dedicated rear tensioner parts | At the front motor mounts, with lever arms. Rear tensioners removed, and the gantry X extrusion shortened to 342 mm. |
 | **XY joints** | Standard (non-live) idlers: the pulleys spin freely on fixed shafts | **Live idlers**, in dual shear: GT2 20-tooth pulleys fixed to a shaft that turns on bearing stacks, supported top and bottom. An M3 internally threaded standoff replaces the M5×40 dowel. |
 | **Shear support** | Double shear optional, at the rear motors only | Dual shear at every corner and both XY joints. Motors need a 37 mm shaft. |
-| **Construction** | Chunky printed corner housings | Flat top and bottom plates held apart by standoffs. One plate design produces the printed (6 mm), carbon fiber (6 mm) and metal (5 mm) versions. |
-| **Hardware** | Mostly printed structure | Moving toward a mostly metal design: aluminium standoffs, threaded spacers, shoulder bolts in three lengths, 48 flanged 695-2RS bearings, T-nut mounting, Voron-spec heat-set inserts and D2F-L endstops. Printed alternatives remain for the standoffs. |
-| **Files** | STLs, a Fusion `.f3d`, beta CNC plate DXFs | STEP files for every part and sub-assembly, print-oriented parts, an all-in-one 3MF, 3D previews and a full [BOM](Printed%20Version/BOM.md) with purchase links |
+| **Construction** | Chunky printed corner housings | Flat top and bottom plates held apart by standoffs. One plate design produces the carbon fiber (6 mm), metal (5 mm) and printed (6 mm) versions. |
+| **Hardware** | Mostly printed structure | Moving toward a mostly metal design: aluminium standoffs, threaded spacers, shoulder bolts in three lengths, 48 flanged 695-2RS bearings, T-nut mounting and D2F-L endstops, with PEM standoffs (CF), tapped holes (metal) or Voron-spec heat-set inserts (printed). Printed alternatives remain for the standoffs. |
+| **Files** | STLs, a Fusion `.f3d`, beta CNC plate DXFs | STEP files for every part and sub-assembly in all three versions, print-oriented parts and an all-in-one 3MF, 3D previews, renders and a full BOM with purchase links for each version |
 
 ## Maintaining this repo
 
-The STL previews and `BOM.md` files are generated by the scripts in [`tools/`](tools), which need FreeCAD. See [tools/README.md](tools/README.md).
+The STL previews, renders and `BOM.md` files are generated by the scripts in [`tools/`](tools), which need FreeCAD. The plate checks (hole sizes, minimum walls, mirror pairs) are there too. See [tools/README.md](tools/README.md).
 
 ## License
 
