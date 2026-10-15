@@ -1,5 +1,8 @@
 # SV08-CF6 Carbon Fiber Gantry (6 mm)
 
+> [!WARNING]
+> **Under review: don't cut or order these plates yet.** The CF plates are being reworked with machining tolerances, and the assemblies, renders and BOM are being re-checked against them. Some files here may not match each other until the review is finished. This notice will be removed when the CF version is ready to use again.
+
 The carbon fiber variant: every gantry plate is cut from 6 mm carbon fiber, and PEM self-clinching standoffs replace the heat-set inserts used in the printed version.
 
 ![Full gantry overview, rendered from the current STEP file](Renders/Full%20Gantry%20-%20Overview.png)

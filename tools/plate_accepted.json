@@ -163,22 +163,6 @@
     },
     {
       "plate": "Back Right Top Plate CF6mm",
-      "kind": "wall",
-      "x": 57.04,
-      "y": -6.33,
-      "value": 0.25,
-      "note": "PEM hex-shoulder ledge: SO-M3 hex (~4.8 A/F) on the 4.3 bore; standoff is epoxied (accepted 2026-10-14)"
-    },
-    {
-      "plate": "Back Right Top Plate CF6mm",
-      "kind": "wall",
-      "x": 34.13,
-      "y": -8.3,
-      "value": 0.25,
-      "note": "PEM hex-shoulder ledge: SO-M3 hex (~4.8 A/F) on the 4.3 bore; standoff is epoxied (accepted 2026-10-14)"
-    },
-    {
-      "plate": "Back Right Top Plate CF6mm",
       "kind": "floor",
       "x": 42.91,
       "y": -25.0,
@@ -224,22 +208,6 @@
       "y": -8.3,
       "value": 1.1,
       "note": "mirror of the accepted Back Right Top PEM-bore-to-bearing-bore wall (accepted 2026-10-14)"
-    },
-    {
-      "plate": "Back Left Top Plate CF6mm",
-      "kind": "wall",
-      "x": 34.13,
-      "y": -8.3,
-      "value": 0.25,
-      "note": "mirror of the accepted Back Right Top PEM hex-shoulder ledge (accepted 2026-10-14)"
-    },
-    {
-      "plate": "Back Left Top Plate CF6mm",
-      "kind": "wall",
-      "x": 57.04,
-      "y": -10.27,
-      "value": 0.25,
-      "note": "mirror of the accepted Back Right Top PEM hex-shoulder ledge (accepted 2026-10-14)"
     },
     {
       "plate": "Back Left Top Plate CF6mm",
@@ -640,6 +608,38 @@
       "y": -25.2,
       "value": 0.5,
       "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners, so the 4.8 A/F PEM hex corners clear the fillets by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Right Top Plate CF6mm",
+      "kind": "wall",
+      "x": 34.0,
+      "y": -8.3,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket ~5.3 A/F, R1 corners; the 4.8 A/F PEM hex corners clear by >=0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Right Top Plate CF6mm",
+      "kind": "wall",
+      "x": 57.1,
+      "y": -6.22,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket ~5.3 A/F, R1 corners; the 4.8 A/F PEM hex corners clear by >=0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Left Top Plate CF6mm",
+      "kind": "wall",
+      "x": 57.1,
+      "y": -10.38,
+      "value": 0.5,
+      "note": "mirror of the accepted Back Right Top PEM hex-shoulder ledge (pocket ~5.3 A/F, R1) (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Left Top Plate CF6mm",
+      "kind": "wall",
+      "x": 34.0,
+      "y": -8.3,
+      "value": 0.5,
+      "note": "mirror of the accepted Back Right Top PEM hex-shoulder ledge (pocket ~5.3 A/F, R1) (accepted 2026-10-14)"
     },
     {
       "plate": "Tensioner Lever Arm Revised - 5mm Metal Only",
