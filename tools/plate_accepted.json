@@ -338,6 +338,310 @@
       "note": "mirror of the accepted Back Right Top D2F endstop floor (accepted 2026-10-14)"
     },
     {
+      "plate": "Front Right Top CF6mm",
+      "kind": "wall",
+      "x": 34.49,
+      "y": 2.37,
+      "value": 0.4,
+      "note": "PEM hex-shoulder ledge (merged hex relief, 3 full + 2 half flats), same as the XY plates; standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Top CF6mm",
+      "kind": "wall",
+      "x": 51.88,
+      "y": -7.0,
+      "value": 0.4,
+      "note": "PEM hex-shoulder ledge (merged hex relief, 3 full + 2 half flats), same as the XY plates; standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Top CF6mm",
+      "kind": "wall",
+      "x": 30.3,
+      "y": -1.9,
+      "value": 1.08,
+      "note": "rim between the FHCS counterbore and the D5 shoulder-bolt hole; same rim as the accepted metal front tops (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Top CF6mm",
+      "kind": "wall",
+      "x": 34.92,
+      "y": -1.22,
+      "value": 1.1,
+      "note": "PEM bore to bearing bore, same as the accepted XY/back walls (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Top CF6mm",
+      "kind": "wall",
+      "x": 47.15,
+      "y": -5.87,
+      "value": 1.1,
+      "note": "PEM bore to bearing bore, same as the accepted XY/back walls (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Top CF6mm",
+      "kind": "floor",
+      "x": 32.93,
+      "y": 0.61,
+      "value": 1.4,
+      "note": "PEM seat ledge around the M3 FHCS hole (3mm PEM vs 1.6mm counterbore), same as the XY tops (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Top CF6mm",
+      "kind": "floor",
+      "x": 49.85,
+      "y": -5.82,
+      "value": 1.4,
+      "note": "PEM seat ledge around the M3 FHCS hole (3mm PEM vs 1.6mm counterbore), same as the XY tops (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Top CF6mm",
+      "kind": "wall",
+      "x": 31.38,
+      "y": -1.15,
+      "value": 0.4,
+      "note": "mirror of the accepted Front Right Top PEM hex-shoulder ledge (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Top CF6mm",
+      "kind": "wall",
+      "x": 51.88,
+      "y": -4.65,
+      "value": 0.4,
+      "note": "mirror of the accepted Front Right Top PEM hex-shoulder ledge (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Top CF6mm",
+      "kind": "wall",
+      "x": 30.3,
+      "y": -1.9,
+      "value": 1.08,
+      "note": "mirror of the accepted Front Right Top counterbore-to-shoulder-hole rim (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Top CF6mm",
+      "kind": "wall",
+      "x": 34.92,
+      "y": -1.22,
+      "value": 1.1,
+      "note": "mirror of the accepted Front Right Top PEM-bore-to-bearing-bore wall (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Top CF6mm",
+      "kind": "wall",
+      "x": 47.15,
+      "y": -5.87,
+      "value": 1.1,
+      "note": "mirror of the accepted Front Right Top PEM-bore-to-bearing-bore wall (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Top CF6mm",
+      "kind": "floor",
+      "x": 32.93,
+      "y": 0.61,
+      "value": 1.4,
+      "note": "mirror of the accepted Front Right Top PEM seat ledge (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Top CF6mm",
+      "kind": "floor",
+      "x": 49.85,
+      "y": -5.82,
+      "value": 1.4,
+      "note": "mirror of the accepted Front Right Top PEM seat ledge (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "wall",
+      "x": 55.69,
+      "y": 11.43,
+      "value": 0.4,
+      "note": "PEM hex-shoulder ledge (merged hex relief, 3 full + 2 half flats), same as the other CF plates; standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "wall",
+      "x": 32.66,
+      "y": 9.39,
+      "value": 0.4,
+      "note": "PEM hex-shoulder ledge (merged hex relief, 3 full + 2 half flats), same as the other CF plates; standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "wall",
+      "x": 51.86,
+      "y": -4.61,
+      "value": 0.4,
+      "note": "PEM hex-shoulder ledge (merged hex relief, 3 full + 2 half flats), same as the other CF plates; standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "wall",
+      "x": 32.36,
+      "y": 0.37,
+      "value": 0.4,
+      "note": "PEM hex-shoulder ledge (merged hex relief, 3 full + 2 half flats), same as the other CF plates; standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "wall",
+      "x": 36.54,
+      "y": 11.43,
+      "value": 1.1,
+      "note": "PEM bore to bearing bore, same as the accepted XY/back/front-top walls (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "wall",
+      "x": 35.86,
+      "y": -0.37,
+      "value": 1.1,
+      "note": "PEM bore to bearing bore, same as the accepted XY/back/front-top walls (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "wall",
+      "x": 50.64,
+      "y": 11.43,
+      "value": 1.1,
+      "note": "PEM bore to bearing bore, same as the accepted XY/back/front-top walls (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "wall",
+      "x": 47.15,
+      "y": -5.87,
+      "value": 1.1,
+      "note": "PEM bore to bearing bore, same as the accepted XY/back/front-top walls (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "floor",
+      "x": 33.84,
+      "y": 11.43,
+      "value": 1.4,
+      "note": "PEM seat ledge around the M3 FHCS hole (3mm PEM vs 1.6mm counterbore), same as the XY/front tops (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "floor",
+      "x": 49.85,
+      "y": -5.82,
+      "value": 1.4,
+      "note": "PEM seat ledge around the M3 FHCS hole (3mm PEM vs 1.6mm counterbore), same as the XY/front tops (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "floor",
+      "x": 34.23,
+      "y": 1.79,
+      "value": 1.4,
+      "note": "PEM seat ledge around the M3 FHCS hole (3mm PEM vs 1.6mm counterbore), same as the XY/front tops (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "floor",
+      "x": 53.34,
+      "y": 11.43,
+      "value": 1.4,
+      "note": "PEM seat ledge around the M3 FHCS hole (3mm PEM vs 1.6mm counterbore), same as the XY/front tops (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "wall",
+      "x": 55.69,
+      "y": 11.43,
+      "value": 0.4,
+      "note": "mirror of the accepted Front Right Bottom PEM hex-shoulder ledge (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "wall",
+      "x": 32.66,
+      "y": 13.46,
+      "value": 0.4,
+      "note": "mirror of the accepted Front Right Bottom PEM hex-shoulder ledge (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "wall",
+      "x": 51.9,
+      "y": -6.96,
+      "value": 0.4,
+      "note": "mirror of the accepted Front Right Bottom PEM hex-shoulder ledge (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "wall",
+      "x": 36.11,
+      "y": 3.2,
+      "value": 0.4,
+      "note": "mirror of the accepted Front Right Bottom PEM hex-shoulder ledge (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "wall",
+      "x": 36.54,
+      "y": 11.43,
+      "value": 1.1,
+      "note": "mirror of the accepted Front Right Bottom PEM-bore-to-bearing-bore wall (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "wall",
+      "x": 35.86,
+      "y": -0.37,
+      "value": 1.1,
+      "note": "mirror of the accepted Front Right Bottom PEM-bore-to-bearing-bore wall (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "wall",
+      "x": 50.64,
+      "y": 11.43,
+      "value": 1.1,
+      "note": "mirror of the accepted Front Right Bottom PEM-bore-to-bearing-bore wall (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "wall",
+      "x": 47.15,
+      "y": -5.87,
+      "value": 1.1,
+      "note": "mirror of the accepted Front Right Bottom PEM-bore-to-bearing-bore wall (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "floor",
+      "x": 33.84,
+      "y": 11.43,
+      "value": 1.4,
+      "note": "mirror of the accepted Front Right Bottom PEM seat ledge (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "floor",
+      "x": 49.85,
+      "y": -5.82,
+      "value": 1.4,
+      "note": "mirror of the accepted Front Right Bottom PEM seat ledge (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "floor",
+      "x": 34.23,
+      "y": 1.79,
+      "value": 1.4,
+      "note": "mirror of the accepted Front Right Bottom PEM seat ledge (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "floor",
+      "x": 53.34,
+      "y": 11.43,
+      "value": 1.4,
+      "note": "mirror of the accepted Front Right Bottom PEM seat ledge (accepted 2026-10-14)"
+    },
+    {
       "plate": "Tensioner Lever Arm Revised - 5mm Metal Only",
       "kind": "near-miss",
       "x": -33.83,
