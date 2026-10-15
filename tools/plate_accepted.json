@@ -244,22 +244,6 @@
     {
       "plate": "Front Right Top CF6mm",
       "kind": "wall",
-      "x": 34.49,
-      "y": 2.37,
-      "value": 0.4,
-      "note": "PEM hex-shoulder ledge (merged hex relief, 3 full + 2 half flats), same as the XY plates; standoff is epoxied (accepted 2026-10-14)"
-    },
-    {
-      "plate": "Front Right Top CF6mm",
-      "kind": "wall",
-      "x": 51.88,
-      "y": -7.0,
-      "value": 0.4,
-      "note": "PEM hex-shoulder ledge (merged hex relief, 3 full + 2 half flats), same as the XY plates; standoff is epoxied (accepted 2026-10-14)"
-    },
-    {
-      "plate": "Front Right Top CF6mm",
-      "kind": "wall",
       "x": 30.3,
       "y": -1.9,
       "value": 1.08,
@@ -300,22 +284,6 @@
     {
       "plate": "Front Left Top CF6mm",
       "kind": "wall",
-      "x": 31.38,
-      "y": -1.15,
-      "value": 0.4,
-      "note": "mirror of the accepted Front Right Top PEM hex-shoulder ledge (accepted 2026-10-14)"
-    },
-    {
-      "plate": "Front Left Top CF6mm",
-      "kind": "wall",
-      "x": 51.88,
-      "y": -4.65,
-      "value": 0.4,
-      "note": "mirror of the accepted Front Right Top PEM hex-shoulder ledge (accepted 2026-10-14)"
-    },
-    {
-      "plate": "Front Left Top CF6mm",
-      "kind": "wall",
       "x": 30.3,
       "y": -1.9,
       "value": 1.08,
@@ -352,38 +320,6 @@
       "y": -5.82,
       "value": 1.4,
       "note": "mirror of the accepted Front Right Top PEM seat ledge (accepted 2026-10-14)"
-    },
-    {
-      "plate": "Front Right Bottom CF6mm",
-      "kind": "wall",
-      "x": 55.69,
-      "y": 11.43,
-      "value": 0.4,
-      "note": "PEM hex-shoulder ledge (merged hex relief, 3 full + 2 half flats), same as the other CF plates; standoff is epoxied (accepted 2026-10-14)"
-    },
-    {
-      "plate": "Front Right Bottom CF6mm",
-      "kind": "wall",
-      "x": 32.66,
-      "y": 9.39,
-      "value": 0.4,
-      "note": "PEM hex-shoulder ledge (merged hex relief, 3 full + 2 half flats), same as the other CF plates; standoff is epoxied (accepted 2026-10-14)"
-    },
-    {
-      "plate": "Front Right Bottom CF6mm",
-      "kind": "wall",
-      "x": 51.86,
-      "y": -4.61,
-      "value": 0.4,
-      "note": "PEM hex-shoulder ledge (merged hex relief, 3 full + 2 half flats), same as the other CF plates; standoff is epoxied (accepted 2026-10-14)"
-    },
-    {
-      "plate": "Front Right Bottom CF6mm",
-      "kind": "wall",
-      "x": 32.36,
-      "y": 0.37,
-      "value": 0.4,
-      "note": "PEM hex-shoulder ledge (merged hex relief, 3 full + 2 half flats), same as the other CF plates; standoff is epoxied (accepted 2026-10-14)"
     },
     {
       "plate": "Front Right Bottom CF6mm",
@@ -448,38 +384,6 @@
       "y": 11.43,
       "value": 1.4,
       "note": "PEM seat ledge around the M3 FHCS hole (3mm PEM vs 1.6mm counterbore), same as the XY/front tops (accepted 2026-10-14)"
-    },
-    {
-      "plate": "Front Left Bottom CF6mm",
-      "kind": "wall",
-      "x": 55.69,
-      "y": 11.43,
-      "value": 0.4,
-      "note": "mirror of the accepted Front Right Bottom PEM hex-shoulder ledge (accepted 2026-10-14)"
-    },
-    {
-      "plate": "Front Left Bottom CF6mm",
-      "kind": "wall",
-      "x": 32.66,
-      "y": 13.46,
-      "value": 0.4,
-      "note": "mirror of the accepted Front Right Bottom PEM hex-shoulder ledge (accepted 2026-10-14)"
-    },
-    {
-      "plate": "Front Left Bottom CF6mm",
-      "kind": "wall",
-      "x": 51.9,
-      "y": -6.96,
-      "value": 0.4,
-      "note": "mirror of the accepted Front Right Bottom PEM hex-shoulder ledge (accepted 2026-10-14)"
-    },
-    {
-      "plate": "Front Left Bottom CF6mm",
-      "kind": "wall",
-      "x": 36.11,
-      "y": 3.2,
-      "value": 0.4,
-      "note": "mirror of the accepted Front Right Bottom PEM hex-shoulder ledge (accepted 2026-10-14)"
     },
     {
       "plate": "Front Left Bottom CF6mm",
@@ -640,6 +544,118 @@
       "y": -8.3,
       "value": 0.5,
       "note": "mirror of the accepted Back Right Top PEM hex-shoulder ledge (pocket ~5.3 A/F, R1) (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Top CF6mm",
+      "kind": "wall",
+      "x": 34.53,
+      "y": 2.41,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners; PEM hex corners clear by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Top CF6mm",
+      "kind": "wall",
+      "x": 51.93,
+      "y": -7.02,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners; PEM hex corners clear by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Top CF6mm",
+      "kind": "wall",
+      "x": 35.76,
+      "y": 2.59,
+      "value": 1.41,
+      "note": "retainer PEM hex pocket to the merged motor-boss/bearing opening, top 0.6 mm only; trimming it would be rough (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Top CF6mm",
+      "kind": "wall",
+      "x": 31.34,
+      "y": -1.18,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners; PEM hex corners clear by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Top CF6mm",
+      "kind": "wall",
+      "x": 51.93,
+      "y": -4.62,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners; PEM hex corners clear by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Top CF6mm",
+      "kind": "wall",
+      "x": 35.76,
+      "y": 2.59,
+      "value": 1.41,
+      "note": "retainer PEM hex pocket to the merged motor-boss/bearing opening, top 0.6 mm only; trimming it would be rough (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "wall",
+      "x": 55.74,
+      "y": 11.43,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners; PEM hex corners clear by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "wall",
+      "x": 32.64,
+      "y": 9.35,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners; PEM hex corners clear by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "wall",
+      "x": 51.9,
+      "y": -4.58,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners; PEM hex corners clear by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "wall",
+      "x": 55.74,
+      "y": 11.43,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners; PEM hex corners clear by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "wall",
+      "x": 32.64,
+      "y": 13.51,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners; PEM hex corners clear by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "wall",
+      "x": 51.95,
+      "y": -6.98,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners; PEM hex corners clear by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "wall",
+      "x": 32.32,
+      "y": 0.34,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners; PEM hex corners clear by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "wall",
+      "x": 36.15,
+      "y": 3.23,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners; PEM hex corners clear by ~0.13); standoff is epoxied (accepted 2026-10-14)"
     },
     {
       "plate": "Tensioner Lever Arm Revised - 5mm Metal Only",
