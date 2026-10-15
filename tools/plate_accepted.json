@@ -50,22 +50,6 @@
       "note": "PEM bore to bearing bore; sets the bearing-retainer screw engagement, moving it out makes the screw stick out; cut successfully before (accepted 2026-10-14)"
     },
     {
-      "plate": "XY Live Idler Right Top Plate CF6mm",
-      "kind": "wall",
-      "x": 26.88,
-      "y": -8.74,
-      "value": 0.4,
-      "note": "PEM hex-shoulder ledge, not a free wall: the merged top relief keeps 3 hex flats; standoff is epoxied (accepted 2026-10-14)"
-    },
-    {
-      "plate": "XY Live Idler Right Top Plate CF6mm",
-      "kind": "wall",
-      "x": 39.99,
-      "y": -15.65,
-      "value": 0.4,
-      "note": "PEM hex-shoulder ledge, not a free wall: the merged top relief keeps 3 hex flats; standoff is epoxied (accepted 2026-10-14)"
-    },
-    {
       "plate": "XY Live Idler Left Top Plate CF6mm",
       "kind": "wall",
       "x": 35.24,
@@ -82,22 +66,6 @@
       "note": "mirror of the accepted XY Right Top PEM-bore-to-bearing-bore wall (accepted 2026-10-14)"
     },
     {
-      "plate": "XY Live Idler Left Top Plate CF6mm",
-      "kind": "wall",
-      "x": 24.57,
-      "y": -7.99,
-      "value": 0.4,
-      "note": "mirror of the accepted XY Right Top PEM hex-shoulder ledge (accepted 2026-10-14)"
-    },
-    {
-      "plate": "XY Live Idler Left Top Plate CF6mm",
-      "kind": "wall",
-      "x": 39.58,
-      "y": -17.62,
-      "value": 0.4,
-      "note": "mirror of the accepted XY Right Top PEM hex-shoulder ledge (accepted 2026-10-14)"
-    },
-    {
       "plate": "XY Live Idler Right Top Plate CF6mm",
       "kind": "floor",
       "x": 31.66,
@@ -112,22 +80,6 @@
       "y": -13.0,
       "value": 1.4,
       "note": "mirror of the accepted XY Right Top PEM seat ledge (accepted 2026-10-14)"
-    },
-    {
-      "plate": "XY Live Idler Right Bottom Plate CF6mm",
-      "kind": "wall",
-      "x": 39.3,
-      "y": -23.19,
-      "value": 0.4,
-      "note": "PEM hex-shoulder ledge, not a free wall (same as the XY tops); standoff is epoxied (accepted 2026-10-14)"
-    },
-    {
-      "plate": "XY Live Idler Right Bottom Plate CF6mm",
-      "kind": "wall",
-      "x": 24.66,
-      "y": -8.04,
-      "value": 0.4,
-      "note": "PEM hex-shoulder ledge, not a free wall (same as the XY tops); standoff is epoxied (accepted 2026-10-14)"
     },
     {
       "plate": "XY Live Idler Right Bottom Plate CF6mm",
@@ -160,22 +112,6 @@
       "y": -24.54,
       "value": 1.4,
       "note": "PEM seat ledge around the M3 FHCS hole: 3mm PEM vs the 1.6mm counterbore, fixed by the stack-up (same as the XY tops) (accepted 2026-10-14)"
-    },
-    {
-      "plate": "XY Live Idler Left Bottom Plate CF6mm",
-      "kind": "wall",
-      "x": 39.51,
-      "y": -25.18,
-      "value": 0.4,
-      "note": "mirror of the accepted XY Right Bottom PEM hex-shoulder ledge (accepted 2026-10-14)"
-    },
-    {
-      "plate": "XY Live Idler Left Bottom Plate CF6mm",
-      "kind": "wall",
-      "x": 26.95,
-      "y": -8.18,
-      "value": 0.4,
-      "note": "mirror of the accepted XY Right Bottom PEM hex-shoulder ledge (accepted 2026-10-14)"
     },
     {
       "plate": "XY Live Idler Left Bottom Plate CF6mm",
@@ -640,6 +576,70 @@
       "y": 11.43,
       "value": 1.4,
       "note": "mirror of the accepted Front Right Bottom PEM seat ledge (accepted 2026-10-14)"
+    },
+    {
+      "plate": "XY Live Idler Right Top Plate CF6mm",
+      "kind": "wall",
+      "x": 39.62,
+      "y": -18.0,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners, so the 4.8 A/F PEM hex corners clear the fillets by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "XY Live Idler Right Top Plate CF6mm",
+      "kind": "wall",
+      "x": 26.92,
+      "y": -8.71,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners, so the 4.8 A/F PEM hex corners clear the fillets by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "XY Live Idler Left Top Plate CF6mm",
+      "kind": "wall",
+      "x": 26.92,
+      "y": -8.36,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners, so the 4.8 A/F PEM hex corners clear the fillets by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "XY Live Idler Left Top Plate CF6mm",
+      "kind": "wall",
+      "x": 39.62,
+      "y": -17.65,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners, so the 4.8 A/F PEM hex corners clear the fillets by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "XY Live Idler Right Bottom Plate CF6mm",
+      "kind": "wall",
+      "x": 39.34,
+      "y": -23.16,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners, so the 4.8 A/F PEM hex corners clear the fillets by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "XY Live Idler Right Bottom Plate CF6mm",
+      "kind": "wall",
+      "x": 26.99,
+      "y": -8.49,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners, so the 4.8 A/F PEM hex corners clear the fillets by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "XY Live Idler Left Bottom Plate CF6mm",
+      "kind": "wall",
+      "x": 26.99,
+      "y": -8.14,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners, so the 4.8 A/F PEM hex corners clear the fillets by ~0.13); standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "XY Live Idler Left Bottom Plate CF6mm",
+      "kind": "wall",
+      "x": 39.55,
+      "y": -25.2,
+      "value": 0.5,
+      "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners, so the 4.8 A/F PEM hex corners clear the fillets by ~0.13); standoff is epoxied (accepted 2026-10-14)"
     },
     {
       "plate": "Tensioner Lever Arm Revised - 5mm Metal Only",
