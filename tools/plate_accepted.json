@@ -210,6 +210,134 @@
       "note": "mirror of the accepted XY Right Bottom PEM seat ledge (accepted 2026-10-14)"
     },
     {
+      "plate": "Back Right Top Plate CF6mm",
+      "kind": "wall",
+      "x": 53.2,
+      "y": -8.3,
+      "value": 1.1,
+      "note": "PEM bore to bearing bore, same as the accepted XY top walls (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Right Top Plate CF6mm",
+      "kind": "wall",
+      "x": 39.1,
+      "y": -8.3,
+      "value": 1.1,
+      "note": "PEM bore to bearing bore, same as the accepted XY top walls (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Right Top Plate CF6mm",
+      "kind": "wall",
+      "x": 57.04,
+      "y": -6.33,
+      "value": 0.25,
+      "note": "PEM hex-shoulder ledge: SO-M3 hex (~4.8 A/F) on the 4.3 bore; standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Right Top Plate CF6mm",
+      "kind": "wall",
+      "x": 34.13,
+      "y": -8.3,
+      "value": 0.25,
+      "note": "PEM hex-shoulder ledge: SO-M3 hex (~4.8 A/F) on the 4.3 bore; standoff is epoxied (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Right Top Plate CF6mm",
+      "kind": "floor",
+      "x": 42.91,
+      "y": -25.0,
+      "value": 1.0,
+      "note": "D2F endstop floor between the M2 nut pocket and the switch pocket, clamped by switch and nut (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Right Top Plate CF6mm",
+      "kind": "floor",
+      "x": 49.41,
+      "y": -25.0,
+      "value": 1.0,
+      "note": "D2F endstop floor between the M2 nut pocket and the switch pocket, clamped by switch and nut (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Right Top Plate CF6mm",
+      "kind": "wall",
+      "x": 37.33,
+      "y": -10.75,
+      "value": 0.95,
+      "note": "FHCS seat ring: counterbore floor from the through PEM bore (4.3) out to the 6.2 counterbore; the head also bears on the bearing flange (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Right Top Plate CF6mm",
+      "kind": "wall",
+      "x": 54.97,
+      "y": -5.85,
+      "value": 0.95,
+      "note": "FHCS seat ring: counterbore floor from the through PEM bore (4.3) out to the 6.2 counterbore; the head also bears on the bearing flange (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Left Top Plate CF6mm",
+      "kind": "wall",
+      "x": 53.2,
+      "y": -8.3,
+      "value": 1.1,
+      "note": "mirror of the accepted Back Right Top PEM-bore-to-bearing-bore wall (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Left Top Plate CF6mm",
+      "kind": "wall",
+      "x": 39.1,
+      "y": -8.3,
+      "value": 1.1,
+      "note": "mirror of the accepted Back Right Top PEM-bore-to-bearing-bore wall (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Left Top Plate CF6mm",
+      "kind": "wall",
+      "x": 34.13,
+      "y": -8.3,
+      "value": 0.25,
+      "note": "mirror of the accepted Back Right Top PEM hex-shoulder ledge (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Left Top Plate CF6mm",
+      "kind": "wall",
+      "x": 57.04,
+      "y": -10.27,
+      "value": 0.25,
+      "note": "mirror of the accepted Back Right Top PEM hex-shoulder ledge (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Left Top Plate CF6mm",
+      "kind": "wall",
+      "x": 37.33,
+      "y": -10.75,
+      "value": 0.95,
+      "note": "mirror of the accepted Back Right Top FHCS seat ring (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Left Top Plate CF6mm",
+      "kind": "wall",
+      "x": 54.97,
+      "y": -5.85,
+      "value": 0.95,
+      "note": "mirror of the accepted Back Right Top FHCS seat ring (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Left Top Plate CF6mm",
+      "kind": "floor",
+      "x": 49.41,
+      "y": -25.0,
+      "value": 1.0,
+      "note": "mirror of the accepted Back Right Top D2F endstop floor (accepted 2026-10-14)"
+    },
+    {
+      "plate": "Back Left Top Plate CF6mm",
+      "kind": "floor",
+      "x": 42.91,
+      "y": -25.0,
+      "value": 1.0,
+      "note": "mirror of the accepted Back Right Top D2F endstop floor (accepted 2026-10-14)"
+    },
+    {
       "plate": "Tensioner Lever Arm Revised - 5mm Metal Only",
       "kind": "near-miss",
       "x": -33.83,
