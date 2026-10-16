@@ -1120,6 +1120,150 @@
       "y": 3.97,
       "value": 1.0,
       "note": "1.0 mm roof over the endstop wire tunnel (floor 3.0, ceiling 5.0, 2 mm span); holds the wire only, carries no load (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Left Bottom Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 82.0,
+      "y": 9.1,
+      "value": 2.5,
+      "note": "mirror of the accepted Back Right entry: M4 hole to the plate edge at the right-hand end, same holes as the accepted Back Right Top walls; shared outline; accepted 2026-10-16"
+    },
+    {
+      "plate": "Back Left Bottom Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 109.5,
+      "y": 9.1,
+      "value": 2.5,
+      "note": "mirror of the accepted Back Right entry: M4 hole to the plate edge at the right-hand end, same holes as the accepted Back Right Top walls; shared outline; accepted 2026-10-16"
+    },
+    {
+      "plate": "Back Left Bottom Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 112.9,
+      "y": 5.7,
+      "value": 2.5,
+      "note": "mirror of the accepted Back Right entry: M4 hole to the plate edge at the right-hand end, same holes as the accepted Back Right Top walls; shared outline; accepted 2026-10-16"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "insert",
+      "x": -53.18,
+      "y": -8.3,
+      "value": 0.75,
+      "note": "mirror of the accepted Back Right entry: retainer insert hole to bearing bore; insert positions fixed by the shared layout. Press the bearing in BEFORE the inserts, so it backs up the wall while the insert is heat-set (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "insert",
+      "x": -39.13,
+      "y": -8.3,
+      "value": 0.75,
+      "note": "mirror of the accepted Back Right entry: retainer insert hole to bearing bore; insert positions fixed by the shared layout. Press the bearing in BEFORE the inserts, so it backs up the wall while the insert is heat-set (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "wall",
+      "x": -53.2,
+      "y": -8.3,
+      "value": 0.8,
+      "note": "mirror of the accepted Back Right entry: same insert-to-bearing wall, through the insert hole's 45 deg chamfer; bearing goes in before the inserts (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "wall",
+      "x": -39.1,
+      "y": -8.3,
+      "value": 0.8,
+      "note": "mirror of the accepted Back Right entry: same insert-to-bearing wall, through the insert hole's 45 deg chamfer; bearing goes in before the inserts (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -46.07,
+      "y": -23.96,
+      "value": 2.44,
+      "note": "mirror of the accepted Back Right entry: between the two M2 nut traps; shared outline; accepted 2026-10-16"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -46.24,
+      "y": -26.04,
+      "value": 2.44,
+      "note": "mirror of the accepted Back Right entry: between the two M2 nut traps; shared outline; accepted 2026-10-16"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -112.9,
+      "y": 5.7,
+      "value": 2.5,
+      "note": "mirror of the accepted Back Right entry: M4 hole to the plate edge at the right-hand end; shared outline; accepted 2026-10-16"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -82.0,
+      "y": 9.1,
+      "value": 2.5,
+      "note": "mirror of the accepted Back Right entry: M4 hole to the plate edge at the right-hand end; shared outline; accepted 2026-10-16"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -109.5,
+      "y": 9.1,
+      "value": 2.5,
+      "note": "mirror of the accepted Back Right entry: M4 hole to the plate edge at the right-hand end; shared outline; accepted 2026-10-16"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -42.91,
+      "y": -28.59,
+      "value": 2.52,
+      "note": "mirror of the accepted Back Right entry: M2 nut trap to the bottom edge; shared outline; accepted 2026-10-16"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -49.41,
+      "y": -28.59,
+      "value": 2.52,
+      "note": "mirror of the accepted Back Right entry: M2 nut trap to the bottom edge; shared outline; accepted 2026-10-16"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -33.23,
+      "y": -11.47,
+      "value": 2.65,
+      "note": "mirror of the accepted Back Right entry: endstop wire channel exit window to the left retainer counterbore (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -34.36,
+      "y": -12.47,
+      "value": 2.99,
+      "note": "mirror of the accepted Back Right entry: same wall, top 0.1 mm (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "floor",
+      "x": -17.85,
+      "y": 3.97,
+      "value": 1.0,
+      "note": "mirror of the accepted Back Right entry: 1.0 mm roof over the endstop wire tunnel (floor 3.0, ceiling 5.0, 2 mm span); holds the wire only, carries no load (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "floor",
+      "x": -46.16,
+      "y": -25.0,
+      "value": 0.6,
+      "note": "mirror of the accepted Back Right entry: ring around the M2 hole between the bridged square (1.4) and the endstop pocket floor (2.0); the nut bears on the 1.0 mm trap ceiling, endstop screws need light clamping only (accepted 2026-10-16)"
     }
   ]
 }
