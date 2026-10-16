@@ -1032,6 +1032,14 @@
       "y": -9.2,
       "value": 2.9,
       "note": "mirror of the accepted XY Live Idler Right Bottom entry: retainer insert hole to the outline arc; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Spacer 10mm Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -1.26,
+      "y": 10.7,
+      "value": 2.45,
+      "note": "end of the spacer beside the 4.3 hole; follows the XY plates' outline (same as their accepted 2.45) (accepted 2026-10-15)"
     }
   ]
 }
