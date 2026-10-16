@@ -6,10 +6,10 @@ Usage (from the repo root):
   powershell -ExecutionPolicy Bypass -File tools\plate-check.ps1 -Variant "Metal Version" -Reference "CF Version"
   powershell -ExecutionPolicy Bypass -File tools\plate-check.ps1 -Variant "Metal Version" -Only "Front Left Top"
 
-Printed parts (wall sweep only): 2.0 mm minimum, 3.6 mm preferred, walls beside the 4.7 mm
+Printed parts (wall sweep only): 2.0 mm minimum, 3.0 mm preferred, walls beside the 4.7 mm
 heat-set insert holes at least the preferred wall, heights in 0.2 mm layers:
-  powershell -ExecutionPolicy Bypass -File tools\plate-check.ps1 -Variant "Printed Version" -Folder "Base Components\Print Ready" -SweepOnly -MinWall 2.0 -PreferredWall 3.6 -InsertHole 4.7 -LayerHeight 0.2
-  powershell -ExecutionPolicy Bypass -File tools\plate-check.ps1 -Variant "Shared Components" -Folder "Print Ready" -SweepOnly -MinWall 2.0 -PreferredWall 3.6 -InsertHole 4.7 -LayerHeight 0.2
+  powershell -ExecutionPolicy Bypass -File tools\plate-check.ps1 -Variant "Printed Version" -Folder "Base Components\Print Ready" -SweepOnly -MinWall 2.0 -PreferredWall 3.0 -InsertHole 4.7 -LayerHeight 0.2
+  powershell -ExecutionPolicy Bypass -File tools\plate-check.ps1 -Variant "Shared Components" -Folder "Print Ready" -SweepOnly -MinWall 2.0 -PreferredWall 3.0 -InsertHole 4.7 -LayerHeight 0.2
 -WallMultiple 0.4 also flags walls off the line-width grid (exact multiples).
 
 -SkipWallSweep runs only plate_check.py; -SweepOnly runs only wall_check.py. Marked-up drawings of
@@ -23,7 +23,7 @@ param(
     [string]$Folder = "Base Components",   # wall sweep only; plate_check always reads Base Components
     [double]$WallMultiple = 0,             # e.g. 0.4: walls must be multiples of the line width
     [double]$WallMax = 4.0,                # widest wall the multiple rule applies to
-    [double]$PreferredWall = 0,            # e.g. 3.6: walls under this (but over -MinWall) are flagged for review
+    [double]$PreferredWall = 0,            # e.g. 3.0: walls under this (but over -MinWall) are flagged for review
     [string]$InsertHole = "",              # e.g. "4.7": walls beside these holes must reach the preferred wall
     [double]$LayerHeight = 0,              # e.g. 0.2: heights must be multiples of the layer height
     [switch]$ListAllChanges,

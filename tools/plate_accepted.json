@@ -762,38 +762,6 @@
       "note": "insert hole to the outline arc; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
     },
     {
-      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": 39.06,
-      "y": -10.94,
-      "value": 3.05,
-      "note": "shoulder-bolt counterbore to the retainer counterbore; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
-    },
-    {
-      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": 21.48,
-      "y": -11.3,
-      "value": 3.19,
-      "note": "retainer counterbore to the outline arc; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
-    },
-    {
-      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": 41.06,
-      "y": 13.01,
-      "value": 3.35,
-      "note": "ring around the shoulder-bolt counterbore; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
-    },
-    {
-      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": 37.38,
-      "y": 16.54,
-      "value": 3.35,
-      "note": "ring around the shoulder-bolt counterbore; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
-    },
-    {
       "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
       "kind": "insert",
       "x": -26.27,
@@ -888,38 +856,6 @@
       "y": -9.41,
       "value": 2.9,
       "note": "mirror of the accepted XY Live Idler Right Top entry: insert hole to the outline arc; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
-    },
-    {
-      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": -39.05,
-      "y": -10.97,
-      "value": 3.05,
-      "note": "mirror of the accepted XY Live Idler Right Top entry: shoulder-bolt counterbore to the retainer counterbore; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
-    },
-    {
-      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": -21.47,
-      "y": -11.31,
-      "value": 3.19,
-      "note": "mirror of the accepted XY Live Idler Right Top entry: retainer counterbore to the outline arc; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
-    },
-    {
-      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": -41.07,
-      "y": 12.97,
-      "value": 3.35,
-      "note": "mirror of the accepted XY Live Idler Right Top entry: ring around the shoulder-bolt counterbore; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
-    },
-    {
-      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": -37.4,
-      "y": 16.51,
-      "value": 3.35,
-      "note": "mirror of the accepted XY Live Idler Right Top entry: ring around the shoulder-bolt counterbore; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
     }
   ]
 }

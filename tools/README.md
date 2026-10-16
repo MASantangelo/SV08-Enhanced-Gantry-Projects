@@ -64,11 +64,11 @@ This runs two checks on each plate in `<variant>\Base Components`: `plate_check.
 **Printed parts:** the sweep can also check that walls and heights suit your slicer settings. Use `-SweepOnly`, because the hole sizes `plate_check.py` expects don't apply to print-tolerance holes, and point `-Folder` at the print-ready parts:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File tools\plate-check.ps1 -Variant "Printed Version" -Folder "Base Components\Print Ready" -SweepOnly -MinWall 2.0 -PreferredWall 3.6 -InsertHole 4.7 -LayerHeight 0.2
-powershell -ExecutionPolicy Bypass -File tools\plate-check.ps1 -Variant "Shared Components" -Folder "Print Ready" -SweepOnly -MinWall 2.0 -PreferredWall 3.6 -InsertHole 4.7 -LayerHeight 0.2
+powershell -ExecutionPolicy Bypass -File tools\plate-check.ps1 -Variant "Printed Version" -Folder "Base Components\Print Ready" -SweepOnly -MinWall 2.0 -PreferredWall 3.0 -InsertHole 4.7 -LayerHeight 0.2
+powershell -ExecutionPolicy Bypass -File tools\plate-check.ps1 -Variant "Shared Components" -Folder "Print Ready" -SweepOnly -MinWall 2.0 -PreferredWall 3.0 -InsertHole 4.7 -LayerHeight 0.2
 ```
 
-These are the project's printed rules: 2.0 mm minimum and 3.6 mm preferred (9 lines at 0.4 mm), since these parts carry the motion system's loads.
+These are the project's printed rules: 2.0 mm minimum and 3.0 mm preferred. 3 mm of printed plastic is enough for most loads in this motion system, and the shared outline can reach it in most places.
 
 - **`-PreferredWall`**: a second tier. Walls from `-MinWall` up to this are `BELOW-PREFERRED WALL`s. They're listed for review like thin walls, so you either fix them or accept them.
 - **`-InsertHole`** (heat-set insert hole diameters, comma-separated, e.g. `4.7`): any wall touching one of these holes and thinner than the preferred wall (or `-MinWall`, without one) is an `INSERT WALL`. Heat-setting pushes melted plastic outward, so a thin wall beside an insert bulges into the next hole or cracks.
