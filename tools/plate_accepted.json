@@ -856,6 +856,94 @@
       "y": -9.41,
       "value": 2.9,
       "note": "mirror of the accepted XY Live Idler Right Top entry: insert hole to the outline arc; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Bottom Plate Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 34.88,
+      "y": -22.17,
+      "value": 1.0,
+      "note": "retainer insert hole to bearing bore; insert positions fixed by the shared layout. Press the bearing in BEFORE the inserts, so it backs up the wall while the insert is heat-set (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Bottom Plate Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 26.3,
+      "y": -11.98,
+      "value": 1.0,
+      "note": "retainer insert hole to bearing bore; insert positions fixed by the shared layout. Press the bearing in BEFORE the inserts, so it backs up the wall while the insert is heat-set (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Bottom Plate Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 34.9,
+      "y": -22.18,
+      "value": 1.05,
+      "note": "same insert-to-bearing wall, through the insert hole's 45 deg chamfer; bearing goes in before the inserts (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Bottom Plate Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 26.29,
+      "y": -11.95,
+      "value": 1.05,
+      "note": "same insert-to-bearing wall, through the insert hole's 45 deg chamfer; bearing goes in before the inserts (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Bottom Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 37.85,
+      "y": -27.71,
+      "value": 2.1,
+      "note": "retainer counterbore to the outer edge; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Bottom Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 21.18,
+      "y": -9.2,
+      "value": 2.1,
+      "note": "retainer counterbore to the outline arc; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Bottom Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -2.77,
+      "y": 11.0,
+      "value": 2.45,
+      "note": "end of the plate beside the 4.3 hole; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Bottom Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 20.24,
+      "y": -14.08,
+      "value": 2.85,
+      "note": "ring around the bearing step; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Bottom Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 29.68,
+      "y": -28.26,
+      "value": 2.85,
+      "note": "ring around the bearing step; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Bottom Plate Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 37.8,
+      "y": -27.31,
+      "value": 2.9,
+      "note": "retainer insert hole to the outer edge; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Bottom Plate Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 21.58,
+      "y": -9.2,
+      "value": 2.9,
+      "note": "retainer insert hole to the outline arc; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
     }
   ]
 }
