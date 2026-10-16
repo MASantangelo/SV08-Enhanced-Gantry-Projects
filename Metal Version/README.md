@@ -66,4 +66,8 @@ On the **front** motor corners, the four D5 M3 × 30 shoulder bolts are also the
 - **2 mm of washers under each shoulder-bolt head** (two 1 mm M5-size washers, which clear the Ø5 shoulder). This leaves about 4 mm of thread in the motor. Unlike on the XY joints and back corners, a washer is fine here: the shoulder still locates in both plates, and the bolt clamps the motor onto the stack.
 - **Or trim the M3 thread to 4 mm** (cut 2 mm off, then run an M3 nut off over the cut to clean up the thread), with no washers.
 
+### Build note: back corner motor screws need washers (or a trim)
+
+The four M3 × 35 screws that hold each back motor pass through both 5 mm plates and the 20 mm standoff. With the thinner metal plates, almost 5 mm of thread would reach the motor, more than most NEMA 17 holes are deep. Put **two M3 washers (3 × 7 × 0.5–0.6 mm) under each head**, as the CAD shows, or **trim 1–2 mm off each screw** (then run an M3 nut off over the cut to clean up the thread). Either way, about 3–4 mm of thread goes into the motor.
+
 Every plate passes [`tools/plate-check.ps1`](../tools), which checks thickness, hole sizes, minimum wall thickness (1.5 mm) and left/right mirror symmetry.

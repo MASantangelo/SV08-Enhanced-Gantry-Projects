@@ -10,7 +10,7 @@ FILE_DESCRIPTION(
 
 FILE_NAME(
 /* name */ 'XY Joint Right CF6mm.step',
-/* time_stamp */ '2026-10-15T14:25:07-04:00',
+/* time_stamp */ '2026-10-15T19:52:58-04:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v20.2',
@@ -651,14 +651,13 @@ SHAPE_REPRESENTATION_RELATIONSHIP()
 'M4 Washer (4mm ID | 9mm OD | 1mm Tall):1');
 #260=NEXT_ASSEMBLY_USAGE_OCCURRENCE('M4x20mm BHCS:1','M4x20mm BHCS:1',
 'M4x20mm BHCS:1',#34830,#34846,'M4x20mm BHCS:1');
-#261=NEXT_ASSEMBLY_USAGE_OCCURRENCE('M3x10mm BHCS (3):1',
-'M3x10mm BHCS (3):1','M3x10mm BHCS (3):1',#34830,#34849,
-'M3x10mm BHCS (3):1');
+#261=NEXT_ASSEMBLY_USAGE_OCCURRENCE('M3x10mm BHCS:1','M3x10mm BHCS:1',
+'M3x10mm BHCS:1',#34830,#34849,'M3x10mm BHCS:1');
 #262=NEXT_ASSEMBLY_USAGE_OCCURRENCE(
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall):1',
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall):1',
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall):1',#34830,#34850,
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall):1');
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall):1',
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall):1',
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall):1',#34830,#34850,
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall):1');
 #263=NEXT_ASSEMBLY_USAGE_OCCURRENCE('M4x20mm BHCS:2','M4x20mm BHCS:2',
 'M4x20mm BHCS:2',#34830,#34846,'M4x20mm BHCS:2');
 #264=NEXT_ASSEMBLY_USAGE_OCCURRENCE(
@@ -678,30 +677,27 @@ SHAPE_REPRESENTATION_RELATIONSHIP()
 'M4 Washer (4mm ID | 9mm OD | 1mm Tall):4');
 #267=NEXT_ASSEMBLY_USAGE_OCCURRENCE('M4x10mm BHCS:2','M4x10mm BHCS:2',
 'M4x10mm BHCS:2',#34830,#34848,'M4x10mm BHCS:2');
-#268=NEXT_ASSEMBLY_USAGE_OCCURRENCE('M3x10mm BHCS (3):2',
-'M3x10mm BHCS (3):2','M3x10mm BHCS (3):2',#34830,#34849,
-'M3x10mm BHCS (3):2');
-#269=NEXT_ASSEMBLY_USAGE_OCCURRENCE('M3x10mm BHCS (3):3',
-'M3x10mm BHCS (3):3','M3x10mm BHCS (3):3',#34830,#34849,
-'M3x10mm BHCS (3):3');
-#270=NEXT_ASSEMBLY_USAGE_OCCURRENCE('M3x10mm BHCS (3):4',
-'M3x10mm BHCS (3):4','M3x10mm BHCS (3):4',#34830,#34849,
-'M3x10mm BHCS (3):4');
+#268=NEXT_ASSEMBLY_USAGE_OCCURRENCE('M3x10mm BHCS:2','M3x10mm BHCS:2',
+'M3x10mm BHCS:2',#34830,#34849,'M3x10mm BHCS:2');
+#269=NEXT_ASSEMBLY_USAGE_OCCURRENCE('M3x10mm BHCS:3','M3x10mm BHCS:3',
+'M3x10mm BHCS:3',#34830,#34849,'M3x10mm BHCS:3');
+#270=NEXT_ASSEMBLY_USAGE_OCCURRENCE('M3x10mm BHCS:4','M3x10mm BHCS:4',
+'M3x10mm BHCS:4',#34830,#34849,'M3x10mm BHCS:4');
 #271=NEXT_ASSEMBLY_USAGE_OCCURRENCE(
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall):2',
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall):2',
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall):2',#34830,#34850,
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall):2');
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall):2',
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall):2',
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall):2',#34830,#34850,
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall):2');
 #272=NEXT_ASSEMBLY_USAGE_OCCURRENCE(
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall):3',
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall):3',
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall):3',#34830,#34850,
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall):3');
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall):3',
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall):3',
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall):3',#34830,#34850,
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall):3');
 #273=NEXT_ASSEMBLY_USAGE_OCCURRENCE(
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall):4',
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall):4',
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall):4',#34830,#34850,
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall):4');
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall):4',
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall):4',
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall):4',#34830,#34850,
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall):4');
 #274=NEXT_ASSEMBLY_USAGE_OCCURRENCE('M5 Spacer 10mm OD 10mm Tall:1',
 'M5 Spacer 10mm OD 10mm Tall:1','M5 Spacer 10mm OD 10mm Tall:1',#34830,
 #34851,'M5 Spacer 10mm OD 10mm Tall:1');
@@ -36938,10 +36934,10 @@ SOLID_ANGLE_UNIT()
 'M4 Washer (4mm ID | 9mm OD | 1mm Tall)',#34872,#34829);
 #34848=PRODUCT_DEFINITION('2026-10-08-10-27-39-735','M4x10mm BHCS',#34873,
 #34829);
-#34849=PRODUCT_DEFINITION('2026-10-08-10-27-39-795','M3x10mm BHCS (3)',
-#34874,#34829);
+#34849=PRODUCT_DEFINITION('2026-10-08-10-27-39-795','M3x10mm BHCS',#34874,
+#34829);
 #34850=PRODUCT_DEFINITION('2026-10-08-10-27-39-815',
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall)',#34875,#34829);
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall)',#34875,#34829);
 #34851=PRODUCT_DEFINITION('2026-10-08-11-12-17-080',
 'M5 Spacer 10mm OD 10mm Tall',#34876,#34829);
 #34852=PRODUCT_DEFINITION('2026-10-12-02-51-44-572','SO-M3-3ZI Insert',
@@ -37013,11 +37009,10 @@ SOLID_ANGLE_UNIT()
 'M4 Washer (4mm ID | 9mm OD | 1mm Tall)',
 'M4 Washer (4mm ID | 9mm OD | 1mm Tall)',(#34925));
 #34898=PRODUCT_RELATED_PRODUCT_CATEGORY('M4x10mm BHCS','M4x10mm BHCS',(#34926));
-#34899=PRODUCT_RELATED_PRODUCT_CATEGORY('M3x10mm BHCS (3)',
-'M3x10mm BHCS (3)',(#34927));
+#34899=PRODUCT_RELATED_PRODUCT_CATEGORY('M3x10mm BHCS','M3x10mm BHCS',(#34927));
 #34900=PRODUCT_RELATED_PRODUCT_CATEGORY(
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall)',
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall)',(#34928));
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall)',
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall)',(#34928));
 #34901=PRODUCT_RELATED_PRODUCT_CATEGORY('M5 Spacer 10mm OD 10mm Tall',
 'M5 Spacer 10mm OD 10mm Tall',(#34929));
 #34902=PRODUCT_RELATED_PRODUCT_CATEGORY('SO-M3-3ZI Insert',
@@ -37067,9 +37062,9 @@ SOLID_ANGLE_UNIT()
 #34925=PRODUCT('2026-10-08-10-27-39-755',
 'M4 Washer (4mm ID | 9mm OD | 1mm Tall)',$,(#34907));
 #34926=PRODUCT('2026-10-08-10-27-39-735','M4x10mm BHCS',$,(#34907));
-#34927=PRODUCT('2026-10-08-10-27-39-795','M3x10mm BHCS (3)',$,(#34907));
+#34927=PRODUCT('2026-10-08-10-27-39-795','M3x10mm BHCS',$,(#34907));
 #34928=PRODUCT('2026-10-08-10-27-39-815',
-'M3 Washer (3mm ID | 7mm OD | .5mm Tall)',$,(#34907));
+'M3 Washer (3mm ID | 7mm OD | .5-.6mm Tall)',$,(#34907));
 #34929=PRODUCT('2026-10-08-11-12-17-080','M5 Spacer 10mm OD 10mm Tall',
 $,(#34907));
 #34930=PRODUCT('2026-10-12-02-51-44-572','SO-M3-3ZI Insert',

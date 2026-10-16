@@ -84,7 +84,8 @@ Run this before committing a new assembly STEP. It reads every part and how many
 & "C:\Program Files\FreeCAD 1.0\bin\python.exe" tools\step_bom.py check "Printed Version"
 ```
 
-- **check**: reports quantity differences, parts in the CAD that aren't in the BOM, and BOM rows that are no longer in the CAD. It ends with `CHECK PASSED` (exit code 0) or `CHECK FAILED` (exit code 1), and never writes anything.
+- **check**: reports quantity differences, parts in the CAD that aren't in the BOM, and BOM rows that are no longer in the CAD. It also fails on duplicate components (see `dupes`). It ends with `CHECK PASSED` (exit code 0) or `CHECK FAILED` (exit code 1), and never writes anything.
+- **dupes**: checks the main STEP and every `Base Assemblies` STEP for duplicate components. When a component is copied and pasted instead of inserted as another instance, Fusion names the copy `Name (1)`, `Name (2)` and so on. The BOM still counts them correctly, but each copy is a separate component to keep in sync, so the check names each one and its parent so you can replace it with an instance of the original. Copies inside the stock Sovol `SV08 … Z Carriage` models are listed but don't fail the check.
 - **update**: writes the CAD quantities into the spreadsheet's Qty column, then rebuilds `BOM.md`. Links, notes and formatting are left alone. New CAD parts are only reported unless you add `--add-new`, which appends them under a "New from CAD (sort these)" section. Close the spreadsheet in Excel first.
 - **tree**: prints the assembly structure, showing each sub-assembly once. It's useful when writing rules.
 

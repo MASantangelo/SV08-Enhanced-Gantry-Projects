@@ -83,7 +83,7 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 |---:|---|---|---|
 | 44 | M5 Washer (5mm ID \| 10mm OD \| 1mm Tall) | [Amazon](https://amazon.com/dp/B07WZ5WQCG) | Includes the 36 bearing-stack shims, now named M5 Washer. |
 | 38 | M4 Washer (4mm ID \| 9mm OD \| 1mm Tall) | [Amazon](https://amazon.com/dp/B0DK6KXB6W) | .8mm more common and acceptable swap, OD matters |
-| 8 | M3 Washer (3mm ID \| 7mm OD \| .5mm Tall) | [Amazon](https://amazon.com/dp/B0C3TJ7PWT) |  |
+| 8 | M3 Washer (3mm ID \| 7mm OD \| .5-.6mm Tall) | [Amazon](https://amazon.com/dp/B0C3TJ7PWT) |  |
 | 8 | M3 Shim (3mm ID \| 5mm OD \| .2mm Tall) | [Amazon](https://amazon.com/dp/B08ZYP1TK4) |  |
 
 ## Bearings

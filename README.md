@@ -49,6 +49,7 @@ The 12 gantry plates, the XY spacers and the 4 tensioner lever arms are machined
 
 - **Machine and tap the plates.** The pockets need a mill; the tap drills, close-fit clearances and locating fits are in the Metal README's [hole guide](Metal%20Version/README.md#hole-guide-for-machining).
 - **Front corners: shim or trim the shoulder bolts.** The D5 M3 × 30 shoulder bolts are also the motor screws. With the 5 mm plates, put two 1 mm M5 washers under each head, or trim the thread to 4 mm, so they don't bottom out in the motor ([details](Metal%20Version/README.md#build-note-front-corner-shoulder-bolts-thread-into-the-motor)).
+- **Back corners: shim or trim the motor screws.** The M3 × 35 screws that hold each back motor would put almost 5 mm of thread into the motor with the 5 mm plates. Put two M3 washers under each head, or trim 1–2 mm off each screw ([details](Metal%20Version/README.md#build-note-back-corner-motor-screws-need-washers-or-a-trim)).
 - **XY joints and back corners: about 1 mm of shoulder-bolt thread sticks out** under the bottom plates. That's expected. Trim it if you like, but don't add a washer under the head ([details](Metal%20Version/README.md#build-note-shoulder-bolt-tips-stick-out-1-mm)).
 - **Use the metal tensioner lever arm** (`Tensioner Lever Arm Revised - 5mm Metal Only`), not the shared one.
 

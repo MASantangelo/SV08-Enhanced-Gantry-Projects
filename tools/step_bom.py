@@ -4,6 +4,7 @@ Usage (run with FreeCAD's python.exe, which has openpyxl installed):
   python tools/step_bom.py check  "Printed Version"
   python tools/step_bom.py update "Printed Version" [--add-new]
   python tools/step_bom.py tree   "Printed Version"
+  python tools/step_bom.py dupes  "Printed Version"
 
 check   Exit 0 if every CAD part maps to a BOM row with the same quantity,
         exit 1 and list the problems otherwise. Never writes anything.
@@ -11,6 +12,10 @@ update  Write CAD quantities into the spreadsheet's Qty column (links, notes and
         formatting untouched), then rebuild BOM.md. CAD parts with no BOM row
         are only reported, unless --add-new appends them in a section to sort.
 tree    Print the assembly structure, each sub-assembly once. Use it to write rules.
+dupes   Check the main STEP and every Base Assemblies STEP for duplicate components:
+        Fusion names a copy-pasted (rather than instanced) component "Name (1)", and
+        that copy should be another instance of "Name". Exit 1 if any are found.
+        check runs this on the main STEP too and fails if it finds any.
 
 How quantities are derived: Fusion's STEP export stores each component's name
 (PRODUCT) and every placement of a component inside its parent
@@ -35,7 +40,8 @@ ROOT = os.path.dirname(HERE)
 # ---------- STEP parsing ----------
 
 def parse_step(path):
-    text = open(path, encoding="latin-1").read()
+    # line breaks carry no meaning in STEP, and long names get wrapped mid-word
+    text = open(path, encoding="latin-1").read().replace("\r", "").replace("\n", "")
     data = text[text.index("DATA;") + 5:]
     stmts = {int(m.group(1)): " ".join(m.group(2).split())
              for m in re.finditer(r"#(\d+)\s*=\s*(.*?);\s*(?=#\d+\s*=|ENDSEC)", data, re.S)}
@@ -245,6 +251,61 @@ def report(mismatches, cad_missing, bom_missing, raw):
     return ok
 
 
+# ---------- duplicate components ----------
+
+# Stock reference models (Sovol's own parts), reported but not failed on
+STOCK_ASSEMBLY = r"^SV08 .* Z Carriage$"
+
+
+def duplicate_components(step_path):
+    """Components named "Name (N)": Fusion's name for a copied component that should have been
+    another instance of "Name". Returns [(dup name, instances, parent names, base exists, stock)]."""
+    names, kids, roots = parse_step(step_path)
+    count, parents = Counter(), defaultdict(set)
+    for parent, ck in kids.items():
+        for child, k in ck.items():
+            count[child] += k
+            parents[child].add(parent)
+    stock = set()
+
+    def mark(pd):
+        for c in kids[pd]:
+            if c not in stock:
+                stock.add(c)
+                mark(c)
+    for pd, n in names.items():
+        if re.search(STOCK_ASSEMBLY, n.strip()):
+            mark(pd)
+    all_names = {n.strip() for n in names.values()}
+    found = []
+    for pd, n in names.items():
+        m = re.match(r"^(.*\S)\s*\((\d+)\)$", n.strip())
+        if m and pd not in roots:
+            par = sorted({names.get(p, "?").strip() for p in parents[pd]})
+            found.append((n.strip(), count[pd], par, m.group(1) in all_names, pd in stock))
+    return sorted(found, key=lambda f: (f[4], f[0]))
+
+
+def report_duplicates(step_path):
+    found = duplicate_components(step_path)
+    own = [f for f in found if not f[4]]
+    stock = [f for f in found if f[4]]
+    name = os.path.basename(step_path)
+    if own:
+        print(f"  DUP  {name}: {len(own)} duplicate component(s)")
+    else:
+        print(f"  OK   {name}: no duplicate components")
+    for n, k, par, base, st in own:
+        root = re.sub(r"\s*\(\d+\)$", "", n)
+        note = (f'copy of "{root}"' if base else
+                f'no "{root}" in this file; rename it, or instance the original')
+        print(f"         {n}  x{k}  in {', '.join(par)}  ({note})")
+    if stock:
+        print(f"       ({len(stock)} more inside the stock SV08 Z carriage models, not counted: "
+              + ", ".join(sorted({f[0] for f in stock})) + ")")
+    return not own
+
+
 # ---------- tree ----------
 
 def print_tree(step_path):
@@ -281,7 +342,7 @@ def show_path(p):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("mode", choices=["check", "update", "tree"])
+    ap.add_argument("mode", choices=["check", "update", "tree", "dupes"])
     ap.add_argument("variant", help='variant folder, e.g. "Printed Version"')
     ap.add_argument("--step", help="assembly STEP (default: the single .step in the variant folder)")
     ap.add_argument("--xlsx", help="BOM spreadsheet (default: the single *BOM*.xlsx in the variant folder)")
@@ -293,6 +354,11 @@ def main():
     if a.mode == "tree":
         print_tree(step)
         return
+    if a.mode == "dupes":
+        print("Duplicate components (copies that should be instances):")
+        files = [step] + sorted(glob.glob(os.path.join(variant_dir, "Base Assemblies", "*.step")))
+        ok = all([report_duplicates(f) for f in files])
+        sys.exit(0 if ok else 1)
 
     rules = load_rules(a.variant)
     xlsx = a.xlsx or find_variant_file(variant_dir, "*BOM*.xlsx", "BOM spreadsheet")
@@ -301,8 +367,11 @@ def main():
     wb, ws, cols, rows = load_bom(xlsx)
     mismatches, cad_missing, bom_missing = compare(cad, rows, rules)
     ok = report(mismatches, cad_missing, bom_missing, raw)
-
     if a.mode == "check":
+        print("\nDuplicate components (copies that should be instances):")
+        if not report_duplicates(step):
+            print("\nCHECK FAILED: duplicate components")
+            ok = False
         sys.exit(0 if ok else 1)
 
     changed = 0

@@ -75,7 +75,7 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 |---:|---|---|---|
 | 60 | M5 Washer (5mm ID \| 10mm OD \| 1mm Tall) | [Amazon](https://amazon.com/dp/B07WZ5WQCG) | Includes the 36 bearing-stack shims, and 2 under each front shoulder-bolt head (16) so the bolts thread 4mm into the motor. Or trim those bolts' threads to 4mm and skip those 16. |
 | 38 | M4 Washer (4mm ID \| 9mm OD \| 1mm Tall) | [Amazon](https://amazon.com/dp/B0DK6KXB6W) | .8mm more common and acceptable swap, OD matters |
-| 8 | M3 Washer (3mm ID \| 7mm OD \| .5mm Tall) | [Amazon](https://amazon.com/dp/B0C3TJ7PWT) |  |
+| 24 | M3 Washer (3mm ID \| 7mm OD \| .5-.6mm Tall) | [Amazon](https://amazon.com/dp/B0C3TJ7PWT) | 8 for the XY joints, plus 2 under the head of each back motor screw (16) so the M3 x 35 screws don't bottom out in the motor. Or skip those 16 and trim 1-2 mm off each back motor screw. |
 | 8 | M3 Shim (3mm ID \| 5mm OD \| .2mm Tall) | [Amazon](https://amazon.com/dp/B08ZYP1TK4) |  |
 
 ## Bearings
