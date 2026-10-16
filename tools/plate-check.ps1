@@ -6,9 +6,11 @@ Usage (from the repo root):
   powershell -ExecutionPolicy Bypass -File tools\plate-check.ps1 -Variant "Metal Version" -Reference "CF Version"
   powershell -ExecutionPolicy Bypass -File tools\plate-check.ps1 -Variant "Metal Version" -Only "Front Left Top"
 
-Printed parts (wall sweep only, with line-width and layer-height rules):
-  powershell -ExecutionPolicy Bypass -File tools\plate-check.ps1 -Variant "Printed Version" -Folder "Base Components\Print Ready" -SweepOnly -WallMultiple 0.4 -LayerHeight 0.2
-  powershell -ExecutionPolicy Bypass -File tools\plate-check.ps1 -Variant "Shared Components" -Folder "Print Ready" -SweepOnly -WallMultiple 0.4 -LayerHeight 0.2
+Printed parts (wall sweep only): 2.0 mm minimum, 3.6 mm preferred, walls beside the 4.7 mm
+heat-set insert holes at least the preferred wall, heights in 0.2 mm layers:
+  powershell -ExecutionPolicy Bypass -File tools\plate-check.ps1 -Variant "Printed Version" -Folder "Base Components\Print Ready" -SweepOnly -MinWall 2.0 -PreferredWall 3.6 -InsertHole 4.7 -LayerHeight 0.2
+  powershell -ExecutionPolicy Bypass -File tools\plate-check.ps1 -Variant "Shared Components" -Folder "Print Ready" -SweepOnly -MinWall 2.0 -PreferredWall 3.6 -InsertHole 4.7 -LayerHeight 0.2
+-WallMultiple 0.4 also flags walls off the line-width grid (exact multiples).
 
 -SkipWallSweep runs only plate_check.py; -SweepOnly runs only wall_check.py. Marked-up drawings of
 plates with plate_check findings go to %TEMP%\sv08-plate-check (not into the repo).
@@ -21,6 +23,8 @@ param(
     [string]$Folder = "Base Components",   # wall sweep only; plate_check always reads Base Components
     [double]$WallMultiple = 0,             # e.g. 0.4: walls must be multiples of the line width
     [double]$WallMax = 4.0,                # widest wall the multiple rule applies to
+    [double]$PreferredWall = 0,            # e.g. 3.6: walls under this (but over -MinWall) are flagged for review
+    [string]$InsertHole = "",              # e.g. "4.7": walls beside these holes must reach the preferred wall
     [double]$LayerHeight = 0,              # e.g. 0.2: heights must be multiples of the layer height
     [switch]$ListAllChanges,
     [switch]$SkipWallSweep,
@@ -36,6 +40,8 @@ $env:PLATE_MIN_WALL = $MinWall.ToString($inv)
 $env:PLATE_FOLDER = $Folder
 $env:PLATE_WALL_MULTIPLE = $(if ($WallMultiple -gt 0) { $WallMultiple.ToString($inv) } else { "" })
 $env:PLATE_WALL_MAX = $WallMax.ToString($inv)
+$env:PLATE_WALL_PREFERRED = $(if ($PreferredWall -gt 0) { $PreferredWall.ToString($inv) } else { "" })
+$env:PLATE_INSERT_HOLE = $InsertHole
 $env:PLATE_LAYER_HEIGHT = $(if ($LayerHeight -gt 0) { $LayerHeight.ToString($inv) } else { "" })
 $env:PLATE_VERBOSE = $(if ($ListAllChanges) { "1" } else { "" })
 $env:PLATE_OUT = Join-Path ([IO.Path]::GetTempPath()) "sv08-plate-check"

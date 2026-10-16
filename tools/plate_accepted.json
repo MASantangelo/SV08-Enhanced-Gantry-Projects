@@ -1,5 +1,5 @@
 {
-  "_help": "Plate-check findings accepted on purpose. An entry matches the same plate and kind ('wall', 'near-miss' or 'fit') within 1 mm of x/y and 0.05 mm of value (the wall thickness or hole diameter). If the geometry changes, the finding is reported again.",
+  "_help": "Plate-check findings accepted on purpose. An entry matches the same plate and kind ('wall', 'near-miss', 'fit', 'floor', 'preferred', 'insert', 'grid' or 'layer') within 1 mm of x/y and 0.05 mm of value (the wall thickness or hole diameter). If the geometry changes, the finding is reported again.",
   "accepted": [
     {
       "plate": "Front Left Top Metal5mm",
@@ -664,6 +664,262 @@
       "y": 8.04,
       "value": 5.75,
       "note": "intentional oversized arc of the adjustment slot, same as the shared lever (accepted 2026-10-13)"
+    },
+    {
+      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 26.28,
+      "y": -12.11,
+      "value": 0.75,
+      "note": "heat-set insert hole to bearing bore; insert positions are fixed by the shared layout. Press the bearing in BEFORE the inserts, so the bearing backs up the wall while the insert is heat-set (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 35.22,
+      "y": -16.36,
+      "value": 0.75,
+      "note": "heat-set insert hole to bearing bore; insert positions are fixed by the shared layout. Press the bearing in BEFORE the inserts, so the bearing backs up the wall while the insert is heat-set (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 26.27,
+      "y": -12.08,
+      "value": 0.8,
+      "note": "same insert-to-bearing wall, through the insert hole's 45 deg chamfer; bearing goes in before the inserts (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 35.24,
+      "y": -16.35,
+      "value": 0.8,
+      "note": "same insert-to-bearing wall, through the insert hole's 45 deg chamfer; bearing goes in before the inserts (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 41.26,
+      "y": -17.8,
+      "value": 2.1,
+      "note": "retainer counterbore to the outer edge, top layers; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 21.18,
+      "y": -9.38,
+      "value": 2.1,
+      "note": "retainer counterbore to the outline arc, top layers; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -2.78,
+      "y": 11.0,
+      "value": 2.45,
+      "note": "end of the plate beside the 4.3 hole; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 27.21,
+      "y": -10.86,
+      "value": 2.69,
+      "note": "insert-hole cone to the bearing bore (same wall as the accepted 0.75); shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 36.54,
+      "y": -24.1,
+      "value": 2.85,
+      "note": "ring around the bearing step; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 20.24,
+      "y": -14.07,
+      "value": 2.85,
+      "note": "ring around the bearing step; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 40.93,
+      "y": -17.57,
+      "value": 2.9,
+      "note": "insert hole to the outer edge; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 21.58,
+      "y": -9.39,
+      "value": 2.9,
+      "note": "insert hole to the outline arc; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 39.06,
+      "y": -10.94,
+      "value": 3.05,
+      "note": "shoulder-bolt counterbore to the retainer counterbore; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 21.48,
+      "y": -11.3,
+      "value": 3.19,
+      "note": "retainer counterbore to the outline arc; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 41.06,
+      "y": 13.01,
+      "value": 3.35,
+      "note": "ring around the shoulder-bolt counterbore; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 37.38,
+      "y": 16.54,
+      "value": 3.35,
+      "note": "ring around the shoulder-bolt counterbore; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
+      "kind": "insert",
+      "x": -26.27,
+      "y": -12.13,
+      "value": 0.75,
+      "note": "mirror of the accepted XY Live Idler Right Top entry: heat-set insert hole to bearing bore; insert positions are fixed by the shared layout. Press the bearing in BEFORE the inserts, so the bearing backs up the wall while the insert is heat-set (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
+      "kind": "insert",
+      "x": -35.21,
+      "y": -16.39,
+      "value": 0.75,
+      "note": "mirror of the accepted XY Live Idler Right Top entry: heat-set insert hole to bearing bore; insert positions are fixed by the shared layout. Press the bearing in BEFORE the inserts, so the bearing backs up the wall while the insert is heat-set (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
+      "kind": "wall",
+      "x": -26.26,
+      "y": -12.1,
+      "value": 0.8,
+      "note": "mirror of the accepted XY Live Idler Right Top entry: same insert-to-bearing wall, through the insert hole's 45 deg chamfer; bearing goes in before the inserts (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
+      "kind": "wall",
+      "x": -35.23,
+      "y": -16.38,
+      "value": 0.8,
+      "note": "mirror of the accepted XY Live Idler Right Top entry: same insert-to-bearing wall, through the insert hole's 45 deg chamfer; bearing goes in before the inserts (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -41.25,
+      "y": -17.83,
+      "value": 2.1,
+      "note": "mirror of the accepted XY Live Idler Right Top entry: retainer counterbore to the outer edge, top layers; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -21.17,
+      "y": -9.39,
+      "value": 2.1,
+      "note": "mirror of the accepted XY Live Idler Right Top entry: retainer counterbore to the outline arc, top layers; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 2.77,
+      "y": 11.0,
+      "value": 2.45,
+      "note": "mirror of the accepted XY Live Idler Right Top entry: end of the plate beside the 4.3 hole; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -27.2,
+      "y": -10.88,
+      "value": 2.69,
+      "note": "mirror of the accepted XY Live Idler Right Top entry: insert-hole cone to the bearing bore (same wall as the accepted 0.75); shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -36.52,
+      "y": -24.13,
+      "value": 2.85,
+      "note": "mirror of the accepted XY Live Idler Right Top entry: ring around the bearing step; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -20.23,
+      "y": -14.09,
+      "value": 2.85,
+      "note": "mirror of the accepted XY Live Idler Right Top entry: ring around the bearing step; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
+      "kind": "insert",
+      "x": -40.92,
+      "y": -17.6,
+      "value": 2.9,
+      "note": "mirror of the accepted XY Live Idler Right Top entry: insert hole to the outer edge; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
+      "kind": "insert",
+      "x": -21.57,
+      "y": -9.41,
+      "value": 2.9,
+      "note": "mirror of the accepted XY Live Idler Right Top entry: insert hole to the outline arc; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -39.05,
+      "y": -10.97,
+      "value": 3.05,
+      "note": "mirror of the accepted XY Live Idler Right Top entry: shoulder-bolt counterbore to the retainer counterbore; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -21.47,
+      "y": -11.31,
+      "value": 3.19,
+      "note": "mirror of the accepted XY Live Idler Right Top entry: retainer counterbore to the outline arc; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -41.07,
+      "y": 12.97,
+      "value": 3.35,
+      "note": "mirror of the accepted XY Live Idler Right Top entry: ring around the shoulder-bolt counterbore; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+    },
+    {
+      "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -37.4,
+      "y": 16.51,
+      "value": 3.35,
+      "note": "mirror of the accepted XY Live Idler Right Top entry: ring around the shoulder-bolt counterbore; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
     }
   ]
 }
