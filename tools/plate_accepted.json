@@ -1468,170 +1468,170 @@
     {
       "plate": "Front Left Top Printed6mm - For Printing",
       "kind": "insert",
-      "x": -35.31,
-      "y": 1.24,
+      "x": 35.31,
+      "y": -1.24,
       "value": 0.75,
       "note": "mirror of the accepted Front Right Top entry: retainer insert hole to idler bearing bore; insert positions fixed by the shared layout. Press the bearing in BEFORE the inserts, so it backs up the wall while the insert is heat-set (accepted 2026-10-16)"
     },
     {
       "plate": "Front Left Top Printed6mm - For Printing",
       "kind": "insert",
-      "x": -47.5,
-      "y": 5.87,
+      "x": 47.49,
+      "y": -5.87,
       "value": 0.75,
       "note": "mirror of the accepted Front Right Top entry: retainer insert hole to idler bearing bore; insert positions fixed by the shared layout. Press the bearing in BEFORE the inserts, so it backs up the wall while the insert is heat-set (accepted 2026-10-16)"
     },
     {
       "plate": "Front Left Top Printed6mm - For Printing",
       "kind": "wall",
-      "x": -35.29,
-      "y": 1.22,
+      "x": 35.3,
+      "y": -1.22,
       "value": 0.8,
       "note": "mirror of the accepted Front Right Top entry: same insert-to-bearing wall, through the insert hole's 45 deg chamfer; bearing goes in before the inserts (accepted 2026-10-16)"
     },
     {
       "plate": "Front Left Top Printed6mm - For Printing",
       "kind": "wall",
-      "x": -47.52,
-      "y": 5.87,
+      "x": 47.52,
+      "y": -5.87,
       "value": 0.8,
       "note": "mirror of the accepted Front Right Top entry: same insert-to-bearing wall, through the insert hole's 45 deg chamfer; bearing goes in before the inserts (accepted 2026-10-16)"
     },
     {
       "plate": "Front Left Top Printed6mm - For Printing",
-      "kind": "insert",
-      "x": -35.55,
-      "y": -2.89,
-      "value": 1.68,
-      "note": "mirror of the accepted Front Right Top entry: left retainer insert to the motor bore; insert position fixed by the plate layout; changing it would mean re-laying out the plate (accepted 2026-10-16)"
-    },
-    {
-      "plate": "Front Left Top Printed6mm - For Printing",
       "kind": "wall",
-      "x": -35.53,
-      "y": -2.87,
-      "value": 1.73,
-      "note": "mirror of the accepted Front Right Top entry: same wall through the insert chamfer; insert position fixed by the plate layout; changing it would mean re-laying out the plate (accepted 2026-10-16)"
-    },
-    {
-      "plate": "Front Left Top Printed6mm - For Printing",
-      "kind": "wall",
-      "x": -30.15,
-      "y": -43.12,
+      "x": 30.16,
+      "y": 43.12,
       "value": 1.75,
       "note": "mirror of the accepted Front Right Top entry: hole to the plate edge that faces the Z gantry parts (about 0.1 mm away), so the edge can't move (accepted 2026-10-16)"
     },
     {
       "plate": "Front Left Top Printed6mm - For Printing",
       "kind": "wall",
-      "x": -2.65,
-      "y": -43.12,
+      "x": 2.65,
+      "y": 43.12,
       "value": 1.75,
       "note": "mirror of the accepted Front Right Top entry: hole to the plate edge that faces the Z gantry parts (about 0.1 mm away), so the edge can't move (accepted 2026-10-16)"
     },
     {
       "plate": "Front Left Top Printed6mm - For Printing",
-      "kind": "insert",
-      "x": -30.96,
-      "y": 1.62,
-      "value": 1.78,
-      "note": "mirror of the accepted Front Right Top entry: left retainer insert to the shoulder bore; insert position fixed by the plate layout; changing it would mean re-laying out the plate (accepted 2026-10-16)"
-    },
-    {
-      "plate": "Front Left Top Printed6mm - For Printing",
-      "kind": "wall",
-      "x": -30.98,
-      "y": 1.61,
-      "value": 1.83,
-      "note": "mirror of the accepted Front Right Top entry: same wall through the insert chamfer; insert position fixed by the plate layout; changing it would mean re-laying out the plate (accepted 2026-10-16)"
-    },
-    {
-      "plate": "Front Left Top Printed6mm - For Printing",
       "kind": "preferred",
-      "x": -35.43,
-      "y": -2.76,
-      "value": 2.03,
-      "note": "mirror of the accepted Front Right Top entry: left retainer insert to the motor bore, through the chamfer; above the 2.0 minimum; positions fixed by the hardware layout (accepted 2026-10-16)"
-    },
-    {
-      "plate": "Front Left Top Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": -31.06,
-      "y": 1.54,
-      "value": 2.03,
-      "note": "mirror of the accepted Front Right Top entry: left retainer insert to the shoulder bore, through the chamfer; above the 2.0 minimum; positions fixed by the hardware layout (accepted 2026-10-16)"
-    },
-    {
-      "plate": "Front Left Top Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": -33.35,
-      "y": 11.22,
+      "x": 33.35,
+      "y": -11.22,
       "value": 2.17,
       "note": "mirror of the accepted Front Right Top entry: bearing step to the outline bulge around the idler bearing (bulge pushed out to D19.46), top layers (accepted 2026-10-16)"
     },
     {
       "plate": "Front Left Top Printed6mm - For Printing",
       "kind": "preferred",
-      "x": -47.6,
-      "y": 11.22,
+      "x": 47.59,
+      "y": -11.22,
       "value": 2.17,
       "note": "mirror of the accepted Front Right Top entry: bearing step to the outline bulge around the idler bearing (bulge pushed out to D19.46), top layers (accepted 2026-10-16)"
     },
     {
       "plate": "Front Left Top Printed6mm - For Printing",
       "kind": "preferred",
-      "x": -50.22,
-      "y": 10.17,
-      "value": 2.4,
-      "note": "mirror of the accepted Front Right Top entry: right retainer counterbore to the top edge; above the 2.0 minimum; positions fixed by the hardware layout (accepted 2026-10-16)"
-    },
-    {
-      "plate": "Front Left Top Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": -88.86,
-      "y": -11.5,
+      "x": 88.86,
+      "y": 11.5,
       "value": 2.5,
       "note": "mirror of the accepted Front Right Top entry: tensioner slot end to the right-hand edge (accepted 2026-10-16)"
     },
     {
       "plate": "Front Left Top Printed6mm - For Printing",
       "kind": "preferred",
-      "x": 0.75,
-      "y": -40.1,
+      "x": -0.75,
+      "y": 40.1,
       "value": 2.5,
       "note": "mirror of the accepted Front Right Top entry: bottom-left hole to the left edge (accepted 2026-10-16)"
     },
     {
       "plate": "Front Left Top Printed6mm - For Printing",
       "kind": "preferred",
-      "x": -0.72,
-      "y": -42.94,
+      "x": 35.42,
+      "y": 2.76,
+      "value": 2.03,
+      "note": "mirror of the accepted Front Right Top entry: left retainer insert to the motor bore, through the chamfer; above the 2.0 minimum; positions fixed by the hardware layout (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Top Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 31.05,
+      "y": -1.54,
+      "value": 2.03,
+      "note": "mirror of the accepted Front Right Top entry: left retainer insert to the shoulder bore, through the chamfer; above the 2.0 minimum; positions fixed by the hardware layout (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Top Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 50.23,
+      "y": -10.17,
+      "value": 2.4,
+      "note": "mirror of the accepted Front Right Top entry: right retainer counterbore to the top edge; above the 2.0 minimum; positions fixed by the hardware layout (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Top Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 0.72,
+      "y": 42.94,
       "value": 2.57,
       "note": "mirror of the accepted Front Right Top entry: bottom-left hole to the corner; above the 2.0 minimum; positions fixed by the hardware layout (accepted 2026-10-16)"
     },
     {
       "plate": "Front Left Top Printed6mm - For Printing",
       "kind": "insert",
-      "x": -36.94,
-      "y": -0.35,
+      "x": 36.94,
+      "y": 0.35,
       "value": 2.57,
       "note": "mirror of the accepted Front Right Top entry: left retainer insert to its counterbore lobe; above the 2.0 minimum; positions fixed by the hardware layout (accepted 2026-10-16)"
     },
     {
       "plate": "Front Left Top Printed6mm - For Printing",
       "kind": "preferred",
-      "x": -36.91,
-      "y": -0.35,
+      "x": 36.91,
+      "y": 0.35,
       "value": 2.62,
       "note": "mirror of the accepted Front Right Top entry: left retainer insert to its counterbore lobe, through the chamfer; above the 2.0 minimum; positions fixed by the hardware layout (accepted 2026-10-16)"
     },
     {
       "plate": "Front Left Top Printed6mm - For Printing",
       "kind": "preferred",
-      "x": -32.45,
-      "y": 4.66,
+      "x": 32.45,
+      "y": -4.66,
       "value": 2.97,
       "note": "mirror of the accepted Front Right Top entry: shoulder bore to the idler bearing bore; above the 2.0 minimum; positions fixed by the hardware layout (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Top Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 35.55,
+      "y": 2.89,
+      "value": 1.68,
+      "note": "mirror of the accepted Front Right Top entry: left retainer insert to the motor bore; insert position fixed by the plate layout; changing it would mean re-laying out the plate (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Top Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 35.53,
+      "y": 2.87,
+      "value": 1.73,
+      "note": "mirror of the accepted Front Right Top entry: same wall through the insert chamfer; insert position fixed by the plate layout; changing it would mean re-laying out the plate (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Top Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 30.96,
+      "y": -1.62,
+      "value": 1.78,
+      "note": "mirror of the accepted Front Right Top entry: left retainer insert to the shoulder bore; insert position fixed by the plate layout; changing it would mean re-laying out the plate (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Top Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 30.98,
+      "y": -1.61,
+      "value": 1.83,
+      "note": "mirror of the accepted Front Right Top entry: same wall through the insert chamfer; insert position fixed by the plate layout; changing it would mean re-laying out the plate (accepted 2026-10-16)"
     }
   ]
 }
