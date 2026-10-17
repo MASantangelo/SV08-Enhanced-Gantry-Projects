@@ -1344,6 +1344,38 @@
       "y": -43.12,
       "value": 1.75,
       "note": "hole to the plate edge that faces the Z gantry parts (about 0.1 mm away), so the edge can't move (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 32.98,
+      "y": 11.22,
+      "value": 2.17,
+      "note": "bearing step to the outline bulge around the idler bearing (bulge pushed out to D19.46), top layers (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 47.22,
+      "y": 11.22,
+      "value": 2.17,
+      "note": "bearing step to the outline bulge around the idler bearing (bulge pushed out to D19.46), top layers (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 88.49,
+      "y": -11.5,
+      "value": 2.5,
+      "note": "tensioner slot end to the right-hand edge (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -1.12,
+      "y": -40.1,
+      "value": 2.5,
+      "note": "bottom-left hole to the left edge (accepted 2026-10-16)"
     }
   ]
 }
