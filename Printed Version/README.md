@@ -46,6 +46,17 @@ Printed Version/
 
 The print-ready plates have their holes enlarged by about 0.3 mm to allow for printing tolerances. That's why they're slightly lighter than the mockup copies, which are dimensioned to nominal size.
 
+## Installing the heat-set inserts
+
+The M3 heat-set inserts go in from the bed side of each plate. Several sit close to a bearing bore, so take them one at a time:
+
+1. **Press the bearings in first.** With the bearing already seated, it backs up the thin wall between the insert and the bore, so the softened plastic can't bulge into the bore.
+2. **Start the insert straight with a screw.** Thread an M3 screw into the insert from the other side of the plate, through the screw hole, and pull the insert's leading edge into its seat. That lines it up before you heat it, so it goes in square. Don't skip this: an insert that goes in crooked will cross-thread its screw, and a screw stuck in a crooked insert usually can't be removed without ruining the plate.
+3. **No bearing in that seat yet? Push the plastic back.** Without a bearing to back it up, the wall flexes inward as the insert goes in. While it's still warm, push it back into place with a spudger so the bore stays round.
+4. **Set it flush or slightly deep, never proud.** It's fine for the insert to sink a little below the surface, but one left sticking out holds the next part off the plate, so the joint won't sit flat or clamp properly.
+5. **Trim any plastic pushed up around the insert.** Pay attention to the screw path and the edges. A raised lip looks untidy, and plastic in the screw path can make the screw cross-thread.
+6. **Chase the threads before assembly, from the opposite side.** Once the insert has cooled, run an M3 screw through it from the side the real screw *doesn't* come in from, all the way through. That pushes any melted plastic out of the side where the assembly screw enters. Going in from the screw's side would just push the plastic deeper into the threads.
+
 ## Renders
 
 Generated automatically from the current STEP files whenever the repo is refreshed (see [tools](../tools)), so they always show the latest design.
