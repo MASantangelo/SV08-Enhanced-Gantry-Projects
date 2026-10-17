@@ -1432,6 +1432,38 @@
       "y": 4.66,
       "value": 2.97,
       "note": "shoulder bore to the idler bearing bore; above the 2.0 minimum; positions fixed by the hardware layout (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 35.17,
+      "y": -2.89,
+      "value": 1.68,
+      "note": "left retainer insert to the motor bore; insert position fixed by the plate layout; changing it would mean re-laying out the plate (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 35.16,
+      "y": -2.87,
+      "value": 1.73,
+      "note": "same wall through the insert chamfer; insert position fixed by the plate layout; changing it would mean re-laying out the plate (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 30.59,
+      "y": 1.62,
+      "value": 1.78,
+      "note": "left retainer insert to the shoulder bore; insert position fixed by the plate layout; changing it would mean re-laying out the plate (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 30.61,
+      "y": 1.61,
+      "value": 1.83,
+      "note": "same wall through the insert chamfer; insert position fixed by the plate layout; changing it would mean re-laying out the plate (accepted 2026-10-16)"
     }
   ]
 }
