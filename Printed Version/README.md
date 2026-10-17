@@ -2,6 +2,9 @@
 
 The printed-plate variant: every gantry plate is 3D printed at 6 mm.
 
+> [!WARNING]
+> **v2 alpha, not yet test-built.** The plates, sub-assemblies, BOM and 3MF here are the reworked v2 parts. The full gantry STEP and its renders are still v1 and will be updated soon. The original v1 files are in the [Printed v1 release](https://github.com/MASantangelo/SV08-Enhanced-Gantry-Projects/releases/tag/printed-v1).
+
 ![Full gantry overview, rendered from the current STEP file](Renders/Full%20Gantry%20-%20Overview.png)
 
 ## Folder structure
@@ -22,9 +25,9 @@ Printed Version/
 ├── Base Components/
 │   ├── Print Ready/                         ← Print these (plus ../Shared Components/Print Ready)
 │   │   ├── *.step                           Printed plates, holes enlarged ~0.3 mm for printing
-│   │   ├── Printed Parts All.3mf            Every printed part, shared ones included, on one plate (Creality Print)
+│   │   ├── Printed Parts All.3mf            Every printed part, shared ones included, on one plate (OrcaSlicer)
 │   │   └── For Viewing/                     STL previews
-│   └── For Mockups Only/                    Plates in assembled orientation. Do not print.
+│   └── For Mockups Only/                    Old v1 plates in assembled orientation. Do not print.
 │       └── For Viewing/                     STL previews
 │
 ├── Renders/                                 Auto-generated from the STEP files (always current)

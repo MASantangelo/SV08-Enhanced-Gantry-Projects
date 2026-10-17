@@ -59,7 +59,7 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 
 | Qty | Part | Buy | Notes |
 |---:|---|---|---|
-| 2 | M3 Internally Threaded Spacer (5mm OD \| 35mm Tall) | [Amazon](https://amazon.com/dp/B0D3HWQ2GF) | Replaces the M5 x 40mm dowel in the XY Joints (1 per joint). Clamped between the plates by 2x M3 x 10mm Ultra Thin Flat Head per joint. |
+| 2 | M3 Internally Threaded Spacer (5mm OD \| 35mm Tall) | [Amazon](https://amazon.com/dp/B0D3HWQ2GF) | Replaces the M5 x 40mm dowel in the XY Joints (1 per joint). Clamped between the plates by 2x M3 x 10mm Ultra Thin Flat Head per joint. It reaches 1.5 mm into each bearing. A 40 mm spacer would run through both bearings for their full width, but the 35 mm is kept so the same part fits every version of the build. |
 | 2 | M3 Internally Threaded Spacer (5mm OD \| 25mm Tall) | [Amazon](https://amazon.com/dp/B0D3HVVJPN) | Replaces the M5 x 30mm dowel in the front motor assemblies (1 per side). Held by 2x M3 x 10mm Ultra Thin Flat Head. |
 
 ## Fasteners - Nuts
@@ -81,7 +81,7 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 |---:|---|---|---|
 | 44 | M5 Washer (5mm ID \| 10mm OD \| 1mm Tall) | [Amazon](https://amazon.com/dp/B07WZ5WQCG) | Includes the 36 bearing-stack shims, now named M5 Washer. |
 | 38 | M4 Washer (4mm ID \| 9mm OD \| 1mm Tall) | [Amazon](https://amazon.com/dp/B0DK6KXB6W) | .8mm more common and acceptable swap, OD matters |
-| 8 | M3 Washer (3mm ID \| 7mm OD \| .5mm Tall) | [Amazon](https://amazon.com/dp/B0C3TJ7PWT) |  |
+| 8 | M3 Washer (3mm ID \| 7mm OD \| .5-.6mm Tall) | [Amazon](https://amazon.com/dp/B0C3TJ7PWT) |  |
 | 8 | M3 Shim (3mm ID \| 5mm OD \| .2mm Tall) | [Amazon](https://amazon.com/dp/B08ZYP1TK4) |  |
 
 ## Bearings
@@ -164,21 +164,21 @@ Print files are in [`Base Components/Print Ready`](Base%20Components/Print%20Rea
 | Qty | Part | Buy | Notes |
 |---:|---|---|---|
 | 4 | [Tensioner Lever Arm Revised](../Shared%20Components/Print%20Ready/For%20Viewing/4x%20Tensioner%20Lever%20Arm%20Revised%20-%20For%20Printing.stl) |  |  |
-| 4 | [XY Live Idler Spacer 5mm Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/XY%20Live%20Idler%20Spacer%205mm%20Printed6mm%20-%20For%20Printing.stl) |  |  |
+| 2 | XY Live Idler Spacer 10mm Printed6mm - For Printing |  | One per XY joint, between the bottom plate and the X extrusion (replaces the two stacked 5 mm spacers). |
 | 4 | [Z Carriage Spacer](../Shared%20Components/Print%20Ready/For%20Viewing/4x%20Z%20Carriage%20Spacer%20-%20For%20Printing.stl) |  |  |
 | 2 | [Back Spacer Plate 20mm](../Shared%20Components/Print%20Ready/For%20Viewing/2x%20Back%20Spacer%20Plate%2020mm%20-%20For%20Printing.stl) |  |  |
 | 2 | [Front Spacer Plate 20mm](../Shared%20Components/Print%20Ready/For%20Viewing/2x%20Front%20Spacer%20Plate%2020mm%20-%20For%20Printing.stl) |  |  |
 | 2 | [Printed Back Motor Spacer](../Shared%20Components/Print%20Ready/For%20Viewing/2x%20Printed%20Back%20Motor%20Spacer%20-For%20Printing.stl) |  |  |
 | 2 | [XY Live Idler Spacer](../Shared%20Components/Print%20Ready/For%20Viewing/2x%20XY%20Live%20Idler%20Spacer%20-%20For%20Printing.stl) |  |  |
-| 1 | [Back Left Bottom Plate Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/Back%20Left%20Bottom%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
-| 1 | [Back Left Top Plate Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/Back%20Left%20Top%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
-| 1 | [Back Right Bottom Plate Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/Back%20Right%20Bottom%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
-| 1 | [Back Right Top Plate Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/Back%20Right%20Top%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
-| 1 | [Front Left Bottom Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/Front%20Left%20Bottom%20Printed6mm%20-%20For%20Printing.stl) |  |  |
-| 1 | [Front Left Top Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/Front%20Left%20Top%20Printed6mm%20-%20For%20Printing.stl) |  |  |
-| 1 | [Front Right Bottom Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/Front%20Right%20Bottom%20Printed6mm%20-%20For%20Printing.stl) |  |  |
-| 1 | [Front Right Top Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/Front%20Right%20Top%20Printed6mm%20-%20For%20Printing.stl) |  |  |
-| 1 | [XY Live Idler Left Bottom Plate Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/XY%20Live%20Idler%20Left%20Bottom%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
-| 1 | [XY Live Idler Left Top Plate Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/XY%20Live%20Idler%20Left%20Top%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
-| 1 | [XY Live Idler Right Bottom Plate Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/XY%20Live%20Idler%20Right%20Bottom%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
-| 1 | [XY Live Idler Right Top Plate Printed6mm](Base%20Components/Print%20Ready/For%20Viewing/XY%20Live%20Idler%20Right%20Top%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
+| 1 | [Back Left Bottom Plate Printed6mm - For Printing](Base%20Components/Print%20Ready/For%20Viewing/Back%20Left%20Bottom%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
+| 1 | [Back Left Top Plate Printed6mm - For Printing](Base%20Components/Print%20Ready/For%20Viewing/Back%20Left%20Top%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
+| 1 | [Back Right Bottom Plate Printed6mm - For Printing](Base%20Components/Print%20Ready/For%20Viewing/Back%20Right%20Bottom%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
+| 1 | [Back Right Top Plate Printed6mm - For Printing](Base%20Components/Print%20Ready/For%20Viewing/Back%20Right%20Top%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
+| 1 | [Front Left Bottom Printed6mm - For Printing](Base%20Components/Print%20Ready/For%20Viewing/Front%20Left%20Bottom%20Printed6mm%20-%20For%20Printing.stl) |  |  |
+| 1 | [Front Left Top Printed6mm - For Printing](Base%20Components/Print%20Ready/For%20Viewing/Front%20Left%20Top%20Printed6mm%20-%20For%20Printing.stl) |  |  |
+| 1 | [Front Right Bottom Printed6mm - For Printing](Base%20Components/Print%20Ready/For%20Viewing/Front%20Right%20Bottom%20Printed6mm%20-%20For%20Printing.stl) |  |  |
+| 1 | [Front Right Top Printed6mm - For Printing](Base%20Components/Print%20Ready/For%20Viewing/Front%20Right%20Top%20Printed6mm%20-%20For%20Printing.stl) |  |  |
+| 1 | [XY Live Idler Left Bottom Plate Printed6mm - For Printing](Base%20Components/Print%20Ready/For%20Viewing/XY%20Live%20Idler%20Left%20Bottom%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
+| 1 | [XY Live Idler Left Top Plate Printed6mm - For Printing](Base%20Components/Print%20Ready/For%20Viewing/XY%20Live%20Idler%20Left%20Top%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
+| 1 | [XY Live Idler Right Bottom Plate Printed6mm - For Printing](Base%20Components/Print%20Ready/For%20Viewing/XY%20Live%20Idler%20Right%20Bottom%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |
+| 1 | [XY Live Idler Right Top Plate Printed6mm - For Printing](Base%20Components/Print%20Ready/For%20Viewing/XY%20Live%20Idler%20Right%20Top%20Plate%20Printed6mm%20-%20For%20Printing.stl) |  |  |

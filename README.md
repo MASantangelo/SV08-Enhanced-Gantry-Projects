@@ -59,14 +59,22 @@ The 12 gantry plates, the XY spacers and the 4 tensioner lever arms are machined
 
 The plates are 3D printed at 6 mm with M3 heat-set inserts. This is the easiest version to build if you have a printer and no access to a mill.
 
-> [!NOTE]
-> **The print files are under final review.** The printed plates are getting the same checks the carbon fiber and metal plates just went through, plus some print-specific tweaks. Expect updates to the files in `Print Ready` soon.
+> [!WARNING]
+> **These are the v2 alpha printed parts, and they haven't been test-built yet.** v2 reworks every printed plate:
+> - support-free printing, with every pocket on one face
+> - thicker walls, checked against printed-part rules
+> - revised bearing seats and fits
+> - a single 10 mm XY idler spacer in place of two 5 mm ones
+>
+> The plates, sub-assemblies, BOM and 3MF are all v2. **The full gantry assembly STEP and its renders are still v1 and will be updated soon.** If you'd rather build the proven original, download it from the [Printed v1 release](https://github.com/MASantangelo/SV08-Enhanced-Gantry-Projects/releases/tag/printed-v1).
 
 **Printed build notes**
 
 - **Print the parts from `Base Components/Print Ready/`.** They're oriented for printing, with holes enlarged by about 0.3 mm for printing tolerance. The spacers and lever arms are in [`Shared Components/Print Ready`](Shared%20Components/Print%20Ready), with quantities in their file names (for example `4x Z Carriage Spacer`).
-- **`Printed Parts All.3mf`** has every printed part (plates and shared parts) laid out on one plate, ready to open in your slicer (made in Creality Print).
-- **Don't print `Base Components/For Mockups Only/`.** Those are the plates in their assembled orientation, for reference.
+- **Press the bearings in before the heat-set inserts.** Some inserts sit close to a bearing bore. With the bearing already in place, it backs up the thin wall between them, so the softened plastic can't bulge into the bore while the insert goes in.
+- **Drill out the shoulder-bolt holes.** They're modelled at Ø5.1 so they print close to 5 mm. Run a 5 mm drill bit through each one by hand for a snug, consistent fit on the D5 shoulder bolts.
+- **`Printed Parts All.3mf`** has every printed part (plates and shared parts) laid out on one plate, ready to open in your slicer (made in OrcaSlicer).
+- **Don't print `Base Components/For Mockups Only/`.** Those are the old v1 plates in their assembled orientation, kept for reference only. They'll be removed when v2 is final.
 - [`Screenshots/`](Printed%20Version/Screenshots) has Fusion screenshots of the assemblies and belt paths, plus an [MP4 of the tensioner motion](Printed%20Version/Screenshots/Front%20Left%20Tensioner%20Motion.mp4).
 
 ## Build notes for every version
