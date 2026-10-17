@@ -30,6 +30,7 @@ Printed Version/
 │   └── For Mockups Only/                    Old v1 plates in assembled orientation. Do not print.
 │       └── For Viewing/                     STL previews
 │
+├── Photos/                                  Photos of real builds
 ├── Renders/                                 Auto-generated from the STEP files (always current)
 └── Screenshots/                             Fusion screenshots, belt paths, tensioner motion (GIF + MP4)
 ```
@@ -45,6 +46,14 @@ Printed Version/
 | Browse all screenshots | [Screenshots](Screenshots) |
 
 The print-ready plates have their holes enlarged by about 0.3 mm to allow for printing tolerances. That's why they're slightly lighter than the mockup copies, which are dimensioned to nominal size.
+
+## Build photos
+
+The first v2 test build: a front left motor assembly, shown without its motor, printed with no supports.
+
+| Side | Top | Angle |
+|---|---|---|
+| ![Front left motor assembly v2, side view showing the bearing stacks and motor pulley between the plates](Photos/Front%20Left%20Motor%20Assembly%20v2%20-%20Side.jpg) | ![Front left motor assembly v2 from the motor side, with the tensioner lever](Photos/Front%20Left%20Motor%20Assembly%20v2%20-%20Top.jpg) | ![Front left motor assembly v2 at an angle, showing the tensioner lever arm and idler](Photos/Front%20Left%20Motor%20Assembly%20v2%20-%20Angle.jpg) |
 
 ## Installing the heat-set inserts
 
