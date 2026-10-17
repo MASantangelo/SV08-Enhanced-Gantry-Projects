@@ -1264,6 +1264,38 @@
       "y": 8.55,
       "value": 2.14,
       "note": "M4 hole to the rounded corner of the cut-back edge; the Z carriage AB-axis mounting plate sits right against this edge and the M4 bolts clamp into it (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Right Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 112.9,
+      "y": 5.7,
+      "value": 2.5,
+      "note": "M4 hole to the plate edge at the right-hand end; shared outline (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Right Bottom Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -112.9,
+      "y": 5.7,
+      "value": 2.5,
+      "note": "M4 hole to the plate edge at the right-hand end; shared outline (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -112.9,
+      "y": 5.7,
+      "value": 2.5,
+      "note": "M4 hole to the plate edge at the right-hand end; shared outline (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Left Bottom Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 112.9,
+      "y": 5.7,
+      "value": 2.5,
+      "note": "M4 hole to the plate edge at the right-hand end; shared outline (accepted 2026-10-16)"
     }
   ]
 }
