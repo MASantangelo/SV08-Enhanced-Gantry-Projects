@@ -1840,6 +1840,230 @@
       "y": -4.66,
       "value": 2.97,
       "note": "above the 2.0 minimum; positions fixed by the hardware layout or edge already pushed out (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Bottom Printed6mm - For Printing",
+      "kind": "wall",
+      "x": -31.91,
+      "y": -4.57,
+      "value": 1.87,
+      "note": "left retainer cluster sliver, top band only; 0.13 under the minimum (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 36.94,
+      "y": 11.43,
+      "value": 0.75,
+      "note": "mirror of the accepted Front Right Bottom entry: retainer insert hole to bearing bore; insert positions fixed by the shared layout. Press the bearing in BEFORE the inserts, so it backs up the wall while the insert is heat-set (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 50.99,
+      "y": 11.43,
+      "value": 0.75,
+      "note": "mirror of the accepted Front Right Bottom entry: retainer insert hole to bearing bore; insert positions fixed by the shared layout. Press the bearing in BEFORE the inserts, so it backs up the wall while the insert is heat-set (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 36.25,
+      "y": -0.39,
+      "value": 0.75,
+      "note": "mirror of the accepted Front Right Bottom entry: retainer insert hole to bearing bore; insert positions fixed by the shared layout. Press the bearing in BEFORE the inserts, so it backs up the wall while the insert is heat-set (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 47.5,
+      "y": -5.87,
+      "value": 0.75,
+      "note": "mirror of the accepted Front Right Bottom entry: retainer insert hole to bearing bore; insert positions fixed by the shared layout. Press the bearing in BEFORE the inserts, so it backs up the wall while the insert is heat-set (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 36.23,
+      "y": -0.37,
+      "value": 0.8,
+      "note": "mirror of the accepted Front Right Bottom entry: same insert-to-bearing wall, through the insert hole's 45 deg chamfer; bearing goes in before the inserts (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 36.91,
+      "y": 11.43,
+      "value": 0.8,
+      "note": "mirror of the accepted Front Right Bottom entry: same insert-to-bearing wall, through the insert hole's 45 deg chamfer; bearing goes in before the inserts (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 47.52,
+      "y": -5.87,
+      "value": 0.8,
+      "note": "mirror of the accepted Front Right Bottom entry: same insert-to-bearing wall, through the insert hole's 45 deg chamfer; bearing goes in before the inserts (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 51.01,
+      "y": 11.43,
+      "value": 0.8,
+      "note": "mirror of the accepted Front Right Bottom entry: same insert-to-bearing wall, through the insert hole's 45 deg chamfer; bearing goes in before the inserts (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 30.15,
+      "y": 43.12,
+      "value": 1.75,
+      "note": "mirror of the accepted Front Right Bottom entry: hole to the plate edge that faces the Z gantry parts (about 0.1 mm away), so the edge can't move (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 2.65,
+      "y": 43.12,
+      "value": 1.75,
+      "note": "mirror of the accepted Front Right Bottom entry: hole to the plate edge that faces the Z gantry parts (about 0.1 mm away), so the edge can't move (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 31.91,
+      "y": -4.57,
+      "value": 1.87,
+      "note": "mirror of the accepted Front Right Bottom entry: left retainer cluster sliver, top band only; 0.13 under the minimum (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 23.32,
+      "y": -4.0,
+      "value": 2.0,
+      "note": "mirror of the accepted Front Right Bottom entry: above the 2.0 minimum; positions fixed by the hardware layout or edge already pushed out (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 59.47,
+      "y": 32.15,
+      "value": 2.0,
+      "note": "mirror of the accepted Front Right Bottom entry: above the 2.0 minimum; positions fixed by the hardware layout or edge already pushed out (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 54.36,
+      "y": -5.01,
+      "value": 2.13,
+      "note": "mirror of the accepted Front Right Bottom entry: above the 2.0 minimum; positions fixed by the hardware layout or edge already pushed out (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 33.35,
+      "y": -11.22,
+      "value": 2.17,
+      "note": "mirror of the accepted Front Right Bottom entry: above the 2.0 minimum; positions fixed by the hardware layout or edge already pushed out (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 47.6,
+      "y": -11.22,
+      "value": 2.17,
+      "note": "mirror of the accepted Front Right Bottom entry: above the 2.0 minimum; positions fixed by the hardware layout or edge already pushed out (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 36.74,
+      "y": 0.81,
+      "value": 2.23,
+      "note": "mirror of the accepted Front Right Bottom entry: above the 2.0 minimum; positions fixed by the hardware layout or edge already pushed out (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 42.22,
+      "y": 2.71,
+      "value": 2.27,
+      "note": "mirror of the accepted Front Right Bottom entry: above the 2.0 minimum; positions fixed by the hardware layout or edge already pushed out (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 23.43,
+      "y": -2.36,
+      "value": 2.32,
+      "note": "mirror of the accepted Front Right Bottom entry: above the 2.0 minimum; positions fixed by the hardware layout or edge already pushed out (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 50.22,
+      "y": -10.17,
+      "value": 2.4,
+      "note": "mirror of the accepted Front Right Bottom entry: above the 2.0 minimum; positions fixed by the hardware layout or edge already pushed out (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 88.86,
+      "y": 11.5,
+      "value": 2.5,
+      "note": "mirror of the accepted Front Right Bottom entry: above the 2.0 minimum; positions fixed by the hardware layout or edge already pushed out (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -0.75,
+      "y": 40.1,
+      "value": 2.5,
+      "note": "mirror of the accepted Front Right Bottom entry: above the 2.0 minimum; positions fixed by the hardware layout or edge already pushed out (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 37.68,
+      "y": 4.96,
+      "value": 2.53,
+      "note": "mirror of the accepted Front Right Bottom entry: above the 2.0 minimum; positions fixed by the hardware layout or edge already pushed out (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 0.72,
+      "y": 42.94,
+      "value": 2.57,
+      "note": "mirror of the accepted Front Right Bottom entry: above the 2.0 minimum; positions fixed by the hardware layout or edge already pushed out (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 31.32,
+      "y": -1.31,
+      "value": 2.73,
+      "note": "mirror of the accepted Front Right Bottom entry: above the 2.0 minimum; positions fixed by the hardware layout or edge already pushed out (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 32.29,
+      "y": -2.73,
+      "value": 2.95,
+      "note": "mirror of the accepted Front Right Bottom entry: above the 2.0 minimum; positions fixed by the hardware layout or edge already pushed out (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Left Bottom Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 32.45,
+      "y": -4.66,
+      "value": 2.97,
+      "note": "mirror of the accepted Front Right Bottom entry: above the 2.0 minimum; positions fixed by the hardware layout or edge already pushed out (accepted 2026-10-16)"
     }
   ]
 }
