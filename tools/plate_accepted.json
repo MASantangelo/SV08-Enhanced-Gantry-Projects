@@ -1376,6 +1376,62 @@
       "y": -40.1,
       "value": 2.5,
       "note": "bottom-left hole to the left edge (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 35.05,
+      "y": -2.76,
+      "value": 2.03,
+      "note": "left retainer insert to the motor bore, through the chamfer; above the 2.0 minimum; positions fixed by the hardware layout (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 30.68,
+      "y": 1.54,
+      "value": 2.03,
+      "note": "left retainer insert to the shoulder bore, through the chamfer; above the 2.0 minimum; positions fixed by the hardware layout (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 49.85,
+      "y": 10.17,
+      "value": 2.4,
+      "note": "right retainer counterbore to the top edge; above the 2.0 minimum; positions fixed by the hardware layout (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 0.35,
+      "y": -42.94,
+      "value": 2.57,
+      "note": "bottom-left hole to the corner; above the 2.0 minimum; positions fixed by the hardware layout (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 36.56,
+      "y": -0.35,
+      "value": 2.57,
+      "note": "left retainer insert to its counterbore lobe; above the 2.0 minimum; positions fixed by the hardware layout (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 36.54,
+      "y": -0.35,
+      "value": 2.62,
+      "note": "left retainer insert to its counterbore lobe, through the chamfer; above the 2.0 minimum; positions fixed by the hardware layout (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 32.08,
+      "y": 4.66,
+      "value": 2.97,
+      "note": "shoulder bore to the idler bearing bore; above the 2.0 minimum; positions fixed by the hardware layout (accepted 2026-10-16)"
     }
   ]
 }
