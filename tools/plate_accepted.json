@@ -1028,30 +1028,6 @@
     {
       "plate": "Back Right Top Plate Printed6mm - For Printing",
       "kind": "preferred",
-      "x": 112.9,
-      "y": 5.7,
-      "value": 2.5,
-      "note": "M4 hole to the plate edge at the right-hand end; shared outline; accepted 2026-10-16"
-    },
-    {
-      "plate": "Back Right Top Plate Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": 82.0,
-      "y": 9.1,
-      "value": 2.5,
-      "note": "M4 hole to the plate edge at the right-hand end; shared outline; accepted 2026-10-16"
-    },
-    {
-      "plate": "Back Right Top Plate Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": 109.5,
-      "y": 9.1,
-      "value": 2.5,
-      "note": "M4 hole to the plate edge at the right-hand end; shared outline; accepted 2026-10-16"
-    },
-    {
-      "plate": "Back Right Top Plate Printed6mm - For Printing",
-      "kind": "preferred",
       "x": 42.91,
       "y": -28.59,
       "value": 2.52,
@@ -1072,30 +1048,6 @@
       "y": -25.0,
       "value": 0.6,
       "note": "ring around the M2 hole between the bridged square (1.4) and the endstop pocket floor (2.0); the nut bears on the 1.0 mm trap ceiling, endstop screws need light clamping only (accepted 2026-10-16)"
-    },
-    {
-      "plate": "Back Right Bottom Plate Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": -82.0,
-      "y": 9.1,
-      "value": 2.5,
-      "note": "M4 hole to the plate edge at the right-hand end, same holes as the accepted Back Right Top walls; shared outline; accepted 2026-10-16"
-    },
-    {
-      "plate": "Back Right Bottom Plate Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": -109.5,
-      "y": 9.1,
-      "value": 2.5,
-      "note": "M4 hole to the plate edge at the right-hand end, same holes as the accepted Back Right Top walls; shared outline; accepted 2026-10-16"
-    },
-    {
-      "plate": "Back Right Bottom Plate Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": -112.9,
-      "y": 5.7,
-      "value": 2.5,
-      "note": "M4 hole to the plate edge at the right-hand end, same holes as the accepted Back Right Top walls; shared outline; accepted 2026-10-16"
     },
     {
       "plate": "Back Right Top Plate Printed6mm - For Printing",
@@ -1120,30 +1072,6 @@
       "y": 3.97,
       "value": 1.0,
       "note": "1.0 mm roof over the endstop wire tunnel (floor 3.0, ceiling 5.0, 2 mm span); holds the wire only, carries no load (accepted 2026-10-16)"
-    },
-    {
-      "plate": "Back Left Bottom Plate Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": 82.0,
-      "y": 9.1,
-      "value": 2.5,
-      "note": "mirror of the accepted Back Right entry: M4 hole to the plate edge at the right-hand end, same holes as the accepted Back Right Top walls; shared outline; accepted 2026-10-16"
-    },
-    {
-      "plate": "Back Left Bottom Plate Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": 109.5,
-      "y": 9.1,
-      "value": 2.5,
-      "note": "mirror of the accepted Back Right entry: M4 hole to the plate edge at the right-hand end, same holes as the accepted Back Right Top walls; shared outline; accepted 2026-10-16"
-    },
-    {
-      "plate": "Back Left Bottom Plate Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": 112.9,
-      "y": 5.7,
-      "value": 2.5,
-      "note": "mirror of the accepted Back Right entry: M4 hole to the plate edge at the right-hand end, same holes as the accepted Back Right Top walls; shared outline; accepted 2026-10-16"
     },
     {
       "plate": "Back Left Top Plate Printed6mm - For Printing",
@@ -1196,30 +1124,6 @@
     {
       "plate": "Back Left Top Plate Printed6mm - For Printing",
       "kind": "preferred",
-      "x": -112.9,
-      "y": 5.7,
-      "value": 2.5,
-      "note": "mirror of the accepted Back Right entry: M4 hole to the plate edge at the right-hand end; shared outline; accepted 2026-10-16"
-    },
-    {
-      "plate": "Back Left Top Plate Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": -82.0,
-      "y": 9.1,
-      "value": 2.5,
-      "note": "mirror of the accepted Back Right entry: M4 hole to the plate edge at the right-hand end; shared outline; accepted 2026-10-16"
-    },
-    {
-      "plate": "Back Left Top Plate Printed6mm - For Printing",
-      "kind": "preferred",
-      "x": -109.5,
-      "y": 9.1,
-      "value": 2.5,
-      "note": "mirror of the accepted Back Right entry: M4 hole to the plate edge at the right-hand end; shared outline; accepted 2026-10-16"
-    },
-    {
-      "plate": "Back Left Top Plate Printed6mm - For Printing",
-      "kind": "preferred",
       "x": -42.91,
       "y": -28.59,
       "value": 2.52,
@@ -1264,6 +1168,102 @@
       "y": -25.0,
       "value": 0.6,
       "note": "mirror of the accepted Back Right entry: ring around the M2 hole between the bridged square (1.4) and the endstop pocket floor (2.0); the nut bears on the 1.0 mm trap ceiling, endstop screws need light clamping only (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Left Bottom Plate Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 82.0,
+      "y": 8.67,
+      "value": 1.65,
+      "note": "M4 hole to the edge cut back 0.85 mm to clear the Z carriage; the Z carriage AB-axis mounting plate sits right against this edge and the M4 bolts clamp into it (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Left Bottom Plate Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 109.5,
+      "y": 8.67,
+      "value": 1.65,
+      "note": "M4 hole to the edge cut back 0.85 mm to clear the Z carriage; the Z carriage AB-axis mounting plate sits right against this edge and the M4 bolts clamp into it (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Left Bottom Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 111.0,
+      "y": 8.55,
+      "value": 2.14,
+      "note": "M4 hole to the rounded corner of the cut-back edge; the Z carriage AB-axis mounting plate sits right against this edge and the M4 bolts clamp into it (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "wall",
+      "x": -82.0,
+      "y": 8.67,
+      "value": 1.65,
+      "note": "M4 hole to the edge cut back 0.85 mm to clear the Z carriage; the Z carriage AB-axis mounting plate sits right against this edge and the M4 bolts clamp into it (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "wall",
+      "x": -109.5,
+      "y": 8.67,
+      "value": 1.65,
+      "note": "M4 hole to the edge cut back 0.85 mm to clear the Z carriage; the Z carriage AB-axis mounting plate sits right against this edge and the M4 bolts clamp into it (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Left Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -111.0,
+      "y": 8.55,
+      "value": 2.14,
+      "note": "M4 hole to the rounded corner of the cut-back edge; the Z carriage AB-axis mounting plate sits right against this edge and the M4 bolts clamp into it (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Right Bottom Plate Printed6mm - For Printing",
+      "kind": "wall",
+      "x": -82.0,
+      "y": 8.67,
+      "value": 1.65,
+      "note": "M4 hole to the edge cut back 0.85 mm to clear the Z carriage; the Z carriage AB-axis mounting plate sits right against this edge and the M4 bolts clamp into it (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Right Bottom Plate Printed6mm - For Printing",
+      "kind": "wall",
+      "x": -109.5,
+      "y": 8.67,
+      "value": 1.65,
+      "note": "M4 hole to the edge cut back 0.85 mm to clear the Z carriage; the Z carriage AB-axis mounting plate sits right against this edge and the M4 bolts clamp into it (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Right Bottom Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": -111.0,
+      "y": 8.55,
+      "value": 2.14,
+      "note": "M4 hole to the rounded corner of the cut-back edge; the Z carriage AB-axis mounting plate sits right against this edge and the M4 bolts clamp into it (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Right Top Plate Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 82.0,
+      "y": 8.67,
+      "value": 1.65,
+      "note": "M4 hole to the edge cut back 0.85 mm to clear the Z carriage; the Z carriage AB-axis mounting plate sits right against this edge and the M4 bolts clamp into it (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Right Top Plate Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 109.5,
+      "y": 8.67,
+      "value": 1.65,
+      "note": "M4 hole to the edge cut back 0.85 mm to clear the Z carriage; the Z carriage AB-axis mounting plate sits right against this edge and the M4 bolts clamp into it (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Back Right Top Plate Printed6mm - For Printing",
+      "kind": "preferred",
+      "x": 111.0,
+      "y": 8.55,
+      "value": 2.14,
+      "note": "M4 hole to the rounded corner of the cut-back edge; the Z carriage AB-axis mounting plate sits right against this edge and the M4 bolts clamp into it (accepted 2026-10-16)"
     }
   ]
 }
