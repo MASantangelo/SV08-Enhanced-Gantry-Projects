@@ -1296,6 +1296,54 @@
       "y": 5.7,
       "value": 2.5,
       "note": "M4 hole to the plate edge at the right-hand end; shared outline (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 34.94,
+      "y": 1.24,
+      "value": 0.75,
+      "note": "retainer insert hole to idler bearing bore; insert positions fixed by the shared layout. Press the bearing in BEFORE the inserts, so it backs up the wall while the insert is heat-set (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "insert",
+      "x": 47.12,
+      "y": 5.87,
+      "value": 0.75,
+      "note": "retainer insert hole to idler bearing bore; insert positions fixed by the shared layout. Press the bearing in BEFORE the inserts, so it backs up the wall while the insert is heat-set (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 34.92,
+      "y": 1.22,
+      "value": 0.8,
+      "note": "same insert-to-bearing wall, through the insert hole's 45 deg chamfer; bearing goes in before the inserts (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 47.15,
+      "y": 5.87,
+      "value": 0.8,
+      "note": "same insert-to-bearing wall, through the insert hole's 45 deg chamfer; bearing goes in before the inserts (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 29.78,
+      "y": -43.12,
+      "value": 1.75,
+      "note": "hole to the plate edge that faces the Z gantry parts (about 0.1 mm away), so the edge can't move (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Top Printed6mm - For Printing",
+      "kind": "wall",
+      "x": 2.28,
+      "y": -43.12,
+      "value": 1.75,
+      "note": "hole to the plate edge that faces the Z gantry parts (about 0.1 mm away), so the edge can't move (accepted 2026-10-16)"
     }
   ]
 }
