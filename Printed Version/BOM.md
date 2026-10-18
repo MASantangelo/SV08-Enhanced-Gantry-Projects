@@ -59,8 +59,8 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 
 | Qty | Part | Buy | Notes |
 |---:|---|---|---|
-| 2 | M3 Internally Threaded Spacer (5mm OD \| 35mm Tall) | [Amazon](https://amazon.com/dp/B0D3HWQ2GF) | Replaces the M5 x 40mm dowel in the XY Joints (1 per joint). Clamped between the plates by 2x M3 x 10mm Ultra Thin Flat Head per joint. It reaches 1.5 mm into each bearing. A 40 mm spacer would run through both bearings for their full width, but the 35 mm is kept so the same part fits every version of the build. |
-| 2 | M3 Internally Threaded Spacer (5mm OD \| 25mm Tall) | [Amazon](https://amazon.com/dp/B0D3HVVJPN) | Replaces the M5 x 30mm dowel in the front motor assemblies (1 per side). Held by 2x M3 x 10mm Ultra Thin Flat Head. |
+| 2 | M3 Internally Threaded Spacer (5mm OD \| 35mm Tall) | [Amazon](https://amazon.com/dp/B0D3HWQ2GF) | Replaces the M5 x 40mm dowel in the XY Joints (1 per joint). Clamped between the plates by 2x M3 x 10mm Ultra Thin Flat Head per joint. It reaches 1.5 mm into each bearing. A 40 mm spacer would run through both bearings for their full width, but the 35 mm is kept so the same part fits every version of the build. UNDER REVIEW: the linked spacers measure about 5.05 mm across (anodised aluminium), too big for the 4.992-5.000 mm bore of a 695 bearing, so they won't slide in. We're evaluating replacements. If you already have them, sand the last ~2 mm of each end (the only part that goes into the bearings) down to about 4.990-4.995 mm: spin it in a drill against 400-600 grit, or roll it under a flat block on sandpaper laid on the bench. Measure in two directions as you go, and stop when it presses into a bearing with firm thumb pressure. Don't force an oversize spacer in; that loads the bearing balls. |
+| 2 | M3 Internally Threaded Spacer (5mm OD \| 25mm Tall) | [Amazon](https://amazon.com/dp/B0D3HVVJPN) | Replaces the M5 x 30mm dowel in the front motor assemblies (1 per side). Held by 2x M3 x 10mm Ultra Thin Flat Head. UNDER REVIEW: the linked spacers measure about 5.05 mm across (anodised aluminium), too big for the 4.992-5.000 mm bore of a 695 bearing, so they won't slide in. We're evaluating replacements. If you already have them, sand the last ~2 mm of each end (the only part that goes into the bearings) down to about 4.990-4.995 mm: spin it in a drill against 400-600 grit, or roll it under a flat block on sandpaper laid on the bench. Measure in two directions as you go, and stop when it presses into a bearing with firm thumb pressure. Don't force an oversize spacer in; that loads the bearing balls. |
 
 ## Fasteners - Nuts
 
@@ -164,7 +164,7 @@ Print files are in [`Base Components/Print Ready`](Base%20Components/Print%20Rea
 | Qty | Part | Buy | Notes |
 |---:|---|---|---|
 | 4 | [Tensioner Lever Arm Revised](../Shared%20Components/Print%20Ready/For%20Viewing/4x%20Tensioner%20Lever%20Arm%20Revised%20-%20For%20Printing.stl) |  |  |
-| 2 | XY Live Idler Spacer 10mm Printed6mm - For Printing |  | One per XY joint, between the bottom plate and the X extrusion (replaces the two stacked 5 mm spacers). |
+| 2 | [XY Live Idler Spacer 10mm Printed6mm - For Printing](Base%20Components/Print%20Ready/For%20Viewing/XY%20Live%20Idler%20Spacer%2010mm%20Printed6mm%20-%20For%20Printing.stl) |  | One per XY joint, between the bottom plate and the X extrusion (replaces the two stacked 5 mm spacers). |
 | 4 | [Z Carriage Spacer](../Shared%20Components/Print%20Ready/For%20Viewing/4x%20Z%20Carriage%20Spacer%20-%20For%20Printing.stl) |  |  |
 | 2 | [Back Spacer Plate 20mm](../Shared%20Components/Print%20Ready/For%20Viewing/2x%20Back%20Spacer%20Plate%2020mm%20-%20For%20Printing.stl) |  |  |
 | 2 | [Front Spacer Plate 20mm](../Shared%20Components/Print%20Ready/For%20Viewing/2x%20Front%20Spacer%20Plate%2020mm%20-%20For%20Printing.stl) |  |  |
