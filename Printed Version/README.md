@@ -2,8 +2,8 @@
 
 The printed-plate variant: every gantry plate is 3D printed at 6 mm.
 
-> [!WARNING]
-> **v2 alpha, first test build in progress.** Everything here is the reworked v2 design: the plates, sub-assemblies, full gantry assembly, BOM, 3MF and renders. The original v1 files are in the [Printed v1 release](https://github.com/MASantangelo/SV08-Enhanced-Gantry-Projects/releases/tag/printed-v1).
+> [!NOTE]
+> **This is the v2 printed design:** the plates, sub-assemblies, full gantry assembly, BOM, 3MF and renders. The original v1 files are in the [Printed v1 release](https://github.com/MASantangelo/SV08-Enhanced-Gantry-Projects/releases/tag/printed-v1).
 
 ![Full gantry overview, rendered from the current STEP file](Renders/Full%20Gantry%20-%20Overview.png)
 
@@ -23,11 +23,9 @@ Printed Version/
 │   └── For Viewing/                         STL previews
 │
 ├── Base Components/
-│   ├── Print Ready/                         ← Print these (plus ../Shared Components/Print Ready)
-│   │   ├── *.step                           Printed plates, holes enlarged ~0.3 mm for printing
-│   │   ├── Printed Parts All.3mf            Every printed part, shared ones included, on one plate (OrcaSlicer)
-│   │   └── For Viewing/                     STL previews
-│   └── For Mockups Only/                    Old v1 plates in assembled orientation. Do not print.
+│   └── Print Ready/                         ← Print these (plus ../Shared Components/Print Ready)
+│       ├── *.step                           Printed plates, holes enlarged ~0.3 mm for printing
+│       ├── Printed Parts All.3mf            Every printed part, shared ones included, on one plate (OrcaSlicer)
 │       └── For Viewing/                     STL previews
 │
 ├── Photos/                                  Photos of real builds
@@ -45,7 +43,7 @@ Printed Version/
 | See the tensioner move | [Front Left Tensioner Motion.gif](Screenshots/Front%20Left%20Tensioner%20Motion.gif) |
 | Browse all screenshots | [Screenshots](Screenshots) |
 
-The print-ready plates have their holes enlarged by about 0.3 mm to allow for printing tolerances. That's why they're slightly lighter than the mockup copies, which are dimensioned to nominal size.
+The print-ready plates have their holes enlarged by about 0.3 mm to allow for printing tolerances. The same files are used in the assemblies, so what you see in the CAD is exactly what you print.
 
 ## Build photos
 
