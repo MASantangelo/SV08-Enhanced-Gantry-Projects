@@ -103,7 +103,7 @@ CAD names don't always match BOM names, so `bom_rules.json` translates them. Fus
 |---|---|---|
 | `exclude_assemblies` | Skips a sub-assembly and everything inside it | The stock SV08 Z carriages |
 | `unit_assemblies` | Counts a sub-assembly as one BOM item. Add `"descend": true` to also count the parts inside it. | A D2F-L switch is 1 item, not 5 pieces |
-| `category_by_assembly` | Puts parts under a sub-assembly into a specific BOM category | Xol hardware goes into "Xol Toolhead Hardware" |
+| `category_by_assembly` | Puts parts under a sub-assembly into a specific BOM category | Xol hardware goes into "Xol Toolhead Hardware". Use `{"as": "<category>", "only": "<regex>"}` to move only the matching parts: the rail screws and M3 T-nuts under `Linear Rails` go into "Linear Rail Mounting Hardware", while the rails stay in "Linear Rails & Sliders" |
 | `rename` | Maps an exact CAD name to a BOM name | `T-Nut M4` becomes `M4 T-Nut` |
 | `rename_patterns` | Regex renames, used when no exact rename matches | `M3x8mm SHCS` becomes `M3 x 8mm SHCS` |
 | `ignore_parts` | CAD parts that never belong in the BOM | |

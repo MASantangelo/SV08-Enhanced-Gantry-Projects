@@ -14,7 +14,11 @@
       }
     },
     "category_by_assembly": {
-      "^Xol Hardware$": "Xol Toolhead Hardware"
+      "^Xol Hardware$": "Xol Toolhead Hardware",
+      "^Linear Rails$": {
+        "as": "Linear Rail Mounting Hardware",
+        "only": "^(T-Nut - M3|M3x8mm SHCS)$"
+      }
     },
     "rename": {
       "T-Nut M4": "M4 T-Nut",

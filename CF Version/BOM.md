@@ -20,6 +20,7 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 - [Xol Toolhead Hardware](#xol-toolhead-hardware)
 - [Electronics / Endstops](#electronics--endstops)
 - [Linear Rails & Sliders](#linear-rails--sliders)
+- [Linear Rail Mounting Hardware](#linear-rail-mounting-hardware)
 - [Motors](#motors)
 - [Extrusions](#extrusions)
 - [CF Plates](#cf-plates)
@@ -27,9 +28,10 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 
 ## Fasteners - Screws
 
+*The M3 screws and M3 T-nuts that mount the linear rails are listed separately under [Linear Rail Mounting Hardware](#linear-rail-mounting-hardware).*
+
 | Qty | Part | Buy | Notes |
 |---:|---|---|---|
-| 28 | M3 x 8mm SHCS | [Amazon](https://amazon.com/dp/B0F5Q6YYWM) | Count matches the 28 M3 T-Nuts 1:1. |
 | 28 | M4 x 10mm BHCS | [Amazon](https://amazon.com/dp/B0CTH3Z2F5) |  |
 | 24 | M3 x 6mm FHCS | [Amazon](https://amazon.com/dp/B01E5EOIWW) |  |
 | 12 | M3 x 10mm BHCS | [Amazon](https://amazon.com/dp/B0GJK7Z9DH) |  |
@@ -51,10 +53,11 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 
 ## Fasteners - T-Nuts
 
+*The M3 screws and M3 T-nuts that mount the linear rails are listed separately under [Linear Rail Mounting Hardware](#linear-rail-mounting-hardware).*
+
 | Qty | Part | Buy | Notes |
 |---:|---|---|---|
 | 32 | M4 T-Nut | [Amazon](https://amazon.com/dp/B0C9DJBG1H) |  |
-| 28 | M3 T-Nut | [Amazon](https://amazon.com/dp/B0G2M7W3PL) |  |
 
 ## Fasteners - Threaded Rods
 
@@ -144,6 +147,15 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 | 2 | Y MGN9H Rail 402mm |  | Re-usable from Stock |
 | 1 | MGN12H Linear Rail Slide |  | Re-usable from Stock |
 | 1 | X MGN12H Rail 406mm |  | Re-usable from Stock |
+
+## Linear Rail Mounting Hardware
+
+*The screws and T-nuts that hold the linear rails to the 2020 extrusions: 10 per Y rail and 8 on the X rail.*
+
+| Qty | Part | Buy | Notes |
+|---:|---|---|---|
+| 28 | M3 x 8mm SHCS | [Amazon](https://amazon.com/dp/B0F5Q6YYWM) | Rail mounting screws: 10 per Y rail (20) and 8 on the X rail, one per M3 T-Nut. |
+| 28 | M3 T-Nut | [Amazon](https://amazon.com/dp/B0G2M7W3PL) | Rail mounting T-nuts: 10 per Y rail (20) and 8 on the X rail. |
 
 ## Motors
 

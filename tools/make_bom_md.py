@@ -63,6 +63,8 @@ out.append("Links are plain product pages with no affiliate or tracking codes. W
            "options, the **Notes** column says which one to pick.")
 out.append("")
 
+RAIL_HW = "Linear Rail Mounting Hardware"
+has_rail_hw = any((r + [""])[0] == RAIL_HW for r in rows)
 header = None
 section = None
 toc = []
@@ -80,6 +82,12 @@ for r in rows:
         body += ["", f"## {section}", ""]
         if section.startswith("Xol"):
             body += ["*Optional: only needed if you're building the Xol carriage.*", ""]
+        if section == RAIL_HW:
+            body += ["*The screws and T-nuts that hold the linear rails to the 2020 extrusions: 10 per Y rail "
+                     "and 8 on the X rail.*", ""]
+        elif has_rail_hw and section in ("Fasteners - Screws", "Fasteners - T-Nuts"):
+            body += [f"*The M3 screws and M3 T-nuts that mount the linear rails are listed separately under "
+                     f"[{RAIL_HW}](#{RAIL_HW.lower().replace(' ', '-')}).*", ""]
         if section == "Printed Parts":
             where = []
             if os.path.isdir(os.path.join(variant, "Base Components", "Print Ready")):

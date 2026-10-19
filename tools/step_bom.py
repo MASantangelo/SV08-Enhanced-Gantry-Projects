@@ -139,8 +139,10 @@ def cad_quantities(step_path, rules):
                 return re.sub(pat, repl, n)
         return n
 
-    def walk(pd, mult, cat):
+    def walk(pd, mult, cat, only=None):
         n = clean(names[pd])
+        if only and not kids[pd] and not re.search(only[1], n):
+            cat = only[0]  # a part the category's "only" filter doesn't cover keeps the outer category
         if first_match(exclude, n):
             return
         unit = first_match(units, n)
@@ -152,10 +154,14 @@ def cad_quantities(step_path, rules):
                 return
         c = first_match(cats, n)
         if c:
-            cat = cats[c]
+            spec = cats[c]
+            if isinstance(spec, dict):  # {"as": category, "only": regex of the part names it applies to}
+                only, cat = (cat, spec["only"]), spec["as"]
+            else:
+                cat = spec
         if kids[pd]:
             for child, k in kids[pd].items():
-                walk(child, mult * k, cat)
+                walk(child, mult * k, cat, only)
         elif not unit and not first_match(ignore, n):
             desc = bom_name(n)
             qty[(cat, desc)] += mult
