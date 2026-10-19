@@ -3,7 +3,7 @@
 The printed-plate variant: every gantry plate is 3D printed at 6 mm.
 
 > [!WARNING]
-> **v2 alpha, not yet test-built.** The plates, sub-assemblies, BOM and 3MF here are the reworked v2 parts. The full gantry STEP and its renders are still v1 and will be updated soon. The original v1 files are in the [Printed v1 release](https://github.com/MASantangelo/SV08-Enhanced-Gantry-Projects/releases/tag/printed-v1).
+> **v2 alpha, first test build in progress.** Everything here is the reworked v2 design: the plates, sub-assemblies, full gantry assembly, BOM, 3MF and renders. The original v1 files are in the [Printed v1 release](https://github.com/MASantangelo/SV08-Enhanced-Gantry-Projects/releases/tag/printed-v1).
 
 ![Full gantry overview, rendered from the current STEP file](Renders/Full%20Gantry%20-%20Overview.png)
 

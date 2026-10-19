@@ -60,13 +60,13 @@ The 12 gantry plates, the XY spacers and the 4 tensioner lever arms are machined
 The plates are 3D printed at 6 mm with M3 heat-set inserts. This is the easiest version to build if you have a printer and no access to a mill.
 
 > [!WARNING]
-> **These are the v2 alpha printed parts, and they haven't been test-built yet.** v2 reworks every printed plate:
+> **These are the v2 alpha printed parts, and the first test build is still in progress.** v2 reworks every printed plate:
 > - support-free printing, with every pocket on one face
 > - thicker walls, checked against printed-part rules
 > - revised bearing seats and fits
 > - a single 10 mm XY idler spacer in place of two 5 mm ones
 >
-> The plates, sub-assemblies, BOM and 3MF are all v2. **The full gantry assembly STEP and its renders are still v1 and will be updated soon.** If you'd rather build the proven original, download it from the [Printed v1 release](https://github.com/MASantangelo/SV08-Enhanced-Gantry-Projects/releases/tag/printed-v1).
+> Everything here is v2: the plates, sub-assemblies, full gantry assembly, BOM, 3MF and renders. If you'd rather build the proven original, download it from the [Printed v1 release](https://github.com/MASantangelo/SV08-Enhanced-Gantry-Projects/releases/tag/printed-v1).
 
 **Printed build notes**
 
