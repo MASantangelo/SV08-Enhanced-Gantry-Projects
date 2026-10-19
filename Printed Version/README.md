@@ -49,11 +49,19 @@ The print-ready plates have their holes enlarged by about 0.3 mm to allow for pr
 
 ## Build photos
 
-The first v2 test build: a front left motor assembly, shown without its motor, printed with no supports.
+The first v2 test build, printed with no supports. The motors aren't fitted yet.
+
+**Front left motor assembly**
 
 | Side | Top | Angle |
 |---|---|---|
 | ![Front left motor assembly v2, side view showing the bearing stacks and motor pulley between the plates](Photos/Front%20Left%20Motor%20Assembly%20v2%20-%20Side.jpg) | ![Front left motor assembly v2 from the motor side, with the tensioner lever](Photos/Front%20Left%20Motor%20Assembly%20v2%20-%20Top.jpg) | ![Front left motor assembly v2 at an angle, showing the tensioner lever arm and idler](Photos/Front%20Left%20Motor%20Assembly%20v2%20-%20Angle.jpg) |
+
+**Back left motor assembly** (here with printed motor standoffs and the printed back spacer plate, in orange)
+
+| Side | End |
+|---|---|
+| ![Back left motor assembly v2 from the side, showing the standoffs and the bearing stack between the plates](Photos/Back%20Left%20Motor%20Assembly%20v2%20-%20Side.jpg) | ![Back left motor assembly v2 from the end, showing the bearing stack and the orange back spacer plate](Photos/Back%20Left%20Motor%20Assembly%20v2%20-%20End.jpg) |
 
 ## Installing the heat-set inserts
 
