@@ -47,9 +47,17 @@ The print-ready plates have their holes enlarged by about 0.3 mm to allow for pr
 
 ## Build photos
 
-The first v2 test build, printed with no supports. The motors aren't fitted yet.
+The first v2 test build, printed with no supports.
 
-**Front left motor assembly**
+**Fully assembled on an SV08**
+
+![The full v2 printed gantry installed on an SV08, seen from above: all four motor corners, both XY joints and the orange tensioner lever arms at the front](Photos/Full%20Gantry%20v2%20-%20Top.jpg)
+
+| Front left corner and XY joint | XY joint (left) |
+|---|---|
+| ![The front left motor corner with its orange tensioner lever, the left XY joint and the back left corner of the v2 printed gantry](Photos/Full%20Gantry%20v2%20-%20Front%20Left.jpg) | ![Close-up of the left XY joint v2: the live idler pulley on its shaft between the top and bottom bearing plates, with both belts running past](Photos/XY%20Joint%20Left%20v2%20-%20Angle.jpg) |
+
+**Front left motor assembly** (before the motors were fitted)
 
 | Side | Top | Angle |
 |---|---|---|
