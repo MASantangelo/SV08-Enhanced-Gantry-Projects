@@ -25,6 +25,8 @@ AWD conversion for the Sovol SV08 with dual-shear live XY idlers and front belt 
 
 The project was designed around the 6 mm carbon fiber plates; the metal and printed versions use the same layout. Parts that are the same in every version (the spacers and the shared tensioner lever arm) live in [`Shared Components`](Shared%20Components), and each version's BOM links there for them.
 
+For how the three versions compare as structures (plate FEA, corner stiffness, mass, vibration modes and thermal bow), see the [Mechanical Analysis](Mechanical%20Analysis.md).
+
 Every version folder has the same layout:
 
 - the **full assembly** as a STEP file, with an STL preview in `For Viewing/`

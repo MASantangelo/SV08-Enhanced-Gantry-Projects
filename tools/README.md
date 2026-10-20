@@ -134,6 +134,31 @@ CAD names don't always match BOM names, so `bom_rules.json` translates them. Fus
 
 `common` rules apply to every variant. Rules under `variants` → `"<folder name>"` add to them for one variant.
 
+## Mechanical analysis
+
+The numbers and figures in [`Mechanical Analysis.md`](../Mechanical%20Analysis.md) come from the scripts in [`analysis/`](analysis). To rerun them after a design change:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools\analysis\analysis.ps1
+```
+
+It takes about 15 minutes and runs six steps. Add `-From <step>` to restart from a later one, reusing the earlier steps' output.
+
+| Step | What it does |
+|---|---|
+| `geometry.py` | Reads the three assembly STEPs. It exports the left-side plates, the front and back corner sandwiches and the left XY joint, and measures every belt wrap and its load at 8 lb. |
+| `plates.py` | FEA of every left-side plate under its idler loads (printed ABS, CF with the weave at 0/90 and at 45°, aluminium), then how much the plates lengthen the belt path compared with the belt's own stretch |
+| `corners.py` | FEA of the corner sandwiches with bonded contacts, giving how stiffly each version holds the Y extrusion ends |
+| `xyjoint.py` | Predicted XY joint bench test: one joint held at its MGN9 carriage with a 200 mm X-beam stub, 49 N sideways and vertically, next to the bare-stub deflection |
+| `frame.py` | Beam models of the whole gantry: masses and acceleration (motor rotors included), sag, vertical bounce, XY and yaw modes, belt tension swing and plucked-frequency table, thermal bow at each chamber temperature, joint slip, motor heat, creep and buckling |
+| `figures.py` | Writes the PNGs in `Renders/Analysis/` |
+
+- **Inputs:** material data and assumptions are in `materials.py`: the CF weave's direction-dependent constants, belt stiffness range, toolhead mass, motor, and chamber temperatures.
+- **Tools:** meshing uses gmsh and solving uses CalculiX. Both ship with FreeCAD 1.0, so nothing else needs installing.
+- **Work files** go to `%TEMP%\sv08fea`, deliberately a short path, because CalculiX fails once a path passes Windows' 260-character limit.
+- **Meshing failures:** gmsh retries with other element sizes and a looser tolerance for touching faces. If a corner still can't be meshed, it's skipped and `frame.py` uses the other corner's value, and says so in its output.
+- **Reading the output:** the printed results are what the tables in the analysis doc are built from. The doc isn't regenerated automatically, so update its numbers by hand when they change.
+
 ## Files
 
 | File | What it does |
@@ -150,6 +175,9 @@ CAD names don't always match BOM names, so `bom_rules.json` translates them. Fus
 | `step_bom.py` | Checks or updates the BOM spreadsheet against the assembly STEP |
 | `bom_rules.json` | Rules that translate CAD names into BOM lines |
 | `read_xlsx.py` | Minimal `.xlsx` reader using only the Python standard library, used by `make_bom_md.py` |
+| `analysis/analysis.ps1` | Runs the mechanical analysis (see above) |
+| `analysis/fealib.py` | Small gmsh + CalculiX wrapper used by the FEA steps: meshing, picking bolt and bore nodes by position, solving, reading results |
+| `analysis/materials.py` | Material data and analysis assumptions |
 
 ## Spreadsheet layout `make_bom_md.py` expects
 
