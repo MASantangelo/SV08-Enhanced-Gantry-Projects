@@ -13,28 +13,30 @@ An engineering check of the three gantry versions: printed, carbon fiber and 606
 
 ## Summary
 
-| | Printed (ABS → PC-CF) | CF, weave 0/90 | CF, weave 45° | Metal 5 mm |
-|---|---|---|---|---|
-| **Plate set mass** (corners + XY joints) | 267–318 g | 383 g | 383 g | 594 g |
-| **Y-axis acceleration** (same motors, rotors included) | baseline → −0.7 % | −1.3 % | −1.3 % | −3.6 % |
-| **Worst plate deflection under belt load** | 59 → 21 µm | 6.4 µm | 5.8 µm | 3.3 µm |
-| **Extra belt-path compliance from the plates** | 1.1–3.5 % → 0.4–1.2 % | 0.1–0.3 % | 0.1–0.3 % | 0.04–0.14 % |
-| **Corner joint stiffness** (metal = 1) | 0.34 → 0.54 | 0.86 | 0.76 | 1.00 |
-| **XY joint pitch stiffness** (metal = 1) | 0.07 → 0.19 | 0.80 | 0.54 | 1.00 |
-| **Gantry vertical bounce** (on extrusions + XY joints) | 60 → 95 Hz | 160 Hz | 141 Hz | 170 Hz |
-| **Y resonance** (belt-limited) | 38–68 Hz | 38–68 Hz | 38–68 Hz | 38–67 Hz |
-| **Gantry yaw mode** | 111–189 Hz | 157–209 Hz | 152–206 Hz | 194–235 Hz |
-| **Y-axis thermal bow, 55 / 70 °C chamber** (bonded corners) | 177 / 265 → 130 / 195 µm | 106 / 158 µm | 115 / 173 µm | 95 / 143 µm |
-| **Plate under a motor, 55 / 70 °C chamber** | 82–94 / 97–109 °C | same | same | 71–78 / 86–93 °C |
+In the tables, **↑** means higher is better and **↓** means lower is better. Tables without arrows are inputs or reference values.
+
+| | Better | Printed (ABS → PC-CF) | CF, weave 0/90 | CF, weave 45° | Metal 5 mm |
+|---|---|---|---|---|---|
+| **Plate set mass** (corners + XY joints) | ↓ | 267–318 g | 383 g | 383 g | 594 g |
+| **Y-axis acceleration** (same motors, rotors included) | ↑ | baseline → −0.7 % | −1.3 % | −1.3 % | −3.6 % |
+| **Worst plate deflection under belt load** | ↓ | 59 → 21 µm | 6.4 µm | 5.8 µm | 3.3 µm |
+| **Extra belt-path compliance from the plates** | ↓ | 1.1–3.5 % → 0.4–1.2 % | 0.1–0.3 % | 0.1–0.3 % | 0.04–0.14 % |
+| **Corner joint stiffness** (metal = 1) | ↑ | 0.34 → 0.54 | 0.86 | 0.76 | 1.00 |
+| **XY joint pitch stiffness** (metal = 1) | ↑ | 0.07 → 0.19 | 0.80 | 0.54 | 1.00 |
+| **Gantry vertical bounce** (on extrusions + XY joints) | ↑ | 60 → 95 Hz | 160 Hz | 141 Hz | 170 Hz |
+| **Y resonance** (belt-limited) | ↑ | 38–68 Hz | 38–68 Hz | 38–68 Hz | 38–67 Hz |
+| **Gantry yaw mode** | ↑ | 111–189 Hz | 157–209 Hz | 152–206 Hz | 194–235 Hz |
+| **Y-axis thermal bow, 55 / 70 °C chamber** (bonded corners) | ↓ | 177 / 265 → 130 / 195 µm | 106 / 158 µm | 115 / 173 µm | 95 / 143 µm |
+| **Plate under a motor, 55 / 70 °C chamber** | ↓ | 82–94 / 97–109 °C | same | same | 71–78 / 86–93 °C |
 
 **What matters, in order:**
 
-1. **The belts set XY stiffness in every version.** Belt loads act in the plane of the plates and every shaft is held by both plates. Even ABS plates add under 4 % to the belt path's flex, and CF and metal add well under 1 %. The Y and X resonances that input shaping deals with are the same in all versions to within a few percent.
-2. **The XY joints are the vertical weak link in a printed build.** Each XY joint hangs the X beam off its MGN9 carriage through about 25 mm of bottom plate. In ABS that's soft enough to drop the moving gantry's vertical bounce to about **60 Hz**, inside the range of the XY resonances. Vertical vibration excited by XY moves can then show up on prints. PC-CF lifts it to about 95 Hz, and CF and metal sit at 140–170 Hz.
-3. **Thermal bow is the biggest structural load in the gantry.** The steel rails bolted to the aluminium extrusions bend the extrusions as the chamber warms: 0.33 mm across the Y span at 55 °C, 0.5 mm at 70 °C, if nothing resists it. Holding the extrusion ends against that takes 12–28 N·m at each corner, far more than the belts ever put on the plates, and the corner bolts slip at those loads. Stiffer corners roughly halve the bow.
-4. **At ASA/ABS and PC/nylon chamber temperatures, ABS and ASA plates are too close to their softening point** where the motors sit on them. PC and PC-CF are fine at 55 °C and marginal at 70 °C. Aluminium also keeps the motors 10–15 °C cooler.
-5. **Weave at 45° doesn't help these plates.** In-plane shear isn't what limits them. Bending is, and the 0/90 weave is stiffer in bending along the plate's edges. Cut CF plates with the weave along the edges.
-6. **Metal costs mass, but less than it looks.** The motors' rotors count for about 0.67 kg of effective moving mass, so the metal XY joints cost only about 3.6 % of Y acceleration compared with printed ABS.
+1. **The belts set XY stiffness.** Even ABS plates add under 4 % to the belt path's flex, so X and Y resonances match across versions within a few percent.
+2. **Printed XY joints are the vertical weak link.** The bottom plate between the MGN9 block and the X beam bends. In ABS the gantry bounces at about **60 Hz**, inside the XY resonance range, which can put Z ripples on prints. PC-CF reaches 95 Hz; CF and metal 140–170 Hz.
+3. **Thermal bow is the biggest structural load.** The steel rails bend the aluminium extrusions as the chamber warms: up to 0.33 mm at 55 °C and 0.5 mm at 70 °C. The corner bolts slip under it. Stiff corners halve the bow; heat-soak before calibrating.
+4. **ABS and ASA are too hot under the motors** in a heated chamber. PC and PC-CF are fine at 55 °C and marginal at 70 °C. Aluminium keeps the motors 10–15 °C cooler.
+5. **Cut CF with the weave along the plate edges.** These plates are limited by bending, not shear, so 45° is worse.
+6. **Metal's mass costs little.** The motor rotors add 0.67 kg of effective mass to every version, so metal is only 3.6 % slower than printed ABS.
 
 ## Basis
 
@@ -52,7 +54,7 @@ An engineering check of the three gantry versions: printed, carbon fiber and 606
 
 **Materials:**
 
-| Material | E, in-plane (GPa) | Density (g/cm³) | Tensile (MPa) | HDT @ 0.45 MPa (°C) | CTE (µm/m·K) | Long-term clamp stress, approx. (MPa) |
+| Material | E, in-plane (GPa) ↑ | Density (g/cm³) ↓ | Tensile (MPa) ↑ | HDT @ 0.45 MPa (°C) ↑ | CTE (µm/m·K), closest to aluminium's 23.6 is best | Long-term clamp stress, approx. (MPa) ↑ |
 |---|---|---|---|---|---|---|
 | ABS | 2.1 | 1.04 | 40 | 95 | 90 | 6 |
 | ASA | 2.0 | 1.07 | 40 | 98 | 90 | 6 |
@@ -96,7 +98,7 @@ These forces balance through the frame. The belt plane sits closer to one plate,
 
 **Acceleration:** each belt span's tension changes by about m·a/4 during a move. With the heaviest version (1.27 kg moving in Y):
 
-| Acceleration | Swing per span | Slack side keeps (from 6–8 lb) |
+| Acceleration | Swing per span ↓ | Slack side keeps (from 6–8 lb) ↑ |
 |---|---|---|
 | 20,000 mm/s² | ±6.4 N | 20–29 N |
 | 40,000 mm/s² | ±12.7 N | 14–23 N |
@@ -110,7 +112,7 @@ All six left-side plates of each version (front corner, back corner and XY joint
 
 ![Front left top plate displacement under belt load: printed ABS, carbon fiber with the weave at 0/90 and at 45°, and aluminium](Renders/Analysis/Plate%20FEA%20-%20Front%20Left%20Top.png)
 
-| Plate | Printed (ABS) | CF 0/90 | CF 45° | Metal 5 mm |
+| Plate (all rows ↓) | Printed (ABS) | CF 0/90 | CF 45° | Metal 5 mm |
 |---|---|---|---|---|
 | Front corner, top | 59 µm | 5.3 µm | 5.5 µm | 3.3 µm |
 | Front corner, bottom | 42 µm | 4.0 µm | 4.2 µm | 1.8 µm |
@@ -126,7 +128,7 @@ Deflections are peak values per plate. Other printed materials scale with stiffn
 
 **Effect on the belt path.** Adding up how far each shaft moves, times its wrap factor, gives the extra belt length the plates allow. Compared with the belt's own stretch:
 
-| Version | Belt path lengthening | Extra compliance (EA 8,000 → 25,000 N) |
+| Version | Belt path lengthening ↓ | Extra compliance (EA 8,000 → 25,000 N) ↓ |
 |---|---|---|
 | Printed ABS / ASA / PC | 105 / 110 / 96 µm | 1.1–3.5 % / 1.2–3.7 % / 1.0–3.2 % |
 | Printed ABS-CF / ASA-CF / PC-CF | 44 / 46 / 37 µm | 0.4–1.5 % |
@@ -137,7 +139,7 @@ Deflections are peak values per plate. Other printed materials scale with stiffn
 
 How rigidly a corner holds the end of its Y extrusion sets how much the gantry sags and how well it resists thermal bow. The corner sandwich was modelled with both plates, the printed 20 mm spacer plate, the Z carriage spacer and a 2020 stub, all bonded together and fixed at the Z-carriage bolts. A pure bending moment was applied to the stub.
 
-| Version | Front corner | Back corner | Relative to metal |
+| Version | Front corner ↑ | Back corner ↑ | Relative to metal ↑ |
 |---|---|---|---|
 | Printed ABS (plates and spacers) | 6,390 N·m/rad | 6,890 N·m/rad | 0.34 |
 | Printed PC-CF (plates and spacers) | 10,140 N·m/rad | 13,870 N·m/rad | 0.54–0.74 |
@@ -153,7 +155,7 @@ These are upper bounds. Bonded contact is stiffer than a real bolted joint, and 
 
 Each XY joint holds the end of the X beam and rides on one MGN9 carriage. The joint was modelled with both plates, its spacers, the steel shafts and standoffs that tie the plates together, and a 200 mm stub of the X beam. It was held only where the MGN9 block bolts on, and 49 N (5 kg) was hung on the end of the stub, sideways and vertically. The same setup is described as a bench test under [Checking your own build](#checking-your-own-build).
 
-| Version | Sideways at the stub end | Vertical at the stub end | Pitch stiffness, per joint | Yaw stiffness, per joint |
+| Version | Sideways at the stub end ↓ | Vertical at the stub end ↓ | Pitch stiffness, per joint ↑ | Yaw stiffness, per joint ↑ |
 |---|---|---|---|---|
 | Bare 2020 stub (rigid joint) | 0.17 mm | 0.17 mm | n/a | n/a |
 | Printed ABS | 2.4 mm | 16.9 mm | 150 N·m/rad | 1,120 N·m/rad |
@@ -168,7 +170,7 @@ Each XY joint holds the end of the X beam and rides on one MGN9 carriage. The jo
 
 **The dynamic effect is not small for printed joints.** The joints act as springs under the moving gantry, in series with the Y extrusions:
 
-| Version | Gantry bounce on the Y extrusions alone | Including the XY joints | With the toolhead bouncing on the X beam (lower bound) |
+| Version | Gantry bounce on the Y extrusions alone ↑ | Including the XY joints ↑ | With the toolhead bouncing on the X beam (lower bound) ↑ |
 |---|---|---|---|
 | Printed ABS | 213 Hz | **60 Hz** | 56 Hz |
 | Printed PC-CF | 235 Hz | 95 Hz | 81 Hz |
@@ -187,7 +189,7 @@ The toolhead bouncing on the X beam on its own sits at 157 Hz in every version.
 
 ### Moving mass and acceleration
 
-| Version | Moving in Y | Plus motor rotors | Y acceleration (same motor force) |
+| Version | Moving in Y ↓ | Plus motor rotors ↓ | Y acceleration (same motor force) ↑ |
 |---|---|---|---|
 | Printed ABS | 1.20 kg | 1.87 kg | baseline |
 | Printed PC-CF | 1.22 kg | 1.89 kg | −0.7 % |
@@ -198,7 +200,7 @@ Moving in Y means the X beam and rail, both XY joints, the toolhead and the MGN1
 
 ### Sag under gravity
 
-| Version | Peak sag at the nozzle | Variation front to back |
+| Version | Peak sag at the nozzle ↓ | Variation front to back ↓ |
 |---|---|---|
 | Printed ABS | 17 µm | 5.5 µm |
 | Printed PC-CF | 16 µm | 4.6 µm |
@@ -209,7 +211,7 @@ Sag comes from the toolhead, the X beam and the joints hanging on the Y extrusio
 
 ### Vibration modes
 
-| Mode | Printed ABS | Printed PC-CF | CF 0/90 | CF 45° | Metal |
+| Mode (all rows ↑) | Printed ABS | Printed PC-CF | CF 0/90 | CF 45° | Metal |
 |---|---|---|---|---|---|
 | Y axis, belt-limited | 39–67 Hz | 38–68 Hz | 38–68 Hz | 38–68 Hz | 38–67 Hz |
 | X axis, belt-limited | 62–107 Hz | 62–109 Hz | 62–109 Hz | 62–109 Hz | 62–109 Hz |
@@ -227,7 +229,7 @@ Both Y axes have a steel MGN9 rail screwed under an aluminium 2020 extrusion. Al
 
 ![Y-axis thermal bow at 55 °C and 70 °C chamber temperatures by version](Renders/Analysis/Thermal%20Bow%20-%20Y%20Axis.png)
 
-| Version | Bow, 55 °C (bonded corners) | Bow, 70 °C | Corner moment, 55 / 70 °C | Shear on each plate, 55 / 70 °C |
+| Version | Bow, 55 °C (bonded corners) ↓ | Bow, 70 °C ↓ | Corner moment, 55 / 70 °C ↓ | Shear on each plate, 55 / 70 °C ↓ |
 |---|---|---|---|---|
 | No restraint | 333 µm | 500 µm | n/a | n/a |
 | Printed ABS | 177 µm | 265 µm | 12 / 18 N·m | 460 / 700 N |
@@ -253,7 +255,7 @@ Both Y axes have a steel MGN9 rail screwed under an aluminium 2020 extrusion. Al
 
 Each motor dissipates about 8 W at 65 % of rated current. Printed and CF plates insulate, so the motor case and the plate under it run hot. Aluminium plates spread the heat into the frame. These are estimates:
 
-| Chamber | Motor case and plate, printed or CF | On aluminium |
+| Chamber | Motor case and plate, printed or CF ↓ | On aluminium ↓ |
 |---|---|---|
 | 25 °C (open, PLA/PETG) | 52–64 °C | 41–48 °C |
 | 55 °C (ASA/ABS) | 82–94 °C | 71–78 °C |
@@ -261,7 +263,7 @@ Each motor dissipates about 8 W at 65 % of rated current. Printed and CF plates 
 
 Plastic under a clamped motor needs to stay well below its heat-deflection temperature, or the clamp slowly sinks in.
 
-| Plate material | 25 °C chamber | 55 °C chamber | 70 °C chamber |
+| Plate material | 25 °C chamber (margin ↑) | 55 °C chamber (margin ↑) | 70 °C chamber (margin ↑) |
 |---|---|---|---|
 | ABS / ASA (HDT 95–98 °C) | Fine | **Too close**: 0–15 °C margin | **Over** |
 | PC / PC-CF (HDT 125–130 °C) | Fine | Fine: 30–45 °C margin | Marginal: 15–30 °C margin |
@@ -291,7 +293,7 @@ The bolted clamps relaxing matter more than the plates themselves; see the print
 
 ## Printed version (6 mm)
 
-| Material | Plate set | XY joint plates | Worst plate deflection | Extra belt compliance | Corner joint (metal = 1) | Heat growth (100 mm, +40 K) |
+| Material | Plate set ↓ | XY joint plates ↓ | Worst plate deflection ↓ | Extra belt compliance ↓ | Corner joint (metal = 1) ↑ | Heat growth (100 mm, +40 K) ↓ |
 |---|---|---|---|---|---|---|
 | ABS | 267 g | 65 g | 59 µm | 1.1–3.5 % | 0.34 | +0.27 mm |
 | ASA | 274 g | 67 g | 62 µm | 1.2–3.7 % | ~0.33 | +0.27 mm |
@@ -316,14 +318,14 @@ Corner joint values marked ~ are interpolated between the ABS and PC-CF FEA runs
 
 ## Carbon fiber version (6 mm)
 
-| | Weave 0/90 | Weave 45° |
-|---|---|---|
-| Plate set / XY joint plates | 383 g / 89 g | 383 g / 89 g |
-| Worst plate deflection | 6.4 µm | 5.8 µm |
-| Corner joint (metal = 1) | 0.86 | 0.76 |
-| XY joint pitch (metal = 1) | 0.80 | 0.54 |
-| Gantry vertical bounce | 160 Hz | 141 Hz |
-| Thermal bow, 55 / 70 °C | 106 / 158 µm | 115 / 173 µm |
+| | Better | Weave 0/90 | Weave 45° |
+|---|---|---|---|
+| Plate set / XY joint plates | ↓ | 383 g / 89 g | 383 g / 89 g |
+| Worst plate deflection | ↓ | 6.4 µm | 5.8 µm |
+| Corner joint (metal = 1) | ↑ | 0.86 | 0.76 |
+| XY joint pitch (metal = 1) | ↑ | 0.80 | 0.54 |
+| Gantry vertical bounce | ↑ | 160 Hz | 141 Hz |
+| Thermal bow, 55 / 70 °C | ↓ | 106 / 158 µm | 115 / 173 µm |
 
 - **Cut the plates with the weave along the plate edges (0/90).** A woven CF plate is stiff along its fibres and soft in in-plane shear. These plates are limited by bending, not shear, so fibres running along the plate do more good than fibres at 45°.
 - **Nearly as stiff as metal for 35 % less plate mass.** With the weave at 0/90, CF reaches 80–90 % of the metal version's joint stiffness and stays far ahead of printed plates.
@@ -338,7 +340,7 @@ Corner joint values marked ~ are interpolated between the ABS and PC-CF FEA runs
 
 ## Metal version (5 mm 6061)
 
-| Plate set | XY joint plates | Worst plate deflection | Corner joint | XY joint pitch | Gantry vertical bounce | Thermal bow, 55 / 70 °C |
+| Plate set ↓ | XY joint plates ↓ | Worst plate deflection ↓ | Corner joint ↑ | XY joint pitch ↑ | Gantry vertical bounce ↑ | Thermal bow, 55 / 70 °C ↓ |
 |---|---|---|---|---|---|---|
 | 594 g | 135 g | 3.3 µm | 1.00 | 1.00 | 170 Hz | 95 / 143 µm |
 
@@ -382,7 +384,7 @@ To measure a joint's stiffness directly:
 
 Predicted deflection at the stub end, with 49 N (5 kg) at about 172 mm from where the beam leaves the joint. Scale linearly for other loads.
 
-| Version | Sideways | Vertical |
+| Version | Sideways ↓ | Vertical ↓ |
 |---|---|---|
 | Bare 2020 stub, rigid joint | 0.17 mm | 0.17 mm |
 | Printed ABS | 2.4 mm | 16.9 mm |
