@@ -48,8 +48,8 @@ CASES = {"Printed ABS": ("Printed", "ABS", "ABS", 0.67), "Printed PC-CF15": ("Pr
          "Metal": ("Metal", "6061-T6", "Metal", 0.0)}
 
 
-def k_corner(case, corner):
-    hit = [c["k_rot"] for c in corners if c["case"] == case and c["corner"] == corner]
+def k_corner(case, corner, model="bonded"):
+    hit = [c["k_rot"] for c in corners if c["case"] == case and c["corner"] == corner and c.get("model", "bonded") == model]
     return hit[0] * 1000 if hit else None  # N*mm/rad
 
 
@@ -230,6 +230,38 @@ for chamber in CHAMBERS[1:]:
         print(f"  {case:16s} bonded corners {r['bow_um']:4.0f} um, corner moment {r['moment_Nm']:4.1f} N*m,"
               f" plate shear {r['plate_shear_N']:4.0f} N vs ~500 N friction{' -> slips' if r['plate_shear_N'] > 500 else ''}")
 
+print("\n== Joint clamping: bonded (a tight through-bolt, best case) vs clamp patches (a loose T-nut joint)")
+kap30, EIc30 = bimetal(174, I_2020, 48, 180, 13.25, CHAMBERS[1] - T_ASSEMBLY)
+kap45, EIc45 = bimetal(174, I_2020, 48, 180, 13.25, CHAMBERS[2] - T_ASSEMBLY)
+clamp = {}
+for case, o in out.items():
+    r = {}
+    for model in ("bonded", "patch"):
+        kf, kb = k_corner(case, "Front", model), k_corner(case, "Back", model)
+        kf, kb = kf or kb, kb or kf
+        name = case if model == "bonded" else case + " (patch)"
+        kp, ky = joint_k(name, "vertical"), joint_k(name, "sideways")
+        if not (kf and kp):
+            continue
+        k = 2 / (1 / kf + 1 / kb) * 1000
+        bows = []
+        for kap, EIc in ((kap30, EIc30), (kap45, EIc45)):
+            M = (kap * L_Y / 2) / (1 / k + L_Y / (2 * EIc))
+            bows.append((kap - M / EIc) * L_Y ** 2 / 8 * 1000)
+        m_g = M_XBEAM + M_JOINT_HW + o["m_joint_plates"] + M_HEAD
+        k_ext = (2 * math.pi * o["f_bounce_extrusions"]) ** 2 * m_g
+        k_v = 2 * kp / ARM ** 2
+        f_b = math.sqrt(1 / (1 / k_ext + 1 / k_v) / m_g) / 2 / math.pi
+        I = M_XBEAM * 0.426 ** 2 / 12 + (M_JOINT_HW + o["m_joint_plates"]) * HALF ** 2
+        yaw = [math.sqrt((2 * ea * sum(1 / q for q in RUNS) * HALF ** 2 + 2 * ky) / I) / 2 / math.pi for ea in EA_BELT]
+        r[model] = dict(k_corner=(kf + kb) / 2 / 1000, k_pitch=kp, k_yaw=ky, bow=bows, f_bounce=f_b, f_yaw=yaw)
+    clamp[case] = r
+    if len(r) == 2:
+        b, p = r["bonded"], r["patch"]
+        print(f"  {case:16s} corner {p['k_corner']:6.0f} -> {b['k_corner']:6.0f} N*m/rad, bow 55 C {p['bow'][0]:4.0f} -> {b['bow'][0]:4.0f} um,"
+              f" 70 C {p['bow'][1]:4.0f} -> {b['bow'][1]:4.0f} um; XY joint pitch {p['k_pitch']:5.0f} -> {b['k_pitch']:5.0f} N*m/rad,"
+              f" bounce {p['f_bounce']:4.0f} -> {b['f_bounce']:4.0f} Hz, yaw {p['f_yaw'][0]:3.0f}-{p['f_yaw'][1]:3.0f} -> {b['f_yaw'][0]:3.0f}-{b['f_yaw'][1]:3.0f} Hz")
+
 print("\n== Motor heat (estimate): case temperature and what the plate under it sees")
 p_motor = 2 * MOTOR["I_run"] ** 2 * MOTOR["R"] + 2.0  # copper in both phases + ~2 W iron loss
 heat = {}
@@ -248,5 +280,5 @@ for case, (v, pm, bk, cr) in CASES.items():
 
 Pcr = math.pi ** 2 * EI_X / L_X ** 2
 print(f"\n== X beam buckling under the 70 N XY-joint squeeze: Euler load {Pcr:.0f} N, factor {Pcr / 70:.0f}")
-json.dump(dict(cases=out, bow=bow, heat=heat, p_motor=p_motor, swing=swing, freq=freq, m_rotor=M_ROTOR,
+json.dump(dict(cases=out, clamp=clamp, bow=bow, heat=heat, p_motor=p_motor, swing=swing, freq=freq, m_rotor=M_ROTOR,
                m_head=M_HEAD, buckling_factor=Pcr / 70), open(os.path.join(WORK, "frame_res.json"), "w"), indent=1)

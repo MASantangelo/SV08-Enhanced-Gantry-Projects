@@ -76,7 +76,37 @@ def belt_wraps(doc):
     return sorted(out, key=lambda i: (i["y"], i["x"]))
 
 
-def corner_sandwich(doc, c):
+GAP, PATCH_R = 1.0, 4.6  # clamp-patch model: gap between extrusion and plates, radius of each bolt's clamped patch
+
+
+def add_stub(solids, roles, stub, bolt_xy, patch):
+    """The extrusion stub. Bonded: it fills the space between the plates (a perfect clamp, the best a through-bolt can
+    do). Patch: it stops GAP short of each plate and touches it only through a disc at each bolt, roughly a
+    joint clamped at its bolts and free everywhere else (what a loose T-nut joint tends toward)."""
+    x, y, z, dx, dy, dz = stub
+    if not patch:
+        solids.append(Part.makeBox(dx, dy, dz, App.Vector(x, y, z))); roles.append(("stub", "2020 stub"))
+        return stub
+    for bx, by in bolt_xy:
+        for zz in (z, z + dz - GAP):
+            solids.append(Part.makeCylinder(PATCH_R, GAP, App.Vector(bx, by, zz))); roles.append(("clamp", "clamp patch"))
+    s = (x, y, z + GAP, dx, dy, dz - 2 * GAP)
+    solids.append(Part.makeBox(s[3], s[4], s[5], App.Vector(*s[:3]))); roles.append(("stub", "2020 stub"))
+    return s
+
+
+def bolt_positions(doc, asm, labels, near_x=None):
+    out = set()
+    for o in doc.Objects:
+        if o.TypeId == "Part::Feature" and o.Label.startswith(labels) and any(p.Label.startswith(asm) for p in o.InListRecursive):
+            b = placed(o).BoundBox
+            x, y = round((b.XMin + b.XMax) / 2, 2), round((b.YMin + b.YMax) / 2, 2)
+            if near_x is None or abs(x - near_x) < 2:
+                out.add((x, y))
+    return sorted(out)
+
+
+def corner_sandwich(doc, c, patch=False):
     solids, roles = [], []
     for o in doc.Objects:
         if o.TypeId != "Part::Feature" or not any(p.Label.startswith(c["asm"]) for p in o.InListRecursive):
@@ -92,14 +122,16 @@ def corner_sandwich(doc, c):
         q.fix(1e-4, 1e-5, 1e-3)
         q = q.removeSplitter()
         solids.append(q.Solids[0]); roles.append((role, L))
-    # fit the stub exactly between the plates and against the spacer plate's face
+    # fit the stub exactly between the plates and against the spacer plate, whose outer side is flush with the
+    # extrusion (a stub even 0.01 mm off leaves a sliver face the mesher can't handle)
     x, y, z, dx, dy, dz = c["stub"]
     pl = sorted([s for s, r in zip(solids, roles) if r[0] == "plate"], key=lambda q: q.BoundBox.ZMin)
     sp = next(s for s, r in zip(solids, roles) if "Spacer Plate 20mm" in r[1])
+    x = sp.BoundBox.XMin
     z0, z1 = pl[0].BoundBox.ZMax, pl[-1].BoundBox.ZMin
     y0, y1 = (sp.BoundBox.YMax, y + dy) if c["stub_dir"] > 0 else (y, sp.BoundBox.YMin)
-    stub = (x, y0, z0, dx, y1 - y0, z1 - z0)
-    solids.append(Part.makeBox(dx, y1 - y0, z1 - z0, App.Vector(x, y0, z0))); roles.append(("stub", "2020 stub"))
+    bolts = bolt_positions(doc, c["asm"], ("M4x10mm BHCS",), near_x=x + dx / 2)  # the M4s into the Y extrusion
+    stub = add_stub(solids, roles, (x, y0, z0, dx, y1 - y0, z1 - z0), bolts, patch)
     # remove overlaps (plates win, then spacers, then the stub) so every region belongs to one part
     for i in range(1, len(solids)):
         cut = solids[i].cut(Part.makeCompound(solids[:i])).Solids
@@ -116,7 +148,7 @@ def corner_sandwich(doc, c):
     return Part.Compound(fused.Solids), parts, stub
 
 
-def xy_joint_sandwich(doc):
+def xy_joint_sandwich(doc, patch=False):
     """Left XY joint as on a bench: both plates, the spacers between them, the steel shafts and standoffs that tie
     the plates together, and a 200 mm stub of the X beam.
 
@@ -171,7 +203,8 @@ def xy_joint_sandwich(doc):
         solids.append(Part.makeCylinder(d / 2, zg1 - zg0 + 2 * t, App.Vector(x, y, zg0 - t)))
         label = f"post {'+'.join(sorted(kinds))} ({x:.0f},{y:.0f})"
         roles.append(("post", label)); post_E[label] = E
-    solids.append(Part.makeBox(stub[3], stub[4], stub[5], App.Vector(*stub[:3]))); roles.append(("stub", "2020 stub"))
+    beam_bolts = bolt_positions(doc, "XY Joint Left", ("M4x20mm BHCS", "M4x10mm BHCS"))  # the M4s into the X beam
+    stub = add_stub(solids, roles, stub, beam_bolts, patch)
     for i in range(1, len(solids)):
         cut = solids[i].cut(Part.makeCompound(solids[:i])).Solids
         solids[i] = max(cut, key=lambda q: q.Volume)  # a post keeps its span between the plates
@@ -203,12 +236,15 @@ for var in VARIANTS:
     json.dump(rows, open(os.path.join(WORK, f"parts_{v}.json"), "w"), indent=1)
     if v == "Metal":  # the belt path is the same in every version
         idlers = belt_wraps(doc)
-    for cname, c in CORNERS.items():
-        shape, parts, stub = corner_sandwich(doc, c)
-        shape.exportBrep(os.path.join(WORK, f"corner_{v}_{cname}.brep"))
-        corners[f"{v}_{cname}"] = dict(parts=parts, stub=stub, stub_dir=c["stub_dir"])
-    shape, joints[v] = xy_joint_sandwich(doc)
-    shape.exportBrep(os.path.join(WORK, f"xyjoint_{v}.brep"))
+    for model, patch in (("bonded", False), ("patch", True)):
+        sfx = "" if model == "bonded" else "_patch"
+        for cname, c in CORNERS.items():
+            shape, parts, stub = corner_sandwich(doc, c, patch)
+            shape.exportBrep(os.path.join(WORK, f"corner_{v}_{cname}{sfx}.brep"))
+            corners[f"{v}_{cname}{sfx}"] = dict(parts=parts, stub=stub, stub_dir=c["stub_dir"], model=model)
+        shape, j = xy_joint_sandwich(doc, patch)
+        shape.exportBrep(os.path.join(WORK, f"xyjoint_{v}{sfx}.brep"))
+        joints[f"{v}{sfx}"] = dict(j, model=model)
     App.closeDocument(doc.Name)
     print(f"GEOMETRY {var}: {len(rows)} solids")
 json.dump(idlers, open(os.path.join(WORK, "idlers.json"), "w"), indent=1)

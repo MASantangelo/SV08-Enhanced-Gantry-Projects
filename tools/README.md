@@ -148,7 +148,7 @@ It takes about 15 minutes and runs six steps. Add `-From <step>` to restart from
 |---|---|
 | `geometry.py` | Reads the three assembly STEPs. It exports the left-side plates, the front and back corner sandwiches and the left XY joint, and measures every belt wrap and its load at 8 lb. |
 | `plates.py` | FEA of every left-side plate under its idler loads (printed ABS, CF with the weave at 0/90 and at 45°, aluminium), then how much the plates lengthen the belt path compared with the belt's own stretch |
-| `corners.py` | FEA of the corner sandwiches with bonded contacts, giving how stiffly each version holds the Y extrusion ends |
+| `corners.py` | FEA of the corner sandwiches, giving how stiffly each version holds the Y extrusion ends. Each is run bonded (a tight through-bolt) and clamped only at its bolts (a loose T-nut joint). |
 | `xyjoint.py` | Predicted XY joint bench test: one joint held at its MGN9 carriage with a 200 mm X-beam stub, 49 N sideways and vertically, next to the bare-stub deflection |
 | `frame.py` | Beam models of the whole gantry: masses and acceleration (motor rotors included), sag, vertical bounce, XY and yaw modes, belt tension swing and plucked-frequency table, thermal bow at each chamber temperature, joint slip, motor heat, creep and buckling |
 | `figures.py` | Writes the PNGs in `Renders/Analysis/` |
@@ -156,7 +156,7 @@ It takes about 15 minutes and runs six steps. Add `-From <step>` to restart from
 - **Inputs:** material data and assumptions are in `materials.py`: the CF weave's direction-dependent constants, belt stiffness range, toolhead mass, motor, and chamber temperatures.
 - **Tools:** meshing uses gmsh and solving uses CalculiX. Both ship with FreeCAD 1.0, so nothing else needs installing.
 - **Work files** go to `%TEMP%\sv08fea`, deliberately a short path, because CalculiX fails once a path passes Windows' 260-character limit.
-- **Meshing failures:** gmsh retries with other element sizes and a looser tolerance for touching faces. If a corner still can't be meshed, it's skipped and `frame.py` uses the other corner's value, and says so in its output.
+- **Meshing failures:** gmsh retries with other element sizes and a looser tolerance for touching faces, and gives up on an attempt after 90 s. If a model still can't be meshed, it's skipped. For a corner, `frame.py` then uses the other corner's value, and says so in its output.
 - **Reading the output:** the printed results are what the tables in the analysis doc are built from. The doc isn't regenerated automatically, so update its numbers by hand when they change.
 
 ## Files

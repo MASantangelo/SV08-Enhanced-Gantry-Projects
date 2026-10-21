@@ -2,7 +2,9 @@
 
 Model: both plates, the printed 20 mm spacer plate and Z carriage spacer, and a solid 20x20 stub with the bending
 stiffness of a 2020 extrusion, all bonded (an upper bound on a bolted joint). Fixed at the two M4 x 45 bolts into
-the Z carriage and on the Z carriage spacer's lower face. A pure bending moment on the stub's free end; the
+the Z carriage and on the Z carriage spacer's lower face. Each corner is run twice: bonded (a perfect clamp, the
+best a through-bolt can do) and clamp patches (touching only at the bolts, what a loose T-nut joint tends toward).
+A pure bending moment on the stub's free end; the
 rotation of the stub where it leaves the plates gives the joint's rotational stiffness.
 Writes corners_res.json into SV08_ANALYSIS_DIR.
 """
@@ -24,12 +26,13 @@ CASES = {"Printed": [("Printed ABS", iso("ABS"), iso("ABS")), ("Printed PC-CF15"
          "CF": [("CF 0/90", dict(ortho=CF_ORTHO, angle=0), iso("ABS")), ("CF 45", dict(ortho=CF_ORTHO, angle=45), iso("ABS"))],
          "Metal": [("Metal", iso("6061-T6"), iso("ABS"))]}
 BOLTS = {"Front": [(-227.5, -214.0), (-255.0, -214.0)], "Back": [(-227.5, 272.0), (-255.0, 272.0)]}
-E_STUB = 69000 * 6936 / (20 ** 4 / 12)  # solid 20x20 box with a 2020 extrusion's bending stiffness
+E_AL, I_2020 = 69000.0, 6936.0  # the stub is a solid box given a 2020 extrusion's bending stiffness
 M0 = 1000.0  # N*mm
 
 res = []
 for key, c in meta.items():
-    var, corner = key.split("_")
+    var, corner = key.split("_")[:2]
+    model = c.get("model", "bonded")
     try:
         m = fealib.mesh(os.path.join(WORK, f"corner_{key}.brep"), clmax=2.5, clmin=0.8, fragment=True)
     except RuntimeError as e:
@@ -67,13 +70,15 @@ for key, c in meta.items():
     zc = xyz[end, 2].mean(); arm = xyz[end, 2] - zc
     loads = [(np.array([j]), [0, f, 0], 0, 0) for j, f in zip(end, M0 * arm / (arm ** 2).sum())]
     for case, plate_mat, spacer_mat in CASES[var]:
-        mats = {s: (plate_mat if role[s] == "plate" else spacer_mat if role[s] == "spacer" else (E_STUB, 0.33)) for s in sets}
+        e_stub = E_AL * I_2020 / (dx * dz ** 3 / 12)  # keeps a 2020's bending stiffness whatever the stub's height
+        mats = {s: (plate_mat if role[s] == "plate" else spacer_mat if role[s] == "spacer"
+                    else (69000, 0.33) if role[s] == "clamp" else (e_stub, 0.33)) for s in sets}
         try:
             U, _ = fealib.solve(m, mats, fix, loads)
         except RuntimeError:
             print(f"CORNER {key}: skipped (the mesh has inverted elements)")
             break
         theta = abs(np.polyfit(xyz[sec, 2], U[sec, 1], 1)[0])
-        res.append(dict(case=case, corner=corner, k_rot=M0 / theta / 1000))
-        print(f"CORNER {case:16s} {corner:5s} k = {M0 / theta / 1000:7.0f} N*m/rad")
+        res.append(dict(case=case, corner=corner, model=model, k_rot=M0 / theta / 1000))
+        print(f"CORNER {case:16s} {corner:5s} {model:6s} k = {M0 / theta / 1000:7.0f} N*m/rad")
 json.dump(res, open(os.path.join(WORK, "corners_res.json"), "w"), indent=1)

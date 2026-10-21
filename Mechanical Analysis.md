@@ -25,15 +25,15 @@ In the tables, **↑** means higher is better and **↓** means lower is better.
 | **XY joint pitch stiffness** (metal = 1) | ↑ | 0.07 → 0.19 | 0.80 | 0.54 | 1.00 |
 | **Gantry vertical bounce** (on extrusions + XY joints) | ↑ | 60 → 95 Hz | 160 Hz | 141 Hz | 170 Hz |
 | **Y resonance** (belt-limited) | ↑ | 38–68 Hz | 38–68 Hz | 38–68 Hz | 38–67 Hz |
-| **Gantry yaw mode** | ↑ | 111–189 Hz | 157–209 Hz | 152–206 Hz | 194–235 Hz |
-| **Y-axis thermal bow, 55 / 70 °C chamber** (bonded corners) | ↓ | 177 / 265 → 130 / 195 µm | 106 / 158 µm | 115 / 173 µm | 95 / 143 µm |
+| **Gantry yaw mode** | ↑ | 111–189 Hz | 157–210 Hz | 152–206 Hz | 197–237 Hz |
+| **Y-axis thermal bow, 55 / 70 °C chamber** (bonded corners) | ↓ | 177 / 265 → 130 / 195 µm | 106 / 159 µm | 115 / 173 µm | 95 / 142 µm |
 | **Plate under a motor, 55 / 70 °C chamber** | ↓ | 82–94 / 97–109 °C | same | same | 71–78 / 86–93 °C |
 
 **What matters, in order:**
 
 1. **The belts set XY stiffness.** Even ABS plates add under 4 % to the belt path's flex, so X and Y resonances match across versions within a few percent.
 2. **Printed XY joints are the vertical weak link.** The bottom plate between the MGN9 block and the X beam bends. In ABS the gantry bounces at about **60 Hz**, inside the XY resonance range, which can put Z ripples on prints. PC-CF reaches 95 Hz; CF and metal 140–170 Hz.
-3. **Thermal bow is the biggest structural load.** The steel rails bend the aluminium extrusions as the chamber warms: up to 0.33 mm at 55 °C and 0.5 mm at 70 °C. The corner bolts slip under it. Stiff corners halve the bow; heat-soak before calibrating.
+3. **Thermal bow is the biggest structural load.** The steel rails bend the aluminium extrusions as the chamber warms: up to 0.33 mm at 55 °C and 0.5 mm at 70 °C. T-nut joints slip under it. Stiff corners halve the bow, and drilled through-bolts in CF or metal hold it without slipping. Heat-soak before calibrating.
 4. **ABS and ASA are too hot under the motors** in a heated chamber. PC and PC-CF are fine at 55 °C and marginal at 70 °C. Aluminium keeps the motors 10–15 °C cooler.
 5. **Cut CF with the weave along the plate edges.** These plates are limited by bending, not shear, so 45° is worse.
 6. **Metal's mass costs little.** The motor rotors add 0.67 kg of effective mass to every version, so metal is only 3.6 % slower than printed ABS.
@@ -215,7 +215,7 @@ Sag comes from the toolhead, the X beam and the joints hanging on the Y extrusio
 |---|---|---|---|---|---|
 | Y axis, belt-limited | 39–67 Hz | 38–68 Hz | 38–68 Hz | 38–68 Hz | 38–67 Hz |
 | X axis, belt-limited | 62–107 Hz | 62–109 Hz | 62–109 Hz | 62–109 Hz | 62–109 Hz |
-| Gantry yaw (X beam twisting about Z) | 111–181 Hz | 126–189 Hz | 157–209 Hz | 152–206 Hz | 194–235 Hz |
+| Gantry yaw (X beam twisting about Z) | 111–181 Hz | 127–189 Hz | 157–210 Hz | 152–206 Hz | 197–237 Hz |
 | Gantry vertical bounce (see XY joints) | 56–60 Hz | 81–95 Hz | 112–160 Hz | 105–141 Hz | 115–170 Hz |
 
 Ranges span the belt stiffness range, or the bounce with and without the toolhead mode.
@@ -234,15 +234,15 @@ Both Y axes have a steel MGN9 rail screwed under an aluminium 2020 extrusion. Al
 | No restraint | 333 µm | 500 µm | n/a | n/a |
 | Printed ABS | 177 µm | 265 µm | 12 / 18 N·m | 460 / 700 N |
 | Printed PC-CF | 130 µm | 195 µm | 16 / 24 N·m | 600 / 900 N |
-| CF 0/90 | 106 µm | 158 µm | 18 / 26 N·m | 670 / 1,010 N |
+| CF 0/90 | 106 µm | 159 µm | 18 / 26 N·m | 670 / 1,010 N |
 | CF 45° | 115 µm | 173 µm | 17 / 25 N·m | 650 / 970 N |
-| Metal 5 mm | 95 µm | 143 µm | 18 / 28 N·m | 700 / 1,060 N |
+| Metal 5 mm | 95 µm | 142 µm | 18 / 28 N·m | 700 / 1,060 N |
 
 **The joints will slip.** The moment is carried as a shear couple between the plates and the extrusion. The two M4 screws per plate hold about 500 N by friction when freshly torqued, and less in a printed plate once its preload has relaxed (about 280 N). At 70 °C every version is past that. So in practice:
 
 - **Partial restraint.** The bow ends up between the bonded values and the free value.
 - **Bolts take the load.** Once a joint slips, the bolts bear in their holes. In printed plates that's about 10–15 MPa on each M4 hole, above the long-term limit for ABS and ASA, so holes can slowly oval over many heat cycles. CF and metal handle it easily.
-- **Joints can settle.** Repeated heat cycles can walk a joint slightly. Re-check the corner bolts after the first few hot prints in every version.
+- **Joints can settle.** Repeated heat cycles can walk a joint slightly. Re-check the corner bolts after the first few hot prints in every version, or through-bolt them (see [Clamping the extrusions](#clamping-the-extrusions-t-nuts-or-drilled-through-bolts)).
 
 **The X beam bows too.** Its MGN12 rail is on the front face, so it bows sideways: up to 0.32 mm at 55 °C and 0.47 mm at 70 °C across the travel if the XY joints let the ends rotate, and roughly a third of that if they hold them square. That bends the X travel slightly in Y. It's the same in every version.
 
@@ -250,6 +250,80 @@ Both Y axes have a steel MGN9 rail screwed under an aluminium 2020 extrusion. Al
 
 - Heat-soak the chamber before Z tilt and the bed mesh, so the bow is already in place when it gets measured.
 - Keep the chamber temperature consistent between calibration and printing.
+
+### Clamping the extrusions: T-nuts or drilled through-bolts
+
+As designed, each plate is held to the extrusions by M4 screws into drop-in T-nuts. That's the cheap option, and it's nearly good enough. The upgrade is to through-bolt the stack instead, at the same positions:
+
+1. An M4 socket head with a washer goes under the bottom plate.
+2. It runs up through a 4.3 mm hole drilled top to bottom through the centre of the extrusion.
+3. It comes out through the top plate, with a washer and a nylon-insert locknut on top.
+
+Like the T-nuts, it uses the existing hole positions, which line up with the stock SV08 extrusions.
+
+**What drilling buys you:**
+
+1. **A positive stop.** Once friction lets go, a T-nut can slide along its slot, so a corner can creep a little along the extrusion with every heat cycle. A bolt in a drilled hole can't move further than its clearance. This applies in every version, including printed.
+2. **More clamping force where the plates can take it.** One bolt clamps both plates and the extrusion in a single stack, and it can be torqued harder than a T-nut, whose slot lips start to give at about 1.5–2 N·m. CF and metal plates take 2.5–3 N·m easily. Printed plates can't use the extra torque: the plastic under the washer still limits them to about 1 N·m (1.3 N·m with a nylon locknut, because the nylon takes some of the torque).
+3. **Stiffer corners.** A tight through-bolt clamps close to the bonded joint the FEA assumes. A T-nut joint behaves more like a joint clamped only at its bolts. Running the front corners both ways puts the difference at about 20–25 %:
+
+| Corner (front) | Clamped at bolts only (T-nut-like) ↑ | Bonded (tight through-bolt) ↑ | Y-axis bow, 55 °C ↓ | Y-axis bow, 70 °C ↓ |
+|---|---|---|---|---|
+| CF, weave 0/90 | 12,170 N·m/rad | 16,090 N·m/rad | 127 → 106 µm | 190 → 159 µm |
+| CF, weave 45° | 11,440 N·m/rad | 14,140 N·m/rad | 132 → 115 µm | 197 → 173 µm |
+| Metal 5 mm | 14,170 N·m/rad | 18,750 N·m/rad | 115 → 95 µm | 173 → 142 µm |
+
+The printed corners' clamped-at-bolts model didn't mesh, so printed isn't in this table.
+
+**Holding against thermal bow.** This compares how much shear each plate can hold by friction (two bolts per plate, friction coefficient 0.2) with what the bow puts on it:
+
+| Clamp | Torque | Preload per bolt | Holds per plate ↑ |
+|---|---|---|---|
+| T-nut | 1.0 / 1.5 N·m | 1,250 / 1,880 N | 500 / 750 N |
+| Through-bolt, printed plates | 1.3 N·m | 1,250 N | 500 N |
+| Through-bolt, CF or metal | 2.5 / 3.0 N·m | 2,750 / 3,380 N | 1,100 / 1,350 N |
+
+| Needed per plate ↓ | 55 °C chamber | 70 °C chamber |
+|---|---|---|
+| Printed ABS | 460 N | 700 N |
+| Printed PC-CF | 600 N | 900 N |
+| CF | 650–670 N | 970–1,010 N |
+| Metal | 710 N | 1,060 N |
+
+- **CF and metal through-bolted at 3 N·m hold at both chamber temperatures,** and at 2.5 N·m they hold up to 55 °C.
+- **T-nuts slip at 70 °C in every version,** and at 55 °C unless torqued toward 1.5 N·m.
+- **Printed plates slip either way,** so for printed the drilled hole's value is the positive stop.
+
+**The XY joints** take the same treatment for the two M4s that hold the X beam. The bolt then clamps the top plate, the beam, the 10 mm spacer and the bottom plate as one stack, so the beam can't shift in the joint under the belt squeeze or hard acceleration.
+
+How much stiffer that makes the joint isn't measured: the clamped-at-bolts version of the XY joint model didn't mesh. Two things bound it:
+- **The ceiling:** the bonded figures in [XY joints](#xy-joints) are the most a perfect clamp could give.
+- **The main flex doesn't change:** most of the joint's flex is the bottom plate bending where it leaves the MGN9 block, which through-bolting doesn't touch.
+
+Expect a joint that stays tight and consistent, close to those bonded figures, rather than one that beats them.
+
+**Hardware:**
+
+| Where | Stack to clamp | Bolt (M4 socket head) | Room above (nut) | Room below (head) |
+|---|---|---|---|---|
+| Corners, into the Y extrusion (2 per corner) | 32 mm (printed, CF) / 30 mm (metal) | M4×45 / M4×40 | Clear at all four positions | Inner positions clear. Back outer: about 1.5 mm to spare. **Front outer, beside the Z carriage: only room for a button head and washer, as now.** |
+| XY joints, into the X beam (2 per joint) | 42 mm (printed, CF) / 40 mm (metal) | M4×55 / M4×50 | Clear | Clear |
+
+Lengths assume about 1 mm washers and a 5 mm DIN 985 locknut, with a thread or two showing. M4×35 is too short everywhere. The nylon insert is good to about 120 °C, so 70 °C chambers are fine, but replace the nut after a few removals.
+
+**Drilling:**
+
+- **Square and centred.** Use a drill press, square to the face, through the centre of the slot.
+- **Clearance:** 4.3 mm, or 4.5 mm if you want a little float to line up with both plates.
+- **The outer holes sit close to the extrusion ends,** at the stock positions:
+
+| Hole | Wall left between the hole and the extrusion end |
+|---|---|
+| XY joint (X beam) | 1.85 mm |
+| Corners (Y extrusion) | 2.8–2.95 mm |
+| X back extrusion (if you through-bolt it too) | 1.85 mm |
+
+That's still several times stronger than needed: the tear-out estimate is about 3–4 kN against loads of about 0.5 kN. The risk is the drill wandering toward the end, or the thin wall bulging. Drill slowly with the end supported, deburr, and check that the saw-cut end is square before you start.
 
 ### Motor heat
 
@@ -325,7 +399,7 @@ Corner joint values marked ~ are interpolated between the ABS and PC-CF FEA runs
 | Corner joint (metal = 1) | ↑ | 0.86 | 0.76 |
 | XY joint pitch (metal = 1) | ↑ | 0.80 | 0.54 |
 | Gantry vertical bounce | ↑ | 160 Hz | 141 Hz |
-| Thermal bow, 55 / 70 °C | ↓ | 106 / 158 µm | 115 / 173 µm |
+| Thermal bow, 55 / 70 °C | ↓ | 106 / 159 µm | 115 / 173 µm |
 
 - **Cut the plates with the weave along the plate edges (0/90).** A woven CF plate is stiff along its fibres and soft in in-plane shear. These plates are limited by bending, not shear, so fibres running along the plate do more good than fibres at 45°.
 - **Nearly as stiff as metal for 35 % less plate mass.** With the weave at 0/90, CF reaches 80–90 % of the metal version's joint stiffness and stays far ahead of printed plates.
@@ -342,7 +416,7 @@ Corner joint values marked ~ are interpolated between the ABS and PC-CF FEA runs
 
 | Plate set ↓ | XY joint plates ↓ | Worst plate deflection ↓ | Corner joint ↑ | XY joint pitch ↑ | Gantry vertical bounce ↑ | Thermal bow, 55 / 70 °C ↓ |
 |---|---|---|---|---|---|---|
-| 594 g | 135 g | 3.3 µm | 1.00 | 1.00 | 170 Hz | 95 / 143 µm |
+| 594 g | 135 g | 3.3 µm | 1.00 | 1.00 | 170 Hz | 95 / 142 µm |
 
 The plate set mass includes the four 5 mm aluminium tensioner lever arms (28 g).
 
@@ -400,7 +474,8 @@ The model bonds every contact and holds the MGN9 block rigidly, so a real joint 
 - **Bonded and fixed.** The FEA treats contacts as bonded and bolt holes as rigidly fixed. Real bolted joints are softer, which affects all three versions but the printed one most.
 - **XY joint shafts.** In the XY joint model, the shafts and standoffs are simplified posts with the real parts' bending stiffness.
 - **Z side not modelled.** The stock Z carriages, Z rails, Z drive and printer frame aren't included. They're identical across versions and would lower the bounce modes equally.
-- **CF and metal back corners** use the front-corner value because their plates didn't mesh cleanly.
+- **CF and metal back corners** use the front-corner value. Where the 20 mm spacer plate meets those back plates, its rounded corners end within 0.02 mm of an edge on the plate. The leftover faces are too small to mesh. That's a modelling limitation, not a fault in the parts.
+- **Clamped-at-bolts models** (the T-nut comparison) only meshed for the CF and metal front corners, not for the printed corners or the XY joints.
 - **Assumed inputs.** Belt stiffness, rail-to-extrusion coupling, the motor's thermal resistance and creep factors are assumed. The ranges are stated where they matter.
 - **Plastics vary.** Creep and heat limits for printed plastics depend strongly on brand, print settings and chamber temperature. The figures here are for comparison.
 - **Walls not checked here.** Thin webs around pockets aren't checked individually in this analysis; the [`tools/plate-check.ps1`](tools) wall checks cover those.

@@ -11,6 +11,7 @@ import numpy as np
 
 BIN = os.environ.get("SV08_FREECAD_BIN", r"C:\Program Files\FreeCAD 1.0\bin")
 WORK = os.environ["SV08_ANALYSIS_DIR"]
+GMSH_TIMEOUT = 90  # s per attempt (a normal mesh takes 5-20 s): some near-degenerate geometry makes gmsh loop instead of failing
 
 
 def mesh(brep, clmax=2.0, clmin=0.6, fragment=False):
@@ -19,7 +20,10 @@ def mesh(brep, clmax=2.0, clmin=0.6, fragment=False):
     inp = os.path.join(WORK, "m.inp")
     src = os.path.join(WORK, "m.geo")
     # A different element size, or a looser tolerance for faces that touch, usually gets past a meshing failure.
+    hung = set()
     for tol, scale in ((0.001, 1.0), (0.001, 0.85), (0.001, 1.15), (0.05, 1.0), (0.05, 0.85), (0.05, 0.7)):
+        if tol in hung:
+            continue  # this tolerance already made gmsh hang: other element sizes won't help
         if fragment:
             with open(src, "w") as f:
                 f.write('SetFactory("OpenCASCADE");\nGeometry.ToleranceBoolean = %g;\nMerge "%s";\n'
@@ -28,9 +32,13 @@ def mesh(brep, clmax=2.0, clmin=0.6, fragment=False):
             break
         if os.path.exists(inp):
             os.remove(inp)
-        r = subprocess.run([os.path.join(BIN, "gmsh.exe"), src if fragment else brep, "-3", "-order", "2",
-                            "-clmax", str(clmax * scale), "-clmin", str(clmin), "-setnumber", "Mesh.SecondOrderLinear", "1",
-                            "-optimize_netgen", "-format", "inp", "-o", inp], capture_output=True)
+        try:
+            r = subprocess.run([os.path.join(BIN, "gmsh.exe"), src if fragment else brep, "-3", "-order", "2",
+                                "-clmax", str(clmax * scale), "-clmin", str(clmin), "-setnumber", "Mesh.SecondOrderLinear", "1",
+                                "-optimize_netgen", "-format", "inp", "-o", inp], capture_output=True, timeout=GMSH_TIMEOUT)
+        except subprocess.TimeoutExpired:
+            hung.add(tol)
+            continue
         if (r.returncode == 0 or b"Done writing" in r.stdout) and has_tets(inp):
             break
     else:
