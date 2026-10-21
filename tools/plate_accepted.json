@@ -716,10 +716,10 @@
     {
       "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
       "kind": "preferred",
-      "x": -2.78,
+      "x": -3.55,
       "y": 11.0,
-      "value": 2.45,
-      "note": "end of the plate beside the 4.3 hole; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+      "value": 2.0,
+      "note": "end of the part beside the outer M4 hole; holes moved 0.99 mm inward to line up with the stock SV08 toolhead extrusion's holes (5 mm and 25 mm from its ends), outline grown 0.54 mm, 2.0 mm is as far as it can go without losing build volume (accepted 2026-10-21)"
     },
     {
       "plate": "XY Live Idler Right Top Plate Printed6mm - For Printing",
@@ -796,10 +796,10 @@
     {
       "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
       "kind": "preferred",
-      "x": 2.77,
+      "x": 3.0,
       "y": 11.0,
-      "value": 2.45,
-      "note": "mirror of the accepted XY Live Idler Right Top entry: end of the plate beside the 4.3 hole; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+      "value": 2.0,
+      "note": "mirror of the accepted XY Live Idler Right Top entry: end of the part beside the outer M4 hole; holes moved 0.99 mm inward to line up with the stock SV08 toolhead extrusion's holes (5 mm and 25 mm from its ends), outline grown 0.54 mm, 2.0 mm is as far as it can go without losing build volume (accepted 2026-10-21)"
     },
     {
       "plate": "XY Live Idler Left Top Plate Printed6mm - For Printing",
@@ -876,10 +876,10 @@
     {
       "plate": "XY Live Idler Right Bottom Plate Printed6mm - For Printing",
       "kind": "preferred",
-      "x": -2.77,
+      "x": -3.54,
       "y": 11.0,
-      "value": 2.45,
-      "note": "end of the plate beside the 4.3 hole; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+      "value": 2.0,
+      "note": "end of the part beside the outer M4 hole; holes moved 0.99 mm inward to line up with the stock SV08 toolhead extrusion's holes (5 mm and 25 mm from its ends), outline grown 0.54 mm, 2.0 mm is as far as it can go without losing build volume (accepted 2026-10-21)"
     },
     {
       "plate": "XY Live Idler Right Bottom Plate Printed6mm - For Printing",
@@ -948,10 +948,10 @@
     {
       "plate": "XY Live Idler Left Bottom Plate Printed6mm - For Printing",
       "kind": "preferred",
-      "x": 2.77,
+      "x": 3.0,
       "y": 11.0,
-      "value": 2.45,
-      "note": "mirror of the accepted XY Live Idler Right Bottom entry: end of the plate beside the 4.3 hole; shared outline can't grow further without changing the look of the plates (accepted 2026-10-15)"
+      "value": 2.0,
+      "note": "mirror of the accepted XY Live Idler Right Bottom entry: end of the part beside the outer M4 hole; holes moved 0.99 mm inward to line up with the stock SV08 toolhead extrusion's holes (5 mm and 25 mm from its ends), outline grown 0.54 mm, 2.0 mm is as far as it can go without losing build volume (accepted 2026-10-21)"
     },
     {
       "plate": "XY Live Idler Left Bottom Plate Printed6mm - For Printing",
@@ -972,10 +972,10 @@
     {
       "plate": "XY Live Idler Spacer 10mm Printed6mm - For Printing",
       "kind": "preferred",
-      "x": -1.26,
+      "x": -2.02,
       "y": 10.7,
-      "value": 2.45,
-      "note": "end of the spacer beside the 4.3 hole; follows the XY plates' outline (same as their accepted 2.45) (accepted 2026-10-15)"
+      "value": 2.0,
+      "note": "end of the part beside the outer M4 hole; holes moved 0.99 mm inward to line up with the stock SV08 toolhead extrusion's holes (5 mm and 25 mm from its ends), outline grown 0.54 mm, 2.0 mm is as far as it can go without losing build volume (accepted 2026-10-21)"
     },
     {
       "plate": "Back Right Top Plate Printed6mm - For Printing",
