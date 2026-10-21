@@ -115,7 +115,7 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 | Qty | Part | Buy | Notes |
 |---:|---|---|---|
 | 10 | M5 Spacer 10mm OD 10mm Tall | [AliExpress](https://www.aliexpress.com/item/3256802878592600.html) | 8mm OD is more common and acceptable. Purchase preferred. Printed as alternative with same dimensions.. If purchasing from Aliexpress be sure to select 5.1x10x10 |
-| 8 | M3 Spacer 8mm OD 20mm Tall | [Amazon](https://amazon.com/dp/B0F8QLBKYC) | 6mm OD is more common and acceptable. Purchase preferred. Printed as alternative with same dimensions. |
+| 8 | M3 Spacer 8mm OD 20mm Tall | [Amazon](https://amazon.com/dp/B0F8QLBKYC) | 6mm OD is more common and acceptable. Purchase preferred. Printed as alternative with same dimensions. Optional: use a 6mm OD (or smaller) spacer for the one nearest each end of the Gantry X extrusion (2 total) and the stock 345mm extrusion fits without cutting. |
 | 2 | M5 Spacer 8mm OD 20mm Tall | [Amazon](https://amazon.com/dp/B0CRL77N5C) | Purchase preferred. Printed as alternative with same dimensions. |
 | 2 | M5 Spacer 8mm OD 30mm Tall | [Amazon](https://amazon.com/dp/B0CQ53LS2B) | Purchase preferred. Printed as alternative with same dimensions. |
 | 1 | M5 Spacer 10mm OD 20mm Tall | [Amazon](https://amazon.com/dp/B0D2L3H5LV) | 8mm OD is more common and acceptable. Purchase preferred. Printed as alternative with same dimensions. |
@@ -167,9 +167,9 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 
 | Qty | Part | Buy | Notes |
 |---:|---|---|---|
-| 2 | Gantry Y-Axis 2020 Extrusion 469mm |  |  |
-| 1 | Gantry X-Axis 2020 Extrusion 342mm |  | Shortened from 345mm: all tensioning now happens at the front motor mounts. |
-| 1 | Toolhead X-Axis 2020 Extrusion 426mm |  |  |
+| 2 | Gantry Y-Axis 2020 Extrusion 469mm |  | Stock extrusion works: the front and back motor-mount bolt holes line up with its existing holes. |
+| 1 | Gantry X-Axis 2020 Extrusion 342mm |  | Shortened from 345mm: all tensioning now happens at the front motor mounts. The back motor-mount bolt holes line up with the stock extrusion's existing holes. To use the stock 345mm extrusion without cutting it, fit a 6mm OD (or smaller) M3 x 20mm spacer in the spot nearest each end of this extrusion (one per back corner) instead of an 8mm one. |
+| 1 | Toolhead X-Axis 2020 Extrusion 426mm |  | The XY joints don't line up with the stock extrusion's holes (different bolt pattern). Either mount them with M4 T-nuts in the slots, or replace this extrusion with one drilled to match. |
 
 ## CF Plates
 
