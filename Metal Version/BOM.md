@@ -160,7 +160,7 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 | Qty | Part | Buy | Notes |
 |---:|---|---|---|
 | 2 | Gantry Y-Axis 2020 Extrusion 469mm |  | Stock extrusion works: the front and back motor-mount bolt holes line up with its existing holes. |
-| 1 | Gantry X-Axis 2020 Extrusion 342mm |  | Shortened from 345mm: all tensioning now happens at the front motor mounts. The back motor-mount bolt holes line up with the stock extrusion's existing holes. To use the stock 345mm extrusion without cutting it, fit a 6mm OD (or smaller) M3 x 20mm spacer in the spot nearest each end of this extrusion (one per back corner) instead of an 8mm one. |
+| 1 | Gantry X-Axis 2020 Extrusion 342mm |  | Shortened from 345mm: all tensioning now happens at the front motor mounts. The back motor-mount bolt holes line up with the stock extrusion's existing holes. To use the stock 345mm extrusion without cutting it, fit a 6mm OD (or smaller) M3 x 20mm spacer in the spot nearest each end of this extrusion (one per back corner) instead of an 8mm one. If you cut a 345mm extrusion down to 342mm, take 1.5mm off each end: the stock holes are 5mm and 23mm from each end, so an even trim keeps both ends lined up with the back motor-mount holes. |
 | 1 | Toolhead X-Axis 2020 Extrusion 426mm |  | The XY joints don't line up with the stock extrusion's holes (different bolt pattern). Either mount them with M4 T-nuts in the slots, or replace this extrusion with one drilled to match. |
 
 ## Metal Plates
