@@ -244,10 +244,10 @@
     {
       "plate": "Front Right Top CF6mm",
       "kind": "wall",
-      "x": 30.3,
-      "y": -1.9,
-      "value": 1.08,
-      "note": "rim between the FHCS counterbore and the D5 shoulder-bolt hole; same rim as the accepted metal front tops (accepted 2026-10-14)"
+      "x": 30.29,
+      "y": -2.0,
+      "value": 0.93,
+      "note": "rim between the FHCS counterbore and the D5 shoulder-bolt hole; same rim as the accepted metal front tops: rim between the countersunk-screw seat and the shoulder-bolt hole, thinner with the larger nut pocket. Now an M3 hex nut pocket (5.9 A/F, R1) instead of the PEM standoff (accepted 2026-10-22)."
     },
     {
       "plate": "Front Right Top CF6mm",
@@ -284,10 +284,10 @@
     {
       "plate": "Front Left Top CF6mm",
       "kind": "wall",
-      "x": 30.3,
-      "y": -1.9,
-      "value": 1.08,
-      "note": "mirror of the accepted Front Right Top counterbore-to-shoulder-hole rim (accepted 2026-10-14)"
+      "x": 30.29,
+      "y": -2.0,
+      "value": 0.93,
+      "note": "mirror of the accepted Front Right Top counterbore-to-shoulder-hole rim: rim between the countersunk-screw seat and the shoulder-bolt hole, thinner with the larger nut pocket. Now an M3 hex nut pocket (5.9 A/F, R1) instead of the PEM standoff (accepted 2026-10-22)."
     },
     {
       "plate": "Front Left Top CF6mm",
@@ -564,10 +564,10 @@
     {
       "plate": "Front Right Top CF6mm",
       "kind": "wall",
-      "x": 35.76,
-      "y": 2.59,
-      "value": 1.41,
-      "note": "retainer PEM hex pocket to the merged motor-boss/bearing opening, top 0.6 mm only; trimming it would be rough (accepted 2026-10-14)"
+      "x": 35.5,
+      "y": 3.24,
+      "value": 0.83,
+      "note": "retainer PEM hex pocket to the merged motor-boss/bearing opening, top 0.6 mm only; trimming it would be rough: retainer nut pocket to the merged motor-boss/bearing opening, near the top face. Now an M3 hex nut pocket (5.9 A/F, R1) instead of the PEM standoff (accepted 2026-10-22)."
     },
     {
       "plate": "Front Left Top CF6mm",
@@ -588,10 +588,10 @@
     {
       "plate": "Front Left Top CF6mm",
       "kind": "wall",
-      "x": 35.76,
-      "y": 2.59,
-      "value": 1.41,
-      "note": "retainer PEM hex pocket to the merged motor-boss/bearing opening, top 0.6 mm only; trimming it would be rough (accepted 2026-10-14)"
+      "x": 35.5,
+      "y": 3.24,
+      "value": 0.83,
+      "note": "retainer PEM hex pocket to the merged motor-boss/bearing opening, top 0.6 mm only; trimming it would be rough: retainer nut pocket to the merged motor-boss/bearing opening, near the top face. Now an M3 hex nut pocket (5.9 A/F, R1) instead of the PEM standoff (accepted 2026-10-22)."
     },
     {
       "plate": "Front Right Bottom CF6mm",
@@ -2068,66 +2068,82 @@
     {
       "plate": "Front Right Bottom CF6mm",
       "kind": "floor",
-      "x": 33.84,
+      "x": 34.68,
       "y": 11.43,
-      "value": 0.4,
-      "note": "0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs (accepted 2026-10-22)"
+      "value": 1.0,
+      "note": "0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs Now 1.00 mm: the PEMs became M3 nuts in 2.4 mm deep pockets (the other CF nut pockets are 2.5 mm), chosen for the thicker floor (accepted 2026-10-22)."
     },
     {
       "plate": "Front Right Bottom CF6mm",
       "kind": "floor",
-      "x": 49.85,
-      "y": -5.82,
-      "value": 0.4,
-      "note": "0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs (accepted 2026-10-22)"
+      "x": 48.99,
+      "y": -5.84,
+      "value": 1.0,
+      "note": "0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs Now 1.00 mm: the PEMs became M3 nuts in 2.4 mm deep pockets (the other CF nut pockets are 2.5 mm), chosen for the thicker floor (accepted 2026-10-22)."
     },
     {
       "plate": "Front Right Bottom CF6mm",
       "kind": "floor",
-      "x": 34.23,
-      "y": 1.79,
-      "value": 0.4,
-      "note": "0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs (accepted 2026-10-22)"
+      "x": 34.74,
+      "y": 1.11,
+      "value": 1.0,
+      "note": "0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs Now 1.00 mm: the PEMs became M3 nuts in 2.4 mm deep pockets (the other CF nut pockets are 2.5 mm), chosen for the thicker floor (accepted 2026-10-22)."
     },
     {
       "plate": "Front Right Bottom CF6mm",
       "kind": "floor",
-      "x": 53.34,
+      "x": 52.5,
       "y": 11.43,
-      "value": 0.4,
-      "note": "0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs (accepted 2026-10-22)"
+      "value": 1.0,
+      "note": "0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs Now 1.00 mm: the PEMs became M3 nuts in 2.4 mm deep pockets (the other CF nut pockets are 2.5 mm), chosen for the thicker floor (accepted 2026-10-22)."
     },
     {
       "plate": "Front Left Bottom CF6mm",
       "kind": "floor",
-      "x": 33.84,
+      "x": 34.68,
       "y": 11.43,
-      "value": 0.4,
-      "note": "mirror of the accepted Front Right Bottom entry: 0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs (accepted 2026-10-22)"
+      "value": 1.0,
+      "note": "mirror of the accepted Front Right Bottom entry: 0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs Now 1.00 mm: the PEMs became M3 nuts in 2.4 mm deep pockets (the other CF nut pockets are 2.5 mm), chosen for the thicker floor (accepted 2026-10-22)."
     },
     {
       "plate": "Front Left Bottom CF6mm",
       "kind": "floor",
-      "x": 49.85,
-      "y": -5.82,
-      "value": 0.4,
-      "note": "mirror of the accepted Front Right Bottom entry: 0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs (accepted 2026-10-22)"
+      "x": 48.99,
+      "y": -5.84,
+      "value": 1.0,
+      "note": "mirror of the accepted Front Right Bottom entry: 0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs Now 1.00 mm: the PEMs became M3 nuts in 2.4 mm deep pockets (the other CF nut pockets are 2.5 mm), chosen for the thicker floor (accepted 2026-10-22)."
     },
     {
       "plate": "Front Left Bottom CF6mm",
       "kind": "floor",
-      "x": 34.23,
-      "y": 1.79,
-      "value": 0.4,
-      "note": "mirror of the accepted Front Right Bottom entry: 0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs (accepted 2026-10-22)"
+      "x": 34.74,
+      "y": 1.11,
+      "value": 1.0,
+      "note": "mirror of the accepted Front Right Bottom entry: 0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs Now 1.00 mm: the PEMs became M3 nuts in 2.4 mm deep pockets (the other CF nut pockets are 2.5 mm), chosen for the thicker floor (accepted 2026-10-22)."
     },
     {
       "plate": "Front Left Bottom CF6mm",
       "kind": "floor",
-      "x": 53.34,
+      "x": 52.5,
       "y": 11.43,
-      "value": 0.4,
-      "note": "mirror of the accepted Front Right Bottom entry: 0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs (accepted 2026-10-22)"
+      "value": 1.0,
+      "note": "mirror of the accepted Front Right Bottom entry: 0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs Now 1.00 mm: the PEMs became M3 nuts in 2.4 mm deep pockets (the other CF nut pockets are 2.5 mm), chosen for the thicker floor (accepted 2026-10-22)."
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "wall",
+      "x": 31.37,
+      "y": -0.66,
+      "value": 1.05,
+      "note": "nut pocket meeting the bearing opening, top 0.25 mm near the inner face only (accepted 2026-10-22)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "wall",
+      "x": 31.37,
+      "y": -0.66,
+      "value": 1.05,
+      "note": "mirror of the accepted Front Right Bottom entry: nut pocket meeting the bearing opening, top 0.25 mm near the inner face only (accepted 2026-10-22)"
     }
   ]
 }

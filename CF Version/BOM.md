@@ -11,7 +11,6 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 - [Fasteners - T-Nuts](#fasteners---t-nuts)
 - [Live Idler Shafts](#live-idler-shafts)
 - [Fasteners - Nuts](#fasteners---nuts)
-- [Inserts - Self-Clinching (PEM)](#inserts---self-clinching-pem)
 - [Washers & Shims](#washers--shims)
 - [Bearings](#bearings)
 - [Pulleys](#pulleys)
@@ -72,13 +71,7 @@ Links are plain product pages with no affiliate or tracking codes. Where a listi
 |---:|---|---|---|
 | 4 | M2 Nut | [Amazon](https://amazon.com/dp/B0FGTMN5JM) |  |
 | 4 | M5 Nut | [Amazon](https://amazon.com/dp/B0D1X2YBLJ) |  |
-
-## Inserts - Self-Clinching (PEM)
-
-| Qty | Part | Buy | Notes |
-|---:|---|---|---|
-| 24 | SO-M3-3ZI Insert | [Mouser](https://www.mouser.com/ProductDetail/PEM/SO-M3-3ZI) | PEM self-clinching standoff, pressed into the CF plates. Replaces the heat-set inserts of the printed version. |
-| 12 | SO-M3-6ZI Insert | [Mouser](https://www.mouser.com/ProductDetail/PEM/SO-M3-6ZI) | PEM self-clinching standoff, pressed into the CF plates. Replaces the heat-set inserts of the printed version. |
+| 36 | M3 Nut | [Amazon](https://amazon.com/dp/B0F9FC4563) | Standard M3 hex nuts (ISO 4032: 5.5mm across flats, up to 2.4mm thick) in hex pockets in the CF plates, in place of the PEM standoffs: bearing retainers, shoulder bolts and lever-arm screws. The pockets are 5.9mm across flats, so a dab of glue holds a nut in place while you assemble. |
 
 ## Washers & Shims
 

@@ -1,6 +1,6 @@
 # SV08 Metal Gantry (5 mm)
 
-The metal variant: every gantry plate is machined from 5 mm 6061 aluminium, with tapped M3 holes in place of the heat-set inserts (printed) and PEM standoffs (CF).
+The metal variant: every gantry plate is machined from 5 mm 6061 aluminium, with tapped M3 holes in place of the heat-set inserts (printed) and M3 hex nuts (CF).
 
 - **[Bill of Materials](BOM.md)**: every part with quantities, purchase links and notes. It's generated from `SV08_M5_BOM_from_STEP.xlsx`, which you can also download.
 

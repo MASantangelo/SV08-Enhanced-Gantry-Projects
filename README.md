@@ -12,7 +12,7 @@ AWD conversion for the Sovol SV08 with dual-shear live XY idlers and front belt 
 
 | Version | Plate material | Plate thickness | Threaded mounting points | Folder | Bill of materials |
 |---|---|---|---|---|---|
-| **[Carbon fiber](#carbon-fiber-version-6-mm)** | Carbon fiber (CFRP) | 6 mm | PEM self-clinching standoffs | [`CF Version`](CF%20Version) | [BOM](CF%20Version/BOM.md) · [XLSX](CF%20Version/SV08_CF6_BOM_from_STEP.xlsx) |
+| **[Carbon fiber](#carbon-fiber-version-6-mm)** | Carbon fiber (CFRP) | 6 mm | M3 hex nuts in hex pockets | [`CF Version`](CF%20Version) | [BOM](CF%20Version/BOM.md) · [XLSX](CF%20Version/SV08_CF6_BOM_from_STEP.xlsx) |
 | **[Metal](#metal-version-5-mm)** | 6061 aluminium | 5 mm | Tapped M3 / M2 holes | [`Metal Version`](Metal%20Version) | [BOM](Metal%20Version/BOM.md) · [XLSX](Metal%20Version/SV08_M5_BOM_from_STEP.xlsx) |
 | **[Printed](#printed-version-6-mm)** | 3D printed | 6 mm | Heat-set inserts | [`Printed Version`](Printed%20Version) | [BOM](Printed%20Version/BOM.md) · [XLSX](Printed%20Version/SV08_P6_Printed_BOM_from_STEP.xlsx) |
 
@@ -30,12 +30,12 @@ Every version folder has the same layout:
 
 ![Carbon fiber front right motor assembly](CF%20Version/Renders/Front%20Right%20Motor%20Assembly%20CF6mm%20-%20Iso.png)
 
-The 12 gantry plates are cut from 6 mm carbon fiber, with PEM self-clinching standoffs (SO-M3-3ZI and SO-M3-6ZI) in place of heat-set inserts. Full details are in the [CF README](CF%20Version/README.md).
+The 12 gantry plates are cut from 6 mm carbon fiber, with standard M3 hex nuts sitting in hex pockets in place of heat-set inserts. Full details are in the [CF README](CF%20Version/README.md).
 
 **CF build notes**
 
-- **Cut the plates with a mill.** The bearing steps, counterbores and hex PEM pockets are partial-depth features, so a waterjet or laser alone can't make them. Hole sizes and tolerances are in the CF README's [hole guide](CF%20Version/README.md#cutting-the-plates).
-- **Epoxy the PEM standoffs.** Carbon fiber doesn't flow around a self-clinching standoff the way sheet metal does, so lock each one in its hex pocket with epoxy. We've used [this epoxy](https://amazon.com/dp/B0CTB8GHYP).
+- **Cut the plates with a mill.** The bearing steps, counterbores and hex nut pockets are partial-depth features, so a waterjet or laser alone can't make them. Hole sizes and tolerances are in the CF README's [hole guide](CF%20Version/README.md#cutting-the-plates).
+- **Hold the M3 nuts in their pockets while you assemble.** The hex pockets are 5.9 mm across the flats, so a standard nut drops in and can't turn, but it can fall out until its screw is in. A dab of glue (CA or epoxy) in each pocket keeps it in place.
 - **Left plates are flipped copies of the right ones**, so their pockets are on the opposite face of the file. Machine each plate pocket-side up as it's drawn.
 - **XY live idler spacers** are cut from the same 6 mm sheet and machined down to 5 mm.
 
@@ -98,7 +98,7 @@ Compared with [Stanciu-Andrei's Sovol SV08 AWD Mod](https://github.com/Stanciu-A
 | **XY joints** | Standard (non-live) idlers: the pulleys spin freely on fixed shafts | **Live idlers**, in dual shear: GT2 20-tooth pulleys fixed to a shaft that turns on bearing stacks, supported top and bottom. A stainless Chicago bolt replaces the M5×40 dowel. |
 | **Shear support** | Double shear optional, at the rear motors only | Dual shear at every corner and both XY joints. Motors need a 37 mm shaft. |
 | **Construction** | Chunky printed corner housings | Flat top and bottom plates held apart by standoffs. One plate design produces the carbon fiber (6 mm), metal (5 mm) and printed (6 mm) versions. |
-| **Hardware** | Mostly printed structure | Moving toward a mostly metal design: aluminium standoffs, Chicago bolt idler shafts, shoulder bolts in three lengths, 48 flanged 695-2RS bearings, T-nut mounting and D2F-L endstops, with PEM standoffs (CF), tapped holes (metal) or Voron-spec heat-set inserts (printed). Printed alternatives remain for the standoffs. |
+| **Hardware** | Mostly printed structure | Moving toward a mostly metal design: aluminium standoffs, Chicago bolt idler shafts, shoulder bolts in three lengths, 48 flanged 695-2RS bearings, T-nut mounting and D2F-L endstops, with M3 hex nuts in pockets (CF), tapped holes (metal) or Voron-spec heat-set inserts (printed). Printed alternatives remain for the standoffs. |
 | **Files** | STLs, a Fusion `.f3d`, beta CNC plate DXFs | STEP files for every part and sub-assembly in all three versions, print-oriented parts and an all-in-one 3MF, 3D previews, renders and a full BOM with purchase links for each version |
 
 ## Maintaining this repo
