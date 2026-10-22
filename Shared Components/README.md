@@ -25,7 +25,7 @@ Nominal size, for parts that can also be cut from carbon fiber instead of printe
 |---:|---|
 | 4 | [Tensioner Lever Arm Revised](For%20Cutting/For%20Viewing/Tensioner%20Lever%20Arm%20Revised.stl) |
 
-The tensioner lever arm works either way: print it from `Print Ready`, or cut it from carbon fiber using this file. **Metal builds use their own flat 5 mm lever arm** from [`Metal Version/Base Components`](../Metal%20Version/Base%20Components).
+The tensioner lever arm works either way: print it from `Print Ready`, or cut it from carbon fiber using this file. **Metal builds use their own flat 5 mm lever arm** from [`Metal Version/Base Components`](../Metal%20Version/Base%20Components). Machined aluminium lever arms for all three versions will be available to buy at some point.
 
 ## Stock Parts
 
