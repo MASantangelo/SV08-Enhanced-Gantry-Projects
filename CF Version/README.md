@@ -21,6 +21,7 @@ CF Version/
 │
 ├── Base Components/                         ← Cut these from 6 mm carbon fiber
 │   ├── *.step                               12 gantry plates + the 5 mm XY idler spacers
+│   ├── CF Printed Parts.3mf                 The shared printed parts a CF build needs, on one plate (OrcaSlicer)
 │   └── For Viewing/                         STL previews
 │
 └── Renders/                                 Auto-generated from the STEP files (always current)
@@ -34,7 +35,7 @@ The spacers and tensioner lever arms are the same in every version, so they live
 |---|---|
 | Buy the hardware | [BOM.md](BOM.md) |
 | Cut the plates | [Base Components](Base%20Components) |
-| Print the shared parts | [Shared Components/Print Ready](../Shared%20Components/Print%20Ready) |
+| Print the shared parts | [Shared Components/Print Ready](../Shared%20Components/Print%20Ready), or all at once from the [CF Printed Parts 3MF](Base%20Components/CF%20Printed%20Parts.3mf) |
 | Look at the assembly in 3D | [Full assembly STL](For%20Viewing/SV08-CF6%20Dual%20Shear%20Live%20Idlers%20Front%20Tensioners.stl) · [Sub-assemblies](Base%20Assemblies/For%20Viewing) |
 
 ## What's different from the printed version

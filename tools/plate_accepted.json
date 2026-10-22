@@ -52,34 +52,34 @@
     {
       "plate": "XY Live Idler Left Top Plate CF6mm",
       "kind": "wall",
-      "x": 35.24,
+      "x": 36.43,
       "y": -17.02,
       "value": 1.1,
-      "note": "mirror of the accepted XY Right Top PEM-bore-to-bearing-bore wall (accepted 2026-10-14)"
+      "note": "mirror of the accepted XY Right Top PEM-bore-to-bearing-bore wall (accepted 2026-10-14) Position moved 1.19 mm with the outline when the XY holes were moved to match the stock toolhead extrusion (re-accepted 2026-10-22)."
     },
     {
       "plate": "XY Live Idler Left Top Plate CF6mm",
       "kind": "wall",
-      "x": 26.27,
+      "x": 27.46,
       "y": -12.74,
       "value": 1.1,
-      "note": "mirror of the accepted XY Right Top PEM-bore-to-bearing-bore wall (accepted 2026-10-14)"
+      "note": "mirror of the accepted XY Right Top PEM-bore-to-bearing-bore wall (accepted 2026-10-14) Position moved 1.19 mm with the outline when the XY holes were moved to match the stock toolhead extrusion (re-accepted 2026-10-22)."
     },
     {
       "plate": "XY Live Idler Right Top Plate CF6mm",
       "kind": "floor",
       "x": 31.66,
       "y": -13.35,
-      "value": 1.4,
-      "note": "PEM seat ledge around the M3 FHCS holes: the 3mm PEM ends exactly 3.00 below the top face and the FHCS can't sink deeper, so 1.4 is fixed; backed by the PEM and clamped by the screw (accepted 2026-10-14)"
+      "value": 1.0,
+      "note": "PEM seat ledge around the M3 FHCS holes: the 3mm PEM ends exactly 3.00 below the top face and the FHCS can't sink deeper, so 1.4 is fixed; backed by the PEM and clamped by the screw (accepted 2026-10-14) Now 1.00 mm: the bearing seat went 0.4 mm deeper for the Chicago bolt's 40 mm span (accepted 2026-10-22)."
     },
     {
       "plate": "XY Live Idler Left Top Plate CF6mm",
       "kind": "floor",
-      "x": 31.66,
+      "x": 32.85,
       "y": -13.0,
-      "value": 1.4,
-      "note": "mirror of the accepted XY Right Top PEM seat ledge (accepted 2026-10-14)"
+      "value": 1.0,
+      "note": "mirror of the accepted XY Right Top PEM seat ledge (accepted 2026-10-14) Now 1.00 mm: the bearing seat went 0.4 mm deeper for the Chicago bolt's 40 mm span (accepted 2026-10-22)."
     },
     {
       "plate": "XY Live Idler Right Bottom Plate CF6mm",
@@ -102,48 +102,48 @@
       "kind": "floor",
       "x": 25.38,
       "y": -10.28,
-      "value": 1.4,
-      "note": "PEM seat ledge around the M3 FHCS hole: 3mm PEM vs the 1.6mm counterbore, fixed by the stack-up (same as the XY tops) (accepted 2026-10-14)"
+      "value": 1.0,
+      "note": "PEM seat ledge around the M3 FHCS hole: 3mm PEM vs the 1.6mm counterbore, fixed by the stack-up (same as the XY tops) (accepted 2026-10-14) Now 1.00 mm: the bearing seat went 0.4 mm deeper for the Chicago bolt's 40 mm span (accepted 2026-10-22)."
     },
     {
       "plate": "XY Live Idler Right Bottom Plate CF6mm",
       "kind": "floor",
       "x": 37.38,
       "y": -24.54,
-      "value": 1.4,
-      "note": "PEM seat ledge around the M3 FHCS hole: 3mm PEM vs the 1.6mm counterbore, fixed by the stack-up (same as the XY tops) (accepted 2026-10-14)"
+      "value": 1.0,
+      "note": "PEM seat ledge around the M3 FHCS hole: 3mm PEM vs the 1.6mm counterbore, fixed by the stack-up (same as the XY tops) (accepted 2026-10-14) Now 1.00 mm: the bearing seat went 0.4 mm deeper for the Chicago bolt's 40 mm span (accepted 2026-10-22)."
     },
     {
       "plate": "XY Live Idler Left Bottom Plate CF6mm",
       "kind": "wall",
-      "x": 34.9,
+      "x": 36.09,
       "y": -22.83,
       "value": 1.35,
-      "note": "mirror of the accepted XY Right Bottom PEM-bore-to-bearing-bore wall (accepted 2026-10-14)"
+      "note": "mirror of the accepted XY Right Bottom PEM-bore-to-bearing-bore wall (accepted 2026-10-14) Position moved 1.19 mm with the outline when the XY holes were moved to match the stock toolhead extrusion (re-accepted 2026-10-22)."
     },
     {
       "plate": "XY Live Idler Left Bottom Plate CF6mm",
       "kind": "wall",
-      "x": 26.29,
+      "x": 27.48,
       "y": -12.6,
       "value": 1.35,
-      "note": "mirror of the accepted XY Right Bottom PEM-bore-to-bearing-bore wall (accepted 2026-10-14)"
+      "note": "mirror of the accepted XY Right Bottom PEM-bore-to-bearing-bore wall (accepted 2026-10-14) Position moved 1.19 mm with the outline when the XY holes were moved to match the stock toolhead extrusion (re-accepted 2026-10-22)."
     },
     {
       "plate": "XY Live Idler Left Bottom Plate CF6mm",
       "kind": "floor",
-      "x": 25.38,
+      "x": 26.57,
       "y": -9.93,
-      "value": 1.4,
-      "note": "mirror of the accepted XY Right Bottom PEM seat ledge (accepted 2026-10-14)"
+      "value": 1.0,
+      "note": "mirror of the accepted XY Right Bottom PEM seat ledge (accepted 2026-10-14) Now 1.00 mm: the bearing seat went 0.4 mm deeper for the Chicago bolt's 40 mm span (accepted 2026-10-22)."
     },
     {
       "plate": "XY Live Idler Left Bottom Plate CF6mm",
       "kind": "floor",
-      "x": 37.38,
+      "x": 38.57,
       "y": -24.19,
-      "value": 1.4,
-      "note": "mirror of the accepted XY Right Bottom PEM seat ledge (accepted 2026-10-14)"
+      "value": 1.0,
+      "note": "mirror of the accepted XY Right Bottom PEM seat ledge (accepted 2026-10-14) Now 1.00 mm: the bearing seat went 0.4 mm deeper for the Chicago bolt's 40 mm span (accepted 2026-10-22)."
     },
     {
       "plate": "Back Right Top Plate CF6mm",
@@ -2064,6 +2064,70 @@
       "y": -4.66,
       "value": 2.97,
       "note": "mirror of the accepted Front Right Bottom entry: above the 2.0 minimum; positions fixed by the hardware layout or edge already pushed out (accepted 2026-10-16)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "floor",
+      "x": 33.84,
+      "y": 11.43,
+      "value": 0.4,
+      "note": "0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs (accepted 2026-10-22)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "floor",
+      "x": 49.85,
+      "y": -5.82,
+      "value": 0.4,
+      "note": "0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs (accepted 2026-10-22)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "floor",
+      "x": 34.23,
+      "y": 1.79,
+      "value": 0.4,
+      "note": "0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs (accepted 2026-10-22)"
+    },
+    {
+      "plate": "Front Right Bottom CF6mm",
+      "kind": "floor",
+      "x": 53.34,
+      "y": 11.43,
+      "value": 0.4,
+      "note": "0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs (accepted 2026-10-22)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "floor",
+      "x": 33.84,
+      "y": 11.43,
+      "value": 0.4,
+      "note": "mirror of the accepted Front Right Bottom entry: 0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs (accepted 2026-10-22)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "floor",
+      "x": 49.85,
+      "y": -5.82,
+      "value": 0.4,
+      "note": "mirror of the accepted Front Right Bottom entry: 0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs (accepted 2026-10-22)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "floor",
+      "x": 34.23,
+      "y": 1.79,
+      "value": 0.4,
+      "note": "mirror of the accepted Front Right Bottom entry: 0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs (accepted 2026-10-22)"
+    },
+    {
+      "plate": "Front Left Bottom CF6mm",
+      "kind": "floor",
+      "x": 53.34,
+      "y": 11.43,
+      "value": 0.4,
+      "note": "mirror of the accepted Front Right Bottom entry: 0.40 mm of carbon between the bearing-retainer counterbore (deepened 1.0 mm with the bearing seat for the Chicago bolt span) and the SO-M3-3ZI PEM hex pocket; accepted for a test cut. If it cracks or delaminates: 2.0 mm hex pocket with the standoff 1 mm proud below (clear 10+ mm), or M3 hex nuts in place of the PEMs (accepted 2026-10-22)"
     }
   ]
 }
