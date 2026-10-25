@@ -38,6 +38,20 @@ powershell -ExecutionPolicy Bypass -File tools\render.ps1 -Variant "Printed Vers
 - **Not covered:** motion. Animations like the tensioner GIF still come from Fusion.
 - **Landing image:** after rendering, `landing_composite.py` combines each version's `Full Gantry - Front Right` render into `Renders/Landing - Front Right.png`. With three versions it's a "Y" split from the centre (seams to the top-left corner, the top-right corner and the bottom middle): printed on the left, metal at the top, CF on the right, each with a label. Edit `REGIONS` in the script to change the order or labels.
 
+## Build-guide step images
+
+`build-steps.ps1` renders the step-by-step pictures for the guides in `Docs/`:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File toolsuild-steps.ps1                    # every guide
+powershell -ExecutionPolicy Bypass -File toolsuild-steps.ps1 -Only "XY Joint"
+```
+
+- **Step files:** each guide has a JSON file in `Docs/steps/` that names groups of parts (matched by name, optionally by height) and lists the steps. The format is described at the top of `build_steps.py`.
+- **What each picture shows:** the parts added in that step in orange, parts fitted in earlier steps of the same sequence in grey, and nothing else.
+- **Output:** `Docs/Images/<guide>/`, cropped and stripped of metadata like the other renders. Re-run it after any change to the sub-assembly STEP the guide uses.
+- **Warnings:** a group that matches no parts (for example after a part is renamed in Fusion) is reported, and the run fails so the guide doesn't silently lose a part.
+
 ## Check flat plates (CF, metal)
 
 ```powershell
@@ -119,6 +133,7 @@ CAD names don't always match BOM names, so `bom_rules.json` translates them. Fus
 | `step2stl.py` | STEP to STL using size-based meshing: small hardware coarse, plates and large parts fine. This keeps full assemblies small enough for GitHub's viewer. |
 | `make_bom_md.py` | Spreadsheet to `BOM.md`: sectioned tables, Amazon/AliExpress/Mouser/McMaster buy links, and printed parts and plates linked to their STL previews |
 | `render.ps1` / `render.py` | Renders PNGs of the assemblies using FreeCAD's full interface |
+| `build-steps.ps1` / `build_steps.py` | Renders the build-guide step images from `Docs/steps/*.json` |
 | `landing_composite.py` | Builds the split landing-page image from each version's render |
 | `plate-check.ps1` / `plate_check.py` | Sanity-checks flat plates: thickness, holes, thin walls, changes from a reference version |
 | `wall_check.py` | Direct minimum-wall and floor sweep of flat plates, including merged pockets (run by `plate-check.ps1`) |

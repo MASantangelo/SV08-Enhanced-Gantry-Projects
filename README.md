@@ -8,6 +8,11 @@ AWD conversion for the Sovol SV08 with dual-shear live XY idlers and front belt 
 
 ![The gantry split three ways from the centre: printed 6 mm on the left, aluminium 5 mm at the top and carbon fiber 6 mm on the right](Renders/Landing%20-%20Front%20Right.png)
 
+## Start here
+
+- **[Build guides](Docs/README.md):** step-by-step assembly, with pictures rendered from the CAD. The installation guide covers the frame and the front motor corners so far; the back corners, XY joints and tensioning are coming.
+- **[FAQ](FAQ.md):** choosing a version, sourcing, printing, machining and assembly questions.
+
 ## Pick your version
 
 | Version | Plate material | Plate thickness | Threaded mounting points | Folder | Bill of materials |

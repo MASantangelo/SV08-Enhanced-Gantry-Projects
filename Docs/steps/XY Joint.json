@@ -1,0 +1,41 @@
+{
+  "step": "Printed Version/Base Assemblies/XY Joint Right Printed 6mm.step",
+  "out_dir": "Docs/Images/XY Joint",
+  "width": 1200,
+  "view": {"azimuth": 45, "elevation": 30},
+  "groups": {
+    "bottom plate": [{"label": "Bottom Plate"}],
+    "top plate": [{"label": "Top Plate"}],
+    "bottom bearing": [{"label": "F695", "z": [-10, 20]}],
+    "top bearing": [{"label": "F695", "z": [20, 60]}],
+    "bottom inserts": [{"label": "Heat Set Insert", "z": [-10, 20]}],
+    "top inserts": [{"label": "Heat Set Insert", "z": [20, 60]}],
+    "bottom retainers": [{"label": "M3x6mm FHCS", "z": [-10, 20]}],
+    "top retainers": [{"label": "M3x6mm FHCS", "z": [20, 60]}],
+    "carriage": [{"label": "MGN9H Linear Rail Slide"}],
+    "carriage screws": [{"label": "M3x10mm BHCS"}, {"label": "M3 Washer"}],
+    "chicago base": [{"label": "Chicago Bolt Base"}],
+    "pulley": [{"label": "^SOLID$"}, {"label": "Set Screw"}],
+    "idler stack": [{"label": "695-2RS Flanged Bearing"}, {"label": "M5 Spacer 10mm OD"}, {"label": "M5 Washer"}],
+    "plain spacer": [{"label": "XY Live Idler Spacer x"}],
+    "extrusion spacer": [{"label": "XY Live Idler Spacer 10mm"}],
+    "t-nuts": [{"label": "T-Nut"}],
+    "bottom m4": [{"label": "M4x20mm BHCS"}, {"label": "M4 Washer", "z": [-10, 20]}],
+    "top m4": [{"label": "M4x10mm BHCS"}, {"label": "M4 Washer", "z": [20, 60]}],
+    "shoulder bolts": [{"label": "Shoulder Bolt"}],
+    "ultra-thin head": [{"label": "Ultra Thin Flat Head"}]
+  },
+  "steps": [
+    {"name": "01 Bottom plate bearing", "seq": "bottom", "context": ["bottom plate"], "new": ["bottom bearing"]},
+    {"name": "02 Bottom plate inserts", "seq": "bottom", "new": ["bottom inserts"], "view": {"azimuth": 225, "elevation": -35}},
+    {"name": "03 Bottom plate retainers", "seq": "bottom", "new": ["bottom retainers"], "view": {"azimuth": 225, "elevation": -35}},
+    {"name": "04 Top plate bearing", "seq": "top", "context": ["top plate"], "new": ["top bearing"], "view": {"azimuth": 225, "elevation": -35}},
+    {"name": "05 Top plate inserts", "seq": "top", "new": ["top inserts"], "view": {"azimuth": 225, "elevation": -35}},
+    {"name": "06 Top plate retainers", "seq": "top", "new": ["top retainers"], "view": {"azimuth": 225, "elevation": -35}},
+    {"name": "07 Y carriage", "seq": "build", "context": ["bottom plate", "bottom bearing", "bottom inserts", "bottom retainers"], "new": ["carriage", "carriage screws"], "view": {"azimuth": 225, "elevation": -25}},
+    {"name": "08 Live idler shaft and pulley", "seq": "build", "new": ["chicago base", "pulley"]},
+    {"name": "09 Idler stack and spacers", "seq": "build", "new": ["idler stack", "plain spacer", "extrusion spacer"]},
+    {"name": "10 Extrusion T-nuts", "seq": "build", "new": ["t-nuts", "bottom m4"]},
+    {"name": "11 Top plate", "seq": "build", "new": ["top plate", "top bearing", "top inserts", "top retainers", "shoulder bolts", "top m4", "ultra-thin head"]}
+  ]
+}
