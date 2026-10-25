@@ -1,0 +1,42 @@
+{
+  "step": "Printed Version/Base Assemblies/XY Joint Left Printed 6mm.step",
+  "out_dir": "Docs/Images/XY Joints",
+  "width": 1200,
+  "view": {"azimuth": 315, "elevation": 30},
+  "groups": {
+    "bottom plate": [{"label": "Left Bottom Plate"}],
+    "top plate": [{"label": "Left Top Plate"}],
+    "bottom inserts": [{"label": "Heat Set Insert", "z": [-10, 20]}],
+    "top inserts": [{"label": "Heat Set Insert", "z": [20, 60]}],
+    "bottom bearing": [{"label": "F695", "z": [-10, 20]}],
+    "bottom retainers": [{"label": "M3x6mm FHCS", "z": [-10, 20]}],
+    "top bearing": [{"label": "F695", "z": [20, 60]}],
+    "top retainers": [{"label": "M3x6mm FHCS", "z": [20, 60]}],
+    "carriage": [{"label": "MGN9H Linear Rail Slide"}],
+    "carriage screws": [{"label": "M3x10mm BHCS"}, {"label": "M3 Washer"}],
+    "extrusion spacer": [{"label": "XY Live Idler Spacer 10mm"}],
+    "bottom m4": [{"label": "M4x20mm BHCS"}, {"label": "M4 Washer", "z": [-10, 10]}, {"label": "T-Nut", "z": [-10, 25]}],
+    "chicago base": [{"label": "Chicago Bolt Base"}],
+    "pulley": [{"label": "^SOLID$"}, {"label": "Set Screw"}],
+    "top m4": [{"label": "M4x10mm BHCS"}, {"label": "M4 Washer", "z": [30, 60]}, {"label": "T-Nut", "z": [25, 60]}],
+    "shoulder bolts": [{"label": "Shoulder Bolt"}],
+    "bearing stack": [{"label": "695-2RS Flanged Bearing"}, {"label": "M5 Spacer"}, {"label": "M5 Washer"}],
+    "printed spacer": [{"label": "XY Live Idler Spacer x"}],
+    "ultra-thin head": [{"label": "Ultra Thin Flat Head"}]
+  },
+  "steps": [
+    {"name": "40 Bottom plate bearing", "seq": "bottom", "context": ["bottom plate", "bottom inserts"], "new": ["bottom bearing", "bottom retainers"]},
+    {"name": "41 Y carriage", "seq": "build", "context": ["bottom plate", "bottom inserts", "bottom bearing", "bottom retainers"], "new": ["carriage", "carriage screws"], "view": {"azimuth": 315, "elevation": -25}},
+    {"name": "42 Extrusion spacer", "seq": "build", "new": ["extrusion spacer"]},
+    {"name": "43 Bottom extrusion bolts", "seq": "build", "new": ["bottom m4"]},
+    {"name": "45 Chicago bolt base", "seq": "build", "new": ["chicago base"]},
+    {"name": "46 Pulley", "seq": "build", "new": ["pulley"]},
+    {"name": "47 Top plate bearing", "seq": "top", "context": ["top plate", "top inserts"], "new": ["top bearing", "top retainers"], "view": {"azimuth": 315, "elevation": -35}},
+    {"name": "48 Top extrusion bolts", "seq": "top", "new": ["top m4"]},
+    {"name": "49 Shoulder bolts", "seq": "top", "new": ["shoulder bolts"]},
+    {"name": "50 Bearing stack", "seq": "top", "new": ["bearing stack"]},
+    {"name": "51 Printed spacer", "seq": "top", "new": ["printed spacer"]},
+    {"name": "52 Top plate", "seq": "build", "new": ["top plate", "top inserts", "top bearing", "top retainers", "top m4", "shoulder bolts", "bearing stack", "printed spacer"]},
+    {"name": "55 Ultra-thin head", "seq": "build", "new": ["ultra-thin head"]}
+  ]
+}

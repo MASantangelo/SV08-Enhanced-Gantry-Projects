@@ -1,6 +1,6 @@
 # Installing the gantry
 
-This guide builds the gantry in place on the printer, corner by corner. It covers the frame and all four motor corners so far; the XY joints and belt tensioning follow.
+This guide builds the gantry in place on the printer, corner by corner. It covers the frame, all four motor corners and the XY joints so far; routing and tensioning the belts follows.
 
 **In the pictures:** orange parts are the ones you add in that step; grey parts are already fitted. They show the front left corner of the printed version. Where the carbon fiber or metal version differs, a note under the step says so.
 
@@ -289,9 +289,142 @@ Fit the D2F-L endstop switch on the top plate with two M2×8 screws, and route i
 
 The back right is a mirror image of the back left, with the same bearing stacks. Its motor drives the **bottom** belt (the back left's drives the top belt), so its pulley sits at a different height: check the CAD or the pictures when you set it at the end.
 
+## XY joints
+
+The pictures show the left joint of the printed version.
+
+### Hardware for one XY joint
+
+| Qty | Part |
+|---:|---|
+| 1 | Bottom plate and top plate |
+| 1 | 10 mm XY idler spacer (printed version; CF and metal use two 5 mm cut spacers) |
+| 1 | 30 mm XY live idler spacer, printed, from [`Shared Components/Print Ready`](../Shared%20Components/Print%20Ready) (all versions) |
+| 2 | F695-2RS flanged bearings (one in each plate) |
+| 2 | 695-2RS flanged bearings (the idler stack) |
+| 1 | M5×40 Chicago bolt base and 1 M4×8 ultra-thin flat head |
+| 1 | GT2 20-tooth pulley |
+| 2 | D5 M3×35 shoulder bolts |
+| 4 | M3×6 FHCS bearing retainers (M3×5 on metal) |
+| 4 | M3×10 BHCS and 4 M3 washers (Y carriage) |
+| 2 | M4×20 BHCS, 2 M4×10 BHCS, 4 M4 washers and 4 M4 T-nuts (if using T-nuts) |
+| 2 | M5 washers, plus M5 spacers (10 mm OD): one 20 mm on the left joint, two 10 mm on the right |
+| 6 | M3 heat-set inserts (printed) or M3 nuts (carbon fiber); tapped holes on metal |
+
+### 39. Y rails and carriages
+
+Fit the linear rails to the Y extrusions, with their carriages, if they aren't on already. They're reused from the stock printer.
+
+### 40. Bottom plate bearing
+
+Fit the live idler's bearing in each XY bottom plate and secure it with its two flat-head retainers (M3×6, or M3×5 on metal).
+
+![Step 40](Images/XY%20Joints/40%20Bottom%20plate%20bearing.png)
+
+### 41. Mount the bottom plates to the Y carriages
+
+Fix the left and right bottom plates to their Y carriages with four M3×10 button heads, each with an M3 washer. These are hard to reach later, so tighten them now.
+
+![Step 41](Images/XY%20Joints/41%20Y%20carriage.png)
+
+### 42. Extrusion spacer
+
+Set the extrusion spacer on each bottom plate: the printed 10 mm spacer, or two 5 mm cut spacers on the carbon fiber and metal versions.
+
+![Step 42](Images/XY%20Joints/42%20Extrusion%20spacer.png)
+
+### 43. Bottom extrusion bolts
+
+**If you're using T-nuts:** fit two M4×20 button heads with washers up through the bottom plate and spacer, with a T-nut on each. They're longer than the top bolts because they also pass through the spacer.
+
+![Step 43](Images/XY%20Joints/43%20Bottom%20extrusion%20bolts.png)
+
+### 44. Fit the toolhead extrusion
+
+Fix the toolhead (X) extrusion to both bottom plates, with its X rail and carriage already on (reused from the stock printer). Use the T-nuts, or the extrusion's through holes and through bolts.
+
+### 45. Chicago bolt base
+
+Push the 40 mm Chicago bolt base up through each bottom plate's bearing, and hold it with tape.
+
+![Step 45](Images/XY%20Joints/45%20Chicago%20bolt%20base.png)
+
+### 46. Pulley
+
+Slide the pulley onto the Chicago bolt and leave its set screws loose; its height gets set at the end.
+
+![Step 46](Images/XY%20Joints/46%20Pulley.png)
+
+### 47. Top plate bearing
+
+On the bench, fit the live idler's bearing in each top plate and secure it with its two flat-head retainers.
+
+![Step 47](Images/XY%20Joints/47%20Top%20plate%20bearing.png)
+
+### 48. Top extrusion bolts
+
+**If you're using T-nuts:** fit two M4×10 button heads with washers through the top plate, with a T-nut on each.
+
+![Step 48](Images/XY%20Joints/48%20Top%20extrusion%20bolts.png)
+
+### 49. Shoulder bolts
+
+Push the two D5 M3×35 shoulder bolts down through the top plate.
+
+![Step 49](Images/XY%20Joints/49%20Shoulder%20bolts.png)
+
+### 50. Idler stack
+
+On the shoulder bolt nearest the pulley, fit the spacers and bearing stack.
+
+- **Left joint:** a 20 mm M5 spacer, then an M5 washer, two 695 flanged bearings and an M5 washer.
+- **Right joint:** a 10 mm M5 spacer, an M5 washer, two 695 flanged bearings, an M5 washer and another 10 mm spacer.
+
+![Step 50](Images/XY%20Joints/50%20Bearing%20stack.png)
+
+> **The left and right joints are built differently, so check the CAD or this guide's pictures for the stack order and pulley height of the joint you're building.** The left joint's bearings and pulley sit lower than the right's, so each belt runs at its own height.
+
+### 51. Printed spacer
+
+Fit the printed 30 mm XY live idler spacer over the second shoulder bolt.
+
+![Step 51](Images/XY%20Joints/51%20Printed%20spacer.png)
+
+### 52. Fit the top plate
+
+Lower the top plate onto the extrusion, making sure the Chicago bolt slides into the top bearing.
+
+![Step 52](Images/XY%20Joints/52%20Top%20plate.png)
+
+### 53. Tighten the shoulder bolts
+
+Tighten the two shoulder bolts into the bottom plate, seating their shoulders firmly.
+
+### 54. Lock the plates to the extrusion
+
+Tighten the T-nut bolts, or the through bolts, to lock the plates to the toolhead extrusion.
+
+### 55. Close the Chicago bolt
+
+Screw the M4×8 ultra-thin flat head into the top of the Chicago bolt, with a drop of blue threadlocker.
+
+![Step 55](Images/XY%20Joints/55%20Ultra-thin%20head.png)
+
+### 56. Spin check
+
+Turn the Chicago bolt and the bearing stack by hand. Both should spin freely.
+
+### 57. Remove the tape
+
+Remove the tape from under the Chicago bolt.
+
+### 58. The other joint
+
+Steps 40–57 cover both joints. Build the second one the same way, but with its own stack order (step 50).
+
 ## Coming next
 
-The XY joints and tensioning the belts are being written up next. Tension the belts only once all the corners and both XY joints are in.
+Routing and tensioning the belts, and setting the pulley heights, are being written up next. Tension the belts only once all the corners and both XY joints are in.
 
 ---
 
