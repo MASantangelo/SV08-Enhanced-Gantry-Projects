@@ -210,6 +210,26 @@ The front right is a mirror image of the front left, but it carries the **top** 
 
 The frame steps (1–3) have already fitted the Z carriage spacer, the bottom plate and its extrusion hardware on this corner.
 
+### Hardware for one back corner
+
+| Qty | Part |
+|---:|---|
+| 1 | Bottom plate, top plate, back spacer plate (20 mm, printed), Z carriage spacer (printed) and printed back motor spacer |
+| 1 | F695-2RS flanged bearing (the motor's dual-shear bearing, in the top plate) |
+| 8 | 695-2RS flanged bearings, in two stacks of four |
+| 2 | D5 M3×25 shoulder bolts |
+| 4 | M3×35 SHCS (motor screws), plus 8 M3 washers on metal (two under each head) |
+| 4 | M3×20 standoffs, 8 mm OD |
+| 2 | M3×6 FHCS bearing retainers (M3×4 on metal) |
+| 8 | M5 washers |
+| 1 | GT2 20-tooth pulley (on the motor) |
+| 8 | M4×10 BHCS and 8 M4 T-nuts (if using T-nuts): four on the bottom plate, four on the top |
+| 2 | M4×45 BHCS (into the Z carriage) |
+| 9 | M4 washers: three under the bottom-plate bolts (the printed back motor spacer replaces the fourth), four on the top plate, two under the M4×45 heads |
+| 4 | M3 heat-set inserts (printed) or M3 nuts (carbon fiber); tapped holes on metal |
+| 1 | D2F-L endstop switch with 2 M2×8 SHCS, plus 2 M2 nuts on printed and carbon fiber (optional) |
+| 1 | Motor with a 5 mm × ~37 mm shaft |
+
 ### 26. Top plate bearing
 
 On the bench, fit the motor's dual-shear bearing in the top plate and secure it with its two flat-head retainers.
