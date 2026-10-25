@@ -1,6 +1,6 @@
 # Installing the gantry
 
-This guide builds the gantry in place on the printer, corner by corner. It covers the frame and the two front motor corners so far; the back corners, the XY joints and belt tensioning follow.
+This guide builds the gantry in place on the printer, corner by corner. It covers the frame and all four motor corners so far; the XY joints and belt tensioning follow.
 
 **In the pictures:** orange parts are the ones you add in that step; grey parts are already fitted. They show the front left corner of the printed version. Where the carbon fiber or metal version differs, a note under the step says so.
 
@@ -59,6 +59,8 @@ On each corner (not the XY joints), fit the Z carriage spacer, then the bottom p
 
 **If you're using T-nuts:** fit the T-nuts, washers and M4×10 bolts on each bottom plate: 2 on each front corner and 4 on each back corner, 12 in all.
 **If you're using the extrusions' through holes:** skip this step.
+
+> **Back corners:** on the X extrusion bolt nearest the motor, the printed back motor spacer goes under the bolt head in place of the washer.
 
 ![Step 2](Images/Front%20Corners/02%20Bottom%20extrusion%20hardware.png)
 
@@ -204,9 +206,92 @@ Remove all the tape from under the corner. Set each pulley about 0.5 mm clear of
 
 The front right is a mirror image of the front left, but it carries the **top** belt. Check the CAD or the pictures for the order of each bearing stack before you build it (see step 9).
 
+## Back left corner
+
+The frame steps (1–3) have already fitted the Z carriage spacer, the bottom plate and its extrusion hardware on this corner.
+
+### 26. Top plate bearing
+
+On the bench, fit the motor's dual-shear bearing in the top plate and secure it with its two flat-head retainers.
+
+![Step 26](Images/Back%20Corners/26%20Top%20plate%20bearing.png)
+
+### 27. Shoulder bolts and motor screws
+
+Push the two D5 M3×25 shoulder bolts and the four M3×35 motor screws down through the top plate. Hold them in place with tape while you build the next few steps.
+
+- **No washers under the shoulder-bolt heads**, on any version. On the metal version about 1 mm of thread sticks out under the bottom plate; that's expected.
+- **Motor screws:** printed and carbon fiber have no washers. **Metal:** put two M3 washers (3 × 7 × 0.5–0.6 mm) under each motor-screw head, so the screws don't bottom out in the motor.
+
+![Step 27](Images/Back%20Corners/27%20Shoulder%20bolts%20and%20motor%20screws.png)
+
+### 28. Standoffs and bearing stacks
+
+- **Each motor screw** gets an M3×20 standoff (8 mm OD).
+- **Each shoulder bolt** gets a stack of four 695 flanged bearings, two pairs, one for each belt: M5 washer, two bearings, M5 washer, M5 washer, two bearings, M5 washer. No spacers go on these.
+
+![Step 28](Images/Back%20Corners/28%20Standoffs%20and%20bearing%20stacks.png)
+
+### 29. Back spacer plate
+
+Set the 20 mm back spacer plate on the bottom plate.
+
+![Step 29](Images/Back%20Corners/29%20Back%20spacer%20plate.png)
+
+### 30. Fit the top plate
+
+Carefully lower the top plate, with everything hanging from it, onto the corner. The hardest part is keeping the bearing stacks in place, so angle them in first.
+
+![Step 30](Images/Back%20Corners/30%20Top%20plate.png)
+
+### 31. Tighten the shoulder bolts
+
+Tighten the two shoulder bolts into the bottom plate, seating their shoulders firmly.
+
+### 32. Fix the corner to the Z carriage
+
+Replace the temporary bolts from step 1 with two M4×45 button heads and washers. They go down through the top plate, the back spacer plate, the bottom plate and the Z carriage spacer into the Z carriage.
+
+![Step 32](Images/Back%20Corners/32%20M4x45%20bolts.png)
+
+### 33. Top extrusion hardware
+
+Secure the extrusions to the top plate with T-nuts, M4×10 button heads and washers, or with the through bolts and nuts.
+
+![Step 33](Images/Back%20Corners/33%20Top%20extrusion%20hardware.png)
+
+### 34. Spin check
+
+Turn both bearing stacks by hand. They should spin freely.
+
+### 35. Fit the motor
+
+Fit the motor from below with its pulley on the shaft, set screws loose: its height gets set at the end. The motor's wires face the side you're working on (left motor's wires to the left). Tighten the four motor screws into it.
+
+![Step 35](Images/Back%20Corners/35%20Motor.png)
+
+### 36. Remove the tape
+
+Remove all the tape from the top plate.
+
+### 37. Endstop (if used)
+
+Fit the D2F-L endstop switch on the top plate with two M2×8 screws, and route its cable.
+
+- **Printed and carbon fiber:** the screws go into M2 nuts in the nut traps on the underside of the top plate.
+- **Metal:** the screws thread straight into tapped M2 holes, so there are no nuts. Their tips stick out about 0.2 mm under the top plate; a 0.2 mm shim under the switch covers that if you want them flush.
+
+![Step 37](Images/Back%20Corners/37%20Endstop.png)
+
+## Back right corner
+
+### 38. Repeat steps 26–37 for the back right
+
+The back right is a mirror image of the back left, with the same bearing stacks. Its motor drives the **bottom** belt (the back left's drives the top belt), so its pulley sits at a different height: check the CAD or the pictures when you set it at the end.
+
 ## Coming next
 
-The back corners, the XY joints and tensioning the belts are being written up next. Tension the belts only once all the corners and both XY joints are in.
+The XY joints and tensioning the belts are being written up next. Tension the belts only once all the corners and both XY joints are in.
 
 ---
 

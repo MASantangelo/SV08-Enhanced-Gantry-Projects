@@ -1,0 +1,37 @@
+{
+  "step": "Printed Version/Base Assemblies/Back Left Motor Assembly Printed 6mm.step",
+  "out_dir": "Docs/Images/Back Corners",
+  "width": 1200,
+  "view": {"azimuth": 225, "elevation": 30},
+  "groups": {
+    "z carriage": [{"label": "ab axis install|AB-axis|z-axis belt|MGN9HZ1C|hex socket"}],
+    "z spacer": [{"label": "Z Carriage Spacer"}],
+    "bottom plate": [{"label": "Back Left Bottom"}],
+    "bottom inserts": [{"label": "Heat Set Insert", "z": [-10, 15]}],
+    "bottom extrusion hardware": [{"label": "T-Nut", "z": [-10, 15]}, {"label": "M4x10mm BHCS", "z": [-10, 15]}, {"label": "M4 Washer", "z": [-10, 5]}, {"label": "Printed Back Motor Spacer"}],
+    "top plate": [{"label": "Back Left Top"}],
+    "top inserts": [{"label": "Heat Set Insert", "z": [15, 60]}],
+    "top bearing": [{"label": "F695"}],
+    "top retainers": [{"label": "M3x6mm FHCS"}],
+    "shoulder bolts": [{"label": "Shoulder Bolt"}],
+    "motor screws": [{"label": "M3x35mm SHCS"}],
+    "standoffs": [{"label": "M3x20mmx8mm Spacer"}],
+    "bearing stacks": [{"label": "695-2RS Flanged Bearing"}, {"label": "M5 Washer"}],
+    "back spacer plate": [{"label": "Back Spacer Plate"}],
+    "m4x45": [{"label": "M4x45mm BHCS"}, {"label": "M4 Washer", "y": [4, 7.5]}],
+    "top extrusion hardware": [{"label": "T-Nut", "z": [15, 60]}, {"label": "M4x10mm BHCS", "z": [15, 60]}, {"label": "M4 Washer", "y": [8, 11], "z": [15, 60]}, {"label": "M4 Washer", "x": [-105, -102], "z": [15, 60]}],
+    "motor": [{"label": "42-48 Motor"}, {"label": "GT2 20-Tooth Pulley"}],
+    "endstop": [{"label": "D2F"}, {"label": "M2x8mm SHCS"}, {"label": "M2 Nut"}]
+  },
+  "steps": [
+    {"name": "26 Top plate bearing", "seq": "top", "context": ["top plate", "top inserts"], "new": ["top bearing", "top retainers"], "view": {"azimuth": 225, "elevation": -35}},
+    {"name": "27 Shoulder bolts and motor screws", "seq": "top", "new": ["shoulder bolts", "motor screws"]},
+    {"name": "28 Standoffs and bearing stacks", "seq": "top", "new": ["standoffs", "bearing stacks"]},
+    {"name": "29 Back spacer plate", "seq": "build", "context": ["z carriage", "z spacer", "bottom plate", "bottom inserts", "bottom extrusion hardware"], "new": ["back spacer plate"]},
+    {"name": "30 Top plate", "seq": "build", "new": ["top plate", "top inserts", "top bearing", "top retainers", "shoulder bolts", "motor screws", "standoffs", "bearing stacks"]},
+    {"name": "32 M4x45 bolts", "seq": "build", "new": ["m4x45"]},
+    {"name": "33 Top extrusion hardware", "seq": "build", "new": ["top extrusion hardware"]},
+    {"name": "35 Motor", "seq": "build", "new": ["motor"]},
+    {"name": "37 Endstop", "seq": "build", "new": ["endstop"]}
+  ]
+}
