@@ -10,7 +10,7 @@ AWD conversion for the Sovol SV08 with dual-shear live XY idlers and front belt 
 
 ## Start here
 
-- **[Build guides](Docs/README.md):** step-by-step assembly, with pictures rendered from the CAD. The installation guide covers the frame, all four motor corners and the XY joints so far; routing and tensioning the belts are coming.
+- **[Build guides](Docs/README.md):** step-by-step assembly, with pictures rendered from the CAD. The installation guide takes you from the bare printer to tensioned belts.
 - **[FAQ](FAQ.md):** choosing a version, sourcing, printing, machining and assembly questions.
 
 ## Pick your version

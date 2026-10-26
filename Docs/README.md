@@ -17,8 +17,7 @@ Step-by-step guides for building the SV08 Enhanced Gantry, one sub-assembly at a
 
 | Guide | Status |
 |---|---|
-| [Installing the gantry](Installation.md): bench prep, the frame, all four motor corners and the XY joints | Ready |
-| Tensioning the belts | Coming |
+| [Installing the gantry](Installation.md): bench prep, the frame, all four motor corners, the XY joints, routing the belts, setting the pulleys and tensioning | Ready |
 
 ## How the pictures are made
 

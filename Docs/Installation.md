@@ -1,6 +1,6 @@
 # Installing the gantry
 
-This guide builds the gantry in place on the printer, corner by corner. It covers the frame, all four motor corners and the XY joints so far; routing and tensioning the belts follows.
+This guide builds the gantry in place on the printer, corner by corner. It covers everything from the bare printer to tensioned belts: the frame, all four motor corners, the XY joints, routing the belts, setting the pulleys and tensioning.
 
 **In the pictures:** orange parts are the ones you add in that step; grey parts are already fitted. They show the front left corner of the printed version. Where the carbon fiber or metal version differs, a note under the step says so.
 
@@ -442,9 +442,140 @@ Remove the tape from under the Chicago bolt.
 
 Steps 40–57 cover both joints. Build the second one the same way, but with its own stack order (step 50).
 
-## Coming next
+## Routing the belts
 
-Routing and tensioning the belts, and setting the pulley heights, are being written up next. Tension the belts only once all the corners and both XY joints are in.
+Route the **bottom belt first**, then the top belt. Each belt's ends were already fitted into its front corner (step 13): the front left carries the bottom belt and the front right carries the top belt.
+
+The pictures show each belt in orange, seen from above with the front of the printer at the bottom. The top plates and motors are hidden so you can see the pulleys. The [Fusion screenshots](../Printed%20Version/Screenshots) also have a `Top Belt Path` and a `Bottom Belt Path` image.
+
+### 59. Fit the toolhead
+
+Fit your toolhead to the X rail's carriage. A printed belt helper that holds the belt ends in place of the toolhead, like [this SV08 belt helper for the X carriage](https://www.printables.com/model/1027579-sovol-sv08-belt-helper-for-x-carriage), makes routing and tensioning easier.
+
+### The bottom belt
+
+![The bottom belt path](Images/Belts/59%20Bottom%20belt.png)
+
+#### 60. Front left to the left XY joint
+
+Take the end of the bottom belt that leaves the front left's live idler, and guide it to the toothed pulley on the left XY joint.
+
+#### 61. Into the toolhead
+
+From that toothed pulley, fit the belt into the toolhead or the belt helper.
+
+#### 62. Front left to the back left
+
+Take the other end of the belt from the front left, and guide it past the left XY joint to the back left corner.
+
+#### 63. Around the back left
+
+At the back left, the bottom belt only goes around the 695 bearing stacks; it doesn't go near the motor. Route it on toward the back right corner.
+
+#### 64. Around the back right motor
+
+At the back right, the bottom belt goes around the first smooth idler, wraps around the motor's toothed pulley, then loops back around the second smooth idler and heads toward the right XY joint.
+
+#### 65. Around the right XY joint
+
+At the right XY joint, the bottom belt goes around the smooth idler, at bottom-belt height, and turns toward the toolhead.
+
+#### 66. Into the toolhead
+
+Fit this end of the bottom belt into the toolhead or the belt helper.
+
+### The top belt
+
+![The top belt path](Images/Belts/67%20Top%20belt.png)
+
+#### 67. Front right to the right XY joint
+
+Take the end of the top belt that leaves the front right's live idler, guide it to the right XY joint, wrap it around the toothed pulley there and on toward the toolhead.
+
+#### 68. Into the toolhead
+
+Fit it into the toolhead or the belt helper.
+
+#### 69. Front right to the back right
+
+Take the other end of the belt from the front right, and guide it to the back right corner. There it goes around the corner without going near the motor, and on toward the back left corner.
+
+#### 70. Around the back left motor
+
+At the back left, the top belt goes smooth idler, then around the motor's toothed pulley, then the second smooth idler.
+
+#### 71. Toward the left XY joint
+
+After the second smooth idler, it heads toward the left XY joint.
+
+#### 72. Around the left XY joint
+
+At the left XY joint, it goes around the smooth idler and turns toward the toolhead.
+
+#### 73. Into the toolhead
+
+Fit this end of the top belt into the toolhead or the belt helper.
+
+## Setting the pulleys
+
+### 74. Set the pulley heights
+
+Now that the belts are routed, set each toothed pulley's final height and tighten its set screws. Measure from the pulley to the plate face next to it; stacked sheets of printer paper (about 0.1 mm each) make a handy gauge.
+
+| Corner | Pulley | Gap |
+|---|---|---|
+| Front left | Both toothed pulleys (motor and live idler) | 0.25–0.35 mm from the bottom face of the pulley to the top face of the bottom plate (about 3 sheets of paper) |
+| Back right | Motor pulley | 0.25–0.35 mm from the bottom face of the pulley to the top face of the bottom plate |
+| Left XY joint | Live idler pulley | 10.25–10.3 mm from the bottom face of the pulley to the top face of the bottom plate |
+| Front right | Both toothed pulleys (motor and live idler) | About 1 mm from the top face of the pulley to the bottom face of the top plate |
+| Back left | Motor pulley | About 1 mm from the top face of the pulley to the bottom face of the top plate |
+| Right XY joint | Live idler pulley | About 0.5 mm from the top face of the pulley to the bottom face of the top plate |
+
+The bottom belt's pulleys (front left, back right, left XY joint) are measured up from the bottom plate; the top belt's (front right, back left, right XY joint) are measured down from the top plate.
+
+## Tensioning the belts
+
+Check the tension as soon as both belts are fitted into the toolhead (or the belt helper), and set it with the lever arms on the two front corners: the front left tensions the bottom belt, the front right the top belt.
+
+### What to aim for
+
+Aim for **6–8 lb (26.7–35.6 N) on each belt span**, with both belts the same. Measure it by plucking a free span and reading its frequency with a phone app or Klipper's tools. The frequency depends on the span's length, measured between the points where the belt leaves its pulleys:
+
+| Free span | 6 lb (26.7 N) | 7 lb (31.1 N) | 8 lb (35.6 N) |
+|---|---|---|---|
+| 100 mm | 289 Hz | 312 Hz | 334 Hz |
+| 150 mm | 193 Hz | 208 Hz | 222 Hz |
+| 200 mm | 144 Hz | 156 Hz | 167 Hz |
+
+These assume about 8 g/m for a 6 mm GT2 belt; a different belt shifts them by a few hertz. Don't go past the top of the range: over-tensioning can break a belt.
+
+### 75. Tighten the lever arm's fixed points
+
+Tighten the lever arm end bolt (the M5 with the long 30 mm spacer) and the two M3 screws the lever arms pivot on.
+
+### 76. Ready the tensioner idler bolt
+
+Put the hex key in the head of the tensioner idler bolt: the M5 that carries the idler bearings. Loosen it just enough that the idler can slide.
+
+### 77. Pull the lever
+
+Pull the tensioner lever arm to the side. The idler, which floats in its slot, moves the opposite way and takes up the belt.
+
+### 78. Hold the nut
+
+With a pair of slip-joint pliers, grip the nut on the bottom of the tensioner idler bolt. Push one leg of the pliers against the end bolt's nut next to it: that holds the lever and the idler in place.
+
+| Hex key in the idler bolt, pliers on the nut | From below: one jaw on the idler nut, the other braced on the end bolt's nut |
+|---|---|
+| ![Tensioning a front corner: hex key in the top of the tensioner idler bolt, slip-joint pliers holding the nut underneath](Images/Tensioning/78%20Hex%20key%20and%20pliers.jpg) | ![The slip-joint pliers seen from below, gripping the tensioner idler nut with one jaw braced against the lever arm end bolt's nut](Images/Tensioning/78%20Pliers%20from%20below.jpg) |
+
+### 79. Lock it
+
+While the pliers hold everything, tighten the tensioner idler bolt with the hex key.
+
+### 80. Measure and even out
+
+Measure each belt, then repeat steps 76–79 on either corner until both belts are within the target range and match each other. Check the tension again after the first few hours of printing.
 
 ---
 

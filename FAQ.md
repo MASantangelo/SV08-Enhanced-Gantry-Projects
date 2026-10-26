@@ -60,7 +60,7 @@ CF left plates are drawn as their right-hand plate turned over, so their pockets
 ## Assembly
 
 ### How tight should the belts be?
-Tight enough to keep the teeth engaged under hard moves, but no tighter: over-tensioning can break a belt, which happened on the v2 test build. Tension both belts evenly, measuring each with a frequency app or a tension gauge rather than by feel.
+Aim for 6–8 lb (26.7–35.6 N) per belt span, with both belts the same. Measure by plucking a span and reading its frequency; the [tensioning section of the installation guide](Docs/Installation.md#tensioning-the-belts) has the target frequencies for each span length and the step-by-step. Don't go past the top of the range: over-tensioning broke a belt on the v2 test build.
 
 ### How far should the pulleys sit from the bearings?
 About 0.5 mm. The pulley turns but the bearing's outer ring doesn't, so a pulley pushed against a bearing rubs. A folded piece of paper makes a good shim while you tighten the set screws.

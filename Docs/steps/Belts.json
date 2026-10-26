@@ -1,0 +1,15 @@
+{
+  "step": "Printed Version/SV08-P6 Dual Shear Live Idlers Front Tensioners.step",
+  "out_dir": "Docs/Images/Belts",
+  "width": 1600,
+  "view": {"azimuth": 0, "elevation": 70},
+  "groups": {
+    "frame": [{"label": "Extrusion"}, {"label": "Bottom Plate|Bottom Printed"}, {"label": "GT2 20-Tooth Pulley"}, {"label": "695"}, {"label": "^SOLID$"}, {"label": "Linear Rail|MGN12H|Y Axis Linear Rail|X MGN12H Rail"}],
+    "bottom belt": [{"label": "Bottom Belt"}],
+    "top belt": [{"label": "Top Belt"}]
+  },
+  "steps": [
+    {"name": "59 Bottom belt", "seq": "bottom", "context": ["frame"], "new": ["bottom belt"]},
+    {"name": "67 Top belt", "seq": "top", "context": ["frame"], "new": ["top belt"]}
+  ]
+}
