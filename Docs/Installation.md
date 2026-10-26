@@ -577,6 +577,23 @@ While the pliers hold everything, tighten the tensioner idler bolt with the hex 
 
 Measure each belt, then repeat steps 76–79 on either corner until both belts are within the target range and match each other. Check the tension again after the first few hours of printing.
 
+### 81. Check for racking
+
+With the motors off, push the gantry flat against the back and look for racking. Both XY joints should meet the back corners at the same time.
+
+If one side sits off the back, adjust the belt tension to square the gantry:
+
+- **Front left:** more tension increases the distance between the left XY joint and the back left plate.
+- **Front right:** more tension increases the distance between the right XY joint and the back right plate.
+
+Recheck the tension (step 80) after any change. Getting the belt lengths right is the proper fix for racking. Use tension only for small adjustments.
+
+## Before first use
+
+### 82. Sync the motors
+
+Before first use, install and run [motors-sync](https://github.com/MRX8024/motors-sync). Each belt runs through two motors, and when they power on they can sit up to about 0.8 mm out of step with each other. That leaves one loop of the belt tighter than the other, and the motors pull against each other. motors-sync is a Klipper module that measures and corrects that offset. Follow its own install and setup guide.
+
 ---
 
 [Back to the build guides](README.md) · [FAQ](../FAQ.md)
