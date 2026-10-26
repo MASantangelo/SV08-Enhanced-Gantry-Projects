@@ -34,6 +34,7 @@ The spacers and tensioner lever arms are the same in every version, so they live
 | I want to... | Go to |
 |---|---|
 | Buy the hardware | [BOM.md](BOM.md) |
+| Install it | [Installation guide](../Docs/Installation.md) |
 | Cut the plates | [Base Components](Base%20Components) |
 | Print the shared parts | [Shared Components/Print Ready](../Shared%20Components/Print%20Ready), or all at once from the [CF Printed Parts 3MF](Base%20Components/CF%20Printed%20Parts.3mf) |
 | Look at the assembly in 3D | [Full assembly STL](For%20Viewing/SV08-CF6%20Dual%20Shear%20Live%20Idlers%20Front%20Tensioners.stl) · [Sub-assemblies](Base%20Assemblies/For%20Viewing) |

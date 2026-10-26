@@ -6,6 +6,16 @@ The metal variant: every gantry plate is machined from 5 mm 6061 aluminium, with
 
 ![The metal gantry, seen from the front right](Renders/Full%20Gantry%20-%20Front%20Right.png)
 
+## Quick links
+
+| I want to... | Go to |
+|---|---|
+| Buy the hardware | [BOM.md](BOM.md) |
+| Install it | [Installation guide](../Docs/Installation.md) |
+| Machine the plates | [Base Components](Base%20Components), with the [hole guide for machining](#hole-guide-for-machining) |
+| Print the shared parts | [Shared Components/Print Ready](../Shared%20Components/Print%20Ready), or all at once from the [Metal Printed Components 3MF](Base%20Components/Metal%20Printed%20Components.3mf) |
+| Look at the assembly in 3D | [Full assembly STL](For%20Viewing/SV08-M5%20Dual%20Shear%20Live%20Idlers%20Front%20Tensioners.stl) · [Sub-assemblies](Base%20Assemblies/For%20Viewing) |
+
 ## Full assembly
 
 - `SV08-M5 Dual Shear Live Idlers Front Tensioners.step`: the full gantry assembly

@@ -38,6 +38,7 @@ Printed Version/
 | I want to... | Go to |
 |---|---|
 | Buy the hardware | [BOM.md](BOM.md) |
+| Install it | [Installation guide](../Docs/Installation.md) |
 | Print the parts | The plates in [Base Components/Print Ready](Base%20Components/Print%20Ready) and the spacers and levers in [Shared Components/Print Ready](../Shared%20Components/Print%20Ready). Or print everything from the all-in-one [3MF plate](Base%20Components/Print%20Ready/Printed%20Parts%20All.3mf). |
 | Look at the assembly in 3D | [Full assembly STL](For%20Viewing/SV08-P6%20Dual%20Shear%20Live%20Idlers%20Front%20Tensioners.stl) · [Sub-assemblies](Base%20Assemblies/For%20Viewing) |
 | See the tensioner move | [Front Left Tensioner Motion.gif](Screenshots/Front%20Left%20Tensioner%20Motion.gif) |
