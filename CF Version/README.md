@@ -24,6 +24,7 @@ CF Version/
 │   ├── CF Printed Parts.3mf                 The shared printed parts a CF build needs, on one plate (OrcaSlicer)
 │   └── For Viewing/                         STL previews
 │
+├── Photos/                                  Photos of real builds
 └── Renders/                                 Auto-generated from the STEP files (always current)
 ```
 
@@ -60,6 +61,14 @@ The spacers and tensioner lever arms are the same in every version, so they live
 - **Left plates are flipped copies of the right ones.** Each left plate is its right-hand plate turned over, so its pockets are on the opposite face of the file. Machine each plate pocket-side up as it's drawn.
 - **XY live idler spacers:** cut from the same 6 mm sheet and machined down to 5 mm, so you don't need a separate 5 mm sheet.
 - A few walls and floors are under 1.5 mm on purpose: mostly the floors between the nut pockets and the bearing-retainer counterbores (1.0 mm on the front bottoms), plus a few rims beside the nut pockets and shoulder-bolt holes. They're listed, with the reasons, in [`tools/plate_accepted.json`](../tools/plate_accepted.json).
+
+## Build photos
+
+The first CF XY joint, cut from 6 mm carbon fiber and fitted with its Chicago bolt live idler, bearings and pulleys.
+
+| Front | Side |
+|---|---|
+| ![The CF XY joint on the printer: the toothed pulley and the bearing stack on the shoulder bolt between the carbon fiber plates, with the orange printed spacer and both belts below](Photos/XY%20Joint%20CF%20-%20Front.jpg) | ![The CF XY joint from the side: the bearing stack and the toothed pulley on the Chicago bolt between the two carbon fiber plates](Photos/XY%20Joint%20CF%20-%20Side.jpg) |
 
 ## Renders
 
