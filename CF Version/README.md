@@ -70,6 +70,12 @@ The first CF XY joint (left), cut from 6 mm carbon fiber and fitted with its Chi
 |---|---|
 | ![The left CF XY joint on the printer: the toothed pulley and the bearing stack on the shoulder bolt between the carbon fiber plates, with the orange printed spacer and both belts below](Photos/XY%20Joint%20Left%20CF%20-%20Front.jpg) | ![The left CF XY joint from the side: the bearing stack and the toothed pulley on the Chicago bolt between the two carbon fiber plates](Photos/XY%20Joint%20Left%20CF%20-%20Side.jpg) |
 
+**The X gantry on the stock SV08 extrusion**, with both CF XY joints through-bolted to it with nuts and bolts.
+
+![Both CF XY joints mounted on the ends of the stock SV08 toolhead extrusion, held in one hand: through-bolts and nuts under each joint, pulleys and orange printed spacers at each end](Photos/X%20Gantry%20CF%20-%20In%20Hand.jpg)
+
+![The CF X gantry installed on an SV08 with printed corners: the toolhead on the stock extrusion between the two CF XY joints, belts fitted](Photos/X%20Gantry%20CF%20-%20On%20Printer.jpg)
+
 ## Renders
 
 Generated automatically from the current STEP files whenever the repo is refreshed (see [tools](../tools)), so they always show the latest design.
