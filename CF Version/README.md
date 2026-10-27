@@ -64,11 +64,11 @@ The spacers and tensioner lever arms are the same in every version, so they live
 
 ## Build photos
 
-The first CF XY joint, cut from 6 mm carbon fiber and fitted with its Chicago bolt live idler, bearings and pulleys.
+The first CF XY joint (left), cut from 6 mm carbon fiber and fitted with its Chicago bolt live idler, bearings and pulleys.
 
 | Front | Side |
 |---|---|
-| ![The CF XY joint on the printer: the toothed pulley and the bearing stack on the shoulder bolt between the carbon fiber plates, with the orange printed spacer and both belts below](Photos/XY%20Joint%20CF%20-%20Front.jpg) | ![The CF XY joint from the side: the bearing stack and the toothed pulley on the Chicago bolt between the two carbon fiber plates](Photos/XY%20Joint%20CF%20-%20Side.jpg) |
+| ![The left CF XY joint on the printer: the toothed pulley and the bearing stack on the shoulder bolt between the carbon fiber plates, with the orange printed spacer and both belts below](Photos/XY%20Joint%20Left%20CF%20-%20Front.jpg) | ![The left CF XY joint from the side: the bearing stack and the toothed pulley on the Chicago bolt between the two carbon fiber plates](Photos/XY%20Joint%20Left%20CF%20-%20Side.jpg) |
 
 ## Renders
 
