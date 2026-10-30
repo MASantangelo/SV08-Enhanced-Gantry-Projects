@@ -76,6 +76,12 @@ The first CF XY joint (left), cut from 6 mm carbon fiber and fitted with its Chi
 
 ![The CF X gantry installed on an SV08 with printed corners: the toolhead on the stock extrusion between the two CF XY joints, belts fitted](Photos/X%20Gantry%20CF%20-%20On%20Printer.jpg)
 
+**Front right motor corner**
+
+| Belt side | Tensioner |
+|---|---|
+| ![The CF front right motor corner on the printer: the motor on the top plate, the belts on the bearing stacks between the two carbon fiber plates, and the orange lever arms on the shoulder bolts](Photos/Front%20Right%20Motor%20Corner%20CF%20-%20Belt%20Side.jpg) | ![The CF front right motor corner from the tensioner side: the orange lever arms clamped top and bottom on the tensioner shaft, with the motor above](Photos/Front%20Right%20Motor%20Corner%20CF%20-%20Tensioner.jpg) |
+
 ## Renders
 
 Generated automatically from the current STEP files whenever the repo is refreshed (see [tools](../tools)), so they always show the latest design.
