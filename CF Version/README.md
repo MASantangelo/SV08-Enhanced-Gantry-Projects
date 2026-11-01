@@ -44,6 +44,7 @@ The spacers and tensioner lever arms are the same in every version, so they live
 
 - **Plates:** cut from 6 mm carbon fiber instead of printed. The layout matches the printed plates, with machining tolerances built in (see the hole guide below) and a few outlines grown slightly to keep at least 1.5 mm of material around the bearing-retainer screws.
 - **Threaded mounting points:** standard M3 hex nuts (ISO 4032), seated in hex pockets, replace the M3 heat-set inserts. The pockets are 5.9 mm across the flats, so a nut drops in and can't turn. A dab of glue (CA or epoxy) keeps each nut in its pocket until its screw is in. Every screw that goes into a nut gets its full thread, apart from the lever-arm screws (about 2.1 of 2.4 mm), which is plenty for a pivot.
+- **Back motors on top:** the CAD has the back motors on top of the corners, like the fronts. The printed and metal CAD hangs them below. Both ways work on every version: swap the back plates left for right to change it (see [Motor up or motor down](../Docs/Installation.md#motor-up-or-motor-down)).
 - **Everything else is the same:** hardware, bearings, pulleys, belts, extrusions and the shared printed parts.
 
 ## Cutting the plates
@@ -53,7 +54,7 @@ The spacers and tensioner lever arms are the same in every version, so they live
 | **M3 / M4 / M5 clearance** | Ø3.2 / Ø4.3 / Ø5.3 | Close fit. The tensioner slot is 5.3 mm wide. |
 | **M3 nut pockets** | 5.9 mm across the flats, R1 corners, 2.5 mm deep (2.4 mm at the bearing retainers on the front bottom plates), with a 1 mm lead-in chamfer | For standard M3 hex nuts; the M3 hole through the rest of the plate is Ø3.2. The 2.4 mm pockets leave a thicker floor at the front bottom retainers. |
 | **Shoulder-bolt holes** | Ø5.00 | Locating fit for the D5 shoulder bolts; head counterbores Ø8.3. |
-| **Bearing seats** | Ø13.00 bore, Ø16.20 step | Locating fit for the F695 flanged bearings. Step depth: 2.0 mm on the XY plates, 2.6 mm on the front bottoms, 1.4 mm on the front tops, 1.0 mm on the back tops. The XY and front depths set the bearing spans for the Chicago bolt idler shafts. |
+| **Bearing seats** | Ø13.00 bore, Ø16.20 step | Locating fit for the F695 flanged bearings. Step depth: 2.0 mm on the XY plates, 2.6 mm on the front bottoms, 1.4 mm on the front tops, 1.0 mm on the back bottoms. The XY and front depths set the bearing spans for the Chicago bolt idler shafts. |
 | **Bearing-retainer counterbores** | Ø6.2, as deep as the bearing step beside them (1.4–2.6 mm) | For the M3 flat heads that clamp the bearing flanges |
 | **Motor boss** | Ø22.00 | Front top plates; merged with the bearing bore, so there's no thin web between them |
 

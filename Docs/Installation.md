@@ -61,6 +61,8 @@ On each corner (not the XY joints), fit the Z carriage spacer, then the bottom p
 **If you're using the extrusions' through holes:** skip this step.
 
 > **Back corners:** on the X extrusion bolt nearest the motor, the printed back motor spacer goes under the bolt head in place of the washer.
+>
+> **Back motors up or down:** the steps here hang the back motors below the corners. If you'd rather have them on top, like the fronts (as in the carbon fiber CAD), see [Motor up or motor down](#motor-up-or-motor-down) before you fit the back bottom plates.
 
 ![Step 2](Images/Front%20Corners/02%20Bottom%20extrusion%20hardware.png)
 
@@ -210,6 +212,8 @@ The front right is a mirror image of the front left, but it carries the **top** 
 
 The frame steps (1–3) have already fitted the Z carriage spacer, the bottom plate and its extrusion hardware on this corner.
 
+These steps build the corner with the motor hanging below it. To put the motor on top, see [Motor up or motor down](#motor-up-or-motor-down) after step 38.
+
 ### Hardware for one back corner
 
 | Qty | Part |
@@ -308,6 +312,21 @@ Fit the D2F-L endstop switch on the top plate with two M2×8 screws, and route i
 ### 38. Repeat steps 26–37 for the back right
 
 The back right is a mirror image of the back left, with the same bearing stacks. Its motor drives the **bottom** belt (the back left's drives the top belt), so its pulley sits at a different height: check the CAD or the pictures when you set it at the end.
+
+## Motor up or motor down
+
+The back motors can hang below the corners (as in steps 26–37, and in the printed and metal CAD) or sit on top of them, like the front motors (as in the carbon fiber CAD). Pick whichever you prefer: both use the same parts, on all three versions.
+
+To change it, **swap the back plates side for side**: build the back left with the back right plates, and the back right with the back left plates. The plate files are named for the way each version's CAD is built, so in the carbon fiber files the motor is on top, and in the printed and metal files it hangs below.
+
+With the motor on top, the corner goes together upside down from steps 26–37:
+
+- The plate with the motor's dual-shear bearing and the endstop is the **bottom** plate, and the motor mounts on the **top** plate.
+- The shoulder bolts go **up** through the bottom plate, into the inserts, nuts or tapped holes in the top plate.
+- The endstop goes on the **underside** of the bottom plate. The XY joint's spacers press it instead of the XY joint's top plate, which shifts where Y homes by up to 0.3 mm.
+- The printed back motor spacer goes under the head of the **top** X-extrusion bolt nearest the motor, in place of its washer, and the bottom bolt gets a washer instead.
+
+The bearing stacks, pulley heights and belt paths don't change.
 
 ## XY joints
 

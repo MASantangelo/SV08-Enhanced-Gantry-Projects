@@ -146,7 +146,7 @@
       "note": "mirror of the accepted XY Right Bottom PEM seat ledge (accepted 2026-10-14) Now 1.00 mm: the bearing seat went 0.4 mm deeper for the Chicago bolt's 40 mm span (accepted 2026-10-22)."
     },
     {
-      "plate": "Back Right Top Plate CF6mm",
+      "plate": "Back Left Bottom Plate CF6mm",
       "kind": "wall",
       "x": 53.2,
       "y": -8.3,
@@ -154,7 +154,7 @@
       "note": "PEM bore to bearing bore, same as the accepted XY top walls (accepted 2026-10-14)"
     },
     {
-      "plate": "Back Right Top Plate CF6mm",
+      "plate": "Back Left Bottom Plate CF6mm",
       "kind": "wall",
       "x": 39.1,
       "y": -8.3,
@@ -162,7 +162,7 @@
       "note": "PEM bore to bearing bore, same as the accepted XY top walls (accepted 2026-10-14)"
     },
     {
-      "plate": "Back Right Top Plate CF6mm",
+      "plate": "Back Left Bottom Plate CF6mm",
       "kind": "floor",
       "x": 42.91,
       "y": -25.0,
@@ -170,7 +170,7 @@
       "note": "D2F endstop floor between the M2 nut pocket and the switch pocket, clamped by switch and nut (accepted 2026-10-14)"
     },
     {
-      "plate": "Back Right Top Plate CF6mm",
+      "plate": "Back Left Bottom Plate CF6mm",
       "kind": "floor",
       "x": 49.41,
       "y": -25.0,
@@ -178,7 +178,7 @@
       "note": "D2F endstop floor between the M2 nut pocket and the switch pocket, clamped by switch and nut (accepted 2026-10-14)"
     },
     {
-      "plate": "Back Right Top Plate CF6mm",
+      "plate": "Back Left Bottom Plate CF6mm",
       "kind": "wall",
       "x": 37.33,
       "y": -10.75,
@@ -186,7 +186,7 @@
       "note": "FHCS seat ring: counterbore floor from the through PEM bore (4.3) out to the 6.2 counterbore; the head also bears on the bearing flange (accepted 2026-10-14)"
     },
     {
-      "plate": "Back Right Top Plate CF6mm",
+      "plate": "Back Left Bottom Plate CF6mm",
       "kind": "wall",
       "x": 54.97,
       "y": -5.85,
@@ -194,52 +194,52 @@
       "note": "FHCS seat ring: counterbore floor from the through PEM bore (4.3) out to the 6.2 counterbore; the head also bears on the bearing flange (accepted 2026-10-14)"
     },
     {
-      "plate": "Back Left Top Plate CF6mm",
+      "plate": "Back Right Bottom Plate CF6mm",
       "kind": "wall",
       "x": 53.2,
       "y": -8.3,
       "value": 1.1,
-      "note": "mirror of the accepted Back Right Top PEM-bore-to-bearing-bore wall (accepted 2026-10-14)"
+      "note": "mirror of the accepted Back Left Bottom (CF; formerly named Back Right Top) PEM-bore-to-bearing-bore wall (accepted 2026-10-14)"
     },
     {
-      "plate": "Back Left Top Plate CF6mm",
+      "plate": "Back Right Bottom Plate CF6mm",
       "kind": "wall",
       "x": 39.1,
       "y": -8.3,
       "value": 1.1,
-      "note": "mirror of the accepted Back Right Top PEM-bore-to-bearing-bore wall (accepted 2026-10-14)"
+      "note": "mirror of the accepted Back Left Bottom (CF; formerly named Back Right Top) PEM-bore-to-bearing-bore wall (accepted 2026-10-14)"
     },
     {
-      "plate": "Back Left Top Plate CF6mm",
+      "plate": "Back Right Bottom Plate CF6mm",
       "kind": "wall",
       "x": 37.33,
       "y": -10.75,
       "value": 0.95,
-      "note": "mirror of the accepted Back Right Top FHCS seat ring (accepted 2026-10-14)"
+      "note": "mirror of the accepted Back Left Bottom (CF; formerly named Back Right Top) FHCS seat ring (accepted 2026-10-14)"
     },
     {
-      "plate": "Back Left Top Plate CF6mm",
+      "plate": "Back Right Bottom Plate CF6mm",
       "kind": "wall",
       "x": 54.97,
       "y": -5.85,
       "value": 0.95,
-      "note": "mirror of the accepted Back Right Top FHCS seat ring (accepted 2026-10-14)"
+      "note": "mirror of the accepted Back Left Bottom (CF; formerly named Back Right Top) FHCS seat ring (accepted 2026-10-14)"
     },
     {
-      "plate": "Back Left Top Plate CF6mm",
+      "plate": "Back Right Bottom Plate CF6mm",
       "kind": "floor",
       "x": 49.41,
       "y": -25.0,
       "value": 1.0,
-      "note": "mirror of the accepted Back Right Top D2F endstop floor (accepted 2026-10-14)"
+      "note": "mirror of the accepted Back Left Bottom (CF; formerly named Back Right Top) D2F endstop floor (accepted 2026-10-14)"
     },
     {
-      "plate": "Back Left Top Plate CF6mm",
+      "plate": "Back Right Bottom Plate CF6mm",
       "kind": "floor",
       "x": 42.91,
       "y": -25.0,
       "value": 1.0,
-      "note": "mirror of the accepted Back Right Top D2F endstop floor (accepted 2026-10-14)"
+      "note": "mirror of the accepted Back Left Bottom (CF; formerly named Back Right Top) D2F endstop floor (accepted 2026-10-14)"
     },
     {
       "plate": "Front Right Top CF6mm",
@@ -514,7 +514,7 @@
       "note": "PEM hex-shoulder ledge (hex pocket 5.3 A/F, R1 corners, so the 4.8 A/F PEM hex corners clear the fillets by ~0.13); standoff is epoxied (accepted 2026-10-14)"
     },
     {
-      "plate": "Back Right Top Plate CF6mm",
+      "plate": "Back Left Bottom Plate CF6mm",
       "kind": "wall",
       "x": 34.0,
       "y": -8.3,
@@ -522,7 +522,7 @@
       "note": "PEM hex-shoulder ledge (hex pocket ~5.3 A/F, R1 corners; the 4.8 A/F PEM hex corners clear by >=0.13); standoff is epoxied (accepted 2026-10-14)"
     },
     {
-      "plate": "Back Right Top Plate CF6mm",
+      "plate": "Back Left Bottom Plate CF6mm",
       "kind": "wall",
       "x": 57.1,
       "y": -6.22,
@@ -530,20 +530,20 @@
       "note": "PEM hex-shoulder ledge (hex pocket ~5.3 A/F, R1 corners; the 4.8 A/F PEM hex corners clear by >=0.13); standoff is epoxied (accepted 2026-10-14)"
     },
     {
-      "plate": "Back Left Top Plate CF6mm",
+      "plate": "Back Right Bottom Plate CF6mm",
       "kind": "wall",
       "x": 57.1,
       "y": -10.38,
       "value": 0.5,
-      "note": "mirror of the accepted Back Right Top PEM hex-shoulder ledge (pocket ~5.3 A/F, R1) (accepted 2026-10-14)"
+      "note": "mirror of the accepted Back Left Bottom (CF; formerly named Back Right Top) PEM hex-shoulder ledge (pocket ~5.3 A/F, R1) (accepted 2026-10-14)"
     },
     {
-      "plate": "Back Left Top Plate CF6mm",
+      "plate": "Back Right Bottom Plate CF6mm",
       "kind": "wall",
       "x": 34.0,
       "y": -8.3,
       "value": 0.5,
-      "note": "mirror of the accepted Back Right Top PEM hex-shoulder ledge (pocket ~5.3 A/F, R1) (accepted 2026-10-14)"
+      "note": "mirror of the accepted Back Left Bottom (CF; formerly named Back Right Top) PEM hex-shoulder ledge (pocket ~5.3 A/F, R1) (accepted 2026-10-14)"
     },
     {
       "plate": "Front Right Top CF6mm",
@@ -2144,6 +2144,38 @@
       "y": -0.66,
       "value": 1.05,
       "note": "mirror of the accepted Front Right Bottom entry: nut pocket meeting the bearing opening, top 0.25 mm near the inner face only (accepted 2026-10-22)"
+    },
+    {
+      "plate": "Back Left Bottom Plate CF6mm",
+      "kind": "wall",
+      "x": 57.04,
+      "y": -10.27,
+      "value": 1.35,
+      "note": "retainer M3 nut pocket meeting the bearing bore, 2.5 mm below the top face; same as the accepted front and XY nut-pocket lips (accepted 2026-11-01)"
+    },
+    {
+      "plate": "Back Left Bottom Plate CF6mm",
+      "kind": "wall",
+      "x": 34.13,
+      "y": -8.3,
+      "value": 1.35,
+      "note": "retainer M3 nut pocket meeting the bearing bore, 2.5 mm below the top face; same as the accepted front and XY nut-pocket lips (accepted 2026-11-01)"
+    },
+    {
+      "plate": "Back Right Bottom Plate CF6mm",
+      "kind": "wall",
+      "x": 57.04,
+      "y": -10.27,
+      "value": 1.35,
+      "note": "mirror of the accepted Back Left Bottom entry: retainer M3 nut pocket meeting the bearing bore, 2.5 mm below the top face; same as the accepted front and XY nut-pocket lips (accepted 2026-11-01)"
+    },
+    {
+      "plate": "Back Right Bottom Plate CF6mm",
+      "kind": "wall",
+      "x": 34.13,
+      "y": -8.3,
+      "value": 1.35,
+      "note": "mirror of the accepted Back Left Bottom entry: retainer M3 nut pocket meeting the bearing bore, 2.5 mm below the top face; same as the accepted front and XY nut-pocket lips (accepted 2026-11-01)"
     }
   ]
 }
