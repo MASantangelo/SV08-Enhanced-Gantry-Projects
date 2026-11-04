@@ -23,6 +23,15 @@ Add `-SkipStl` or `-SkipBom` to run only one of the two steps. Close the spreads
 
 The output is deterministic: if a STEP file hasn't changed, its STL comes out byte-for-byte identical, so git only shows files that actually changed.
 
+### Sub-variants (`CF Version\9mm Belt Mod`)
+
+A sub-variant is a folder inside a variant that reuses most of its parent, like the CF build for 9 mm belts. It holds its own main STEP, `*BOM*.xlsx`, `BOM.md`, `Renders` and `For Viewing`. Its own sub-assemblies and parts sit beside the parent's in a folder with the same name: `CF Version\Base Assemblies\9mm Belt Mod` and `CF Version\Base Components\9mm Belt Mod`.
+
+- Pass it as the variant: `-Variant "CF Version\9mm Belt Mod" -Title "SV08-CF6 Carbon Fiber Gantry for 9mm Belts"`. Renders, the BOM check and `dupes` pick up its sub-assemblies from the parent's `Base Assemblies\9mm Belt Mod`.
+- `BOM.md` links its own parts first, then the parent's `Base Components` (the plates it shares), then `Shared Components`.
+- Its BOM rules are the parent's rules plus any under `variants` → `"CF Version/9mm Belt Mod"`.
+- The STLs for its parts in the parent's folders come from refreshing the parent (`-Variant "CF Version"`), which converts every subfolder.
+
 ## Renders
 
 `update-previews.ps1` also renders PNGs into `<variant>\Renders\`. You can run that step on its own:

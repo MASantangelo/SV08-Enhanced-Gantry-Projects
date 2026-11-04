@@ -17,6 +17,9 @@ $ErrorActionPreference = "Stop"
 $root = Split-Path $PSScriptRoot -Parent
 $variantDir = Join-Path $root $Variant
 $outDir = Join-Path $variantDir "Renders"
+# A sub-variant ("CF Version\9mm Belt Mod") keeps its sub-assemblies in <parent>\Base Assemblies\<sub-variant name>
+$assemblyDir = Join-Path $variantDir "Base Assemblies"
+if (-not (Test-Path $assemblyDir)) { $assemblyDir = Join-Path (Split-Path $variantDir -Parent) (Join-Path "Base Assemblies" (Split-Path $variantDir -Leaf)) }
 
 $MainViews = @(
     @{ name = "Front Left";  azimuth = 315; elevation = 30 },
@@ -37,7 +40,7 @@ if ($main.Count -eq 1) {
 } else {
     Write-Host "No main assembly STEP in $Variant yet; rendering sub-assemblies only."
 }
-Get-ChildItem (Join-Path $variantDir "Base Assemblies") -File -Filter *.step -ErrorAction SilentlyContinue | ForEach-Object {
+Get-ChildItem $assemblyDir -File -Filter *.step -ErrorAction SilentlyContinue | ForEach-Object {
     $file = $_
     $views = $AssemblyViews
     foreach ($key in $AzimuthOverrides.Keys) {

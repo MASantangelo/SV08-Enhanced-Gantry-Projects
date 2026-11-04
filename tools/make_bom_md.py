@@ -4,6 +4,8 @@ Usage: python make_bom_md.py <variant folder> <xlsx name> <title>
 Section rows = only column A filled. Data rows = Category, Qty, Description, Link, Notes.
 Made parts (printed parts, plates) link to their STL preview when one with a matching name
 exists in the variant's Base Components (Print Ready or flat) or in Shared Components.
+A sub-variant (a folder inside a variant, like "CF Version/9mm Belt Mod") keeps its own parts in
+<parent>/Base Components/<sub-variant name> and reuses the rest of the parent's Base Components.
 """
 import json
 import os
@@ -23,19 +25,25 @@ def norm(s):
     return s.strip().lower()
 
 
+# Folders of made parts, as path parts relative to the variant folder; earlier entries win.
+root = os.path.dirname(here)
+up = ("..",) * len(os.path.relpath(os.path.abspath(variant), root).split(os.sep))  # back to the repo root
+if len(up) > 1:  # sub-variant: its own parts first, then the parent's
+    COMPONENT_DIRS = [("..", "Base Components", os.path.basename(os.path.abspath(variant))), ("..", "Base Components")]
+else:
+    COMPONENT_DIRS = [("Base Components",)]
+COMPONENT_DIRS = [d for d in COMPONENT_DIRS if os.path.isdir(os.path.join(variant, *d))]
+SHARED = up + ("Shared Components",)
 # STL preview folders, as path parts relative to the variant folder; earlier entries win.
-STL_DIRS = [
-    ("Base Components", "Print Ready", "For Viewing"),
-    ("Base Components", "For Viewing"),
-    ("..", "Shared Components", "Print Ready", "For Viewing"),
-]
+STL_DIRS = [d + sub for d in COMPONENT_DIRS for sub in (("Print Ready", "For Viewing"), ("For Viewing",))]
+STL_DIRS.append(SHARED + ("Print Ready", "For Viewing"))
 stl_by_name = {}
 for parts in STL_DIRS:
     d = os.path.join(variant, *parts)
     for f in sorted(os.listdir(d)) if os.path.isdir(d) else []:
         if f.lower().endswith(".stl"):
             stl_by_name.setdefault(norm(os.path.splitext(f)[0]), parts + (f,))
-has_shared = os.path.isdir(os.path.join(variant, "..", "Shared Components"))
+has_shared = os.path.isdir(os.path.join(variant, *SHARED))
 
 
 def rel(*parts):
@@ -90,16 +98,17 @@ for r in rows:
                      f"[{RAIL_HW}](#{RAIL_HW.lower().replace(' ', '-')}).*", ""]
         if section == "Printed Parts":
             where = []
-            if os.path.isdir(os.path.join(variant, "Base Components", "Print Ready")):
-                where.append(f"[`Base Components/Print Ready`]({rel('Base Components', 'Print Ready')})")
+            for d in COMPONENT_DIRS:
+                if os.path.isdir(os.path.join(variant, *d, "Print Ready")):
+                    where.append(f"[`{'/'.join(p for p in d if p != '..')}/Print Ready`]({rel(*d, 'Print Ready')})")
             if has_shared:
-                where.append(f"[`Shared Components/Print Ready`]({rel('..', 'Shared Components', 'Print Ready')}) "
+                where.append(f"[`Shared Components/Print Ready`]({rel(*SHARED, 'Print Ready')}) "
                              f"(parts common to every version)")
             body += [f"Print files are in {' and '.join(where)}. Click a part name to preview it in 3D.", ""]
         elif section.endswith("Plates"):
             verb = "Machining" if section.startswith("Metal") else "Cutting"
-            body += [f"{verb} files are in [`Base Components`]({rel('Base Components')}). "
-                     f"Click a part name to preview it in 3D.", ""]
+            where = [f"[`{'/'.join(p for p in d if p != '..')}`]({rel(*d)})" for d in COMPONENT_DIRS]
+            body += [f"{verb} files are in {' and '.join(where)}. Click a part name to preview it in 3D.", ""]
         body += ["| Qty | Part | Buy | Notes |", "|---:|---|---|---|"]
         continue
     if not r[2]:

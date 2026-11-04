@@ -105,12 +105,24 @@ def load_rules(variant):
     with open(os.path.join(HERE, "bom_rules.json"), encoding="utf-8") as f:
         all_rules = json.load(f)
     rules = json.loads(json.dumps(all_rules.get("common", {})))
-    for key, val in all_rules.get("variants", {}).get(variant, {}).items():
-        if isinstance(val, dict):
-            rules.setdefault(key, {}).update(val)
-        else:
-            rules.setdefault(key, []).extend(val)
+    # a sub-variant ("CF Version/9mm Belt Mod") gets its parent's rules first, then its own
+    parts = variant.replace("\\", "/").strip("/").split("/")
+    for i in range(1, len(parts) + 1):
+        for key, val in all_rules.get("variants", {}).get("/".join(parts[:i]), {}).items():
+            if isinstance(val, dict):
+                rules.setdefault(key, {}).update(val)
+            else:
+                rules.setdefault(key, []).extend(val)
     return rules
+
+
+def assemblies_dir(variant_dir):
+    """Base Assemblies of a variant. A sub-variant keeps its own in <parent>/Base Assemblies/<sub-variant name>."""
+    own = os.path.join(variant_dir, "Base Assemblies")
+    if os.path.isdir(own):
+        return own
+    parent, name = os.path.split(os.path.normpath(variant_dir))
+    return os.path.join(parent, "Base Assemblies", name)
 
 
 def first_match(patterns, name):
@@ -362,7 +374,7 @@ def main():
         return
     if a.mode == "dupes":
         print("Duplicate components (copies that should be instances):")
-        files = [step] + sorted(glob.glob(os.path.join(variant_dir, "Base Assemblies", "*.step")))
+        files = [step] + sorted(glob.glob(os.path.join(assemblies_dir(variant_dir), "*.step")))
         ok = all([report_duplicates(f) for f in files])
         sys.exit(0 if ok else 1)
 

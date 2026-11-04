@@ -12,16 +12,19 @@ CF Version/
 ├── SV08_CF6_BOM_from_STEP.xlsx              BOM spreadsheet (source for BOM.md)
 ├── SV08-CF6 Dual Shear Live Idlers Front Tensioners.step   Full assembly
 ├── For Viewing/                             STL preview of the full assembly (~34 MB)
+├── 9mm Belt Mod/                            The 9 mm belt version: its own full assembly, BOM and renders
 │
 ├── Base Assemblies/                         Each corner and joint as its own assembly
 │   ├── Back Left / Back Right Motor Assembly
 │   ├── Front Left / Front Right Motor Assembly
 │   ├── XY Joint Left / Right
+│   ├── 9mm Belt Mod/                        The same six for 9 mm belts
 │   └── For Viewing/                         STL previews
 │
 ├── Base Components/                         ← Cut these from 6 mm carbon fiber
 │   ├── *.step                               12 gantry plates + the 5 mm XY idler spacers
 │   ├── CF Printed Parts.3mf                 The shared printed parts a CF build needs, on one plate (OrcaSlicer)
+│   ├── 9mm Belt Mod/                        The three 5 mm riser spacers for the 9 mm build (CF or printed)
 │   └── For Viewing/                         STL previews
 │
 ├── Photos/                                  Photos of real builds
@@ -39,6 +42,7 @@ The spacers and tensioner lever arms are the same in every version, so they live
 | Cut the plates | [Base Components](Base%20Components) |
 | Print the shared parts | [Shared Components/Print Ready](../Shared%20Components/Print%20Ready), or all at once from the [CF Printed Parts 3MF](Base%20Components/CF%20Printed%20Parts.3mf) |
 | Look at the assembly in 3D | [Full assembly STL](For%20Viewing/SV08-CF6%20Dual%20Shear%20Live%20Idlers%20Front%20Tensioners.stl) · [Sub-assemblies](Base%20Assemblies/For%20Viewing) |
+| Build it for 9 mm belts | [9mm Belt Mod](9mm%20Belt%20Mod): the same CF plates with a 30 mm corner gap, 9 mm idlers and pulleys and longer hardware, with its own [BOM](9mm%20Belt%20Mod/BOM.md) |
 
 ## What's different from the printed version
 

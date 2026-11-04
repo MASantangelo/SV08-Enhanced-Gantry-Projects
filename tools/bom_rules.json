@@ -27,7 +27,9 @@
       "M3 Shim 5mm OD .2mm Tall": "M3 Shim (3mm ID | 5mm OD | .2mm Tall)",
       "M3x20mmx8mm Spacer": "M3 Spacer 8mm OD 20mm Tall",
       "MG9H Linear Rail Slide": "MGN9H Linear Rail Slide",
-      "Y Axis Linear Rail": "Y MGN9H Rail 402mm"
+      "Y Axis Linear Rail": "Y MGN9H Rail 402mm",
+      "Y Axis Linear Rail MG9H 402mm": "Y MGN9H Rail 402mm",
+      "X Axis Linear Rail (MG12H 406mm)": "X MGN12H Rail 406mm"
     },
     "rename_patterns": [
       [
@@ -51,6 +53,21 @@
     "CF Version": {
       "unit_assemblies": {
         "^Front Left (Top|Bottom) CF6mm$": {}
+      }
+    },
+    "CF Version/9mm Belt Mod": {
+      "unit_assemblies": {
+        "^GT2 20 Tooth Live Idler Pulley 9mm Belt Version$": {
+          "as": "GT2 20-Tooth Pulley - Live Idler Version (9mm Belt)",
+          "descend": true
+        }
+      },
+      "rename": {
+        "GT2 Pulley for 9mm Belts": "GT2 20-Tooth Pulley Set-Screw Version (9mm Belt)",
+        "Bottom Belt": "Bottom Belt 2.1m (9mm)",
+        "Top Belt": "Top Belt 2.1m (9mm)",
+        "M4x55 BHCS": "M4 x 55mm BHCS",
+        "M5x60 SHCS": "M5 x 60mm SHCS"
       }
     }
   }
