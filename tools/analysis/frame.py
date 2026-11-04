@@ -12,7 +12,7 @@ import numpy as np
 from scipy.linalg import eigh
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from materials import (BELT_LOOP, CHAMBERS, EA_BELT, M_TOOL, MAT, MOTOR, MU_BELT, PLATE_TAG, PRINTED, PULLEY_R,
+from materials import (BELT_LOOP, CHAMBERS, EA_BELT, EA_SCALE, M_TOOL, MAT, MOTOR, MU_BELT, MU_BELT_9, PLATE_TAG, PRINTED, PULLEY_R,
                        ROTOR_J, T_ASSEMBLY, T_BELT, T_RANGE)
 
 WORK = os.environ["SV08_ANALYSIS_DIR"]
@@ -25,6 +25,15 @@ plates = load("plates.json")
 corners = load("corners_res.json")
 belt = load("belt_path.json")
 xyj = load("xyjoint_res.json")
+# The 6 mm CF XY joint stopped meshing after the October 2026 CAD update (its plate relief circles sit right on the
+# stand-in shaft post). Until it meshes again, use the bench FEA result from the previous revision (um at 49 N);
+# the current 9mm-mod joint on the same CF plates lands within 2 % of it.
+XYJ_FALLBACK = {"CF 0/90": dict(sideways=539.3, vertical=1623.2, bare_stub_um=173.8, free_length=172.0, fallback=True),
+                "CF 45": dict(sideways=580.5, vertical=2303.5, bare_stub_um=173.8, free_length=172.0, fallback=True)}
+for k, v in XYJ_FALLBACK.items():
+    if k not in xyj:
+        xyj[k] = v
+        print(f"  {k}: XY joint from the previous CAD revision (current one didn't mesh)")
 xyj_geo = load("xyjoints.json")["Metal"]
 # XY joint as a spring: it pivots where the bottom plate leaves the MGN9 carriage. The bench load sits LEVER from
 # that edge; the X beam's own reaction sits ARM from it (middle of the length the beam is clamped over).
@@ -45,7 +54,8 @@ def joint_k(case, mode):
 # case: version, plate material (for mass), key into belt_path.json, creep factor (extra deflection / elastic)
 CASES = {"Printed ABS": ("Printed", "ABS", "ABS", 0.67), "Printed PC-CF15": ("Printed", "PC-CF15", "PC-CF15", 0.30),
          "CF 0/90": ("CF", "CF 3K twill", "CF 0/90", 0.0), "CF 45": ("CF", "CF 3K twill", "CF 45", 0.0),
-         "Metal": ("Metal", "6061-T6", "Metal", 0.0)}
+         "Metal": ("Metal", "6061-T6", "Metal", 0.0),
+         "CF 9mm": ("CF9", "CF 3K twill", "CF 9mm", 0.0)}
 
 
 def k_corner(case, corner, model="bonded"):
@@ -59,9 +69,9 @@ def vol(v, pred):
 
 
 in_joint = lambda p: any("XY Joint" in s for s in p["parents"])
-is_plate = lambda v: (lambda p: PLATE_TAG[v] in p["label"] or "5mm Metal Only" in p["label"])
+is_plate = lambda v: (lambda p: PLATE_TAG[v] in p["label"] or "5mm Metal Only" in p["label"] or "5mm Spacer for" in p["label"])
 print("== Plate mass (g): corners (incl. metal lever arms) | XY joints | total")
-for v, mats in (("Printed", PRINTED), ("CF", ["CF 3K twill"]), ("Metal", ["6061-T6"])):
+for v, mats in (("Printed", PRINTED), ("CF", ["CF 3K twill"]), ("Metal", ["6061-T6"]), ("CF9", ["CF 3K twill"])):
     c, j = vol(v, lambda p: is_plate(v)(p) and not in_joint(p)), vol(v, lambda p: is_plate(v)(p) and in_joint(p))
     for m in mats:
         d = MAT[m][2]
@@ -76,7 +86,9 @@ def density(p):
 
 
 P = parts["Printed"]
-M_JOINT_HW = sum(p["vol"] * density(p) for p in P if in_joint(p) and not ("Printed6mm" in p["label"] or "Spacer x" in p["label"])) / 1e6
+JOINT_HW = {v: sum(p["vol"] * density(p) for p in parts[v] if in_joint(p)
+                   and not (PLATE_TAG[v] in p["label"] or "XY Live Idler Spacer" in p["label"])) / 1e6 for v in PLATE_TAG}
+M_JOINT_HW = JOINT_HW["Printed"]
 M_XBEAM = (next(p for p in P if "Toolhead X-Axis" in p["label"])["vol"] * 2.7 + next(p for p in P if "X MGN12H Rail" in p["label"])["vol"] * 7.8) / 1e6
 M_BLOCK = next(p for p in P if p["label"].startswith("MGN12H Linear Rail Slide"))["vol"] * 7.85 / 1e6
 M_HEAD = M_TOOL + M_BLOCK  # everything that moves in X
@@ -121,12 +133,15 @@ at = lambda x, a: int(round(a / (x[1] - x[0])))
 out = {}
 for case, (v, pm, _, _) in CASES.items():
     kf, kb = k_corner(case, "Front"), k_corner(case, "Back")
+    if kf is None and kb is None:
+        print(f"  {case:16s} skipped: neither corner meshed")
+        continue
     note = ""
     if kb is None: kb, note = kf, "back corner not meshed: front value used"
     if kf is None: kf, note = kb, "front corner not meshed: back value used"
     m_plates = vol(v, lambda p: is_plate(v)(p) and in_joint(p)) * MAT[pm][2] / 1000
     out[case] = dict(k_front=kf / 1000, k_back=kb / 1000, note=note, m_joint_plates=m_plates,
-                     m_y=M_XBEAM + M_JOINT_HW + m_plates + M_HEAD)
+                     m_joint_hw=JOINT_HW[v], m_y=M_XBEAM + JOINT_HW[v] + m_plates + M_HEAD)
     print(f"  {case:16s} corners {kf / 1e6:5.2f} / {kb / 1e6:5.2f} kN*m/rad{'  (' + note + ')' if note else ''}")
 
 print("\n== Moving mass and acceleration (same motor force; motor rotors included)")
@@ -137,7 +152,7 @@ for case, o in out.items():
 
 print("\n== Gravity sag at the nozzle (static: Z tilt and the bed mesh take it out)")
 for case, o in out.items():
-    P_side = (M_XBEAM + M_JOINT_HW + o["m_joint_plates"] + M_HEAD) * g / 2
+    P_side = (M_XBEAM + o["m_joint_hw"] + o["m_joint_plates"] + M_HEAD) * g / 2
     KY, _, xy = beam(L_Y, EI_Y, o["k_front"] * 1000, o["k_back"] * 1000)
     KX, _, xx = beam(L_X, EI_X, 0, 0)  # X beam pinned in the joints: conservative
     fx = np.zeros(KX.shape[0]); fx[2 * at(xx, L_X / 2)] -= M_HEAD * g; fx[0::2] -= M_XBEAM * g / len(xx)
@@ -154,7 +169,7 @@ for case, o in out.items():
     kp, ky = joint_k(case, "vertical"), joint_k(case, "sideways")
     o.update(joint_k_pitch=kp, joint_k_yaw=ky, joint_k_vert=kp / ARM ** 2 / 1000 if kp else None)
     if kp:
-        sag = (M_XBEAM + M_JOINT_HW / 2 + M_HEAD) / 2 * g * ARM / kp * ARM * 1e6
+        sag = (M_XBEAM + o["m_joint_hw"] / 2 + M_HEAD) / 2 * g * ARM / kp * ARM * 1e6
         o["joint_sag_um"] = sag
         print(f"  {case:16s} pitch {kp:6.0f} N*m/rad (vertical {kp / ARM ** 2 / 1000:5.0f} N/mm at the beam),"
               f" yaw {ky:6.0f} N*m/rad; static drop at the beam end {sag:4.1f} um")
@@ -162,7 +177,7 @@ for case, o in out.items():
 print("\n== Vertical bounce (moving gantry on the Y extrusions and the XY joints; toolhead on the X beam)")
 for case, o in out.items():
     K, M, xy = beam(L_Y, 2 * EI_Y, 2 * o["k_front"] * 1000, 2 * o["k_back"] * 1000, rho=2 * M_YEXT / L_Y)
-    m_g = M_XBEAM + M_JOINT_HW + o["m_joint_plates"] + M_HEAD
+    m_g = M_XBEAM + o["m_joint_hw"] + o["m_joint_plates"] + M_HEAD
     j = 2 * at(xy, L_Y / 2); M[j, j] += m_g
     fr = free_dofs(K)
     w2 = eigh(K[np.ix_(fr, fr)] * 1000, M[np.ix_(fr, fr)], eigvals_only=True, subset_by_index=[0, 0])[0]
@@ -182,13 +197,16 @@ print("\n== XY belt resonance (CoreXY, AWD: each belt held by both motors) and g
 L1, L2 = 407.0, 500.0     # belt path from the toolhead to the nearest motor on each side, toolhead centred (CAD)
 RUNS, HALF = (0.190, 0.240), 0.229  # Y belt runs either side of a centred XY joint (m), joint half-spacing (m)
 for case, (v, pm, bk, _) in CASES.items():
+    if case not in out:
+        continue
     o = out[case]
     add = belt[bk]["compliance_added"]
-    k = [2 * ea * (1 / L1 + 1 / L2) / (1 + a) * 1000 for ea, a in zip(EA_BELT, add)]
-    I = M_XBEAM * 0.426 ** 2 / 12 + (M_JOINT_HW + o["m_joint_plates"]) * HALF ** 2  # 426 mm X beam
+    eas = [ea * EA_SCALE.get(case, 1.0) for ea in EA_BELT]  # 9 mm belts are about 1.5x as stiff
+    k = [2 * ea * (1 / L1 + 1 / L2) / (1 + a) * 1000 for ea, a in zip(eas, add)]
+    I = M_XBEAM * 0.426 ** 2 / 12 + (o["m_joint_hw"] + o["m_joint_plates"]) * HALF ** 2  # 426 mm X beam
     # the belts and both XY joints resist the same rotation of the X beam, so they add
     kj = 2 * (o.get("joint_k_yaw") or 0)
-    yaw = [math.sqrt((2 * ea * sum(1 / r for r in RUNS) * HALF ** 2 + kj) / I) / 2 / math.pi for ea in EA_BELT]
+    yaw = [math.sqrt((2 * ea * sum(1 / r for r in RUNS) * HALF ** 2 + kj) / I) / 2 / math.pi for ea in eas]
     o.update(f_y=[math.sqrt(q / o["m_y"]) / 2 / math.pi for q in k], f_x=[math.sqrt(q / M_HEAD) / 2 / math.pi for q in k], f_yaw=yaw)
     print(f"  {case:16s} Y {o['f_y'][0]:3.0f}-{o['f_y'][1]:3.0f} Hz, X {o['f_x'][0]:3.0f}-{o['f_x'][1]:3.0f} Hz,"
           f" yaw {yaw[0]:3.0f}-{yaw[1]:3.0f} Hz")
@@ -204,6 +222,11 @@ freq = {}
 for L in (100, 150, 200):
     freq[L] = [math.sqrt(T / MU_BELT) / (2 * L / 1000) for T in (26.7, 31.1, 35.6)]
     print(f"  span {L} mm: 6 lb {freq[L][0]:4.0f} Hz, 7 lb {freq[L][1]:4.0f} Hz, 8 lb {freq[L][2]:4.0f} Hz")
+freq9 = {}
+print(f"  9 mm belts, mu = {MU_BELT_9 * 1000:.1f} g/m:")
+for L in (100, 150, 200):
+    freq9[L] = [math.sqrt(T / MU_BELT_9) / (2 * L / 1000) for T in (26.7, 31.1, 35.6)]
+    print(f"  span {L} mm: 6 lb {freq9[L][0]:4.0f} Hz, 7 lb {freq9[L][1]:4.0f} Hz, 8 lb {freq9[L][2]:4.0f} Hz")
 
 
 def bimetal(A1, I1, A2, I2, d, dT):
@@ -248,12 +271,13 @@ for case, o in out.items():
         for kap, EIc in ((kap30, EIc30), (kap45, EIc45)):
             M = (kap * L_Y / 2) / (1 / k + L_Y / (2 * EIc))
             bows.append((kap - M / EIc) * L_Y ** 2 / 8 * 1000)
-        m_g = M_XBEAM + M_JOINT_HW + o["m_joint_plates"] + M_HEAD
+        m_g = M_XBEAM + o["m_joint_hw"] + o["m_joint_plates"] + M_HEAD
         k_ext = (2 * math.pi * o["f_bounce_extrusions"]) ** 2 * m_g
         k_v = 2 * kp / ARM ** 2
         f_b = math.sqrt(1 / (1 / k_ext + 1 / k_v) / m_g) / 2 / math.pi
-        I = M_XBEAM * 0.426 ** 2 / 12 + (M_JOINT_HW + o["m_joint_plates"]) * HALF ** 2
-        yaw = [math.sqrt((2 * ea * sum(1 / q for q in RUNS) * HALF ** 2 + 2 * ky) / I) / 2 / math.pi for ea in EA_BELT]
+        I = M_XBEAM * 0.426 ** 2 / 12 + (o["m_joint_hw"] + o["m_joint_plates"]) * HALF ** 2
+        yaw = [math.sqrt((2 * ea * EA_SCALE.get(case, 1.0) * sum(1 / q for q in RUNS) * HALF ** 2 + 2 * ky) / I) / 2 / math.pi
+               for ea in EA_BELT]
         r[model] = dict(k_corner=(kf + kb) / 2 / 1000, k_pitch=kp, k_yaw=ky, bow=bows, f_bounce=f_b, f_yaw=yaw)
     clamp[case] = r
     if len(r) == 2:
@@ -274,11 +298,13 @@ for chamber in CHAMBERS:
 
 print("\n== Belt tension lost to plate creep (~1000 h near chamber temperature)")
 for case, (v, pm, bk, cr) in CASES.items():
+    if case not in out:
+        continue
     extra = belt[bk]["dL_um"] * cr / 1000
     out[case]["creep_loss_N"] = [extra * ea / BELT_LOOP for ea in EA_BELT]
     print(f"  {case:16s} {out[case]['creep_loss_N'][0]:4.2f}-{out[case]['creep_loss_N'][1]:4.2f} N of {T_BELT} N")
 
 Pcr = math.pi ** 2 * EI_X / L_X ** 2
 print(f"\n== X beam buckling under the 70 N XY-joint squeeze: Euler load {Pcr:.0f} N, factor {Pcr / 70:.0f}")
-json.dump(dict(cases=out, clamp=clamp, bow=bow, heat=heat, p_motor=p_motor, swing=swing, freq=freq, m_rotor=M_ROTOR,
+json.dump(dict(cases=out, clamp=clamp, bow=bow, heat=heat, p_motor=p_motor, swing=swing, freq=freq, freq9=freq9, m_rotor=M_ROTOR,
                m_head=M_HEAD, buckling_factor=Pcr / 70), open(os.path.join(WORK, "frame_res.json"), "w"), indent=1)

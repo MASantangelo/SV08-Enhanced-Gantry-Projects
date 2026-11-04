@@ -12,7 +12,7 @@ MAT = {
     "6061-T6":    (68900, 0.33, 2.70, 23.6),
 }
 PRINTED = ["ABS", "ASA", "PC", "ABS-CF15", "ASA-CF15", "PC-CF15"]
-PLATE_TAG = {"Printed": "Printed6mm", "CF": "CF6mm", "Metal": "Metal5mm"}
+PLATE_TAG = {"Printed": "Printed6mm", "CF": "CF6mm", "Metal": "Metal5mm", "CF9": "CF6mm"}
 
 # Woven 0/90 CF-epoxy plate (3K twill, ~50 % fibre): stiff along the weave, soft in in-plane shear.
 # CalculiX engineering constants: E1, E2, E3, nu12, nu13, nu23, G12, G13, G23 (MPa); axes 1/2 along the weave.
@@ -24,7 +24,11 @@ CASES = {
     "CF 0/90":     ("CF", dict(ortho=CF_ORTHO, angle=0)),
     "CF 45":       ("CF", dict(ortho=CF_ORTHO, angle=45)),
     "Metal":       ("Metal", (MAT["6061-T6"][0], MAT["6061-T6"][1])),
+    "CF 9mm":      ("CF9", dict(ortho=CF_ORTHO, angle=0)),  # 9mm belt mod, analysed on its CF template plates
 }
+# belt stiffness relative to a 6 mm GT2 belt (it scales with the width of the fiberglass cord layer)
+EA_SCALE = {"CF 9mm": 1.5}
+MU_BELT_9 = 0.012        # kg/m, typical 9 mm GT2 belt
 
 T_BELT = 35.6            # N per span, 8 lb
 T_RANGE = (26.7, 35.6)   # N, 6-8 lb

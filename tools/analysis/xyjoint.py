@@ -3,8 +3,8 @@ the plates together) with a 200 mm stub of 2020 in it, the MGN9 carriage side he
 
 Bonded contacts and a rigidly held carriage, so this is the stiffest the joint can be; a real bolted joint adds a
 little more. The bare-stub line is a 2020 extrusion fixed where it leaves the plates: the joint's own share is the
-difference. Each joint is also run with the beam held only by clamp patches at its bolts (what a loose T-nut joint
-tends toward); results for that model are named "<case> (patch)". Writes xyjoint_res.json into SV08_ANALYSIS_DIR.
+difference. geometry.py exports each joint with a few stand-in shaft post sizes; the first that meshes is used.
+Writes xyjoint_res.json into SV08_ANALYSIS_DIR.
 """
 import json
 import os
@@ -26,23 +26,26 @@ CASES = [("Printed ABS", "Printed", iso("ABS"), iso("ABS")),
          ("Printed PC-CF15", "Printed", iso("PC-CF15"), iso("PC-CF15")),
          ("CF 0/90", "CF", dict(ortho=CF_ORTHO, angle=0), iso("ABS")),
          ("CF 45", "CF", dict(ortho=CF_ORTHO, angle=45), iso("ABS")),
-         ("Metal", "Metal", iso("6061-T6"), iso("ABS"))]
+         ("Metal", "Metal", iso("6061-T6"), iso("ABS")),
+         ("CF 9mm", "CF9", dict(ortho=CF_ORTHO, angle=0), iso("ABS"))]
 
 res = {}
 meshes = {}
-for (name, var, plate_mat, spacer_mat), model in [(c, m) for m in ("bonded", "patch") for c in CASES]:
-    key = var if model == "bonded" else var + "_patch"
-    if model == "patch":
-        name = name + " (patch)"
-    j = meta[key]
+for name, var, plate_mat, spacer_mat in CASES:
+    key, model = var, "bonded"
     if key not in meshes:
-        try:
-            meshes[key] = fealib.mesh(os.path.join(WORK, f"xyjoint_{key}.brep"), clmax=2.5, clmin=0.8, fragment=True)
-        except RuntimeError as e:
-            print(f"XYJOINT {key}: skipped ({e})"); meshes[key] = None
-    m = meshes[key]
-    if m is None:
+        meshes[key] = None
+        for alt in meta[key]["alts"]:  # same joint with different stand-in shaft post sizes: use the first that meshes
+            try:
+                meshes[key] = (fealib.mesh(os.path.join(WORK, alt["file"]), clmax=2.5, clmin=0.8, fragment=True), alt)
+                break
+            except RuntimeError:
+                continue
+        if meshes[key] is None:
+            print(f"XYJOINT {key}: skipped (no shaft post size meshed)")
+    if meshes[key] is None:
         continue
+    m, j = meshes[key]
     xyz = m["xyz"]
     sets = sorted(set(m["elset"]))
     role, part = {}, {}

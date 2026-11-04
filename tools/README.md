@@ -146,10 +146,10 @@ It takes about 15 minutes and runs six steps. Add `-From <step>` to restart from
 
 | Step | What it does |
 |---|---|
-| `geometry.py` | Reads the three assembly STEPs. It exports the left-side plates, the front and back corner sandwiches and the left XY joint, and measures every belt wrap and its load at 8 lb. |
+| `geometry.py` | Reads the three versions' assembly STEPs and the 9mm belt mod's. It exports the left-side plates, the front and back corner sandwiches and the left XY joint, and measures every belt wrap and its load at 8 lb. |
 | `plates.py` | FEA of every left-side plate under its idler loads (printed ABS, CF with the weave at 0/90 and at 45°, aluminium), then how much the plates lengthen the belt path compared with the belt's own stretch |
 | `corners.py` | FEA of the corner sandwiches, giving how stiffly each version holds the Y extrusion ends. Each is run bonded (a tight through-bolt) and clamped only at its bolts (a loose T-nut joint). |
-| `xyjoint.py` | Predicted XY joint bench test: one joint held at its MGN9 carriage with a 200 mm X-beam stub, 49 N sideways and vertically, next to the bare-stub deflection |
+| `xyjoint.py` | Predicted XY joint bench test: one joint held at its MGN9 carriage with a 200 mm X-beam stub, 49 N sideways and vertically, next to the bare-stub deflection. Each joint is exported with three stand-in shaft post sizes, and the first that meshes is used. |
 | `frame.py` | Beam models of the whole gantry: masses and acceleration (motor rotors included), sag, vertical bounce, XY and yaw modes, belt tension swing and plucked-frequency table, thermal bow at each chamber temperature, joint slip, motor heat, creep and buckling |
 | `figures.py` | Writes the PNGs in `Renders/Analysis/` |
 

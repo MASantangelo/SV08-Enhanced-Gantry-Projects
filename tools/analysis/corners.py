@@ -24,8 +24,8 @@ iso = lambda m: MAT[m][:2]
 # per version: (case, plate material, printed spacer material). In CF and metal builds the spacer barely matters.
 CASES = {"Printed": [("Printed ABS", iso("ABS"), iso("ABS")), ("Printed PC-CF15", iso("PC-CF15"), iso("PC-CF15"))],
          "CF": [("CF 0/90", dict(ortho=CF_ORTHO, angle=0), iso("ABS")), ("CF 45", dict(ortho=CF_ORTHO, angle=45), iso("ABS"))],
-         "Metal": [("Metal", iso("6061-T6"), iso("ABS"))]}
-BOLTS = {"Front": [(-227.5, -214.0), (-255.0, -214.0)], "Back": [(-227.5, 272.0), (-255.0, 272.0)]}
+         "Metal": [("Metal", iso("6061-T6"), iso("ABS"))],
+         "CF9": [("CF 9mm", dict(ortho=CF_ORTHO, angle=0), iso("ABS"))]}
 E_AL, I_2020 = 69000.0, 6936.0  # the stub is a solid box given a 2020 extrusion's bending stiffness
 M0 = 1000.0  # N*mm
 
@@ -55,7 +55,7 @@ for key, c in meta.items():
     if (count > 1).sum() > 50:
         print(f"CORNER {key}: skipped (parts not bonded: {(count > 1).sum()} duplicate nodes)")
         continue
-    fix = [np.where(np.hypot(xyz[:, 0] - x, xyz[:, 1] - y) < 2.6)[0] for x, y in BOLTS[corner]]
+    fix = [np.where(np.hypot(xyz[:, 0] - x, xyz[:, 1] - y) < 2.6)[0] for x, y in c["zbolts"]]  # into the Z carriage
     zs = next(p for p in c["parts"] if p["label"].startswith("Z Carriage"))["bb"]
     fix.append(np.where((abs(xyz[:, 2] - zs[2]) < 0.05) & np.all((xyz[:, :2] > np.array(zs[:2]) - .1)
                                                                   & (xyz[:, :2] < np.array(zs[3:5]) + .1), axis=1))[0])

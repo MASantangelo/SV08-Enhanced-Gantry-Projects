@@ -15,15 +15,16 @@ import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import fealib
-from materials import BELT_LOOP, CASES, EA_BELT, MAT, PRINTED, T_BELT
+from materials import BELT_LOOP, CASES, EA_BELT, EA_SCALE, MAT, PRINTED, T_BELT
 
 WORK = fealib.WORK
 plates = json.load(open(os.path.join(WORK, "plates.json")))
-idlers = json.load(open(os.path.join(WORK, "idlers.json")))
+IDLERS = {"*": json.load(open(os.path.join(WORK, "idlers.json"))),
+          "CF9": json.load(open(os.path.join(WORK, "idlers_CF9.json")))}  # the 9mm mod's belts run at other heights
 PAIRS = [("FrontLeftBottom", "FrontLeftTop"), ("BackLeftBottomPlate", "BackLeftTopPlate"),
          ("XYLiveIdlerLeftBottomPlate", "XYLiveIdlerLeftTopPlate")]
 OTHER = {a: b for a, b in PAIRS} | {b: a for a, b in PAIRS}
-FIXING = re.compile(r"^(M4x\d+mm BHCS|M3x10mm BHCS)")  # frame and carriage bolts; M3x10 only at the XY joints
+FIXING = re.compile(r"^(M4x\d+(mm)? BHCS|M3x10mm BHCS)")  # frame and carriage bolts; M3x10 only at the XY joints
 
 
 def tag(case):
@@ -38,6 +39,7 @@ def zmid(key):
 res = {}
 for key, meta in plates.items():
     var, name = key.split("_", 1)
+    idlers = IDLERS.get(var, IDLERS["*"])
     b = meta["bb"]
     zb, zt = sorted((zmid(key), zmid(f"{var}_{OTHER[name]}")))
     is_bottom = zmid(key) == zb
@@ -83,6 +85,7 @@ json.dump(res, open(os.path.join(WORK, "plates_res.json"), "w"), indent=1)
 print("\nBelt path lengthening from plate deflection (one belt loop = every left-side idler, by symmetry)")
 path = {}
 for case, (var, _) in CASES.items():
+    idlers = IDLERS.get(var, IDLERS["*"])
     dL = 0.0
     for bot, top in PAIRS:
         kb, kt = f"{case}|{bot}", f"{case}|{top}"
@@ -102,7 +105,8 @@ rows = ([(m, path["Printed ABS"] * MAT["ABS"][0] / MAT[m][0]) for m in PRINTED]
         + [(c, path[c]) for c in CASES if not c.startswith("Printed")])
 out = {}
 for name, dL in rows:
-    out[name] = dict(dL_um=dL * 1000, compliance_added=[dL / s for s in stretch])
-    print(f"  {name:9s} {dL * 1000:6.1f} um -> adds {dL / stretch[0] * 100:4.2f}-{dL / stretch[1] * 100:4.2f} % "
-          f"to the belt's compliance (EA {EA_BELT[0]}-{EA_BELT[1]} N)")
+    st = [s / EA_SCALE.get(name, 1.0) for s in stretch]  # a stiffer (wider) belt stretches less
+    out[name] = dict(dL_um=dL * 1000, compliance_added=[dL / s for s in st])
+    print(f"  {name:9s} {dL * 1000:6.1f} um -> adds {dL / st[0] * 100:4.2f}-{dL / st[1] * 100:4.2f} % "
+          f"to the belt's compliance (EA {EA_BELT[0]}-{EA_BELT[1]} N x {EA_SCALE.get(name, 1.0)})")
 json.dump(out, open(os.path.join(WORK, "belt_path.json"), "w"), indent=1)
