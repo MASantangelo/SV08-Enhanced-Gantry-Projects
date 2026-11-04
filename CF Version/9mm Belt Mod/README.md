@@ -2,6 +2,12 @@
 
 The [CF version](..) set up for 9 mm GT2 belts. The 12 carbon fiber plates are unchanged. The corners open up from a 20 mm to a 30 mm gap to fit two 9 mm idler stacks, and the spacers, bolts, pulleys, belts and motor shafts change to suit.
 
+> [!NOTE]
+> **Not just for carbon fiber.** The 9 mm belt mod doesn't need the CF plates. It's modelled on them here as a template, and the same build works with the [aluminum](../../Metal%20Version) and [printed](../../Printed%20Version) versions. Use that version's plates and BOM, and swap in the 9 mm parts from [this BOM](BOM.md): the riser spacers, 30 mm spacer plates, 35 mm XY live idler spacer, shims, 9 mm idlers, pulleys and belts, longer hardware and motor shafts. The differences come from the plate material:
+>
+> - **Threaded mounting points:** where the CF plates take M3 nuts in hex pockets, printed plates use M3 heat-set inserts and aluminum plates use tapped M3 holes.
+> - **Screw lengths:** check any screw that passes through a plate against that version's BOM, since the aluminum plates are 5 mm thick rather than 6.
+
 ![Full gantry overview, rendered from the current STEP file](Renders/Full%20Gantry%20-%20Overview.png)
 
 ## Where the files are

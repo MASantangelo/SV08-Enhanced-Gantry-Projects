@@ -21,6 +21,8 @@ AWD conversion for the Sovol SV08 with dual-shear live XY idlers and front belt 
 | **[Metal](#metal-version-5-mm)** | 6061 aluminium | 5 mm | Tapped M3 / M2 holes | [`Metal Version`](Metal%20Version) | [BOM](Metal%20Version/BOM.md) · [XLSX](Metal%20Version/SV08_M5_BOM_from_STEP.xlsx) |
 | **[Printed](#printed-version-6-mm)** | 3D printed | 6 mm | Heat-set inserts | [`Printed Version`](Printed%20Version) | [BOM](Printed%20Version/BOM.md) · [XLSX](Printed%20Version/SV08_P6_Printed_BOM_from_STEP.xlsx) |
 
+**9 mm belts:** any version can run 9 mm GT2 belts with the [9mm Belt Mod](CF%20Version/9mm%20Belt%20Mod): the same plates with a 30 mm corner gap, 9 mm idlers and pulleys and longer hardware. It's modelled on the CF plates, with its own [BOM](CF%20Version/9mm%20Belt%20Mod/BOM.md).
+
 The project was designed around the 6 mm carbon fiber plates; the metal and printed versions use the same layout. Parts that are the same in every version (the spacers and the shared tensioner lever arm) live in [`Shared Components`](Shared%20Components), and each version's BOM links there for them.
 
 Every version folder has the same layout:

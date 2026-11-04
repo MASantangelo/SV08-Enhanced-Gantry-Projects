@@ -42,7 +42,7 @@ The spacers and tensioner lever arms are the same in every version, so they live
 | Cut the plates | [Base Components](Base%20Components) |
 | Print the shared parts | [Shared Components/Print Ready](../Shared%20Components/Print%20Ready), or all at once from the [CF Printed Parts 3MF](Base%20Components/CF%20Printed%20Parts.3mf) |
 | Look at the assembly in 3D | [Full assembly STL](For%20Viewing/SV08-CF6%20Dual%20Shear%20Live%20Idlers%20Front%20Tensioners.stl) · [Sub-assemblies](Base%20Assemblies/For%20Viewing) |
-| Build it for 9 mm belts | [9mm Belt Mod](9mm%20Belt%20Mod): the same CF plates with a 30 mm corner gap, 9 mm idlers and pulleys and longer hardware, with its own [BOM](9mm%20Belt%20Mod/BOM.md) |
+| Build it for 9 mm belts | [9mm Belt Mod](9mm%20Belt%20Mod): the same CF plates with a 30 mm corner gap, 9 mm idlers and pulleys and longer hardware, with its own [BOM](9mm%20Belt%20Mod/BOM.md). It works with the aluminum and printed plates too. |
 
 ## What's different from the printed version
 
