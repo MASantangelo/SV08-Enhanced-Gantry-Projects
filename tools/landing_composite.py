@@ -7,12 +7,16 @@ Uses <variant>/Renders/Full Gantry - Front Right.png for each variant in REGIONS
 With three variants the image is split in a "Y" from its centre: seams run to the top-left
 corner, the top-right corner and the bottom middle, giving a left, a top and a right region.
 With two, a single vertical seam splits it down the middle. Each region gets its variant's label.
-Renders are aligned on the top-left of their content, since each was auto-cropped separately.
+Each render was auto-cropped (and scaled to a fixed width) separately, so parts that stick out
+in one variant, like the CF version's top-mounted motors, shift and scale its frame. The renders
+are registered to the first one on their dark pixels (mostly the black extrusions): a search over
+scale, with FFT cross-correlation for the shift, so the gantries line up across the seams.
 Like render.py, it writes pixels only and skips unchanged output.
 """
 import os
 import sys
 
+import numpy as np
 from PySide2 import QtCore, QtGui
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -30,14 +34,36 @@ LABEL_BG = QtGui.QColor(255, 255, 255, 225)
 LABEL_EDGE = QtGui.QColor(190, 190, 190)
 
 
-def content_origin(img, step=2, threshold=248):
-    xs, ys = [], []
-    for y in range(0, img.height(), step):
-        for x in range(0, img.width(), step):
-            if QtGui.qGray(img.pixel(x, y)) < threshold:
-                xs.append(x)
-                ys.append(y)
-    return QtCore.QPoint(min(xs), min(ys))
+def dark_mask(img, step=1, threshold=60):
+    """Float array, 1 where the pixel is dark (the extrusions), sampled every step pixels."""
+    w, h = img.width(), img.height()
+    a = np.frombuffer(img.constBits(), np.uint8, img.bytesPerLine() * h)
+    a = a.reshape(h, img.bytesPerLine() // 4, 4)[:, :w, :3]
+    return (a.mean(axis=2) < threshold).astype(float)[::step, ::step]
+
+
+def resized(m, s):
+    h, w = m.shape
+    yi = np.minimum((np.arange(int(round(h * s))) / s).astype(int), h - 1)
+    xi = np.minimum((np.arange(int(round(w * s))) / s).astype(int), w - 1)
+    return m[yi][:, xi]
+
+
+def best_shift(ref, mov):
+    """(score, dx, dy): the shift of mov that best overlaps ref."""
+    H, W = ref.shape[0] + mov.shape[0], ref.shape[1] + mov.shape[1]
+    c = np.fft.irfft2(np.fft.rfft2(ref, (H, W)) * np.conj(np.fft.rfft2(mov, (H, W))), (H, W))
+    dy, dx = np.unravel_index(np.argmax(c), c.shape)
+    return c[dy, dx], (dx - W if dx > W // 2 else dx), (dy - H if dy > H // 2 else dy)
+
+
+def register(ref_img, img):
+    """(scale, dx, dy) that maps img onto ref_img: coarse search on a quarter-size mask, then refine."""
+    ref4, mov4 = dark_mask(ref_img, 4), dark_mask(img, 4)
+    _, _, _, s = max(best_shift(ref4, resized(mov4, s)) + (s,) for s in np.arange(0.90, 1.10, 0.005))
+    ref1, mov1 = dark_mask(ref_img), dark_mask(img)
+    _, dx, dy, s = max(best_shift(ref1, resized(mov1, t)) + (t,) for t in np.arange(s - 0.005, s + 0.0051, 0.001))
+    return float(s), int(dx), int(dy)
 
 
 def region_polygons(w, h, names):
@@ -67,11 +93,11 @@ def main():
     if len(regions) < 2:
         print(f"Only {len(regions)} variant render(s) found; nothing to composite.")
         return
-    origins = [content_origin(r[4]) for r in regions]
-    # Shift every image so its content's top-left lands where the first image's does.
-    shifts = [origins[0] - o for o in origins]
-    w = max(r[4].width() + s.x() for r, s in zip(regions, shifts))
-    h = max(r[4].height() + s.y() for r, s in zip(regions, shifts))
+    # Map every image onto the first one's frame; the output is the first image's size.
+    transforms = [(1.0, 0, 0)] + [register(regions[0][4], r[4]) for r in regions[1:]]
+    for r, (sc, dx, dy) in zip(regions[1:], transforms[1:]):
+        print(f"     {r[0]}: scale {sc:.3f}, shift {dx:+d}, {dy:+d} px")
+    w, h = regions[0][4].width(), regions[0][4].height()
 
     out = QtGui.QImage(w, h, QtGui.QImage.Format_RGB32)
     out.fill(QtCore.Qt.white)
@@ -82,13 +108,16 @@ def main():
     if len(regions) == 2:  # two variants: first on the left, second on the right
         regions = [regions[0][:2] + ("left",) + regions[0][3:], regions[1][:2] + ("right",) + regions[1][3:]]
 
-    for r, s in zip(regions, shifts):
+    for r, (sc, dx, dy) in zip(regions, transforms):
         path = QtGui.QPainterPath()
         path.addPolygon(QtGui.QPolygonF([QtCore.QPointF(x, y) for x, y in polys[r[2]]]))
         path.closeSubpath()
         p.save()
         p.setClipPath(path)
-        p.drawImage(s, r[4])
+        p.translate(dx, dy)
+        p.scale(sc, sc)
+        p.setRenderHint(QtGui.QPainter.SmoothPixmapTransform)
+        p.drawImage(0, 0, r[4])
         p.restore()
     p.setPen(QtGui.QPen(SEAM, 3))
     for (x1, y1), (x2, y2) in seams:
