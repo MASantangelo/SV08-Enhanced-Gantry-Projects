@@ -25,15 +25,6 @@ plates = load("plates.json")
 corners = load("corners_res.json")
 belt = load("belt_path.json")
 xyj = load("xyjoint_res.json")
-# The 6 mm CF XY joint stopped meshing after the October 2026 CAD update (its plate relief circles sit right on the
-# stand-in shaft post). Until it meshes again, use the bench FEA result from the previous revision (um at 49 N);
-# the current 9mm-mod joint on the same CF plates lands within 2 % of it.
-XYJ_FALLBACK = {"CF 0/90": dict(sideways=539.3, vertical=1623.2, bare_stub_um=173.8, free_length=172.0, fallback=True),
-                "CF 45": dict(sideways=580.5, vertical=2303.5, bare_stub_um=173.8, free_length=172.0, fallback=True)}
-for k, v in XYJ_FALLBACK.items():
-    if k not in xyj:
-        xyj[k] = v
-        print(f"  {k}: XY joint from the previous CAD revision (current one didn't mesh)")
 xyj_geo = load("xyjoints.json")["Metal"]
 # XY joint as a spring: it pivots where the bottom plate leaves the MGN9 carriage. The bench load sits LEVER from
 # that edge; the X beam's own reaction sits ARM from it (middle of the length the beam is clamped over).

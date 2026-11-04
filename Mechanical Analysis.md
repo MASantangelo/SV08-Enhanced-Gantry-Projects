@@ -22,10 +22,10 @@ In the tables, **↑** means higher is better and **↓** means lower is better.
 | **Worst plate deflection under belt load** | ↓ | 63 → 22 µm | 8.2 µm | 7.7 µm | 3.6 µm | 7.7 µm |
 | **Extra belt-path compliance from the plates** | ↓ | 1.2–3.7 % → 0.4–1.3 % | 0.1–0.4 % | 0.1–0.4 % | 0.05–0.14 % | 0.14–0.43 % |
 | **Corner joint stiffness** (metal = 1) | ↑ | 0.34 → 0.54 | 0.86 | 0.75 | 1.00 | 0.90 front, 1.8 back |
-| **XY joint pitch stiffness** (metal = 1) | ↑ | 0.07 → 0.19 | 0.80 | 0.54 | 1.00 | 0.77 |
-| **Gantry vertical bounce** (on extrusions + XY joints) | ↑ | 59 → 93 Hz | 159 Hz | 140 Hz | 168 Hz | 160 Hz |
+| **XY joint pitch stiffness** (metal = 1) | ↑ | 0.07 → 0.19 | 0.77 | 0.53 | 1.00 | 0.76 |
+| **Gantry vertical bounce** (on extrusions + XY joints) | ↑ | 59 → 93 Hz | 157 Hz | 138 Hz | 168 Hz | 159 Hz |
 | **Y resonance** (belt-limited) | ↑ | 38–68 Hz | 38–68 Hz | 38–68 Hz | 38–67 Hz | 47–82 Hz |
-| **Gantry yaw mode** | ↑ | 111–189 Hz | 157–209 Hz | 152–205 Hz | 196–236 Hz | 166–235 Hz |
+| **Gantry yaw mode** | ↑ | 111–189 Hz | 157–209 Hz | 151–205 Hz | 196–236 Hz | 166–234 Hz |
 | **Y-axis thermal bow, 55 / 70 °C chamber** (bonded corners) | ↓ | 176 / 265 → 130 / 195 µm | 106 / 158 µm | 115 / 173 µm | 95 / 142 µm | 83 / 124 µm |
 | **Plate under a motor, 55 / 70 °C chamber** | ↓ | 82–94 / 97–109 °C | same | same | 71–78 / 86–93 °C | as CF |
 
@@ -162,14 +162,12 @@ Each XY joint holds the end of the X beam and rides on one MGN9 carriage. The jo
 | Version | Sideways at the stub end ↓ | Vertical at the stub end ↓ | Pitch stiffness, per joint ↑ | Yaw stiffness, per joint ↑ |
 |---|---|---|---|---|
 | Bare 2020 stub (rigid joint) | 0.17 mm | 0.17 mm | n/a | n/a |
-| Printed ABS | 2.4 mm | 16.9 mm | 150 N·m/rad | 1,120 N·m/rad |
-| Printed PC-CF | 1.1 mm | 6.3 mm | 410 N·m/rad | 2,820 N·m/rad |
-| CF, weave 0/90* | 0.54 mm | 1.6 mm | 1,730 N·m/rad | 6,850 N·m/rad |
-| CF, weave 45°* | 0.58 mm | 2.3 mm | 1,180 N·m/rad | 6,150 N·m/rad |
-| Metal 5 mm | 0.34 mm | 1.3 mm | 2,170 N·m/rad | 14,700 N·m/rad |
-| 9mm belt mod (CF 0/90) | 0.55 mm | 1.7 mm | 1,660 N·m/rad | 6,610 N·m/rad |
-
-\*The 6 mm CF joint on the current CAD didn't mesh, so these come from the previous revision of the same plates. The 9mm mod's joint uses the same CF plates on the current CAD and lands within 2–3 % of them.
+| Printed ABS | 2.4 mm | 16.9 mm | 150 N·m/rad | 1,130 N·m/rad |
+| Printed PC-CF | 1.0 mm | 6.3 mm | 410 N·m/rad | 2,860 N·m/rad |
+| CF, weave 0/90 | 0.54 mm | 1.7 mm | 1,660 N·m/rad | 6,840 N·m/rad |
+| CF, weave 45° | 0.58 mm | 2.4 mm | 1,140 N·m/rad | 6,070 N·m/rad |
+| Metal 5 mm | 0.34 mm | 1.3 mm | 2,150 N·m/rad | 14,690 N·m/rad |
+| 9mm belt mod (CF 0/90) | 0.55 mm | 1.7 mm | 1,640 N·m/rad | 6,600 N·m/rad |
 
 **The joint pivots where its bottom plate leaves the MGN9 block.** About 25 mm of plate between the block and the X beam carries the whole moment. Vertically that bends the plate through its thickness, which is a plate's weakest direction. Sideways it bends the plate in its own plane, which is much stiffer.
 
@@ -181,10 +179,10 @@ Each XY joint holds the end of the X beam and rides on one MGN9 carriage. The jo
 |---|---|---|---|
 | Printed ABS | 213 Hz | **59 Hz** | 56 Hz |
 | Printed PC-CF | 235 Hz | 93 Hz | 80 Hz |
-| CF, weave 0/90 | 246 Hz | 159 Hz | 112 Hz |
-| CF, weave 45° | 241 Hz | 140 Hz | 104 Hz |
+| CF, weave 0/90 | 246 Hz | 157 Hz | 111 Hz |
+| CF, weave 45° | 241 Hz | 138 Hz | 104 Hz |
 | Metal 5 mm | 249 Hz | 168 Hz | 115 Hz |
-| 9mm belt mod (CF 0/90) | 260 Hz | 160 Hz | 112 Hz |
+| 9mm belt mod (CF 0/90) | 260 Hz | 159 Hz | 112 Hz |
 
 The toolhead bouncing on the X beam on its own sits at 157 Hz in every version.
 
@@ -225,8 +223,8 @@ Sag comes from the toolhead, the X beam and the joints hanging on the Y extrusio
 |---|---|---|---|---|---|---|
 | Y axis, belt-limited | 38–67 Hz | 38–68 Hz | 38–68 Hz | 38–68 Hz | 38–67 Hz | 47–82 Hz |
 | X axis, belt-limited | 61–107 Hz | 62–109 Hz | 62–109 Hz | 62–109 Hz | 62–109 Hz | 76–134 Hz |
-| Gantry yaw (X beam twisting about Z) | 111–180 Hz | 126–189 Hz | 157–209 Hz | 152–205 Hz | 196–236 Hz | 166–235 Hz |
-| Gantry vertical bounce (see XY joints) | 56–59 Hz | 80–93 Hz | 112–159 Hz | 104–140 Hz | 115–168 Hz | 112–160 Hz |
+| Gantry yaw (X beam twisting about Z) | 111–180 Hz | 126–189 Hz | 157–209 Hz | 151–205 Hz | 196–236 Hz | 166–234 Hz |
+| Gantry vertical bounce (see XY joints) | 56–59 Hz | 80–93 Hz | 111–157 Hz | 104–138 Hz | 115–168 Hz | 112–159 Hz |
 
 Ranges span the belt stiffness range, or the bounce with and without the toolhead mode.
 
@@ -411,12 +409,12 @@ Corner joint values marked ~ are interpolated between the ABS and PC-CF FEA runs
 | Plate set / XY joint plates | ↓ | 383 g / 89 g | 383 g / 89 g |
 | Worst plate deflection | ↓ | 8.2 µm | 7.7 µm |
 | Corner joint (metal = 1) | ↑ | 0.86 | 0.75 |
-| XY joint pitch (metal = 1) | ↑ | 0.80 | 0.54 |
-| Gantry vertical bounce | ↑ | 159 Hz | 140 Hz |
+| XY joint pitch (metal = 1) | ↑ | 0.77 | 0.53 |
+| Gantry vertical bounce | ↑ | 157 Hz | 138 Hz |
 | Thermal bow, 55 / 70 °C | ↓ | 106 / 158 µm | 115 / 173 µm |
 
 - **Cut the plates with the weave along the plate edges (0/90).** A woven CF plate is stiff along its fibres and soft in in-plane shear. These plates are limited by bending, not shear, so fibres running along the plate do more good than fibres at 45°.
-- **Nearly as stiff as metal for 35 % less plate mass.** With the weave at 0/90, CF reaches 80–90 % of the metal version's joint stiffness and stays far ahead of printed plates.
+- **Nearly as stiff as metal for 35 % less plate mass.** With the weave at 0/90, CF reaches 75–90 % of the metal version's joint stiffness and stays far ahead of printed plates.
 - **Barely expands with heat**, so it shrinks slightly relative to the aluminium frame as things warm up (−0.08 mm over 100 mm at +40 K). The close-fit clearance holes absorb that.
 - **No creep** at these stresses. The thermal-bow couple (up to about 1,000 N per plate at 70 °C) is well within what the laminate and its bolt holes can take.
 - **Heat:** the epoxy's glass transition is typically around 120 °C. At 70 °C chambers the plate under a motor can reach 100–110 °C, so check your supplier's Tg, or use a high-Tg grade if you print PC or nylon.
@@ -451,11 +449,11 @@ The [9mm belt mod](CF%20Version/9mm%20Belt%20Mod) widens both belts to 9 mm. To 
 | Worst plate deflection | ↓ | 8.2 µm | 7.7 µm |
 | Extra belt-path compliance from the plates | ↓ | 0.12–0.40 % | 0.14–0.43 % |
 | Corner joint, front / back | ↑ | 16,110 / ≈16,110 N·m/rad | 16,810 / 34,280 N·m/rad |
-| XY joint pitch / yaw | ↑ | 1,730 / 6,850 N·m/rad | 1,660 / 6,610 N·m/rad |
+| XY joint pitch / yaw | ↑ | 1,660 / 6,840 N·m/rad | 1,640 / 6,600 N·m/rad |
 | Y resonance, belt-limited | ↑ | 38–68 Hz | 47–82 Hz |
 | X resonance, belt-limited | ↑ | 62–109 Hz | 76–134 Hz |
-| Gantry yaw | ↑ | 157–209 Hz | 166–235 Hz |
-| Gantry vertical bounce | ↑ | 159 Hz | 160 Hz |
+| Gantry yaw | ↑ | 157–209 Hz | 166–234 Hz |
+| Gantry vertical bounce | ↑ | 157 Hz | 159 Hz |
 | Y-axis thermal bow, 55 / 70 °C (bonded corners) | ↓ | 106 / 158 µm | 83 / 124 µm |
 
 **What the wider belts buy:**
@@ -514,8 +512,8 @@ Predicted deflection at the stub end, with 49 N (5 kg) at about 172 mm from wher
 | Bare 2020 stub, rigid joint | 0.17 mm | 0.17 mm |
 | Printed ABS | 2.4 mm | 16.9 mm |
 | Printed PC-CF | 1.1 mm | 6.3 mm |
-| CF, weave 0/90 | 0.54 mm | 1.6 mm |
-| CF, weave 45° | 0.58 mm | 2.3 mm |
+| CF, weave 0/90 | 0.54 mm | 1.7 mm |
+| CF, weave 45° | 0.58 mm | 2.4 mm |
 | Metal 5 mm | 0.34 mm | 1.3 mm |
 | 9mm belt mod (CF) | 0.55 mm | 1.7 mm |
 
@@ -526,7 +524,6 @@ The model bonds every contact and holds the MGN9 block rigidly, so a real joint 
 - **Bonded and fixed.** The FEA treats contacts as bonded and bolt holes as rigidly fixed. Real bolted joints are softer, which affects all three versions but the printed one most.
 - **XY joint shafts.** In the XY joint model, the shafts and standoffs are simplified posts with the real parts' bending stiffness.
 - **Z side not modelled.** The stock Z carriages, Z rails, Z drive and printer frame aren't included. They're identical across versions and would lower the bounce modes equally.
-- **6 mm CF XY joint** uses the previous CAD revision's result, because the current one didn't mesh (see [XY joints](#xy-joints)).
 - **CF and metal back corners** use the front-corner value. Where the 20 mm spacer plate meets those back plates, its rounded corners end within 0.02 mm of an edge on the plate. The leftover faces are too small to mesh. That's a modelling limitation, not a fault in the parts.
 - **Clamped-at-bolts models** (the T-nut comparison) only meshed for the corners of the main versions, not for the XY joints or the 9mm mod.
 - **Assumed inputs.** Belt stiffness, rail-to-extrusion coupling, the motor's thermal resistance and creep factors are assumed. The ranges are stated where they matter.

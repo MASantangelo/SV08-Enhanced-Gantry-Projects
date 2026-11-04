@@ -210,6 +210,27 @@ def xy_joint_sandwich(doc, patch=False, shaft_d=15.4):
     main = sorted([i for i, r in enumerate(roles) if r[0] == "plate" and "Spacer" not in r[1]], key=lambda i: solids[i].BoundBox.ZMin)
     t = solids[main[0]].BoundBox.ZLength
     zg0, zg1 = solids[main[0]].BoundBox.ZMax, solids[main[-1]].BoundBox.ZMin  # gap between the two joint plates
+    # Square the version's own spacers' corners up to the outline of the plate they sit on. In the 6 mm CF joint the
+    # spacer's 3.0 mm corner radius and the bottom plate's 3.35 mm one touch the same edge at the same point and then
+    # peel apart, leaving a sliver of plate face that tapers to zero width and can't be meshed. Filling it (same
+    # material, about 0.1 mm^2) makes the spacer follow the plate's arc at each corner.
+    for i in [i for i, r in enumerate(roles) if r[0] == "plate" and "Spacer" in r[1]]:
+        sb = solids[i].BoundBox
+        k = min(main, key=lambda m: min(abs(solids[m].BoundBox.ZMax - sb.ZMin), abs(solids[m].BoundBox.ZMin - sb.ZMax)))
+        zt = solids[k].BoundBox.ZMax if solids[k].BoundBox.ZMax <= sb.ZMin + 0.05 else solids[k].BoundBox.ZMin
+        # the plate's outline just inside the face the spacer sits on (a face can be split by pockets, a section can't)
+        zc = zt - 0.05 if zt == solids[k].BoundBox.ZMax else zt + 0.05
+        outline = Part.Face(max(solids[k].slice(App.Vector(0, 0, 1), zc), key=lambda w: Part.Face(w).Area))
+        outline.translate(App.Vector(0, 0, sb.ZMin - outline.BoundBox.ZMin))
+        prism = outline.extrude(App.Vector(0, 0, sb.ZLength))
+        for cx, cy in ((sb.XMin, sb.YMin), (sb.XMax, sb.YMin), (sb.XMin, sb.YMax), (sb.XMax, sb.YMax)):
+            corner = Part.makeBox(4, 4, sb.ZLength, App.Vector(min(cx, cx - 4 if cx == sb.XMax else cx),
+                                                               min(cy, cy - 4 if cy == sb.YMax else cy), sb.ZMin))
+            filler = prism.common(corner).cut(solids[i])
+            if filler.Solids:
+                f = solids[i].fuse(filler).removeSplitter().Solids
+                if len(f) == 1:
+                    solids[i] = f[0]
     # the version's own spacers are plate material: merge them into the bottom plate (saves a sliver-prone interface)
     merged = []
     for i in [i for i, r in enumerate(roles) if r[0] == "plate" and "Spacer" in r[1]]:
@@ -223,7 +244,7 @@ def xy_joint_sandwich(doc, patch=False, shaft_d=15.4):
         # (model diameter, E giving the real part's bending stiffness)
         if "shaft" in kinds: d, E = shaft_d, 200000 * (5 / shaft_d) ** 4  # 5 mm shaft in F695 bearings
         elif "standoff" in kinds: d, E = 10.0, 69000 + 200000 * (5 / 10) ** 4  # 10 mm aluminium standoff + D5 bolt
-        else: d, E = 8.0, 200000 * (5 / 8) ** 4                          # D5 shoulder bolt through a printed spacer
+        else: d, E = 10.5, 200000 * (5 / 10.5) ** 4                      # D5 shoulder bolt (clear of the 8.3 mm relief)
         solids.append(Part.makeCylinder(d / 2, zg1 - zg0 + 2 * t, App.Vector(x, y, zg0 - t)))
         label = f"post {'+'.join(sorted(kinds))} ({x:.0f},{y:.0f})"
         roles.append(("post", label)); post_E[label] = E
