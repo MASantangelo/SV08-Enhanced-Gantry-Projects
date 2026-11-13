@@ -87,6 +87,12 @@ The first CF XY joint (left), cut from 6 mm carbon fiber and fitted with its Chi
 |---|---|
 | ![The CF front right motor corner on the printer: the motor on the top plate, the belts on the bearing stacks between the two carbon fiber plates, and the orange lever arms on the shoulder bolts](Photos/Front%20Right%20Motor%20Corner%20CF%20-%20Belt%20Side.jpg) | ![The CF front right motor corner from the tensioner side: the orange lever arms clamped top and bottom on the tensioner shaft, with the motor above](Photos/Front%20Right%20Motor%20Corner%20CF%20-%20Tensioner.jpg) |
 
+**Front left motor corner, with aluminium lever arms.** The arms are the standard shared lever arm ([`Tensioner Lever Arm Revised`](../Shared%20Components/For%20Cutting)), machined from aluminium instead of printed.
+
+| Top | Belt side | Tensioner |
+|---|---|---|
+| ![The CF front left motor corner from above: the motor with stick-on heatsinks on the top carbon fiber plate, and the machined aluminium lever arm with the tensioner shaft below it](Photos/Front%20Left%20Motor%20Corner%20CF%20-%20Top.jpg) | ![The CF front left motor corner from the belt side: the bearing stacks and toothed idler between the two carbon fiber plates, the belt running off along the gantry extrusion, and the aluminium lever arms top and bottom](Photos/Front%20Left%20Motor%20Corner%20CF%20-%20Belt%20Side.jpg) | ![The CF front left motor corner from the tensioner side: the aluminium lever arms clamped top and bottom on the tensioner shaft, the orange printed spacer on the extrusion, and the motor above](Photos/Front%20Left%20Motor%20Corner%20CF%20-%20Tensioner.jpg) |
+
 ## Renders
 
 Generated automatically from the current STEP files whenever the repo is refreshed (see [tools](../tools)), so they always show the latest design.
