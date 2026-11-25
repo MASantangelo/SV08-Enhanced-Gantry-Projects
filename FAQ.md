@@ -65,6 +65,9 @@ Aim for 6–8 lb (26.7–35.6 N) per belt span, with both belts the same. Measur
 ### How far should the pulleys sit from the bearings?
 About 0.5 mm. The pulley turns but the bearing's outer ring doesn't, so a pulley pushed against a bearing rubs. A folded piece of paper makes a good shim while you tighten the set screws.
 
+### The belt rides up on the tensioner bearing stacks
+Check the height of the front live idler pulley before you touch the stack. If the pulley sits too high on its Chicago bolt, the belt rides on the pulley's bottom flange, which lifts it, and the belt then climbs the smooth stack after it. It's usually worst with the toolhead at the front corner on that side, where the run to the XY joint is shortest and the belt comes in at its steepest angle. Loosen the set screws, lower the pulley a few tenths of a millimetre at a time until the belt runs centred on its teeth, then check the belt at all four corners of travel. Check both sides: if one is off, the other often is too.
+
 ### Do I need threadlocker?
 Yes, on the ultra-thin flat heads that close the Chicago bolts, because those shafts spin. Use blue (medium strength); red needs heat to remove, which can damage the bearings and printed parts nearby.
 
